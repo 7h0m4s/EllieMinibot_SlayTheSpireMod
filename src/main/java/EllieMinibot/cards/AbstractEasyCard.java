@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -216,6 +217,10 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     protected void altDmgTop(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
         att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
+    }
+
+    protected void DmgSelf(AbstractCreature p, AbstractGameAction.AttackEffect fx) {
+        atb(new DamageAction(p, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), fx));
     }
 
     private AbstractGameAction dmgRandomAction(AbstractGameAction.AttackEffect fx, Consumer<AbstractMonster> extraEffectToTarget, Consumer<AbstractMonster> effectBefore) {

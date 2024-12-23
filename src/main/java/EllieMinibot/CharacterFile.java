@@ -1,5 +1,6 @@
 package EllieMinibot;
 
+import EllieMinibot.cards.attackcards.RawSpaghettiCard;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -65,6 +66,7 @@ public class CharacterFile extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(RawSpaghettiCard.ID);
         return retVal;
     }
 
