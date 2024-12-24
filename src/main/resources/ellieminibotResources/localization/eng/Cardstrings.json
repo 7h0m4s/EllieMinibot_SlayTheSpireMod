@@ -64,9 +64,14 @@
     "NAME": "Eat Raw Spaghetti",
     "DESCRIPTION": "Take 1 damage, deal !D! damage to ALL enemies."
   },
+  "${ModID}:ReadyToRaid": {
+    "NAME": "Ready To Raid!",
+    "DESCRIPTION": "Reduce enemy Strength by *X. NL *Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce enemy Strength by *X + !M! NL *Exhaust."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
-    "DESCRIPTION": "*Channel !M! *Frost",
+    "DESCRIPTION": "*Channel !M! *Frost.",
     "EXTENDED_DESCRIPTION": [
       "Rolling a d20 for number of ice cubes was a bad idea.",
       "Banjo playing the cold away was not."

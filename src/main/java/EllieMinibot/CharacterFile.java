@@ -1,6 +1,7 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
+import EllieMinibot.cards.powercards.ReadyToRaidCard;
 import EllieMinibot.cards.skillcards.IceCubeChallengeCard;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -69,6 +70,7 @@ public class CharacterFile extends CustomPlayer {
         }
         retVal.add(RawSpaghettiCard.ID);
         retVal.add(IceCubeChallengeCard.ID);
+        retVal.add(ReadyToRaidCard.ID);
         return retVal;
     }
 
