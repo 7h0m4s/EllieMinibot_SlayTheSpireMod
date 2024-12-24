@@ -17,15 +17,16 @@ public class RawSpaghettiCard  extends AbstractEasyCard {
     public RawSpaghettiCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = damage = 10;
-        secondDamage = 2;
+        baseSecondDamage = secondDamage = 1;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        allDmg(AbstractGameAction.AttackEffect.NONE);
         DmgSelf(p, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        allDmg(AbstractGameAction.AttackEffect.NONE);
+
 
     }
 
@@ -33,6 +34,5 @@ public class RawSpaghettiCard  extends AbstractEasyCard {
     public void upp() {
 
         upgradeDamage(3);
-        secondDamage = secondDamage -  1;
     }
 }

@@ -62,6 +62,14 @@
   },
   "${ModID}:RawSpaghetti": {
     "NAME": "Eat Raw Spaghetti",
-    "DESCRIPTION": "Take !${ModID}:d2! damage, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Take 1 damage, deal !D! damage to ALL enemies."
+  },
+  "${ModID}:IceCubeChallenge": {
+    "NAME": "Ice Cube Challenge",
+    "DESCRIPTION": "*Channel !M! *Frost",
+    "EXTENDED_DESCRIPTION": [
+      "Rolling a d20 for number of ice cubes was a bad idea.",
+      "Banjo playing the cold away was not."
+    ]
   }
 }

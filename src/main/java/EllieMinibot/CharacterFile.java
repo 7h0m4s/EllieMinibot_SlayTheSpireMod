@@ -1,6 +1,7 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
+import EllieMinibot.cards.skillcards.IceCubeChallengeCard;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -53,20 +54,21 @@ public class CharacterFile extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 0, 99, 5, this, getStartingRelics(),
+                80, 80, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 1; i++) {
             retVal.add(Strike.ID);
         }
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 1; i++) {
             retVal.add(Defend.ID);
         }
         retVal.add(RawSpaghettiCard.ID);
+        retVal.add(IceCubeChallengeCard.ID);
         return retVal;
     }
 
@@ -75,6 +77,8 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(TodoItem.ID);
         return retVal;
     }
+
+
 
     @Override
     public void doCharSelectScreenSelectEffect() {
@@ -129,8 +133,7 @@ public class CharacterFile extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new RawSpaghettiCard();
     }
 
     @Override
