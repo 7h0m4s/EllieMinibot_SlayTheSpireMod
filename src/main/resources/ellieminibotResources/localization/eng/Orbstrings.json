@@ -1,3 +1,18 @@
 {
-    
+  "YourAverageBoOrb": {
+    "NAME": "Your Average Bo",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, deal #b",
+      " damage to the frontmost enemy. NL #yEvoke: Deal #b",
+      " damage to the frontmost enemy twice."
+    ]
+  },
+  "GomiOrb": {
+    "NAME": "Gomi",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, apply #b *Poison",
+      " to a random enemy. NL #yEvoke: Apply #b",
+      " *Poison to a random enemy twice."
+    ]
+  }
 }

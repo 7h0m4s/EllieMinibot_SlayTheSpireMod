@@ -1,7 +1,6 @@
-package EllieMinibot.cards.powercards;
+package EllieMinibot.cards.skillcards;
 import EllieMinibot.actions.EasyXCostAction;
 import EllieMinibot.cards.AbstractEasyCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;

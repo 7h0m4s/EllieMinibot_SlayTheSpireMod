@@ -69,6 +69,14 @@
     "DESCRIPTION": "Reduce enemy Strength by *X. NL *Exhaust.",
     "UPGRADE_DESCRIPTION": "Reduce enemy Strength by *X + !M! NL *Exhaust."
   },
+  "${ModID}:YourAverageBoCollab": {
+    "NAME": "YourAverageBo Collab",
+    "DESCRIPTION": "*Channel 1 *YourAverageBo."
+  },
+  "${ModID}:GomiCollab": {
+    "NAME": "Gomi Collab",
+    "DESCRIPTION": "*Channel 1 *Gomi."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
     "DESCRIPTION": "*Channel !M! *Frost.",

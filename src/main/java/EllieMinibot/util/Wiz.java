@@ -66,6 +66,12 @@ public class Wiz {
         return monsters;
     }
 
+    public static AbstractMonster getFrontmostEnemy(){
+        ArrayList<AbstractMonster> enemyArray = getEnemies();
+        if(enemyArray.isEmpty()) return null;
+        return enemyArray.get(0);
+    }
+
     public static ArrayList<AbstractCard> getCardsMatchingPredicate(Predicate<AbstractCard> pred) {
         return getCardsMatchingPredicate(pred, false);
     }
