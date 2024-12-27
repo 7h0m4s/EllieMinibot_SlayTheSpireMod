@@ -22,5 +22,13 @@
       " cost no [E] on next use. NL #yEvoke: Make a random",
       " card in hand cost no [E] for next use."
     ]
+  },
+  "ShoomimiOrb": {
+    "NAME": "Shoomimi",
+    "DESCRIPTION": [
+      "#yPassive: At the start of turn draw %d cards.",
+      "NL #yEvoke: Draw %d",
+      " cards."
+    ]
   }
 }

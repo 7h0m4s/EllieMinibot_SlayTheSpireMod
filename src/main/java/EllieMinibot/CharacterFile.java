@@ -73,6 +73,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(YourAverageBoCollabCard.ID);
         retVal.add(GomiCollabCard.ID);
         retVal.add(MinikoMewCard.ID);
+        retVal.add(ShoomimiCard.ID);
         return retVal;
     }
 

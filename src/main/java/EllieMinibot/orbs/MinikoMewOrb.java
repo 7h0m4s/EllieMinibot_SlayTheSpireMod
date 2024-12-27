@@ -45,6 +45,7 @@ public class MinikoMewOrb extends AbstractOrb {
         this.angle = MathUtils.random(360.0F);
         this.channelAnimTimer = 0.5F;
         scale = 1.0F;
+        this.showEvokeValue = false;
     }
 
     public void updateDescription() {
