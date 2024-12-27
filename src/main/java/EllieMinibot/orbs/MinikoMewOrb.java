@@ -50,7 +50,7 @@ public class MinikoMewOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = orbString.DESCRIPTION[0]  + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2];
+        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2], this.evokeAmount, this.evokeAmount);
     }
 
     public void onEvoke() {
@@ -59,8 +59,8 @@ public class MinikoMewOrb extends AbstractOrb {
         for (int i = playerHand.size() - 1; i >= 0; i--) {
             AbstractCard card = playerHand.get(i);
             if (card.costForTurn > 0 && ((card.color != AbstractCard.CardColor.CURSE || card.cardID.equals("Pride")) && (card.type != AbstractCard.CardType.STATUS || card.cardID.equals("Slimed")))){
-                //card.setCostForTurn(card.costForTurn - 1);
-                card.freeToPlayOnce = true;
+
+                card.setCostForTurn(card.cost - this.passiveAmount);
                 break;
             }
         }
@@ -69,15 +69,14 @@ public class MinikoMewOrb extends AbstractOrb {
 
     }
 
-    public void onEndOfTurn() {
-        ArrayList<AbstractCard> outOfHandPile = (ArrayList<AbstractCard>) Wiz.drawPile().group.clone();
-        outOfHandPile.addAll((ArrayList<AbstractCard>) Wiz.discardPile().group.clone());
-        java.util.Collections.shuffle(outOfHandPile);// randomise order
-        for (int i = outOfHandPile.size() - 1; i >= 0; i--) {
-            AbstractCard card = outOfHandPile.get(i);
+    public void onStartOfTurn() {
+        boolean hasModifiedCard = false;
+        ArrayList<AbstractCard> playerDrawPile = (ArrayList<AbstractCard>) Wiz.drawPile().group.clone();
+        for (int i = playerDrawPile.size() - 1; i >= 0; i--) {
+            AbstractCard card = playerDrawPile.get(i);
             if (card.costForTurn > 0 && ((card.color != AbstractCard.CardColor.CURSE || card.cardID.equals("Pride")) && (card.type != AbstractCard.CardType.STATUS || card.cardID.equals("Slimed")))){
-                //card.setCostForTurn(card.costForTurn - 1);
-                card.freeToPlayOnce = true;
+
+                card.setCostForTurn(card.cost - this.passiveAmount);
                 break;
             }
         }
