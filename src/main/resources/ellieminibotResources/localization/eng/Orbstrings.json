@@ -10,9 +10,17 @@
   "GomiOrb": {
     "NAME": "Gomi",
     "DESCRIPTION": [
-      "#yPassive: At the end of turn, apply #b *Poison",
-      " to a random enemy. NL #yEvoke: Apply #b",
-      " *Poison to a random enemy twice."
+      "#yPassive: At the end of turn, apply #b ",
+      " #yPoison to a random enemy. NL #yEvoke: Apply #b",
+      " #yPoison to a random enemy twice."
+    ]
+  },
+  "MinikoMewOrb": {
+    "NAME": "MinikoMew",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, make a random card in your draw or discard pile",
+      " cost no [E] on next use. NL #yEvoke: Make a random",
+      " card in hand cost no [E] for next use."
     ]
   }
 }

@@ -1,40 +1,44 @@
 package EllieMinibot.orbs;
 
-import EllieMinibot.actions.EasyXCostAction;
 import EllieMinibot.util.TexLoader;
 import EllieMinibot.util.Wiz;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.SpeechBubble;
+import com.megacrit.cardcrawl.vfx.SpeechTextEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
+import com.megacrit.cardcrawl.vfx.combat.*;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
-import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
-import com.megacrit.cardcrawl.vfx.combat.WebEffect;
+import com.megacrit.cardcrawl.vfx.scene.ShinySparkleEffect;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.ModFile.makeImagePath;
-import static EllieMinibot.util.Wiz.*;
+import static EllieMinibot.util.Wiz.applyToEnemyTop;
+import static EllieMinibot.util.Wiz.att;
 
-public class GomiOrb extends AbstractOrb {
+public class MinikoMewOrb extends AbstractOrb {
     private static final OrbStrings orbString;
-    private static final Texture myTex = TexLoader.getTexture(makeImagePath("/orbs/GomiOrb.png"));
+    private static final Texture myTex = TexLoader.getTexture(makeImagePath("/orbs/MinikoMewOrb.png"));
 
-    public GomiOrb() {
-        this.ID = makeID("GomiOrb");
+    public MinikoMewOrb() {
+        this.ID = makeID("MinikoMewOrb");
         this.img = myTex;
         this.name = orbString.NAME;
-        this.basePassiveAmount = 2;
+        this.basePassiveAmount = 1;
         this.passiveAmount = this.basePassiveAmount;
         this.baseEvokeAmount = this.evokeAmount = this.basePassiveAmount * 2;
         this.updateDescription();
@@ -45,23 +49,40 @@ public class GomiOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = orbString.DESCRIPTION[0] + this.passiveAmount + orbString.DESCRIPTION[1] + this.evokeAmount + orbString.DESCRIPTION[2];
+        this.description = orbString.DESCRIPTION[0]  + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2];
     }
 
     public void onEvoke() {
-        AbstractMonster target = Wiz.getRandomEnemy();
-        applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),evokeAmount));
-        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+        ArrayList<AbstractCard> playerHand = (ArrayList<AbstractCard>) Wiz.hand().group.clone();
+        java.util.Collections.shuffle(playerHand);// randomise order
+        for (int i = playerHand.size() - 1; i >= 0; i--) {
+            AbstractCard card = playerHand.get(i);
+            if (card.costForTurn > 0 && ((card.color != AbstractCard.CardColor.CURSE || card.cardID.equals("Pride")) && (card.type != AbstractCard.CardType.STATUS || card.cardID.equals("Slimed")))){
+                //card.setCostForTurn(card.costForTurn - 1);
+                card.freeToPlayOnce = true;
+                break;
+            }
+        }
+        att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
         att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
 
     }
 
     public void onEndOfTurn() {
-        AbstractMonster target = Wiz.getRandomEnemy();
-        applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),passiveAmount));
+        ArrayList<AbstractCard> outOfHandPile = (ArrayList<AbstractCard>) Wiz.drawPile().group.clone();
+        outOfHandPile.addAll((ArrayList<AbstractCard>) Wiz.discardPile().group.clone());
+        java.util.Collections.shuffle(outOfHandPile);// randomise order
+        for (int i = outOfHandPile.size() - 1; i >= 0; i--) {
+            AbstractCard card = outOfHandPile.get(i);
+            if (card.costForTurn > 0 && ((card.color != AbstractCard.CardColor.CURSE || card.cardID.equals("Pride")) && (card.type != AbstractCard.CardType.STATUS || card.cardID.equals("Slimed")))){
+                //card.setCostForTurn(card.costForTurn - 1);
+                card.freeToPlayOnce = true;
+                break;
+            }
+        }
         att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
-        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
         att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
+
     }
 
     public void triggerEvokeAnimation() {
@@ -74,7 +95,7 @@ public class GomiOrb extends AbstractOrb {
     }
 
     public AbstractOrb makeCopy() {
-        return new GomiOrb();
+        return new MinikoMewOrb();
     }
 
 
@@ -95,6 +116,6 @@ public class GomiOrb extends AbstractOrb {
     }
 
     static {
-        orbString = CardCrawlGame.languagePack.getOrbString("GomiOrb");
+        orbString = CardCrawlGame.languagePack.getOrbString("MinikoMewOrb");
     }
 }

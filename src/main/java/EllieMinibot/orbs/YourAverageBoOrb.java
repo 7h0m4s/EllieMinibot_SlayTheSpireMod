@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
+import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 
 import static EllieMinibot.ModFile.makeID;
@@ -30,7 +31,7 @@ public class YourAverageBoOrb  extends AbstractOrb {
         this.ID = makeID("YourAverageBoOrb");
         this.img = myTex;
         this.name = orbString.NAME;
-        this.basePassiveAmount = 4;
+        this.basePassiveAmount = 3;
         this.passiveAmount = this.basePassiveAmount;
         this.baseEvokeAmount = this.evokeAmount = this.basePassiveAmount;
         this.updateDescription();
@@ -52,6 +53,7 @@ public class YourAverageBoOrb  extends AbstractOrb {
                     AbstractMonster target = Wiz.getFrontmostEnemy();
                     if (target != null) {
                         att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                        att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
                         att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
                         att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                     }
@@ -69,6 +71,7 @@ public class YourAverageBoOrb  extends AbstractOrb {
                 AbstractMonster target = Wiz.getFrontmostEnemy();
                 if (target != null) {
                     att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
                     att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
                     att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                 }

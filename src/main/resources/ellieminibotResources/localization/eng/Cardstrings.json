@@ -77,6 +77,10 @@
     "NAME": "Gomi Collab",
     "DESCRIPTION": "*Channel 1 *Gomi."
   },
+  "${ModID}:MinikoMewCollab": {
+    "NAME": "MinikoMew Collab",
+    "DESCRIPTION": "*Channel 1 *MinikoMew."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
     "DESCRIPTION": "*Channel !M! *Frost.",

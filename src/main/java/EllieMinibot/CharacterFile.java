@@ -1,10 +1,7 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
-import EllieMinibot.cards.skillcards.GomiCollabCard;
-import EllieMinibot.cards.skillcards.ReadyToRaidCard;
-import EllieMinibot.cards.skillcards.IceCubeChallengeCard;
-import EllieMinibot.cards.skillcards.YourAverageBoCollabCard;
+import EllieMinibot.cards.skillcards.*;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -75,6 +72,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(ReadyToRaidCard.ID);
         retVal.add(YourAverageBoCollabCard.ID);
         retVal.add(GomiCollabCard.ID);
+        retVal.add(MinikoMewCard.ID);
         return retVal;
     }
 
