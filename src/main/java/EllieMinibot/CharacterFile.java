@@ -83,6 +83,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(OtamatoneCard.ID);
         retVal.add(LeadedSolderCard.ID);
         retVal.add(FakeBoyfriendCard.ID);
+        retVal.add(SpinRingCard.ID);
         return retVal;
     }
 

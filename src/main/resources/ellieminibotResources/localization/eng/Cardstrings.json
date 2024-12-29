@@ -89,6 +89,11 @@
     "NAME": "Fake Boyfriend",
     "DESCRIPTION": "Gain !B! *Block."
   },
+  "${ModID}:SpinRing": {
+    "NAME": "Sping The Bug Ring",
+    "DESCRIPTION": "Gain [E] [E]. NL Add a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Add a *Void into your discard pile."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."
