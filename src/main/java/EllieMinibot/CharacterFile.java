@@ -1,5 +1,6 @@
 package EllieMinibot;
 
+import EllieMinibot.cards.attackcards.LeadedSolderCard;
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
 import EllieMinibot.cards.attackcards.TeethModelCard;
 import EllieMinibot.cards.powercards.OtamatoneCard;
@@ -80,6 +81,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(TeethModelCard.ID);
         retVal.add(WaterproofingCard.ID);
         retVal.add(OtamatoneCard.ID);
+        retVal.add(LeadedSolderCard.ID);
         return retVal;
     }
 

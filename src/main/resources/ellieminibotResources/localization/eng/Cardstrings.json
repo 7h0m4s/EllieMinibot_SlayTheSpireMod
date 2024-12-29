@@ -81,6 +81,10 @@
     "NAME": "Otamatone Model",
     "DESCRIPTION": "Gain !M! *Orb slots."
   },
+  "${ModID}:LeadedSolder": {
+    "NAME": "Leaded Solder Fumes",
+    "DESCRIPTION": "Apply !M! *Poison. NL Apply !${ModID}:m2! *Weak."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."
