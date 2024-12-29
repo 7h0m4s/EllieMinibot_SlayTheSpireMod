@@ -1,6 +1,9 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
+import EllieMinibot.cards.attackcards.TeethModelCard;
+import EllieMinibot.cards.powercards.OtamatoneCard;
+import EllieMinibot.cards.powercards.WaterproofingCard;
 import EllieMinibot.cards.skillcards.*;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -74,6 +77,9 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(GomiCollabCard.ID);
         retVal.add(MinikoMewCard.ID);
         retVal.add(ShoomimiCard.ID);
+        retVal.add(TeethModelCard.ID);
+        retVal.add(WaterproofingCard.ID);
+        retVal.add(OtamatoneCard.ID);
         return retVal;
     }
 

@@ -69,6 +69,18 @@
     "DESCRIPTION": "Reduce enemy Strength by *X. NL *Exhaust.",
     "UPGRADE_DESCRIPTION": "Reduce enemy Strength by *X + !M! NL *Exhaust."
   },
+  "${ModID}:TeethModel": {
+    "NAME": "Teeth Model",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Vulnerable. NL Apply !M! *Weak."
+  },
+  "${ModID}:Waterproofing": {
+    "NAME": "Waterproof Body",
+    "DESCRIPTION": "Apply !M! *Waterproofing."
+  },
+  "${ModID}:Otamatone": {
+    "NAME": "Otamatone Model",
+    "DESCRIPTION": "Gain !M! *Orb slots."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."

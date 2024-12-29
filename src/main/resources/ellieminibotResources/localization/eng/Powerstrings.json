@@ -6,5 +6,11 @@
       " #yStrength and #b",
       " #yDexterity."
     ]
+  },
+  "${ModID}:WaterproofingPower": {
+    "NAME": "Waterproofing",
+    "DESCRIPTIONS": [
+      "Reduce incoming damage by #b%d"
+    ]
   }
 }

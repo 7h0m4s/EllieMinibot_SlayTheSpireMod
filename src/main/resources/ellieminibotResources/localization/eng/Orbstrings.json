@@ -1,6 +1,6 @@
 {
   "YourAverageBoOrb": {
-    "NAME": "Your Average Bo",
+    "NAME": "YourAverageBo",
     "DESCRIPTION": [
       "#yPassive: At the end of turn, deal #b",
       " damage to the frontmost enemy. NL #yEvoke: Deal #b",
@@ -19,15 +19,15 @@
     "NAME": "MinikoMew",
     "DESCRIPTION": [
       "#yPassive: At the start of your turn, reduce the cost of the next card in your",
-      " draw pile by %d. NL #yEvoke: Reduce the cost of a random",
-      " card in hand by %d."
+      " draw pile by #b%d. NL #yEvoke: Reduce the cost of a random",
+      " card in hand by #b%d."
     ]
   },
   "ShoomimiOrb": {
     "NAME": "Shoomimi",
     "DESCRIPTION": [
-      "#yPassive: At the start of turn draw %d card.",
-      " NL #yEvoke: Draw %d",
+      "#yPassive: At the start of turn draw #b%d card.",
+      " NL #yEvoke: Draw #b%d",
       " card."
     ]
   }
