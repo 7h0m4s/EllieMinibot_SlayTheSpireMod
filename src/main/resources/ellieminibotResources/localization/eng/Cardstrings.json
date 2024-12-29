@@ -85,6 +85,10 @@
     "NAME": "Leaded Solder Fumes",
     "DESCRIPTION": "Apply !M! *Poison. NL Apply !${ModID}:m2! *Weak."
   },
+  "${ModID}:FakeBoyfriend": {
+    "NAME": "Fake Boyfriend",
+    "DESCRIPTION": "Gain !B! *Block."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."
