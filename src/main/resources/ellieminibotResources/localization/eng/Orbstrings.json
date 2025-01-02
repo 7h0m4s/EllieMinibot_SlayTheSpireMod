@@ -23,6 +23,12 @@
       " card in hand by #b%d."
     ]
   },
+  "VedalOrb": {
+    "NAME": "Vedal987",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, upgrade #b%d cards in your draw pile. NL #yEvoke: Upgrade #b%d random card in hand."
+    ]
+  },
   "ShoomimiOrb": {
     "NAME": "Shoomimi",
     "DESCRIPTION": [

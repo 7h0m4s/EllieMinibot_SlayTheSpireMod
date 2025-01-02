@@ -89,6 +89,10 @@
     "NAME": "Fake Boyfriend",
     "DESCRIPTION": "Gain !B! *Block."
   },
+  "${ModID}:SelfMaintenance": {
+    "NAME": "Self Maintenance",
+    "DESCRIPTION": "At the end of combat, repair !M! *HP."
+  },
   "${ModID}:SpinRing": {
     "NAME": "Sping The Bug Ring",
     "DESCRIPTION": "Gain [E] [E]. NL Add a *Void into your discard pile.",
@@ -122,6 +126,10 @@
   "${ModID}:ShoomimiCollab": {
     "NAME": "Shoomimi Collab",
     "DESCRIPTION": "*Channel 1 *Shoomimi."
+  },
+  "${ModID}:VedalCollab": {
+    "NAME": "Vedal Collab",
+    "DESCRIPTION": "*Channel 1 *Vedal."
   },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",

@@ -1,13 +1,9 @@
 package EllieMinibot;
 
-import EllieMinibot.cards.attackcards.LeadedSolderCard;
-import EllieMinibot.cards.attackcards.RawSpaghettiCard;
-import EllieMinibot.cards.attackcards.TeethModelCard;
-import EllieMinibot.cards.powercards.OtamatoneCard;
-import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
-import EllieMinibot.cards.powercards.SongTogetherCard;
-import EllieMinibot.cards.powercards.WaterproofingCard;
+import EllieMinibot.cards.attackcards.*;
+import EllieMinibot.cards.powercards.*;
 import EllieMinibot.cards.skillcards.*;
+import EllieMinibot.cards.skillcards.ReadyToRaidCard;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -34,6 +30,7 @@ import java.util.ArrayList;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT_COLOR;
 import static EllieMinibot.ModFile.*;
+import static EllieMinibot.cards.skillcards.ReadyToRaidCard.*;
 
 public class CharacterFile extends CustomPlayer {
 
@@ -89,6 +86,8 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(BeatSabreCard.ID);
         retVal.add(SongTogetherCard.ID);
         retVal.add(SongCrazyRobotBodyCard.ID);
+        retVal.add(SelfMaintenanceCard.ID);
+        retVal.add(VedalCollabCard.ID);
         return retVal;
     }
 
