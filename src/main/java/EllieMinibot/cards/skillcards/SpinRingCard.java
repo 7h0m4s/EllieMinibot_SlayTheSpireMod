@@ -25,8 +25,6 @@ public class SpinRingCard extends AbstractEasyCard {
 
         p.gainEnergy(2);
         addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, false));
-
-
     }
 
 
