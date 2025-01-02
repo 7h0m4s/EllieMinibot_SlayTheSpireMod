@@ -4,6 +4,8 @@ import EllieMinibot.cards.attackcards.LeadedSolderCard;
 import EllieMinibot.cards.attackcards.RawSpaghettiCard;
 import EllieMinibot.cards.attackcards.TeethModelCard;
 import EllieMinibot.cards.powercards.OtamatoneCard;
+import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
+import EllieMinibot.cards.powercards.SongTogetherCard;
 import EllieMinibot.cards.powercards.WaterproofingCard;
 import EllieMinibot.cards.skillcards.*;
 import basemod.abstracts.CustomEnergyOrb;
@@ -85,6 +87,8 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(FakeBoyfriendCard.ID);
         retVal.add(SpinRingCard.ID);
         retVal.add(BeatSabreCard.ID);
+        retVal.add(SongTogetherCard.ID);
+        retVal.add(SongCrazyRobotBodyCard.ID);
         return retVal;
     }
 

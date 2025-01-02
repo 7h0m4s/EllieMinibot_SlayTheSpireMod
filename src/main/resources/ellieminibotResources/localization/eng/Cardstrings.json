@@ -99,6 +99,14 @@
     "DESCRIPTION": "Draw !M! card. NL Draw !${ModID}:m2! cards next turn.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Draw !${ModID}:m2! cards next turn."
   },
+  "${ModID}:SongTogether": {
+    "NAME": "Together Song",
+    "DESCRIPTION": "Gain !M! *Focus."
+  },
+  "${ModID}:SongCrazyRobotBody": {
+    "NAME": "Crazy Effing Robot Body Song",
+    "DESCRIPTION": "Gain !M! *Strength."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."

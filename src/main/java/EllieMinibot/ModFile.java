@@ -1,5 +1,6 @@
 package EllieMinibot;
 
+import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.DynamicVariable;
@@ -60,6 +61,12 @@ public class ModFile implements
     private static final String CARD_ENERGY_L = makeImagePath("1024/energy.png");
     private static final String CHARSELECT_BUTTON = makeImagePath("charSelect/charButton.png");
     private static final String CHARSELECT_PORTRAIT = makeImagePath("charSelect/charBG.png");
+
+    //Audio
+    public static final String SONG_TOGETHER_KEY = makeID("SongTogetherAudio");
+    private static final String SONG_TOGETHER_OGG = makePath("audio/SongTogether.ogg");
+    public static final String SONG_CRAZYROBOTBODY_KEY = makeID("SongCrazyRobotBodyAudio");
+    private static final String SONG_CRAZYROBOTBODY_OGG = makePath("audio/SongCrazyRobotBody.ogg");
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -170,8 +177,9 @@ public class ModFile implements
 
     @Override
     public void receiveAddAudio() {
-        for (ProAudio a : ProAudio.values())
-            BaseMod.addAudio(makeID(a.name()), makePath("audio/" + a.name().toLowerCase() + ".ogg"));
+
+        BaseMod.addAudio(SONG_TOGETHER_KEY, SONG_TOGETHER_OGG);
+        BaseMod.addAudio(SONG_CRAZYROBOTBODY_KEY, SONG_CRAZYROBOTBODY_OGG);
     }
 
     @Override
