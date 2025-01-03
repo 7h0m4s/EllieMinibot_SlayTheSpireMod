@@ -2,12 +2,17 @@ package EllieMinibot.cards.attackcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.util.Wiz;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.applyToEnemyTop;
@@ -35,5 +40,13 @@ public class LeadedSolderCard extends AbstractEasyCard {
 
         upgradeMagicNumber(2);
         upgradeSecondMagic(1);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("poison"), BaseMod.getKeywordDescription("poison")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("weak"), BaseMod.getKeywordDescription("weak")));
+        return tooltips;
     }
 }

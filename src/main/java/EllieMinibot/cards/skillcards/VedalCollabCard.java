@@ -39,6 +39,7 @@ public class VedalCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@Monikaphobia")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Vedal987")), BaseMod.getKeywordDescription(makeID("Vedal987"))));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("upgrade"), BaseMod.getKeywordDescription("upgrade")));
         return tooltips;

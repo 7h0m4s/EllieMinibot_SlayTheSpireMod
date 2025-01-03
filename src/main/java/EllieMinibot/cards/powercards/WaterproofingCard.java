@@ -41,6 +41,7 @@ public class WaterproofingCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@Kuinmelen")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Waterproofing")), BaseMod.getKeywordDescription(makeID("Waterproofing"))));
         return tooltips;
     }
 }

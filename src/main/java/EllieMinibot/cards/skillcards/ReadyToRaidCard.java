@@ -1,9 +1,14 @@
 package EllieMinibot.cards.skillcards;
 import EllieMinibot.actions.EasyXCostAction;
 import EllieMinibot.cards.AbstractEasyCard;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.*;
@@ -29,5 +34,12 @@ public class ReadyToRaidCard  extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("exhaust"), BaseMod.getKeywordDescription("exhaust")));
+        return tooltips;
     }
 }

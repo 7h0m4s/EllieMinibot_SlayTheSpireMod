@@ -50,7 +50,9 @@ public class TeethModelCard extends AbstractEasyCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "The_Festive_Fleshmaster & Arkyn")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "The_Festive_Fleshmaster & #bArkyn")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("vulnerable"), BaseMod.getKeywordDescription("vulnerable")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("weak"), BaseMod.getKeywordDescription("weak")));
         return tooltips;
     }
 }

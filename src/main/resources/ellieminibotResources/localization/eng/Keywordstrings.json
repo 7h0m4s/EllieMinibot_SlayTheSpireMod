@@ -12,7 +12,14 @@
     "NAMES": [
       "Artist"
     ],
-    "DESCRIPTION": "Card art was created by %s."
+    "DESCRIPTION": "#b%s."
+  },
+  {
+    "PROPER_NAME": "Waterproofing",
+    "NAMES": [
+      "Waterproofing"
+    ],
+    "DESCRIPTION": "Reduce incoming damage at a flat rate."
   },
   {
     "PROPER_NAME": "YourAverageBo",

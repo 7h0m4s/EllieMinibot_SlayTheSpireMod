@@ -1,11 +1,16 @@
 package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 
@@ -29,5 +34,13 @@ public class IceCubeChallengeCard  extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeMagicNumber(2);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("frost"), BaseMod.getKeywordDescription("frost")));
+        return tooltips;
     }
 }

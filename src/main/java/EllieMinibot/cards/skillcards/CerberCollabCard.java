@@ -38,6 +38,7 @@ public class CerberCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Cerber")), BaseMod.getKeywordDescription(makeID("Cerber"))));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("vigor"), BaseMod.getKeywordDescription("vigor")));
         return tooltips;
     }
