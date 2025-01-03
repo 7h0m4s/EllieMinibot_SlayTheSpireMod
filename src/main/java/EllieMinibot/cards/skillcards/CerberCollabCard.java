@@ -2,9 +2,14 @@ package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.orbs.CerberOrb;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.atb;
@@ -27,5 +32,13 @@ public class CerberCollabCard extends AbstractEasyCard {
     @Override
     public void upp() {
         this.updateCost(-1);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Cerber")), BaseMod.getKeywordDescription(makeID("Cerber"))));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("vigor"), BaseMod.getKeywordDescription("vigor")));
+        return tooltips;
     }
 }

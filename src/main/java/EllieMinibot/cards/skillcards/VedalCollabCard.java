@@ -3,9 +3,14 @@ package EllieMinibot.cards.skillcards;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.orbs.MinikoMewOrb;
 import EllieMinibot.orbs.VedalOrb;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.atb;
@@ -28,5 +33,14 @@ public class VedalCollabCard extends AbstractEasyCard {
     @Override
     public void upp() {
         this.updateCost(-1);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@Monikaphobia")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Vedal987")), BaseMod.getKeywordDescription(makeID("Vedal987"))));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("upgrade"), BaseMod.getKeywordDescription("upgrade")));
+        return tooltips;
     }
 }

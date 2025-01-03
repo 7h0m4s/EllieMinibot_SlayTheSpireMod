@@ -30,7 +30,6 @@ import java.util.ArrayList;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT_COLOR;
 import static EllieMinibot.ModFile.*;
-import static EllieMinibot.cards.skillcards.ReadyToRaidCard.*;
 
 public class CharacterFile extends CustomPlayer {
 
@@ -75,8 +74,8 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(ReadyToRaidCard.ID);
         retVal.add(YourAverageBoCollabCard.ID);
         retVal.add(GomiCollabCard.ID);
-        retVal.add(MinikoMewCard.ID);
-        retVal.add(ShoomimiCard.ID);
+        retVal.add(MinikoMewCollabCard.ID);
+        retVal.add(ShoomimiCollabCard.ID);
         retVal.add(TeethModelCard.ID);
         retVal.add(WaterproofingCard.ID);
         retVal.add(OtamatoneCard.ID);

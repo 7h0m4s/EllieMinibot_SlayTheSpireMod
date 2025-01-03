@@ -1,8 +1,13 @@
 package EllieMinibot.cards;
 
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 
@@ -24,5 +29,12 @@ public class Strike extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeDamage(3);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@NoctisWhole")));
+        return tooltips;
     }
 }

@@ -2,12 +2,17 @@ package EllieMinibot.cards.attackcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.util.Wiz;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.applyToEnemy;
@@ -40,5 +45,12 @@ public class TeethModelCard extends AbstractEasyCard {
 
         upgradeDamage(3);
         upgradeMagicNumber(1);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "The_Festive_Fleshmaster & Arkyn")));
+        return tooltips;
     }
 }

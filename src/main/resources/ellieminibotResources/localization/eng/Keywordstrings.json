@@ -8,11 +8,53 @@
     "DESCRIPTION": "TODO: Make your own epic keywords"
   },
   {
+    "PROPER_NAME": "Artist",
+    "NAMES": [
+      "Artist"
+    ],
+    "DESCRIPTION": "Card art was created by %s."
+  },
+  {
     "PROPER_NAME": "YourAverageBo",
     "NAMES": [
       "YourAverageBo",
       "Your Average Bo"
     ],
-    "DESCRIPTION": "TODO: Make your own epic keywords"
+    "DESCRIPTION": "An orb that damages the frontmost enemy at the end of turn."
+  },
+  {
+    "PROPER_NAME": "Gomi",
+    "NAMES": [
+      "Gomi"
+    ],
+    "DESCRIPTION": "An orb that poisons a random enemy at the end of turn."
+  },
+  {
+    "PROPER_NAME": "MinikoMew",
+    "NAMES": [
+      "MinikoMew"
+    ],
+    "DESCRIPTION": "An orb that reduces the cost of the next draw card at the start of turn."
+  },
+  {
+    "PROPER_NAME": "Vedal987",
+    "NAMES": [
+      "Vedal987"
+    ],
+    "DESCRIPTION": "An orb that upgrades the next draw card at the start of turn."
+  },
+  {
+    "PROPER_NAME": "Cerber",
+    "NAMES": [
+      "Cerber"
+    ],
+    "DESCRIPTION": "An orb that adds Vigor at the end of your turn."
+  },
+  {
+    "PROPER_NAME": "Shoomimi",
+    "NAMES": [
+      "Shoomimi"
+    ],
+    "DESCRIPTION": "An orb that draws a card at the start of turn."
   }
 ]
