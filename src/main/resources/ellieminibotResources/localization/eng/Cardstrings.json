@@ -131,6 +131,10 @@
     "NAME": "Vedal Collab",
     "DESCRIPTION": "*Channel 1 *Vedal."
   },
+  "${ModID}:CerberCollab": {
+    "NAME": "Cerber Collab",
+    "DESCRIPTION": "*Channel 1 *Cerber."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
     "DESCRIPTION": "*Channel !M! *Frost.",

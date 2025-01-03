@@ -29,6 +29,12 @@
       "#yPassive: At the start of your turn, upgrade #b%d cards in your draw pile. NL #yEvoke: Upgrade #b%d random card in hand."
     ]
   },
+  "CerberOrb": {
+    "NAME": "Cerber",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, gain #b%d #yVigor. NL #yEvoke: Gain #b%d #yVigor."
+    ]
+  },
   "ShoomimiOrb": {
     "NAME": "Shoomimi",
     "DESCRIPTION": [

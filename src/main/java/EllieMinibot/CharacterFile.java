@@ -88,6 +88,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(SongCrazyRobotBodyCard.ID);
         retVal.add(SelfMaintenanceCard.ID);
         retVal.add(VedalCollabCard.ID);
+        retVal.add(CerberCollabCard.ID);
         return retVal;
     }
 
