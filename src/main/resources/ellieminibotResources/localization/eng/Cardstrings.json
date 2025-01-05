@@ -142,5 +142,13 @@
       "Rolling a d20 for number of ice cubes was a bad idea.",
       "Banjo playing the cold away was not."
     ]
+  },
+  "${ModID}:Hireathon": {
+    "NAME": "Hireathon",
+    "DESCRIPTION": "Deal !D! damage. NL !M!% chance to create a NL *That *Company card NL and *Exhaust."
+  },
+  "${ModID}:ThatCompany": {
+    "NAME": "\"That\" Company",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }
