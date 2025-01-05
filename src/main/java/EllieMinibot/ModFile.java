@@ -1,6 +1,7 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
+import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.DynamicVariable;
@@ -13,14 +14,12 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.OrbStrings;
-import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.StanceStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.cardvars.AbstractEasyDynamicVariable;
@@ -37,6 +36,7 @@ public class ModFile implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
+        PostInitializeSubscriber,
         AddAudioSubscriber {
 
     public static final String modID = "ellieminibot";
@@ -173,6 +173,7 @@ public class ModFile implements
         BaseMod.loadCustomStringsFile(OrbStrings.class, modID + "Resources/localization/" + getLangString() + "/Orbstrings.json");
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
+        BaseMod.loadCustomStringsFile(MonsterStrings.class, modID + "Resources/localization/" + getLangString() + "/MonsterStrings.json");
     }
 
     @Override
@@ -194,4 +195,20 @@ public class ModFile implements
             }
         }
     }
+
+    @Override
+    public void receivePostInitialize()
+    {
+        // Add a single monster encounter
+        BaseMod.addMonster(LanternBugMonster.ID, () -> new LanternBugMonster());
+        // Add a multi-monster encounter
+        BaseMod.addMonster("MultiLanternBug", () -> new MonsterGroup(new AbstractMonster[] {
+                new LanternBugMonster(-200.0F, 15.0F),
+                new LanternBugMonster(80.0F, 0.0F)
+        }));
+
+        BaseMod.addMonsterEncounter(Exordium.ID, new MonsterInfo(LanternBugMonster.ID, 5));
+        BaseMod.addStrongMonsterEncounter(TheCity.ID, new MonsterInfo("MultiLanternBug", 10));
+    }
+
 }

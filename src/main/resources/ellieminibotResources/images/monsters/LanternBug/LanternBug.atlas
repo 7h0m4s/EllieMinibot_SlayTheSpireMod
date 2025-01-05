@@ -1,0 +1,13 @@
+
+LanternBug.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+LanternBug
+  rotate: false
+  xy: 1, 1
+  size: 399, 240
+  orig: 440, 293
+  offset: 19, 19
+  index: -1
