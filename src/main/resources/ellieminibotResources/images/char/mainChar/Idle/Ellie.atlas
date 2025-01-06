@@ -1,0 +1,3690 @@
+
+Ellie_0.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0122
+  rotate: false
+  xy: 546, 304
+  size: 132, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0128
+  rotate: false
+  xy: 2, 304
+  size: 136, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0018
+  rotate: false
+  xy: 546, 2
+  size: 129, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0019
+  rotate: false
+  xy: 677, 2
+  size: 129, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0126
+  rotate: false
+  xy: 140, 304
+  size: 135, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0130
+  rotate: false
+  xy: 2, 606
+  size: 135, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0131
+  rotate: false
+  xy: 140, 2
+  size: 135, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0044
+  rotate: false
+  xy: 412, 2
+  size: 132, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0295
+  rotate: false
+  xy: 550, 605
+  size: 134, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0124
+  rotate: false
+  xy: 822, 2
+  size: 134, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0294
+  rotate: false
+  xy: 277, 2
+  size: 133, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0016
+  rotate: false
+  xy: 680, 304
+  size: 131, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0296
+  rotate: false
+  xy: 139, 606
+  size: 135, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0123
+  rotate: false
+  xy: 277, 304
+  size: 133, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0125
+  rotate: false
+  xy: 413, 605
+  size: 135, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0129
+  rotate: false
+  xy: 2, 2
+  size: 136, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0045
+  rotate: false
+  xy: 822, 604
+  size: 133, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0127
+  rotate: false
+  xy: 276, 605
+  size: 135, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0047
+  rotate: false
+  xy: 686, 605
+  size: 134, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0046
+  rotate: false
+  xy: 822, 302
+  size: 133, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+frame_0293
+  rotate: false
+  xy: 412, 304
+  size: 132, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 0
+
+Ellie_1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0021
+  rotate: false
+  xy: 395, 604
+  size: 127, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0347
+  rotate: false
+  xy: 524, 302
+  size: 128, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0017
+  rotate: false
+  xy: 2, 606
+  size: 129, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0043
+  rotate: false
+  xy: 2, 2
+  size: 129, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0349
+  rotate: false
+  xy: 264, 600
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0042
+  rotate: false
+  xy: 395, 302
+  size: 127, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0348
+  rotate: false
+  xy: 264, 2
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0408
+  rotate: false
+  xy: 909, 2
+  size: 113, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 1
+frame_0020
+  rotate: false
+  xy: 654, 2
+  size: 126, 300
+  orig: 139, 300
+  offset: 2, 0
+  index: 1
+frame_0014
+  rotate: false
+  xy: 525, 2
+  size: 127, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0132
+  rotate: false
+  xy: 782, 2
+  size: 125, 300
+  orig: 139, 300
+  offset: 10, 0
+  index: 1
+frame_0352
+  rotate: false
+  xy: 264, 301
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0102
+  rotate: false
+  xy: 524, 601
+  size: 126, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0353
+  rotate: false
+  xy: 133, 2
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0101
+  rotate: false
+  xy: 652, 601
+  size: 126, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0090
+  rotate: false
+  xy: 654, 304
+  size: 92, 295
+  orig: 139, 300
+  offset: 15, 0
+  index: 1
+frame_0068
+  rotate: false
+  xy: 780, 304
+  size: 125, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0350
+  rotate: false
+  xy: 133, 600
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0158
+  rotate: false
+  xy: 907, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0015
+  rotate: false
+  xy: 2, 304
+  size: 129, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0048
+  rotate: false
+  xy: 780, 606
+  size: 125, 300
+  orig: 139, 300
+  offset: 9, 0
+  index: 1
+frame_0065
+  rotate: false
+  xy: 395, 2
+  size: 128, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+frame_0388
+  rotate: false
+  xy: 907, 606
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 1
+frame_0351
+  rotate: false
+  xy: 133, 301
+  size: 129, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 1
+
+Ellie_2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0049
+  rotate: false
+  xy: 378, 606
+  size: 122, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 2
+frame_0290
+  rotate: false
+  xy: 502, 605
+  size: 122, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 2
+frame_0066
+  rotate: false
+  xy: 255, 2
+  size: 123, 299
+  orig: 139, 300
+  offset: 5, 0
+  index: 2
+frame_0297
+  rotate: false
+  xy: 254, 606
+  size: 122, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 2
+frame_0040
+  rotate: false
+  xy: 873, 304
+  size: 121, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0100
+  rotate: false
+  xy: 2, 304
+  size: 125, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0098
+  rotate: false
+  xy: 129, 606
+  size: 123, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0507
+  rotate: false
+  xy: 873, 2
+  size: 121, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0067
+  rotate: false
+  xy: 254, 304
+  size: 123, 300
+  orig: 139, 300
+  offset: 4, 0
+  index: 2
+frame_0292
+  rotate: false
+  xy: 503, 303
+  size: 122, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 2
+frame_0396
+  rotate: false
+  xy: 750, 2
+  size: 121, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0291
+  rotate: false
+  xy: 502, 2
+  size: 122, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 2
+frame_0099
+  rotate: false
+  xy: 129, 2
+  size: 124, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0505
+  rotate: false
+  xy: 627, 303
+  size: 121, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0288
+  rotate: false
+  xy: 380, 2
+  size: 120, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 2
+frame_0041
+  rotate: false
+  xy: 2, 2
+  size: 125, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0012
+  rotate: false
+  xy: 626, 604
+  size: 122, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0069
+  rotate: false
+  xy: 129, 304
+  size: 123, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0070
+  rotate: false
+  xy: 750, 304
+  size: 121, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0013
+  rotate: false
+  xy: 2, 605
+  size: 125, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0508
+  rotate: false
+  xy: 873, 606
+  size: 121, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 2
+frame_0050
+  rotate: false
+  xy: 379, 303
+  size: 122, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 2
+frame_0022
+  rotate: false
+  xy: 750, 606
+  size: 121, 300
+  orig: 139, 300
+  offset: 5, 0
+  index: 2
+frame_0289
+  rotate: false
+  xy: 626, 2
+  size: 122, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 2
+
+Ellie_3.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0397
+  rotate: false
+  xy: 611, 602
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0298
+  rotate: false
+  xy: 125, 2
+  size: 120, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 3
+frame_0118
+  rotate: false
+  xy: 125, 304
+  size: 109, 296
+  orig: 139, 300
+  offset: 18, 0
+  index: 3
+frame_0322
+  rotate: false
+  xy: 734, 2
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0323
+  rotate: false
+  xy: 853, 606
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0092
+  rotate: false
+  xy: 612, 304
+  size: 112, 296
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0501
+  rotate: false
+  xy: 491, 2
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0324
+  rotate: false
+  xy: 732, 606
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0502
+  rotate: false
+  xy: 247, 2
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0504
+  rotate: false
+  xy: 2, 302
+  size: 121, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0282
+  rotate: false
+  xy: 855, 2
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0096
+  rotate: false
+  xy: 368, 602
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0133
+  rotate: false
+  xy: 2, 602
+  size: 120, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 3
+frame_0321
+  rotate: false
+  xy: 732, 304
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0400
+  rotate: false
+  xy: 490, 602
+  size: 119, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0499
+  rotate: false
+  xy: 368, 302
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0011
+  rotate: false
+  xy: 369, 2
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0509
+  rotate: false
+  xy: 246, 304
+  size: 120, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0051
+  rotate: false
+  xy: 853, 304
+  size: 119, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 3
+frame_0097
+  rotate: false
+  xy: 246, 606
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0283
+  rotate: false
+  xy: 124, 602
+  size: 120, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0500
+  rotate: false
+  xy: 490, 302
+  size: 120, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+frame_0134
+  rotate: false
+  xy: 613, 2
+  size: 119, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 3
+frame_0506
+  rotate: false
+  xy: 2, 2
+  size: 121, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 3
+
+Ellie_4.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0319
+  rotate: false
+  xy: 2, 601
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0009
+  rotate: false
+  xy: 721, 2
+  size: 117, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0037
+  rotate: false
+  xy: 604, 2
+  size: 115, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0490
+  rotate: false
+  xy: 2, 301
+  size: 119, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0354
+  rotate: false
+  xy: 721, 304
+  size: 118, 297
+  orig: 139, 300
+  offset: 12, 0
+  index: 4
+frame_0355
+  rotate: false
+  xy: 482, 304
+  size: 118, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 4
+frame_0320
+  rotate: false
+  xy: 364, 2
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0039
+  rotate: false
+  xy: 242, 601
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0135
+  rotate: false
+  xy: 122, 601
+  size: 118, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 4
+frame_0010
+  rotate: false
+  xy: 484, 2
+  size: 118, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0023
+  rotate: false
+  xy: 723, 604
+  size: 117, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 4
+frame_0159
+  rotate: false
+  xy: 840, 2
+  size: 117, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0503
+  rotate: false
+  xy: 2, 2
+  size: 120, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0000
+  rotate: false
+  xy: 602, 302
+  size: 117, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0325
+  rotate: false
+  xy: 244, 2
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0089
+  rotate: false
+  xy: 123, 304
+  size: 89, 295
+  orig: 139, 300
+  offset: 16, 0
+  index: 4
+frame_0001
+  rotate: false
+  xy: 604, 604
+  size: 117, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0299
+  rotate: false
+  xy: 124, 2
+  size: 118, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 4
+frame_0464
+  rotate: false
+  xy: 482, 604
+  size: 118, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0399
+  rotate: false
+  xy: 362, 606
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0460
+  rotate: false
+  xy: 842, 605
+  size: 117, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0281
+  rotate: false
+  xy: 842, 304
+  size: 117, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+frame_0398
+  rotate: false
+  xy: 362, 304
+  size: 118, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 4
+
+Ellie_5.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0462
+  rotate: false
+  xy: 121, 602
+  size: 117, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0414
+  rotate: false
+  xy: 593, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0356
+  rotate: false
+  xy: 121, 302
+  size: 117, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 5
+frame_0103
+  rotate: false
+  xy: 240, 2
+  size: 116, 300
+  orig: 139, 300
+  offset: 11, 0
+  index: 5
+frame_0390
+  rotate: false
+  xy: 593, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0300
+  rotate: false
+  xy: 240, 304
+  size: 116, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 5
+frame_0391
+  rotate: false
+  xy: 827, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0358
+  rotate: false
+  xy: 595, 606
+  size: 116, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0438
+  rotate: false
+  xy: 476, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 5
+frame_0405
+  rotate: false
+  xy: 710, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 5
+frame_0008
+  rotate: false
+  xy: 2, 2
+  size: 117, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0038
+  rotate: false
+  xy: 2, 303
+  size: 117, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0136
+  rotate: false
+  xy: 240, 606
+  size: 116, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0280
+  rotate: false
+  xy: 477, 606
+  size: 116, 299
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0071
+  rotate: false
+  xy: 358, 2
+  size: 116, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0389
+  rotate: false
+  xy: 476, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0461
+  rotate: false
+  xy: 121, 2
+  size: 117, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0463
+  rotate: false
+  xy: 2, 604
+  size: 117, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0104
+  rotate: false
+  xy: 713, 606
+  size: 115, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 5
+frame_0301
+  rotate: false
+  xy: 830, 606
+  size: 115, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 5
+frame_0415
+  rotate: false
+  xy: 827, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0406
+  rotate: false
+  xy: 358, 304
+  size: 116, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 5
+frame_0095
+  rotate: false
+  xy: 358, 606
+  size: 117, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 5
+frame_0439
+  rotate: false
+  xy: 710, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 5
+
+Ellie_6.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0469
+  rotate: false
+  xy: 2, 304
+  size: 115, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 6
+frame_0437
+  rotate: false
+  xy: 585, 2
+  size: 114, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 6
+frame_0440
+  rotate: false
+  xy: 353, 2
+  size: 114, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+frame_0073
+  rotate: false
+  xy: 933, 600
+  size: 89, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 6
+frame_0360
+  rotate: false
+  xy: 236, 2
+  size: 115, 299
+  orig: 139, 300
+  offset: 15, 0
+  index: 6
+frame_0407
+  rotate: false
+  xy: 469, 304
+  size: 114, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+frame_0476
+  rotate: false
+  xy: 934, 2
+  size: 88, 300
+  orig: 139, 300
+  offset: 24, 0
+  index: 6
+frame_0387
+  rotate: false
+  xy: 2, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 6
+frame_0157
+  rotate: false
+  xy: 469, 606
+  size: 114, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 6
+frame_0413
+  rotate: false
+  xy: 469, 2
+  size: 114, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 6
+frame_0468
+  rotate: false
+  xy: 119, 605
+  size: 115, 299
+  orig: 139, 300
+  offset: 12, 0
+  index: 6
+frame_0121
+  rotate: false
+  xy: 817, 301
+  size: 115, 297
+  orig: 139, 300
+  offset: 15, 0
+  index: 6
+frame_0156
+  rotate: false
+  xy: 585, 304
+  size: 114, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 6
+frame_0064
+  rotate: false
+  xy: 236, 603
+  size: 115, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 6
+frame_0395
+  rotate: false
+  xy: 353, 606
+  size: 114, 300
+  orig: 139, 300
+  offset: 9, 0
+  index: 6
+frame_0361
+  rotate: false
+  xy: 817, 600
+  size: 114, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 6
+frame_0436
+  rotate: false
+  xy: 353, 304
+  size: 114, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 6
+frame_0287
+  rotate: false
+  xy: 701, 304
+  size: 114, 299
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+frame_0362
+  rotate: false
+  xy: 701, 605
+  size: 114, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 6
+frame_0094
+  rotate: false
+  xy: 817, 2
+  size: 115, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 6
+frame_0417
+  rotate: false
+  xy: 701, 2
+  size: 114, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+frame_0359
+  rotate: false
+  xy: 119, 304
+  size: 115, 299
+  orig: 139, 300
+  offset: 15, 0
+  index: 6
+frame_0357
+  rotate: false
+  xy: 236, 303
+  size: 115, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+frame_0467
+  rotate: false
+  xy: 585, 606
+  size: 114, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 6
+frame_0052
+  rotate: false
+  xy: 119, 2
+  size: 115, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 6
+frame_0416
+  rotate: false
+  xy: 2, 606
+  size: 115, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 6
+
+Ellie_7.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0418
+  rotate: false
+  xy: 692, 2
+  size: 112, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0326
+  rotate: false
+  xy: 232, 304
+  size: 113, 300
+  orig: 139, 300
+  offset: 5, 0
+  index: 7
+frame_0386
+  rotate: false
+  xy: 347, 304
+  size: 113, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 7
+frame_0145
+  rotate: false
+  xy: 921, 304
+  size: 101, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 7
+frame_0404
+  rotate: false
+  xy: 348, 2
+  size: 113, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 7
+frame_0441
+  rotate: false
+  xy: 2, 602
+  size: 113, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 7
+frame_0402
+  rotate: false
+  xy: 347, 606
+  size: 113, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0363
+  rotate: false
+  xy: 463, 2
+  size: 113, 299
+  orig: 139, 300
+  offset: 17, 0
+  index: 7
+frame_0392
+  rotate: false
+  xy: 578, 2
+  size: 112, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0120
+  rotate: false
+  xy: 578, 304
+  size: 113, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 7
+frame_0119
+  rotate: false
+  xy: 118, 304
+  size: 109, 296
+  orig: 139, 300
+  offset: 18, 0
+  index: 7
+frame_0154
+  rotate: false
+  xy: 921, 2
+  size: 101, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 7
+frame_0189
+  rotate: false
+  xy: 693, 304
+  size: 112, 297
+  orig: 139, 300
+  offset: 14, 0
+  index: 7
+frame_0403
+  rotate: false
+  xy: 807, 606
+  size: 112, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 7
+frame_0316
+  rotate: false
+  xy: 2, 302
+  size: 114, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 7
+frame_0435
+  rotate: false
+  xy: 692, 603
+  size: 113, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 7
+frame_0105
+  rotate: false
+  xy: 232, 606
+  size: 113, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 7
+frame_0093
+  rotate: false
+  xy: 462, 304
+  size: 114, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 7
+frame_0411
+  rotate: false
+  xy: 807, 2
+  size: 112, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0063
+  rotate: false
+  xy: 577, 603
+  size: 113, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0137
+  rotate: false
+  xy: 118, 2
+  size: 113, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0053
+  rotate: false
+  xy: 117, 602
+  size: 113, 300
+  orig: 139, 300
+  offset: 19, 0
+  index: 7
+frame_0153
+  rotate: false
+  xy: 921, 606
+  size: 101, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 7
+frame_0286
+  rotate: false
+  xy: 462, 603
+  size: 113, 299
+  orig: 139, 300
+  offset: 12, 0
+  index: 7
+frame_0106
+  rotate: false
+  xy: 807, 304
+  size: 112, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+frame_0483
+  rotate: false
+  xy: 2, 2
+  size: 114, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 7
+frame_0412
+  rotate: false
+  xy: 233, 2
+  size: 113, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 7
+
+Ellie_8.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0165
+  rotate: false
+  xy: 798, 2
+  size: 111, 300
+  orig: 139, 300
+  offset: 11, 0
+  index: 8
+frame_0367
+  rotate: false
+  xy: 911, 304
+  size: 111, 300
+  orig: 139, 300
+  offset: 19, 0
+  index: 8
+frame_0191
+  rotate: false
+  xy: 798, 606
+  size: 112, 297
+  orig: 139, 300
+  offset: 14, 0
+  index: 8
+frame_0410
+  rotate: false
+  xy: 2, 2
+  size: 112, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 8
+frame_0434
+  rotate: false
+  xy: 458, 2
+  size: 112, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 8
+frame_0318
+  rotate: false
+  xy: 230, 303
+  size: 112, 299
+  orig: 139, 300
+  offset: 5, 0
+  index: 8
+frame_0364
+  rotate: false
+  xy: 116, 606
+  size: 112, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 8
+frame_0062
+  rotate: false
+  xy: 458, 302
+  size: 112, 298
+  orig: 139, 300
+  offset: 16, 0
+  index: 8
+frame_0419
+  rotate: false
+  xy: 911, 2
+  size: 111, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 8
+frame_0479
+  rotate: false
+  xy: 912, 606
+  size: 110, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 8
+frame_0107
+  rotate: false
+  xy: 572, 2
+  size: 111, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 8
+frame_0442
+  rotate: false
+  xy: 685, 2
+  size: 111, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 8
+frame_0466
+  rotate: false
+  xy: 2, 606
+  size: 112, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 8
+frame_0366
+  rotate: false
+  xy: 230, 604
+  size: 112, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 8
+frame_0401
+  rotate: false
+  xy: 798, 304
+  size: 111, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 8
+frame_0163
+  rotate: false
+  xy: 572, 304
+  size: 111, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 8
+frame_0365
+  rotate: false
+  xy: 344, 2
+  size: 112, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 8
+frame_0443
+  rotate: false
+  xy: 685, 606
+  size: 111, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 8
+frame_0482
+  rotate: false
+  xy: 458, 602
+  size: 112, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 8
+frame_0160
+  rotate: false
+  xy: 116, 2
+  size: 112, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 8
+frame_0385
+  rotate: false
+  xy: 572, 606
+  size: 111, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 8
+frame_0285
+  rotate: false
+  xy: 230, 2
+  size: 112, 299
+  orig: 139, 300
+  offset: 13, 0
+  index: 8
+frame_0380
+  rotate: false
+  xy: 2, 304
+  size: 112, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 8
+frame_0193
+  rotate: false
+  xy: 344, 303
+  size: 112, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 8
+frame_0192
+  rotate: false
+  xy: 344, 603
+  size: 112, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 8
+frame_0164
+  rotate: false
+  xy: 685, 304
+  size: 111, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 8
+frame_0409
+  rotate: false
+  xy: 116, 304
+  size: 112, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 8
+
+Ellie_9.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0254
+  rotate: false
+  xy: 677, 302
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0166
+  rotate: false
+  xy: 678, 602
+  size: 109, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 9
+frame_0036
+  rotate: false
+  xy: 115, 601
+  size: 111, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0155
+  rotate: false
+  xy: 900, 606
+  size: 109, 300
+  orig: 139, 300
+  offset: 5, 0
+  index: 9
+frame_0368
+  rotate: false
+  xy: 453, 301
+  size: 110, 299
+  orig: 139, 300
+  offset: 19, 0
+  index: 9
+frame_0255
+  rotate: false
+  xy: 565, 2
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0284
+  rotate: false
+  xy: 341, 304
+  size: 110, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 9
+frame_0345
+  rotate: false
+  xy: 452, 2
+  size: 111, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 9
+frame_0433
+  rotate: false
+  xy: 566, 602
+  size: 110, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 9
+frame_0445
+  rotate: false
+  xy: 901, 304
+  size: 109, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 9
+frame_0465
+  rotate: false
+  xy: 340, 2
+  size: 110, 300
+  orig: 139, 300
+  offset: 9, 0
+  index: 9
+frame_0481
+  rotate: false
+  xy: 2, 301
+  size: 111, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0444
+  rotate: false
+  xy: 228, 2
+  size: 110, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 9
+frame_0252
+  rotate: false
+  xy: 789, 302
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0489
+  rotate: false
+  xy: 2, 601
+  size: 111, 298
+  orig: 139, 300
+  offset: 9, 0
+  index: 9
+frame_0346
+  rotate: false
+  xy: 341, 606
+  size: 111, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 9
+frame_0253
+  rotate: false
+  xy: 454, 602
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0190
+  rotate: false
+  xy: 2, 2
+  size: 112, 297
+  orig: 139, 300
+  offset: 14, 0
+  index: 9
+frame_0196
+  rotate: false
+  xy: 565, 302
+  size: 110, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 9
+frame_0384
+  rotate: false
+  xy: 901, 2
+  size: 109, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 9
+frame_0195
+  rotate: false
+  xy: 115, 301
+  size: 111, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 9
+frame_0256
+  rotate: false
+  xy: 677, 2
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+frame_0194
+  rotate: false
+  xy: 228, 601
+  size: 111, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 9
+frame_0188
+  rotate: false
+  xy: 116, 2
+  size: 110, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 9
+frame_0302
+  rotate: false
+  xy: 789, 602
+  size: 109, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 9
+frame_0251
+  rotate: false
+  xy: 789, 2
+  size: 110, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 9
+
+Ellie_10.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0344
+  rotate: false
+  xy: 889, 304
+  size: 109, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0449
+  rotate: false
+  xy: 335, 602
+  size: 109, 299
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0459
+  rotate: false
+  xy: 335, 301
+  size: 109, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 10
+frame_0024
+  rotate: false
+  xy: 113, 606
+  size: 109, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 10
+frame_0420
+  rotate: false
+  xy: 113, 2
+  size: 109, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0317
+  rotate: false
+  xy: 557, 602
+  size: 109, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 10
+frame_0186
+  rotate: false
+  xy: 668, 606
+  size: 109, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0185
+  rotate: false
+  xy: 890, 603
+  size: 109, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0330
+  rotate: false
+  xy: 778, 2
+  size: 108, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 10
+frame_0162
+  rotate: false
+  xy: 2, 2
+  size: 109, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 10
+frame_0061
+  rotate: false
+  xy: 778, 304
+  size: 109, 297
+  orig: 139, 300
+  offset: 19, 0
+  index: 10
+frame_0379
+  rotate: false
+  xy: 668, 2
+  size: 108, 300
+  orig: 139, 300
+  offset: 0, 0
+  index: 10
+frame_0108
+  rotate: false
+  xy: 113, 304
+  size: 109, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 10
+frame_0448
+  rotate: false
+  xy: 224, 602
+  size: 109, 299
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0197
+  rotate: false
+  xy: 557, 302
+  size: 109, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 10
+frame_0035
+  rotate: false
+  xy: 779, 603
+  size: 109, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 10
+frame_0470
+  rotate: false
+  xy: 2, 304
+  size: 109, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 10
+frame_0258
+  rotate: false
+  xy: 446, 2
+  size: 109, 298
+  orig: 139, 300
+  offset: 1, 0
+  index: 10
+frame_0447
+  rotate: false
+  xy: 446, 602
+  size: 109, 299
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0054
+  rotate: false
+  xy: 2, 606
+  size: 109, 300
+  orig: 139, 300
+  offset: 22, 0
+  index: 10
+frame_0257
+  rotate: false
+  xy: 557, 2
+  size: 109, 298
+  orig: 139, 300
+  offset: 1, 0
+  index: 10
+frame_0187
+  rotate: false
+  xy: 224, 2
+  size: 110, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 10
+frame_0446
+  rotate: false
+  xy: 888, 2
+  size: 108, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 10
+frame_0369
+  rotate: false
+  xy: 224, 301
+  size: 109, 299
+  orig: 139, 300
+  offset: 19, 0
+  index: 10
+frame_0250
+  rotate: false
+  xy: 446, 302
+  size: 109, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 10
+frame_0487
+  rotate: false
+  xy: 668, 304
+  size: 108, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 10
+frame_0184
+  rotate: false
+  xy: 336, 2
+  size: 108, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 10
+
+Ellie_11.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0248
+  rotate: false
+  xy: 658, 2
+  size: 107, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 11
+frame_0247
+  rotate: false
+  xy: 549, 303
+  size: 107, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 11
+frame_0249
+  rotate: false
+  xy: 2, 604
+  size: 108, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 11
+frame_0498
+  rotate: false
+  xy: 549, 603
+  size: 107, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0161
+  rotate: false
+  xy: 222, 304
+  size: 107, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0497
+  rotate: false
+  xy: 658, 302
+  size: 107, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0421
+  rotate: false
+  xy: 658, 602
+  size: 106, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+frame_0279
+  rotate: false
+  xy: 440, 605
+  size: 107, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 11
+frame_0452
+  rotate: false
+  xy: 549, 2
+  size: 107, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+frame_0370
+  rotate: false
+  xy: 222, 2
+  size: 107, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+frame_0329
+  rotate: false
+  xy: 222, 606
+  size: 107, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0167
+  rotate: false
+  xy: 331, 2
+  size: 107, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0488
+  rotate: false
+  xy: 112, 2
+  size: 108, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0138
+  rotate: false
+  xy: 440, 2
+  size: 107, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 11
+frame_0328
+  rotate: false
+  xy: 874, 604
+  size: 106, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0496
+  rotate: false
+  xy: 876, 2
+  size: 107, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 11
+frame_0432
+  rotate: false
+  xy: 112, 302
+  size: 108, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 11
+frame_0109
+  rotate: false
+  xy: 331, 304
+  size: 107, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 11
+frame_0450
+  rotate: false
+  xy: 2, 303
+  size: 108, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+frame_0383
+  rotate: false
+  xy: 874, 302
+  size: 106, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 11
+frame_0198
+  rotate: false
+  xy: 112, 602
+  size: 108, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 11
+frame_0183
+  rotate: false
+  xy: 767, 2
+  size: 107, 298
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+frame_0003
+  rotate: false
+  xy: 2, 2
+  size: 108, 299
+  orig: 139, 300
+  offset: 9, 0
+  index: 11
+frame_0378
+  rotate: false
+  xy: 767, 302
+  size: 105, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 11
+frame_0331
+  rotate: false
+  xy: 766, 602
+  size: 106, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 11
+frame_0491
+  rotate: false
+  xy: 331, 606
+  size: 107, 300
+  orig: 139, 300
+  offset: 11, 0
+  index: 11
+frame_0451
+  rotate: false
+  xy: 440, 304
+  size: 107, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 11
+
+Ellie_12.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0458
+  rotate: false
+  xy: 327, 2
+  size: 106, 299
+  orig: 139, 300
+  offset: 12, 0
+  index: 12
+frame_0004
+  rotate: false
+  xy: 867, 2
+  size: 106, 298
+  orig: 139, 300
+  offset: 11, 0
+  index: 12
+frame_0091
+  rotate: false
+  xy: 652, 302
+  size: 95, 296
+  orig: 139, 300
+  offset: 14, 0
+  index: 12
+frame_0430
+  rotate: false
+  xy: 543, 601
+  size: 106, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 12
+frame_0422
+  rotate: false
+  xy: 2, 304
+  size: 106, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 12
+frame_0343
+  rotate: false
+  xy: 110, 304
+  size: 107, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 12
+frame_0431
+  rotate: false
+  xy: 867, 602
+  size: 106, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 12
+frame_0117
+  rotate: false
+  xy: 435, 303
+  size: 107, 296
+  orig: 139, 300
+  offset: 19, 0
+  index: 12
+frame_0259
+  rotate: false
+  xy: 867, 302
+  size: 106, 298
+  orig: 139, 300
+  offset: 4, 0
+  index: 12
+frame_0168
+  rotate: false
+  xy: 2, 606
+  size: 106, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 12
+frame_0303
+  rotate: false
+  xy: 2, 2
+  size: 106, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 12
+frame_0454
+  rotate: false
+  xy: 651, 600
+  size: 106, 298
+  orig: 139, 300
+  offset: 18, 0
+  index: 12
+frame_0332
+  rotate: false
+  xy: 110, 2
+  size: 106, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 12
+frame_0060
+  rotate: false
+  xy: 110, 603
+  size: 107, 297
+  orig: 139, 300
+  offset: 21, 0
+  index: 12
+frame_0199
+  rotate: false
+  xy: 759, 600
+  size: 106, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 12
+frame_0486
+  rotate: false
+  xy: 327, 604
+  size: 106, 299
+  orig: 139, 300
+  offset: 14, 0
+  index: 12
+frame_0116
+  rotate: false
+  xy: 543, 2
+  size: 107, 296
+  orig: 139, 300
+  offset: 19, 0
+  index: 12
+frame_0453
+  rotate: false
+  xy: 435, 601
+  size: 106, 298
+  orig: 139, 300
+  offset: 18, 0
+  index: 12
+frame_0277
+  rotate: false
+  xy: 327, 303
+  size: 106, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 12
+frame_0278
+  rotate: false
+  xy: 435, 2
+  size: 106, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 12
+frame_0182
+  rotate: false
+  xy: 652, 2
+  size: 106, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 12
+frame_0034
+  rotate: false
+  xy: 218, 2
+  size: 107, 297
+  orig: 139, 300
+  offset: 0, 0
+  index: 12
+frame_0110
+  rotate: false
+  xy: 219, 301
+  size: 106, 299
+  orig: 139, 300
+  offset: 21, 0
+  index: 12
+frame_0381
+  rotate: false
+  xy: 760, 2
+  size: 105, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 12
+frame_0002
+  rotate: false
+  xy: 219, 602
+  size: 106, 299
+  orig: 139, 300
+  offset: 11, 0
+  index: 12
+frame_0005
+  rotate: false
+  xy: 544, 300
+  size: 106, 298
+  orig: 139, 300
+  offset: 11, 0
+  index: 12
+
+Ellie_13.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0216
+  rotate: false
+  xy: 754, 2
+  size: 104, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 13
+frame_0457
+  rotate: false
+  xy: 860, 602
+  size: 105, 299
+  orig: 139, 300
+  offset: 14, 0
+  index: 13
+frame_0219
+  rotate: false
+  xy: 646, 2
+  size: 106, 297
+  orig: 139, 300
+  offset: 15, 0
+  index: 13
+frame_0494
+  rotate: false
+  xy: 2, 302
+  size: 106, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0111
+  rotate: false
+  xy: 217, 302
+  size: 105, 300
+  orig: 139, 300
+  offset: 21, 0
+  index: 13
+frame_0275
+  rotate: false
+  xy: 860, 2
+  size: 105, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 13
+frame_0327
+  rotate: false
+  xy: 431, 2
+  size: 105, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0221
+  rotate: false
+  xy: 538, 301
+  size: 106, 297
+  orig: 139, 300
+  offset: 14, 0
+  index: 13
+frame_0201
+  rotate: false
+  xy: 753, 301
+  size: 105, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 13
+frame_0342
+  rotate: false
+  xy: 860, 303
+  size: 105, 297
+  orig: 139, 300
+  offset: 19, 0
+  index: 13
+frame_0222
+  rotate: false
+  xy: 110, 2
+  size: 106, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0223
+  rotate: false
+  xy: 2, 602
+  size: 106, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0218
+  rotate: false
+  xy: 538, 600
+  size: 106, 297
+  orig: 139, 300
+  offset: 15, 0
+  index: 13
+frame_0072
+  rotate: false
+  xy: 431, 304
+  size: 105, 300
+  orig: 139, 300
+  offset: 9, 0
+  index: 13
+frame_0495
+  rotate: false
+  xy: 2, 2
+  size: 106, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0276
+  rotate: false
+  xy: 753, 602
+  size: 105, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 13
+frame_0423
+  rotate: false
+  xy: 324, 2
+  size: 105, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 13
+frame_0217
+  rotate: false
+  xy: 538, 2
+  size: 106, 297
+  orig: 139, 300
+  offset: 15, 0
+  index: 13
+frame_0471
+  rotate: false
+  xy: 110, 302
+  size: 105, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 13
+frame_0006
+  rotate: false
+  xy: 110, 604
+  size: 105, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0484
+  rotate: false
+  xy: 218, 2
+  size: 104, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 13
+frame_0200
+  rotate: false
+  xy: 431, 606
+  size: 105, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 13
+frame_0382
+  rotate: false
+  xy: 217, 604
+  size: 105, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 13
+frame_0202
+  rotate: false
+  xy: 646, 602
+  size: 105, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 13
+frame_0169
+  rotate: false
+  xy: 324, 604
+  size: 105, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 13
+frame_0112
+  rotate: false
+  xy: 646, 301
+  size: 105, 299
+  orig: 139, 300
+  offset: 21, 0
+  index: 13
+frame_0055
+  rotate: false
+  xy: 324, 304
+  size: 105, 298
+  orig: 139, 300
+  offset: 24, 0
+  index: 13
+
+Ellie_14.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0139
+  rotate: false
+  xy: 748, 304
+  size: 104, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 14
+frame_0181
+  rotate: false
+  xy: 323, 2
+  size: 105, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 14
+frame_0148
+  rotate: false
+  xy: 642, 2
+  size: 104, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 14
+frame_0007
+  rotate: false
+  xy: 216, 602
+  size: 105, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 14
+frame_0149
+  rotate: false
+  xy: 854, 2
+  size: 104, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 14
+frame_0170
+  rotate: false
+  xy: 642, 304
+  size: 104, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 14
+frame_0226
+  rotate: false
+  xy: 109, 302
+  size: 105, 298
+  orig: 139, 300
+  offset: 9, 0
+  index: 14
+frame_0175
+  rotate: false
+  xy: 430, 606
+  size: 104, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 14
+frame_0455
+  rotate: false
+  xy: 2, 302
+  size: 105, 298
+  orig: 139, 300
+  offset: 16, 0
+  index: 14
+frame_0426
+  rotate: false
+  xy: 536, 606
+  size: 104, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 14
+frame_0172
+  rotate: false
+  xy: 536, 2
+  size: 104, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 14
+frame_0220
+  rotate: false
+  xy: 748, 606
+  size: 105, 297
+  orig: 139, 300
+  offset: 15, 0
+  index: 14
+frame_0273
+  rotate: false
+  xy: 748, 2
+  size: 104, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 14
+frame_0429
+  rotate: false
+  xy: 216, 302
+  size: 105, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 14
+frame_0376
+  rotate: false
+  xy: 216, 2
+  size: 105, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 14
+frame_0394
+  rotate: false
+  xy: 642, 606
+  size: 104, 300
+  orig: 139, 300
+  offset: 21, 0
+  index: 14
+frame_0428
+  rotate: false
+  xy: 323, 302
+  size: 105, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 14
+frame_0174
+  rotate: false
+  xy: 855, 603
+  size: 104, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 14
+frame_0333
+  rotate: false
+  xy: 536, 304
+  size: 104, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 14
+frame_0492
+  rotate: false
+  xy: 109, 2
+  size: 105, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 14
+frame_0274
+  rotate: false
+  xy: 430, 304
+  size: 104, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 14
+frame_0224
+  rotate: false
+  xy: 2, 2
+  size: 105, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 14
+frame_0115
+  rotate: false
+  xy: 854, 304
+  size: 105, 297
+  orig: 139, 300
+  offset: 20, 0
+  index: 14
+frame_0180
+  rotate: false
+  xy: 2, 602
+  size: 105, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 14
+frame_0315
+  rotate: false
+  xy: 323, 602
+  size: 105, 298
+  orig: 139, 300
+  offset: 9, 0
+  index: 14
+frame_0425
+  rotate: false
+  xy: 430, 2
+  size: 104, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 14
+frame_0493
+  rotate: false
+  xy: 109, 602
+  size: 105, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 14
+
+Ellie_15.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0485
+  rotate: false
+  xy: 2, 303
+  size: 104, 299
+  orig: 139, 300
+  offset: 15, 0
+  index: 15
+frame_0147
+  rotate: false
+  xy: 741, 606
+  size: 103, 300
+  orig: 139, 300
+  offset: 17, 0
+  index: 15
+frame_0261
+  rotate: false
+  xy: 847, 2
+  size: 103, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 15
+frame_0150
+  rotate: false
+  xy: 846, 304
+  size: 103, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 15
+frame_0033
+  rotate: false
+  xy: 532, 304
+  size: 93, 296
+  orig: 139, 300
+  offset: 12, 0
+  index: 15
+frame_0266
+  rotate: false
+  xy: 636, 304
+  size: 103, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 15
+frame_0176
+  rotate: false
+  xy: 108, 2
+  size: 104, 298
+  orig: 139, 300
+  offset: 18, 0
+  index: 15
+frame_0472
+  rotate: false
+  xy: 742, 2
+  size: 103, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 15
+frame_0267
+  rotate: false
+  xy: 637, 2
+  size: 103, 300
+  orig: 139, 300
+  offset: 6, 0
+  index: 15
+frame_0424
+  rotate: false
+  xy: 2, 2
+  size: 104, 299
+  orig: 139, 300
+  offset: 18, 0
+  index: 15
+frame_0225
+  rotate: false
+  xy: 320, 2
+  size: 104, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 15
+frame_0171
+  rotate: false
+  xy: 636, 606
+  size: 103, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 15
+frame_0427
+  rotate: false
+  xy: 214, 2
+  size: 104, 298
+  orig: 139, 300
+  offset: 16, 0
+  index: 15
+frame_0056
+  rotate: false
+  xy: 108, 302
+  size: 104, 298
+  orig: 139, 300
+  offset: 24, 0
+  index: 15
+frame_0304
+  rotate: false
+  xy: 532, 2
+  size: 103, 300
+  orig: 139, 300
+  offset: 19, 0
+  index: 15
+frame_0025
+  rotate: false
+  xy: 426, 602
+  size: 103, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 15
+frame_0377
+  rotate: false
+  xy: 108, 602
+  size: 104, 298
+  orig: 139, 300
+  offset: 0, 0
+  index: 15
+frame_0260
+  rotate: false
+  xy: 214, 602
+  size: 104, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 15
+frame_0178
+  rotate: false
+  xy: 426, 302
+  size: 104, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 15
+frame_0113
+  rotate: false
+  xy: 320, 302
+  size: 104, 298
+  orig: 139, 300
+  offset: 21, 0
+  index: 15
+frame_0456
+  rotate: false
+  xy: 214, 302
+  size: 104, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 15
+frame_0179
+  rotate: false
+  xy: 426, 2
+  size: 104, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 15
+frame_0114
+  rotate: false
+  xy: 320, 602
+  size: 104, 298
+  orig: 139, 300
+  offset: 21, 0
+  index: 15
+frame_0173
+  rotate: false
+  xy: 2, 604
+  size: 104, 299
+  orig: 139, 300
+  offset: 16, 0
+  index: 15
+frame_0151
+  rotate: false
+  xy: 531, 602
+  size: 103, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 15
+frame_0215
+  rotate: false
+  xy: 846, 606
+  size: 104, 297
+  orig: 139, 300
+  offset: 16, 0
+  index: 15
+frame_0393
+  rotate: false
+  xy: 741, 304
+  size: 103, 300
+  orig: 139, 300
+  offset: 23, 0
+  index: 15
+
+Ellie_16.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0213
+  rotate: false
+  xy: 736, 600
+  size: 103, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 16
+frame_0246
+  rotate: false
+  xy: 738, 2
+  size: 102, 298
+  orig: 139, 300
+  offset: 4, 0
+  index: 16
+frame_0262
+  rotate: false
+  xy: 318, 2
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0271
+  rotate: false
+  xy: 107, 600
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0227
+  rotate: false
+  xy: 527, 302
+  size: 103, 298
+  orig: 139, 300
+  offset: 10, 0
+  index: 16
+frame_0371
+  rotate: false
+  xy: 528, 602
+  size: 102, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 16
+frame_0214
+  rotate: false
+  xy: 528, 2
+  size: 103, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 16
+frame_0269
+  rotate: false
+  xy: 213, 2
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0152
+  rotate: false
+  xy: 632, 602
+  size: 102, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 16
+frame_0177
+  rotate: false
+  xy: 423, 2
+  size: 103, 298
+  orig: 139, 300
+  offset: 19, 0
+  index: 16
+frame_0058
+  rotate: false
+  xy: 2, 2
+  size: 104, 297
+  orig: 139, 300
+  offset: 23, 0
+  index: 16
+frame_0032
+  rotate: false
+  xy: 737, 302
+  size: 91, 296
+  orig: 139, 300
+  offset: 13, 0
+  index: 16
+frame_0140
+  rotate: false
+  xy: 841, 602
+  size: 101, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 16
+frame_0270
+  rotate: false
+  xy: 422, 303
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0229
+  rotate: false
+  xy: 422, 604
+  size: 103, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0059
+  rotate: false
+  xy: 2, 301
+  size: 104, 297
+  orig: 139, 300
+  offset: 23, 0
+  index: 16
+frame_0230
+  rotate: false
+  xy: 842, 2
+  size: 102, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0268
+  rotate: false
+  xy: 212, 303
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0228
+  rotate: false
+  xy: 841, 302
+  size: 102, 298
+  orig: 139, 300
+  offset: 9, 0
+  index: 16
+frame_0203
+  rotate: false
+  xy: 2, 600
+  size: 103, 299
+  orig: 139, 300
+  offset: 17, 0
+  index: 16
+frame_0264
+  rotate: false
+  xy: 212, 604
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0057
+  rotate: false
+  xy: 633, 2
+  size: 103, 297
+  orig: 139, 300
+  offset: 24, 0
+  index: 16
+frame_0204
+  rotate: false
+  xy: 632, 301
+  size: 103, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 16
+frame_0263
+  rotate: false
+  xy: 317, 303
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0272
+  rotate: false
+  xy: 317, 604
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+frame_0265
+  rotate: false
+  xy: 108, 2
+  size: 103, 299
+  orig: 139, 300
+  offset: 6, 0
+  index: 16
+
+Ellie_17.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0212
+  rotate: false
+  xy: 105, 2
+  size: 102, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 17
+frame_0143
+  rotate: false
+  xy: 106, 601
+  size: 100, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 17
+frame_0231
+  rotate: false
+  xy: 106, 301
+  size: 101, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 17
+frame_0211
+  rotate: false
+  xy: 412, 301
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0373
+  rotate: false
+  xy: 819, 302
+  size: 98, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 17
+frame_0208
+  rotate: false
+  xy: 517, 2
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0142
+  rotate: false
+  xy: 310, 304
+  size: 100, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 17
+frame_0334
+  rotate: false
+  xy: 2, 2
+  size: 101, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0341
+  rotate: false
+  xy: 2, 304
+  size: 102, 297
+  orig: 139, 300
+  offset: 20, 0
+  index: 17
+frame_0372
+  rotate: false
+  xy: 208, 601
+  size: 100, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 17
+frame_0340
+  rotate: false
+  xy: 819, 2
+  size: 99, 298
+  orig: 139, 300
+  offset: 21, 0
+  index: 17
+frame_0207
+  rotate: false
+  xy: 310, 606
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0335
+  rotate: false
+  xy: 620, 2
+  size: 98, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 17
+frame_0336
+  rotate: false
+  xy: 720, 2
+  size: 97, 300
+  orig: 139, 300
+  offset: 21, 0
+  index: 17
+frame_0146
+  rotate: false
+  xy: 718, 600
+  size: 99, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 17
+frame_0206
+  rotate: false
+  xy: 311, 2
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0209
+  rotate: false
+  xy: 413, 600
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0245
+  rotate: false
+  xy: 920, 2
+  size: 99, 298
+  orig: 139, 300
+  offset: 6, 0
+  index: 17
+frame_0141
+  rotate: false
+  xy: 516, 600
+  size: 99, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 17
+frame_0305
+  rotate: false
+  xy: 617, 600
+  size: 99, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 17
+frame_0339
+  rotate: false
+  xy: 819, 604
+  size: 98, 298
+  orig: 139, 300
+  offset: 22, 0
+  index: 17
+frame_0210
+  rotate: false
+  xy: 414, 2
+  size: 101, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 17
+frame_0144
+  rotate: false
+  xy: 209, 2
+  size: 100, 300
+  orig: 139, 300
+  offset: 12, 0
+  index: 17
+frame_0205
+  rotate: false
+  xy: 2, 603
+  size: 102, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 17
+frame_0478
+  rotate: false
+  xy: 919, 601
+  size: 98, 299
+  orig: 139, 300
+  offset: 12, 0
+  index: 17
+frame_0244
+  rotate: false
+  xy: 919, 302
+  size: 99, 297
+  orig: 139, 300
+  offset: 6, 0
+  index: 17
+frame_0314
+  rotate: false
+  xy: 515, 301
+  size: 101, 297
+  orig: 139, 300
+  offset: 12, 0
+  index: 17
+
+Ellie_18.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0026
+  rotate: false
+  xy: 393, 601
+  size: 94, 300
+  orig: 139, 300
+  offset: 18, 0
+  index: 18
+frame_0240
+  rotate: false
+  xy: 585, 301
+  size: 93, 297
+  orig: 139, 300
+  offset: 11, 0
+  index: 18
+frame_0236
+  rotate: false
+  xy: 585, 600
+  size: 93, 297
+  orig: 139, 300
+  offset: 11, 0
+  index: 18
+frame_0477
+  rotate: false
+  xy: 2, 2
+  size: 97, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 18
+frame_0234
+  rotate: false
+  xy: 200, 2
+  size: 95, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0074
+  rotate: false
+  xy: 489, 601
+  size: 94, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 18
+frame_0375
+  rotate: false
+  xy: 296, 600
+  size: 95, 298
+  orig: 139, 300
+  offset: 12, 0
+  index: 18
+frame_0235
+  rotate: false
+  xy: 394, 2
+  size: 95, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0233
+  rotate: false
+  xy: 199, 301
+  size: 96, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0238
+  rotate: false
+  xy: 491, 2
+  size: 93, 297
+  orig: 139, 300
+  offset: 11, 0
+  index: 18
+frame_0239
+  rotate: false
+  xy: 490, 301
+  size: 93, 298
+  orig: 139, 300
+  offset: 11, 0
+  index: 18
+frame_0232
+  rotate: false
+  xy: 101, 2
+  size: 97, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0312
+  rotate: false
+  xy: 868, 600
+  size: 92, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 18
+frame_0242
+  rotate: false
+  xy: 393, 302
+  size: 95, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0088
+  rotate: false
+  xy: 297, 302
+  size: 87, 296
+  orig: 139, 300
+  offset: 17, 0
+  index: 18
+frame_0307
+  rotate: false
+  xy: 775, 2
+  size: 91, 299
+  orig: 139, 300
+  offset: 22, 0
+  index: 18
+frame_0337
+  rotate: false
+  xy: 101, 301
+  size: 96, 299
+  orig: 139, 300
+  offset: 22, 0
+  index: 18
+frame_0243
+  rotate: false
+  xy: 101, 602
+  size: 96, 297
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0338
+  rotate: false
+  xy: 2, 604
+  size: 97, 298
+  orig: 139, 300
+  offset: 22, 0
+  index: 18
+frame_0306
+  rotate: false
+  xy: 774, 600
+  size: 92, 299
+  orig: 139, 300
+  offset: 22, 0
+  index: 18
+frame_0237
+  rotate: false
+  xy: 586, 2
+  size: 93, 297
+  orig: 139, 300
+  offset: 11, 0
+  index: 18
+frame_0480
+  rotate: false
+  xy: 2, 304
+  size: 97, 298
+  orig: 139, 300
+  offset: 14, 0
+  index: 18
+frame_0075
+  rotate: false
+  xy: 680, 600
+  size: 92, 300
+  orig: 139, 300
+  offset: 13, 0
+  index: 18
+frame_0311
+  rotate: false
+  xy: 681, 2
+  size: 91, 297
+  orig: 139, 300
+  offset: 19, 0
+  index: 18
+frame_0241
+  rotate: false
+  xy: 297, 2
+  size: 95, 298
+  orig: 139, 300
+  offset: 9, 0
+  index: 18
+frame_0076
+  rotate: false
+  xy: 868, 2
+  size: 90, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 18
+frame_0313
+  rotate: false
+  xy: 680, 301
+  size: 93, 297
+  orig: 139, 300
+  offset: 17, 0
+  index: 18
+frame_0374
+  rotate: false
+  xy: 199, 600
+  size: 95, 298
+  orig: 139, 300
+  offset: 13, 0
+  index: 18
+
+Ellie_19.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0028
+  rotate: false
+  xy: 363, 2
+  size: 86, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 19
+frame_0080
+  rotate: false
+  xy: 542, 304
+  size: 85, 299
+  orig: 139, 300
+  offset: 15, 0
+  index: 19
+frame_0030
+  rotate: false
+  xy: 186, 2
+  size: 87, 298
+  orig: 139, 300
+  offset: 17, 0
+  index: 19
+frame_0078
+  rotate: false
+  xy: 275, 2
+  size: 86, 300
+  orig: 139, 300
+  offset: 16, 0
+  index: 19
+frame_0077
+  rotate: false
+  xy: 2, 304
+  size: 90, 300
+  orig: 139, 300
+  offset: 14, 0
+  index: 19
+frame_0031
+  rotate: false
+  xy: 185, 601
+  size: 89, 297
+  orig: 139, 300
+  offset: 14, 0
+  index: 19
+frame_0079
+  rotate: false
+  xy: 451, 2
+  size: 86, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 19
+frame_0308
+  rotate: false
+  xy: 94, 2
+  size: 90, 298
+  orig: 139, 300
+  offset: 22, 0
+  index: 19
+frame_0473
+  rotate: false
+  xy: 366, 601
+  size: 87, 300
+  orig: 139, 300
+  offset: 29, 0
+  index: 19
+frame_0029
+  rotate: false
+  xy: 539, 2
+  size: 85, 300
+  orig: 139, 300
+  offset: 19, 0
+  index: 19
+frame_0309
+  rotate: false
+  xy: 2, 606
+  size: 90, 298
+  orig: 139, 300
+  offset: 21, 0
+  index: 19
+frame_0086
+  rotate: false
+  xy: 629, 302
+  size: 81, 296
+  orig: 139, 300
+  offset: 19, 0
+  index: 19
+frame_0310
+  rotate: false
+  xy: 94, 302
+  size: 90, 297
+  orig: 139, 300
+  offset: 20, 0
+  index: 19
+frame_0027
+  rotate: false
+  xy: 94, 601
+  size: 89, 300
+  orig: 139, 300
+  offset: 20, 0
+  index: 19
+frame_0081
+  rotate: false
+  xy: 455, 304
+  size: 85, 300
+  orig: 139, 300
+  offset: 15, 0
+  index: 19
+frame_0087
+  rotate: false
+  xy: 186, 302
+  size: 83, 296
+  orig: 139, 300
+  offset: 18, 0
+  index: 19
+frame_0083
+  rotate: false
+  xy: 626, 2
+  size: 84, 298
+  orig: 139, 300
+  offset: 15, 0
+  index: 19
+frame_0085
+  rotate: false
+  xy: 626, 605
+  size: 82, 297
+  orig: 139, 300
+  offset: 18, 0
+  index: 19
+frame_0474
+  rotate: false
+  xy: 276, 601
+  size: 88, 300
+  orig: 139, 300
+  offset: 27, 0
+  index: 19
+frame_0082
+  rotate: false
+  xy: 455, 606
+  size: 85, 299
+  orig: 139, 300
+  offset: 15, 0
+  index: 19
+frame_0084
+  rotate: false
+  xy: 542, 605
+  size: 82, 298
+  orig: 139, 300
+  offset: 17, 0
+  index: 19
+frame_0475
+  rotate: false
+  xy: 2, 2
+  size: 90, 300
+  orig: 139, 300
+  offset: 23, 0
+  index: 19
