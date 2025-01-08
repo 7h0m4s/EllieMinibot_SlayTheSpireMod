@@ -1,6 +1,5 @@
 package EllieMinibot;
 
-import EllieMinibot.cards.AbstractEasyCardDemo;
 import EllieMinibot.cards.EasyModalChoiceCard;
 import EllieMinibot.cards.democards.complex.EasyXCostDemo;
 import EllieMinibot.cards.democards.complex.InlinePowerDemo;

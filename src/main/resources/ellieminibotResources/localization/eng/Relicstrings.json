@@ -7,10 +7,10 @@
     ]
   },
   "${ModID}:EllieAntennaRelic": {
-    "NAME": "Ellie's Antenna",
-    "FLAVOR": "TODO: Flavor make this a sweet relic.",
+    "NAME": "Antennas",
+    "FLAVOR": "Antenna found upon the head of a silly little robot.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Channel a random friend of Ellie as an orb at start of combat."
     ]
   }
 }
