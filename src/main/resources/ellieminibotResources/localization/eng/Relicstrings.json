@@ -5,5 +5,12 @@
     "DESCRIPTIONS": [
       "Has no effect."
     ]
+  },
+  "${ModID}:EllieAntennaRelic": {
+    "NAME": "Ellie's Antenna",
+    "FLAVOR": "TODO: Flavor make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
   }
 }

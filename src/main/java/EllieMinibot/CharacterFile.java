@@ -4,6 +4,7 @@ import EllieMinibot.cards.attackcards.*;
 import EllieMinibot.cards.powercards.*;
 import EllieMinibot.cards.skillcards.*;
 import EllieMinibot.cards.skillcards.ReadyToRaidCard;
+import EllieMinibot.relics.EllieAntennaRelic;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.G3DJAnimation;
@@ -102,7 +103,8 @@ public class CharacterFile extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(TodoItem.ID);
+        //retVal.add(TodoItem.ID);
+        retVal.add(EllieAntennaRelic.ID);
         return retVal;
     }
 

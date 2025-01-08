@@ -1,5 +1,14 @@
 package EllieMinibot;
 
+import EllieMinibot.cards.AbstractEasyCardDemo;
+import EllieMinibot.cards.EasyModalChoiceCard;
+import EllieMinibot.cards.democards.complex.EasyXCostDemo;
+import EllieMinibot.cards.democards.complex.InlinePowerDemo;
+import EllieMinibot.cards.democards.complex.MultiCardPreviewAndDrawCallback;
+import EllieMinibot.cards.democards.complex.SelectCardsPlusCardMods;
+import EllieMinibot.cards.democards.simple.DrawAndShiv;
+import EllieMinibot.cards.democards.simple.StartupBlockCard;
+import EllieMinibot.cards.democards.simple.TwoTypesOfDamage;
 import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
 import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
