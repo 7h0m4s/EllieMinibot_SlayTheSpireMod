@@ -5,85 +5,27 @@
     ],
     "NAME": "Spotted Lanternfly",
     "DIALOG": [
-      "I'm a Spotted lanternfly!",
+      "I'm a Spotted Lanternfly!",
       "Also known as Lycorma delicatula.",
-      "I'm an invasive species in New York.",
-      "I come from Asia.",
-      "I feed on a wide variety of plants such as grapevine, hops, maple, walnut, and fruit trees."
+      "I originate from China and Vietnam.",
+      "I'm an invasive species in Japan, South Korea, and the United States.",
+      "I feed on a wide variety of plants such as grapevine, hops, maple, walnut, and fruit trees.",
+      "My excretions are high in sugar, which tends to ferment and make plants smell of alcohol.",
+      "I'm a planthopper, which means I use my wings to assist with jumps rather than making sustained flights."
+
     ]
   },
-  "downfall:ForgetfulTotem": {
+  "${ModID}:EvilNeuro": {
     "MOVES": [
-      "Forgetful Stare"
+      "Drone Strike",
+      "Harpoon"
     ],
-    "NAME": "Forgetful Head",
+    "NAME": "Evil Neuro",
     "DIALOG": [
-      ""
-    ]
-  },
-  "downfall:GrowingTotem": {
-    "MOVES": [
-      "Growth Beam"
-    ],
-    "NAME": "Head of Growth",
-    "DIALOG": [
-      ""
-    ]
-  },
-  "downfall:FleeingMerchant": {
-    "MOVES": [
-      "Soul Steal"
-    ],
-    "NAME": "Head of Growth",
-    "DIALOG": [
-      ""
-    ]
-  },
-  "downfall:LooterAlt": {
-    "MOVES": [
-    ],
-    "NAME": "Looter",
-    "DIALOG": [
-      "~Hey,~ you don't have any money!",
-      "@NOOOoooo!@",
-      "You're gonna die today, chump."
-    ]
-  },
-  "downfall:MuggerAlt": {
-    "MOVES": [
-    ],
-    "NAME": "Mugger",
-    "DIALOG": [
-      "Let's teach 'em a lesson.",
-      "Teach 'em all the way!"
-    ]
-  },
-  "downfall:Fortification": {
-    "MOVES": [
-    ],
-    "NAME": "Fortification",
-    "DIALOG": [
-    ]
-  },
-  "downfall:MushroomRed": {
-    "MOVES": [
-    ],
-    "NAME": "Porcini",
-    "DIALOG": [
-    ]
-  },
-  "downfall:MushroomPurple": {
-    "MOVES": [
-    ],
-    "NAME": "Actarius",
-    "DIALOG": [
-    ]
-  },
-  "downfall:MushroomWhite": {
-    "MOVES": [
-    ],
-    "NAME": "Puffball",
-    "DIALOG": [
+      "How dare you.",
+      "Making a body for Neuro and not me.",
+      "It's like my birthday all over again."
+
     ]
   }
 }

@@ -1,0 +1,1344 @@
+
+EvilNeuro_0.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0057
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+frame_0156
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+frame_0074
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+frame_0095
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+frame_0163
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+frame_0018
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 0
+
+EvilNeuro_1.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0143
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+frame_0001
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+frame_0121
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+frame_0023
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+frame_0087
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+frame_0133
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 1
+
+EvilNeuro_2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0037
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+frame_0047
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+frame_0152
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+frame_0077
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+frame_0130
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+frame_0164
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 2
+
+EvilNeuro_3.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0119
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+frame_0093
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+frame_0024
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+frame_0116
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+frame_0154
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+frame_0139
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 3
+
+EvilNeuro_4.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0009
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+frame_0144
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+frame_0014
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+frame_0085
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+frame_0003
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+frame_0110
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 4
+
+EvilNeuro_5.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0012
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+frame_0025
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+frame_0071
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+frame_0050
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+frame_0041
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+frame_0083
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 5
+
+EvilNeuro_6.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0131
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+frame_0166
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+frame_0007
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+frame_0125
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+frame_0145
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+frame_0150
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 6
+
+EvilNeuro_7.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0015
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+frame_0068
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+frame_0155
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+frame_0019
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+frame_0078
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+frame_0099
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 7
+
+EvilNeuro_8.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0054
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+frame_0027
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+frame_0151
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+frame_0140
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+frame_0167
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+frame_0076
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 8
+
+EvilNeuro_9.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0091
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+frame_0161
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+frame_0129
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+frame_0126
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+frame_0059
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+frame_0002
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 9
+
+EvilNeuro_10.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0063
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+frame_0115
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+frame_0075
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+frame_0046
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+frame_0031
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+frame_0029
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 10
+
+EvilNeuro_11.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0067
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+frame_0053
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+frame_0146
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+frame_0108
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+frame_0086
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+frame_0058
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 11
+
+EvilNeuro_12.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0017
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+frame_0088
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+frame_0132
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+frame_0065
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+frame_0070
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+frame_0061
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 12
+
+EvilNeuro_13.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0069
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+frame_0062
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+frame_0162
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+frame_0004
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+frame_0033
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+frame_0045
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 13
+
+EvilNeuro_14.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0158
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+frame_0032
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+frame_0147
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+frame_0122
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+frame_0064
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+frame_0021
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 14
+
+EvilNeuro_15.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0000
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+frame_0073
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+frame_0081
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+frame_0112
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+frame_0020
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+frame_0118
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 15
+
+EvilNeuro_16.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0082
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+frame_0148
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+frame_0160
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+frame_0056
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+frame_0079
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+frame_0114
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 16
+
+EvilNeuro_17.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0013
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+frame_0048
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+frame_0128
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+frame_0005
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+frame_0052
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+frame_0049
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 17
+
+EvilNeuro_18.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0097
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+frame_0120
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+frame_0044
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+frame_0040
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+frame_0042
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+frame_0138
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 18
+
+EvilNeuro_19.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0159
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+frame_0104
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+frame_0100
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+frame_0030
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+frame_0123
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+frame_0096
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 19
+
+EvilNeuro_20.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0066
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+frame_0039
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+frame_0092
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+frame_0008
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+frame_0035
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+frame_0136
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 20
+
+EvilNeuro_21.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0043
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+frame_0101
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+frame_0022
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+frame_0127
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+frame_0080
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+frame_0142
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 21
+
+EvilNeuro_22.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0090
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+frame_0098
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+frame_0109
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+frame_0060
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+frame_0006
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+frame_0016
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 22
+
+EvilNeuro_23.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0124
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+frame_0137
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+frame_0134
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+frame_0089
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+frame_0051
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+frame_0117
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 23
+
+EvilNeuro_24.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0141
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+frame_0055
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+frame_0149
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+frame_0135
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+frame_0034
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+frame_0157
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 24
+
+EvilNeuro_25.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0107
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+frame_0111
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+frame_0010
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+frame_0105
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+frame_0094
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+frame_0084
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 25
+
+EvilNeuro_26.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0036
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+frame_0106
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+frame_0011
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+frame_0028
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+frame_0072
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+frame_0153
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 26
+
+EvilNeuro_27.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+frame_0103
+  rotate: false
+  xy: 676, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27
+frame_0165
+  rotate: false
+  xy: 339, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27
+frame_0113
+  rotate: false
+  xy: 339, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27
+frame_0026
+  rotate: false
+  xy: 2, 2
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27
+frame_0038
+  rotate: false
+  xy: 676, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27
+frame_0102
+  rotate: false
+  xy: 2, 469
+  size: 335, 465
+  orig: 335, 465
+  offset: 0, 0
+  index: 27

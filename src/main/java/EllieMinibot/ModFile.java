@@ -9,6 +9,7 @@ import EllieMinibot.cards.democards.simple.DrawAndShiv;
 import EllieMinibot.cards.democards.simple.StartupBlockCard;
 import EllieMinibot.cards.democards.simple.TwoTypesOfDamage;
 import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
+import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
@@ -217,6 +218,15 @@ public class ModFile implements
 
         BaseMod.addMonsterEncounter(Exordium.ID, new MonsterInfo(LanternBugMonster.ID, 5));
         BaseMod.addStrongMonsterEncounter(TheCity.ID, new MonsterInfo("MultiLanternBug", 10));
+
+
+
+        BaseMod.addMonster(EvilNeuroMonster.ID, () -> new EvilNeuroMonster());
+
+        BaseMod.addBoss(Exordium.ID, EvilNeuroMonster.ID,
+                "ellieminibotResources/images/ui/map/boss/EvilNeuro.png",
+                "ellieminibotResources/images/ui/map/bossOutline/EvilNeuro.png");
+
     }
 
 }
