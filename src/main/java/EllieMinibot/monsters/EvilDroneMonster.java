@@ -61,8 +61,8 @@ public class EvilDroneMonster extends AbstractMonster {
     }
 
     public void takeTurn() {
-        // 10% chance to say the next message
-        if(lastMessageIndex < DIALOG.length - 1 && new Random().randomBoolean(0.1F)){
+        // 5% chance to say the next message
+        if(lastMessageIndex < DIALOG.length - 1 && new Random().randomBoolean(0.05F)){
             lastMessageIndex += 1;
             AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[lastMessageIndex], 0.3F, 2.0F));
 
