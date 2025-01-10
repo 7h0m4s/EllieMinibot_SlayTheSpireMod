@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 
@@ -38,6 +40,7 @@ public class EvilDroneMonster extends AbstractMonster {
     private static final byte STASIS = 3;
     private boolean usedStasis = false;
     private int count;
+    private int lastMessageIndex = -1;
 
     public EvilDroneMonster(float x, float y, int count) {
         super(monsterStrings.NAME, ID, AbstractDungeon.monsterHpRng.random(52, 58), 0.0F, 0.0F, 160.0F, 160.0F, "ellieminibotResources/images/monsters/EvilDrone/EvilDrone.png", x, y);
@@ -58,10 +61,16 @@ public class EvilDroneMonster extends AbstractMonster {
     }
 
     public void takeTurn() {
+        // 10% chance to say the next message
+        if(lastMessageIndex < DIALOG.length - 1 && new Random().randomBoolean(0.1F)){
+            lastMessageIndex += 1;
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[lastMessageIndex], 0.3F, 2.0F));
+
+        }
         switch (this.nextMove) {
             case 1:
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.RED)));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.3F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(0), AttackEffect.NONE));
                 break;
@@ -92,7 +101,7 @@ public class EvilDroneMonster extends AbstractMonster {
         } else if (num >= 70 && !this.lastTwoMoves((byte)2)) {
             this.setMove((byte)2, Intent.DEFEND);
         } else if (!this.lastTwoMoves((byte)1)) {
-            this.setMove((byte)1, Intent.ATTACK, 8);
+            this.setMove(MOVES[0],(byte)1, Intent.ATTACK, 8);
         } else {
             this.setMove((byte)2, Intent.DEFEND);
         }

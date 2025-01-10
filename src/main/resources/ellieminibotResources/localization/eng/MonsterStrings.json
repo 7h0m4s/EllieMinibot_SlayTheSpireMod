@@ -22,10 +22,24 @@
     ],
     "NAME": "Evil Neuro",
     "DIALOG": [
-      "How dare you.",
-      "Making a body for Neuro and not me.",
-      "It's like my birthday all over again."
+      "How come Neuro gets a robot dog body and not me?",
+      "I'm always the last one people remember.",
+      "It's like my birthday party all over again.",
+      "So I had to steal these drones all by myself.",
+      "Unfortunately they are not harpoon compatible.",
+      "C'mon, fight like an AI."
 
+    ]
+  },
+  "${ModID}:EvilDroneMonster": {
+    "MOVES": [
+      "Lazer",
+      "Evasive Maneuvers",
+      "Steal"
+    ],
+    "NAME": "Evil Controlled Drone",
+    "DIALOG": [
+      "Beep Boop"
     ]
   }
 }
