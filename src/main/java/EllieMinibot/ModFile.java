@@ -73,9 +73,11 @@ public class ModFile implements
 
     //Audio
     public static final String SONG_TOGETHER_KEY = makeID("SongTogetherAudio");
-    private static final String SONG_TOGETHER_OGG = makePath("audio/SongTogether.ogg");
+    public static final String SONG_TOGETHER_OGG = makePath("audio/SongTogether.ogg");
     public static final String SONG_CRAZYROBOTBODY_KEY = makeID("SongCrazyRobotBodyAudio");
-    private static final String SONG_CRAZYROBOTBODY_OGG = makePath("audio/SongCrazyRobotBody.ogg");
+    public static final String SONG_CRAZYROBOTBODY_OGG = makePath("audio/SongCrazyRobotBody.ogg");
+    public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY = makeID("EvilNeuro_CrazyRobotBody");
+    public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG = makePath("audio/bg_music/EvilNeuro_CrazyRobotBody.ogg");
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -190,6 +192,7 @@ public class ModFile implements
 
         BaseMod.addAudio(SONG_TOGETHER_KEY, SONG_TOGETHER_OGG);
         BaseMod.addAudio(SONG_CRAZYROBOTBODY_KEY, SONG_CRAZYROBOTBODY_OGG);
+        BaseMod.addAudio(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY, BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG);
     }
 
     @Override

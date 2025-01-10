@@ -1,5 +1,6 @@
 package EllieMinibot.monsters;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -25,7 +26,6 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.EnemyType;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
-import com.megacrit.cardcrawl.monsters.city.BronzeOrb;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.random.Random;
@@ -33,7 +33,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.LaserBeamEffect;
 
-import static EllieMinibot.ModFile.makeID;
+import static EllieMinibot.ModFile.*;
 
 public class EvilNeuroMonster extends AbstractMonster {
     public static final String ID = makeID("EvilNeuro");
@@ -136,14 +136,14 @@ public class EvilNeuroMonster extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_AUTOMATON_SUMMON", MathUtils.random(-0.1F, 0.1F)));
                 }
 
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrb(-300.0F, 200.0F, 0), true));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new EvilDroneMonster(-300.0F, 200.0F, 0), true));
                 if (MathUtils.randomBoolean()) {
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("AUTOMATON_ORB_SPAWN", MathUtils.random(-0.1F, 0.1F)));
                 } else {
                     AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_AUTOMATON_SUMMON", MathUtils.random(-0.1F, 0.1F)));
                 }
 
-                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrb(200.0F, 130.0F, 1), true));
+                AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new EvilDroneMonster(200.0F, 130.0F, 1), true));
                 break;
             case 5:
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.blockAmt));

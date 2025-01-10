@@ -1,0 +1,27 @@
+
+EvilDrone.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dronebody_red
+  rotate: false
+  xy: 1, 1
+  size: 1000, 780
+  orig: 1000, 780
+  offset: 0, 0
+  index: -1
+rightBlade
+  rotate: false
+  xy: 120, 783
+  size: 115, 36
+  orig: 115, 36
+  offset: 0, 0
+  index: -1
+leftBlade
+  rotate: false
+  xy: 1, 783
+  size: 117, 36
+  orig: 117, 36
+  offset: 0, 0
+  index: -1
