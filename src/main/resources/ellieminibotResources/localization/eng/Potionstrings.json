@@ -5,5 +5,12 @@
             "Gain #b",
             " #yStrength."
         ]
+    },
+    "${ModID}:BeansPotion": {
+        "NAME": "Bathroom Beans",
+        "DESCRIPTIONS": [
+            "#yHeal #b",
+            ", and avoid awkward social interaction."
+        ]
     }
 }
