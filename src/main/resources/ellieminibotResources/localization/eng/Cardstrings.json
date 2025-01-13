@@ -156,10 +156,12 @@
     "DESCRIPTION": "\"Swarming in hundreds\" NL Add !M! *Bug *Facts to your hand."
   },
   "${ModID}:BugFact": {
-    "NAME": "Bug Facts",
+    "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & *Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Scientists are unsure why the Brazilian treehopper has these globular appendages coming out of its thorax. Some scientists speculate they are a form of defense against predators."
+      "Scientists are unsure why the Brazilian treehopper has these globular appendages coming out of its thorax. Some scientists speculate they are a form of defense against predators.",
+      "To attract a mate, the peanut bug (Fulgora laternaria) will knock its head on a hollow tree to create sound vibrations",
+      "A silkworm eats enough leaves to increase its weight over 4,000 times in 56 days."
     ]
   }
 }
