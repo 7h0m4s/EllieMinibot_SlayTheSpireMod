@@ -98,6 +98,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(VedalCollabCard.ID);
         retVal.add(CerberCollabCard.ID);
         retVal.add(HireathonCard.ID);
+        retVal.add(LoudAsCicadaCard.ID);
         return retVal;
     }
 

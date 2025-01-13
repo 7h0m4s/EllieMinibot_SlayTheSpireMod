@@ -150,5 +150,16 @@
   "${ModID}:ThatCompany": {
     "NAME": "\"That\" Company",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:LoudAsCicada": {
+    "NAME": "Loud As Cicadas",
+    "DESCRIPTION": "\"Swarming in hundreds\" NL Add !M! *Bug *Facts to your hand."
+  },
+  "${ModID}:BugFact": {
+    "NAME": "Bug Facts",
+    "DESCRIPTION": "Deal !D! damage & *Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Scientists are unsure why the Brazilian treehopper has these globular appendages coming out of its thorax. Some scientists speculate they are a form of defense against predators."
+    ]
   }
 }
