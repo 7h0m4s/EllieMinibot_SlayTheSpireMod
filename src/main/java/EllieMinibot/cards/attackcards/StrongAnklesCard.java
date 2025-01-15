@@ -8,14 +8,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.Wiz.applyToEnemyTop;
 
 public class StrongAnklesCard extends AbstractEasyCard {
 

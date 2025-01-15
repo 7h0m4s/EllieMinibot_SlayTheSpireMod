@@ -7,9 +7,7 @@ import EllieMinibot.cards.skillcards.ReadyToRaidCard;
 import EllieMinibot.relics.EllieAntennaRelic;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.G3DJAnimation;
 import basemod.animations.SpineAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -28,7 +26,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import EllieMinibot.cards.Defend;
 import EllieMinibot.cards.Strike;
-import EllieMinibot.relics.TodoItem;
 
 import java.util.ArrayList;
 
