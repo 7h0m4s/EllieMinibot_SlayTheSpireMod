@@ -63,5 +63,12 @@
       "Shoomimi"
     ],
     "DESCRIPTION": "An orb that draws a card at the start of turn."
+  },
+  {
+    "PROPER_NAME": "Ellie_Minibot",
+    "NAMES": [
+      "Ellie_Minibot"
+    ],
+    "DESCRIPTION": "An orb that creates Bug Fact cards at the start of turn."
   }
 ]

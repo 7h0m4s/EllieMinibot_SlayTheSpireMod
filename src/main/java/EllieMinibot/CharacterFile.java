@@ -85,6 +85,7 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(GomiCollabCard.ID);
         retVal.add(MinikoMewCollabCard.ID);
         retVal.add(ShoomimiCollabCard.ID);
+        retVal.add(EllieCollabCard.ID);
         retVal.add(TeethModelCard.ID);
         retVal.add(WaterproofingCard.ID);
         retVal.add(OtamatoneCard.ID);

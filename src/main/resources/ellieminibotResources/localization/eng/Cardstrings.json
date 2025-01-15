@@ -135,6 +135,10 @@
     "NAME": "Cerber Collab",
     "DESCRIPTION": "*Channel 1 *Cerber."
   },
+  "${ModID}:EllieCollab": {
+    "NAME": "Ellie Solo Stream",
+    "DESCRIPTION": "*Channel 1 *Ellie."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
     "DESCRIPTION": "*Channel !M! *Frost.",

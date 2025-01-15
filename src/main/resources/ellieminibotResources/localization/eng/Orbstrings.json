@@ -26,7 +26,7 @@
   "VedalOrb": {
     "NAME": "Vedal987",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, upgrade #b%d cards in your draw pile. NL #yEvoke: Upgrade #b%d random card in hand."
+      "#yPassive: At the start of your turn, upgrade #b%d cards in your draw pile. NL #yEvoke: Upgrade #b%d random cards in hand."
     ]
   },
   "CerberOrb": {
@@ -38,9 +38,17 @@
   "ShoomimiOrb": {
     "NAME": "Shoomimi",
     "DESCRIPTION": [
-      "#yPassive: At the start of turn draw #b%d card.",
+      "#yPassive: At the start of turn draw #b%d cards.",
       " NL #yEvoke: Draw #b%d",
-      " card."
+      " cards."
+    ]
+  },
+  "EllieOrb": {
+    "NAME": "Ellie Minibot",
+    "DESCRIPTION": [
+      "#yPassive: At the start of turn, create #b%d #yBug #yFact card.",
+      " NL #yEvoke: Create #b%d",
+      " #yBug #yFact card."
     ]
   }
 }
