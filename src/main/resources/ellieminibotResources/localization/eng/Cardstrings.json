@@ -159,6 +159,10 @@
     "NAME": "Loud As Cicadas",
     "DESCRIPTION": "\"Swarming in hundreds\" NL Add !M! *Bug *Facts to your hand."
   },
+  "${ModID}:StrongAnkles": {
+    "NAME": "Strong Ankles",
+    "DESCRIPTION": "Deal !D! damage NL Draw !M! *Bug *Fact cards."
+  },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & *Exhaust.",

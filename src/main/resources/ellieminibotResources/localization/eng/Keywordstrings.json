@@ -15,6 +15,13 @@
     "DESCRIPTION": "#b%s."
   },
   {
+    "PROPER_NAME": "Card Suggested By",
+    "NAMES": [
+      "CardSuggestedBy"
+    ],
+    "DESCRIPTION": "#b%s."
+  },
+  {
     "PROPER_NAME": "Waterproofing",
     "NAMES": [
       "Waterproofing"
