@@ -30,6 +30,7 @@ public class EllieAntennaRelic extends AbstractEasyRelic {
         orbClasses.add(ShoomimiOrb.class);
         orbClasses.add(VedalOrb.class);
         orbClasses.add(YourAverageBoOrb.class);
+        orbClasses.add(EllieOrb.class);
 
         // Step 2: Select a random class
         Random random = new Random();
