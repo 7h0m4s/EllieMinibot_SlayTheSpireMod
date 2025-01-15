@@ -163,6 +163,10 @@
     "NAME": "Strong Ankles",
     "DESCRIPTION": "Deal !D! damage NL Draw !M! *Bug *Fact cards."
   },
+  "${ModID}:NerdyGirlRizz": {
+    "NAME": "Nerdy Girl Rizz",
+    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters."
+  },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & *Exhaust.",
