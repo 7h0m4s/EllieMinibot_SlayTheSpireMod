@@ -139,6 +139,10 @@
     "NAME": "Ellie Solo Stream",
     "DESCRIPTION": "*Channel 1 *Ellie."
   },
+  "${ModID}:BookieCollab": {
+    "NAME": "Bookie Collab",
+    "DESCRIPTION": "*Channel 1 *Bookie."
+  },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
     "DESCRIPTION": "*Channel !M! *Frost.",
@@ -165,7 +169,7 @@
   },
   "${ModID}:NerdyGirlRizz": {
     "NAME": "Nerdy Girl Rizz",
-    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters."
+    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters. NL *Exhaust"
   },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",

@@ -50,5 +50,12 @@
       " NL #yEvoke: Create #b%d",
       " #yBug #yFact card."
     ]
+  },
+  "BookieOrb": {
+    "NAME": "Bookie",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, randomly transfer either #b%d debuff from player to a monster OR  #b%d buff from a monster to the player.",
+      " NL #yEvoke: Randomly transfer either #b%d debuff from player to a monster OR  #b%d buff from a monster to the player."
+    ]
   }
 }
