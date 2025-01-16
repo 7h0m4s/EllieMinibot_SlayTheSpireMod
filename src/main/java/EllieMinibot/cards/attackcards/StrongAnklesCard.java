@@ -43,6 +43,7 @@ public class StrongAnklesCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@zieb_s")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("BugFact")), BaseMod.getKeywordDescription(makeID("BugFact"))));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("CardSuggestedBy")), String.format(BaseMod.getKeywordDescription(makeID("CardSuggestedBy")), "Maple #bPrime")));
         return tooltips;
     }

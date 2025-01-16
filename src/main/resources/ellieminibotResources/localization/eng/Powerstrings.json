@@ -12,5 +12,12 @@
     "DESCRIPTIONS": [
       "Reduce incoming damage by #b%d"
     ]
+  },
+  "${ModID}:UmActuallyPower": {
+    "NAME": "Umm Actually",
+    "DESCRIPTIONS": [
+      "#yBug #Facts deal #b",
+      " additional damage."
+    ]
   }
 }

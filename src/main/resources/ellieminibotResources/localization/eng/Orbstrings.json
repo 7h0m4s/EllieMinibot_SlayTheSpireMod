@@ -10,7 +10,7 @@
   "GomiOrb": {
     "NAME": "Gomi",
     "DESCRIPTION": [
-      "#yPassive: At the end of turn, apply #b ",
+      "#yPassive: At the end of turn, apply #b",
       " #yPoison to a random enemy. NL #yEvoke: Apply #b",
       " #yPoison to a random enemy twice."
     ]

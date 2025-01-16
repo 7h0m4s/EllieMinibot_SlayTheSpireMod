@@ -111,6 +111,14 @@
     "NAME": "Crazy Effing Robot Body Song",
     "DESCRIPTION": "Gain !M! *Strength."
   },
+  "${ModID}:DrinkingStream": {
+    "NAME": "Drinking Stream",
+    "DESCRIPTION": "Gain !B! *Block for every *Channeled orb."
+  },
+  "${ModID}:UmActually": {
+    "NAME": "Ummm, Actually",
+    "DESCRIPTION": "*Bug *Fact cards deal an extra !M! damage."
+  },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
     "DESCRIPTION": "*Channel 1 *YourAverageBo."

@@ -100,6 +100,8 @@ public class CharacterFile extends CustomPlayer {
         retVal.add(StrongAnklesCard.ID);
         retVal.add(NerdyGirlRizzCard.ID);
         retVal.add(BookieCollabCard.ID);
+        retVal.add(DrinkingStreamCard.ID);
+        retVal.add(UmActuallyCard.ID);
         return retVal;
     }
 

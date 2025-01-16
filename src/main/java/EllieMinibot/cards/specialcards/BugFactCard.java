@@ -1,6 +1,7 @@
 package EllieMinibot.cards.specialcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import EllieMinibot.powers.UmActuallyPower;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,8 +27,8 @@ public class BugFactCard  extends AbstractEasyCard {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         tags.add(CardTags.EMPTY);
 
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower("Accuracy")) {
-            this.baseDamage = 4 + AbstractDungeon.player.getPower("Accuracy").amount;
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(UmActuallyPower.POWER_ID)) {
+            this.baseDamage = 4 + AbstractDungeon.player.getPower(UmActuallyPower.POWER_ID).amount;
         } else {
             this.baseDamage = 4;
         }

@@ -29,6 +29,20 @@
     "DESCRIPTION": "Reduce incoming damage at a flat rate."
   },
   {
+    "PROPER_NAME": "Bug Fact",
+    "NAMES": [
+      "BugFact"
+    ],
+    "DESCRIPTION": "Bug Facts are #b0 cost Attack cards which Exhaust."
+  },
+  {
+    "PROPER_NAME": "Umm Actually",
+    "NAMES": [
+      "UmActuallyPower"
+    ],
+    "DESCRIPTION": "Bug Facts cards deal more damage."
+  },
+  {
     "PROPER_NAME": "YourAverageBo",
     "NAMES": [
       "YourAverageBo",
