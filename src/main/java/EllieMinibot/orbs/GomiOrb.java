@@ -34,9 +34,9 @@ public class GomiOrb extends AbstractOrb {
         this.ID = makeID("GomiOrb");
         this.img = myTex;
         this.name = orbString.NAME;
-        this.basePassiveAmount = 2;
+        this.basePassiveAmount = 1;
         this.passiveAmount = this.basePassiveAmount;
-        this.baseEvokeAmount = this.evokeAmount = this.basePassiveAmount + 2;
+        this.baseEvokeAmount = this.evokeAmount = this.basePassiveAmount + 1;
         this.updateDescription();
         this.angle = MathUtils.random(360.0F);
         this.channelAnimTimer = 0.5F;
