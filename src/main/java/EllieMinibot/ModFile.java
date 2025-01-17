@@ -9,11 +9,13 @@ import EllieMinibot.cards.democards.simple.DrawAndShiv;
 import EllieMinibot.cards.democards.simple.StartupBlockCard;
 import EllieMinibot.cards.democards.simple.TwoTypesOfDamage;
 import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
+import EllieMinibot.events.ClintsReptilesEvent;
 import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.DynamicVariable;
+import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -36,6 +38,8 @@ import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
 import EllieMinibot.util.ProAudio;
 import java.nio.charset.StandardCharsets;
+
+import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -78,6 +82,8 @@ public class ModFile implements
     public static final String SONG_CRAZYROBOTBODY_OGG = makePath("audio/SongCrazyRobotBody.ogg");
     public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY = makeID("EvilNeuro_CrazyRobotBody");
     public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG = makePath("audio/bg_music/EvilNeuro_CrazyRobotBody.ogg");
+    public static final String CLINTS_REPTILE_ROOM_KEY = makeID("ClintsReptileRoomAudio");
+    public static final String CLINTS_REPTILE_ROOM_OGG = makePath("audio/ClintsReptileRoom.ogg");
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -133,8 +139,8 @@ public class ModFile implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], CharacterFile.Enums.ELLIE_MINIBOT),
-            CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CharacterFile.Enums.ELLIE_MINIBOT);
+        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], ELLIE_MINIBOT),
+            CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, ELLIE_MINIBOT);
         
         new AutoAdd(modID)
             .packageFilter(AbstractEasyPotion.class)
@@ -185,6 +191,8 @@ public class ModFile implements
         BaseMod.loadCustomStringsFile(StanceStrings.class, modID + "Resources/localization/" + getLangString() + "/Stancestrings.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, modID + "Resources/localization/" + getLangString() + "/Potionstrings.json");
         BaseMod.loadCustomStringsFile(MonsterStrings.class, modID + "Resources/localization/" + getLangString() + "/MonsterStrings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
+
     }
 
     @Override
@@ -193,6 +201,7 @@ public class ModFile implements
         BaseMod.addAudio(SONG_TOGETHER_KEY, SONG_TOGETHER_OGG);
         BaseMod.addAudio(SONG_CRAZYROBOTBODY_KEY, SONG_CRAZYROBOTBODY_OGG);
         BaseMod.addAudio(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY, BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG);
+        BaseMod.addAudio(CLINTS_REPTILE_ROOM_KEY, CLINTS_REPTILE_ROOM_OGG);
     }
 
     @Override
@@ -229,6 +238,11 @@ public class ModFile implements
         BaseMod.addBoss(Exordium.ID, EvilNeuroMonster.ID,
                 "ellieminibotResources/images/ui/map/boss/EvilNeuro.png",
                 "ellieminibotResources/images/ui/map/bossOutline/EvilNeuro.png");
+
+
+        // Events
+        BaseMod.addEvent(ClintsReptilesEvent.ID, ClintsReptilesEvent.class);
+        BaseMod.addEvent(new AddEventParams.Builder(ClintsReptilesEvent.ID, ClintsReptilesEvent.class).playerClass(ELLIE_MINIBOT).create());
 
     }
 
