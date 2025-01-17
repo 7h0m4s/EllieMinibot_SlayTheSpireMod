@@ -78,25 +78,16 @@ public class BookieOrb extends AbstractOrb {
         if((!playerDebuffPowers.isEmpty() && choosePlayer) || monsterBuffPowers.isEmpty()){
             // Player -> Monster
             AbstractPower powerToTransfer = playerDebuffPowers.get(random.nextInt(playerDebuffPowers.size()));
-            transferPower(powerToTransfer, AbstractDungeon.player, Wiz.getRandomEnemy());
+            Wiz.transferPower(powerToTransfer, AbstractDungeon.player, Wiz.getRandomEnemy());
         }
         else {
             // Monster -> Player
             AbstractPower powerToTransfer = monsterBuffPowers.get(random.nextInt(monsterBuffPowers.size()));
-            transferPower(powerToTransfer,monster,AbstractDungeon.player);
+            Wiz.transferPower(powerToTransfer,monster,AbstractDungeon.player);
         }
     }
 
-    private void transferPower(AbstractPower power, AbstractCreature source, AbstractCreature target){
-        if(target.powers.stream().anyMatch(a-> a.ID.equals(power.ID))){
-            AbstractPower existingPower = target.powers.stream().filter(a-> a.ID.equals(power.ID)).collect(Collectors.toList()).get(0);
-            if(power.amount == -1) return;
-            existingPower.stackPower(power.amount);
-        }else{
-            target.powers.add(power);
-        }
-        source.powers.remove(power);
-    }
+
 
     public void triggerEvokeAnimation() {
         CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.1F);

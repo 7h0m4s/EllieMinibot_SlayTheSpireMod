@@ -297,4 +297,15 @@ public class Wiz {
     public static CardGroup deck() {
         return AbstractDungeon.player.masterDeck;
     }
+
+    public static void transferPower(AbstractPower power, AbstractCreature source, AbstractCreature target){
+        if(target.powers.stream().anyMatch(a-> a.ID.equals(power.ID))){
+            AbstractPower existingPower = target.powers.stream().filter(a-> a.ID.equals(power.ID)).collect(Collectors.toList()).get(0);
+            if(power.amount == -1) return;
+            existingPower.stackPower(power.amount);
+        }else{
+            target.powers.add(power);
+        }
+        source.powers.remove(power);
+    }
 }

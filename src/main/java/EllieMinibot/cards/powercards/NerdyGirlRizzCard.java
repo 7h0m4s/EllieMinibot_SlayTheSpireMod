@@ -1,6 +1,7 @@
 package EllieMinibot.cards.powercards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,7 @@ public class NerdyGirlRizzCard extends AbstractEasyCard {
     public NerdyGirlRizzCard() {
         super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,9 +31,9 @@ public class NerdyGirlRizzCard extends AbstractEasyCard {
         // For each monster, move buffs to player
         for( AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters.stream().filter(a -> !a.isDeadOrEscaped()).collect(Collectors.toList())){
             List<AbstractPower> monsterBuffPowers = monster.powers.stream().filter(a -> a.type == AbstractPower.PowerType.BUFF).collect(Collectors.toList());
-            monsterBuffPowers.forEach(p::addPower);
+            monsterBuffPowers.forEach(a-> Wiz.transferPower(a, monster, p));
             monster.powers.removeAll(monsterBuffPowers);
-            playerDebuffPowers.forEach(monster::addPower);
+            playerDebuffPowers.forEach(a-> Wiz.transferPower(a, p, monster));
         }
     }
 

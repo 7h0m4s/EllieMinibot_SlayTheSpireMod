@@ -15,12 +15,12 @@ public class ThatCompanyCard extends AbstractEasyCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public ThatCompanyCard() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = 32;
         tags.add(CardTags.STRIKE);
         exhaust = true;
 
-        this.costForTurn = 0; // Free to play when first created
+        //this.costForTurn = 0; // Free to play when first created
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

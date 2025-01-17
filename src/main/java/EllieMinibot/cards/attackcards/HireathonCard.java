@@ -4,6 +4,7 @@ import EllieMinibot.cards.AbstractEasyCard;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,10 +24,16 @@ public class HireathonCard extends AbstractEasyCard {
     public HireathonCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 3;
-        baseMagicNumber = magicNumber = 5;
+        this.misc = 1;
+        baseMagicNumber = magicNumber = 1;
         tags.add(CardTags.STRIKE);
+        rawDescription = String.format(cardStrings.DESCRIPTION,this.misc);
+        this.initializeDescription();
         this.cardsToPreview = new ThatCompanyCard();
     }
+
+    @Override
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
@@ -40,11 +47,22 @@ public class HireathonCard extends AbstractEasyCard {
             this.exhaust = true;
             this.triggerOnExhaust();
         }
+
+        this.addToBot(new IncreaseMiscAction(this.uuid, this.misc, this.magicNumber));
     }
 
     @Override
+    public void applyPowers() {
+        super.applyPowers();
+        rawDescription = String.format(cardStrings.DESCRIPTION,this.misc);
+        this.initializeDescription();
+    }
+
+
+    @Override
     public void upp() {
-        upgradeMagicNumber(5);
+
+        upgradeMagicNumber(1);
     }
 
     @Override
