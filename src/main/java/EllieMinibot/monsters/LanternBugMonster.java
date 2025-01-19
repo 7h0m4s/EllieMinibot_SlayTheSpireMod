@@ -71,27 +71,27 @@ public class LanternBugMonster extends AbstractMonster
         }
 
         if (AbstractDungeon.ascensionLevel >= 17) {
-            this.bellowStr = 5;
+            this.bellowStr = 4;
             this.bellowBlock = 9;
-            this.chompDmg = 12;
-            this.thrashDmg = 7;
+            this.chompDmg = 10;
+            this.thrashDmg = 5;
             this.thrashBlock = 5;
         } else if (AbstractDungeon.ascensionLevel >= 2) {
-            this.bellowStr = 4;
-            this.bellowBlock = 6;
-            this.chompDmg = 12;
-            this.thrashDmg = 7;
-            this.thrashBlock = 5;
-        } else {
             this.bellowStr = 3;
             this.bellowBlock = 6;
-            this.chompDmg = 11;
-            this.thrashDmg = 7;
+            this.chompDmg = 9;
+            this.thrashDmg = 5;
+            this.thrashBlock = 5;
+        } else {
+            this.bellowStr = 2;
+            this.bellowBlock = 6;
+            this.chompDmg = 8;
+            this.thrashDmg = 5;
             this.thrashBlock = 5;
         }
 
-        this.damage.add(new DamageInfo(this, this.swipeDmg));
-        this.damage.add(new DamageInfo(this, this.bigSwipeDmg));
+        this.damage.add(new DamageInfo(this, this.chompDmg));
+        this.damage.add(new DamageInfo(this, this.thrashDmg));
 
         loadAnimation("ellieminibotResources/images/monsters/LanternBug/LanternBug.atlas", "ellieminibotResources/images/monsters/LanternBug/LanternBug.json", 1.0F);
 
