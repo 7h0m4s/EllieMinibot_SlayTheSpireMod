@@ -69,39 +69,39 @@ public class CharacterFile extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike.ID);
         }
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(RawSpaghettiCard.ID);
-        retVal.add(IceCubeChallengeCard.ID);
-        retVal.add(ReadyToRaidCard.ID);
         retVal.add(YourAverageBoCollabCard.ID);
-        retVal.add(GomiCollabCard.ID);
-        retVal.add(MinikoMewCollabCard.ID);
-        retVal.add(ShoomimiCollabCard.ID);
-        retVal.add(EllieCollabCard.ID);
-        retVal.add(TeethModelCard.ID);
-        retVal.add(WaterproofingCard.ID);
-        retVal.add(OtamatoneCard.ID);
-        retVal.add(LeadedSolderCard.ID);
-        retVal.add(FakeBoyfriendCard.ID);
-        retVal.add(SpinRingCard.ID);
-        retVal.add(BeatSabreCard.ID);
-        retVal.add(SongTogetherCard.ID);
-        retVal.add(SongCrazyRobotBodyCard.ID);
-        retVal.add(SelfMaintenanceCard.ID);
-        retVal.add(VedalCollabCard.ID);
-        retVal.add(CerberCollabCard.ID);
-        retVal.add(HireathonCard.ID);
-        retVal.add(LoudAsCicadaCard.ID);
-        retVal.add(StrongAnklesCard.ID);
+//        retVal.add(RawSpaghettiCard.ID);
+//        retVal.add(IceCubeChallengeCard.ID);
+//        retVal.add(ReadyToRaidCard.ID);
+//        retVal.add(GomiCollabCard.ID);
+//        retVal.add(MinikoMewCollabCard.ID);
+//        retVal.add(ShoomimiCollabCard.ID);
+//        retVal.add(EllieCollabCard.ID);
+//        retVal.add(TeethModelCard.ID);
+//        retVal.add(WaterproofingCard.ID);
+//        retVal.add(OtamatoneCard.ID);
+//        retVal.add(LeadedSolderCard.ID);
+//        retVal.add(FakeBoyfriendCard.ID);
+//        retVal.add(SpinRingCard.ID);
+//        retVal.add(BeatSabreCard.ID);
+//        retVal.add(SongTogetherCard.ID);
+//        retVal.add(SongCrazyRobotBodyCard.ID);
+//        retVal.add(SelfMaintenanceCard.ID);
+//        retVal.add(VedalCollabCard.ID);
+//        retVal.add(CerberCollabCard.ID);
+//        retVal.add(HireathonCard.ID);
+//        retVal.add(LoudAsCicadaCard.ID);
+//        retVal.add(StrongAnklesCard.ID);
         retVal.add(NerdyGirlRizzCard.ID);
-        retVal.add(BookieCollabCard.ID);
-        retVal.add(DrinkingStreamCard.ID);
-        retVal.add(UmActuallyCard.ID);
+//        retVal.add(BookieCollabCard.ID);
+//        retVal.add(DrinkingStreamCard.ID);
+//        retVal.add(UmActuallyCard.ID);
         return retVal;
     }
 
@@ -119,6 +119,7 @@ public class CharacterFile extends CustomPlayer {
         CardCrawlGame.sound.playA("UNLOCK_PING", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
+        //TODO: Put ellie sound effect here?
     }
 
     private static final String[] orbTextures = {
