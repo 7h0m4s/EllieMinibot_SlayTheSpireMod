@@ -235,7 +235,7 @@ public class ModFile implements
 
         BaseMod.addMonster(EvilNeuroMonster.ID, () -> new EvilNeuroMonster());
 
-        BaseMod.addBoss(Exordium.ID, EvilNeuroMonster.ID,
+        BaseMod.addBoss(TheCity.ID, EvilNeuroMonster.ID,
                 "ellieminibotResources/images/ui/map/boss/EvilNeuro.png",
                 "ellieminibotResources/images/ui/map/bossOutline/EvilNeuro.png");
 
