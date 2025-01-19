@@ -179,6 +179,10 @@
     "NAME": "Nerdy Girl Rizz",
     "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters. NL *Exhaust"
   },
+  "${ModID}:Distracted": {
+    "NAME": "Distracted",
+    "DESCRIPTION": "*Unplayable. NL *Ethereal. NL Whenever this card is drawn, lose 1 Energy."
+  },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & *Exhaust.",
