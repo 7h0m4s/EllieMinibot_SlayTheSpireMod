@@ -161,7 +161,7 @@
   },
   "${ModID}:Hireathon": {
     "NAME": "Hireathon",
-    "DESCRIPTION": "Deal !D! damage & increase chance by !M!%%. NL NL %d%% chance to create a NL *That *Company card NL and *Exhaust."
+    "DESCRIPTION": "Deal !D! damage & permanently increase chance by !M!%%. NL NL %d%% chance to create a NL *That *Company card NL and *Exhaust."
   },
   "${ModID}:ThatCompany": {
     "NAME": "\"That\" Company",
