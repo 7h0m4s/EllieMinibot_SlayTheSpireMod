@@ -304,6 +304,7 @@ public class Wiz {
             if(power.amount == -1) return;
             existingPower.stackPower(power.amount);
         }else{
+            power.owner = target;
             target.powers.add(power);
         }
         source.powers.remove(power);
