@@ -18,7 +18,7 @@ public class NerdyGirlRizzCard extends AbstractEasyCard {
     // intellij stuff power, self, uncommon
 
     public NerdyGirlRizzCard() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.exhaust = true;
         this.isMultiDamage = true;
     }
