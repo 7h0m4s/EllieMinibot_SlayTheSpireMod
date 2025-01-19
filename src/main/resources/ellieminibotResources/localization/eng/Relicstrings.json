@@ -7,7 +7,7 @@
     ]
   },
   "${ModID}:EllieAntennaRelic": {
-    "NAME": "Antennas",
+    "NAME": "Minibot Antennae",
     "FLAVOR": "Antenna found upon the head of a silly little robot.",
     "DESCRIPTIONS": [
       "Channel a random friend of Ellie as an orb at start of combat."
