@@ -24,7 +24,6 @@ public class StrongAnklesCard extends AbstractEasyCard {
         baseDamage = damage = 6;
         baseMagicNumber = magicNumber = 1;
         isMultiDamage = false;
-        tags.add(CardTags.STRIKE);
         this.cardsToPreview = new BugFactCard();
     }
 
@@ -35,8 +34,8 @@ public class StrongAnklesCard extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
-        upgradeMagicNumber(2);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 
     @Override
