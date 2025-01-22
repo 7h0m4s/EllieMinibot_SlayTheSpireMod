@@ -9,6 +9,7 @@ import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -19,8 +20,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -28,6 +31,7 @@ import EllieMinibot.cards.Defend;
 import EllieMinibot.cards.Strike;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT_COLOR;
 import static EllieMinibot.ModFile.*;
@@ -64,6 +68,20 @@ public class CharacterFile extends CustomPlayer {
         return new CharSelectInfo(NAMES[0], TEXT[0],
                 80, 80, 3, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
+    }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("ellieminibotResources/images/scenes/ellieBg.png");
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie1.png", "BELL"));
+        panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie2.png"));
+        panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie3.png"));
+        return panels;
     }
 
     @Override
