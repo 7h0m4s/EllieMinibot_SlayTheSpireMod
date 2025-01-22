@@ -89,6 +89,10 @@
     "NAME": "Fake Boyfriend",
     "DESCRIPTION": "Gain !B! *Block."
   },
+  "${ModID}:EatTheCodeBug": {
+    "NAME": "Eat The Codebug",
+    "DESCRIPTION": "*Exhaust all *Bug *Fact cards in hand. NL Gain !B! *Block for each card *Exhausted."
+  },
   "${ModID}:SelfMaintenance": {
     "NAME": "Self Maintenance",
     "DESCRIPTION": "At the end of combat, repair !M! *HP."
