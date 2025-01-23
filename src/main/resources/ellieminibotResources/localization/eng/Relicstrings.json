@@ -12,5 +12,15 @@
     "DESCRIPTIONS": [
       "Channel a random friend of Ellie as an orb at start of combat."
     ]
+  },
+  "${ModID}:NeuroDogRelic": {
+    "NAME": "Neuro Dog",
+    "FLAVOR": "Solo built robot quadruped to provide an AI streamer a physical body.",
+    "DESCRIPTIONS": [
+      "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bDesign",
+      "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bReduce #bLatency",
+      "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bAssemble",
+      "Fully functional Neuro Dog is summoned as an ally at the start of each combat."
+    ]
   }
 }

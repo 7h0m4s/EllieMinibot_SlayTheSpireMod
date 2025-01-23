@@ -5,6 +5,7 @@ import EllieMinibot.cards.powercards.*;
 import EllieMinibot.cards.skillcards.*;
 import EllieMinibot.cards.skillcards.ReadyToRaidCard;
 import EllieMinibot.relics.EllieAntennaRelic;
+import EllieMinibot.relics.NeuroDogRelic;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
@@ -128,6 +129,7 @@ public class CharacterFile extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //retVal.add(TodoItem.ID);
         retVal.add(EllieAntennaRelic.ID);
+        retVal.add(NeuroDogRelic.ID);
         return retVal;
     }
 

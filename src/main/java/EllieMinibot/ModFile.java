@@ -5,8 +5,10 @@ import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
 import EllieMinibot.events.ClintsReptilesEvent;
 import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
+import EllieMinibot.ui.campfire.NeuroDogCampfireOption;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.abstracts.DynamicVariable;
 import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
@@ -18,12 +20,16 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
+import com.megacrit.cardcrawl.rooms.CampfireUI;
+import com.megacrit.cardcrawl.rooms.RestRoom;
+import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.cardvars.AbstractEasyDynamicVariable;
@@ -31,6 +37,7 @@ import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
 import EllieMinibot.util.ProAudio;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT;
 
@@ -238,5 +245,8 @@ public class ModFile implements
         BaseMod.addEvent(new AddEventParams.Builder(ClintsReptilesEvent.ID, ClintsReptilesEvent.class).playerClass(ELLIE_MINIBOT).create());
 
     }
+
+
+
 
 }
