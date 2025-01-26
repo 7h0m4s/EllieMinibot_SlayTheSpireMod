@@ -1,0 +1,20 @@
+
+NeuroDogAnimation.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cutoutneurodog_withface
+  rotate: false
+  xy: 1, 1
+  size: 115, 117
+  orig: 118, 122
+  offset: 1, 1
+  index: -1
+cutoutneurodog_off
+  rotate: false
+  xy: 118, 1
+  size: 115, 117
+  orig: 118, 122
+  offset: 1, 1
+  index: -1

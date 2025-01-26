@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import EllieMinibot.cards.Defend;
 import EllieMinibot.cards.Strike;
+import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,12 +38,15 @@ import java.util.List;
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT_COLOR;
 import static EllieMinibot.ModFile.*;
 
-public class CharacterFile extends CustomPlayer {
+public class CharacterFile extends AbstractPlayerWithMinions {
 
     static final String ID = makeID("ModdedCharacter");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
+    public static final int BASE_MINION_COUNT = 1;
+    public static final float BASE_MINION_POWER_CHANCE = 0.75f;
+    public static final float BASE_MINION_ATTACK_CHANCE = 0.75f;
 
 
     public CharacterFile(String name, PlayerClass setClass) {
@@ -59,6 +63,9 @@ public class CharacterFile extends CustomPlayer {
 
         e.setTime(e.getEndTime() * MathUtils.random());
 
+        setBaseMinionCount(BASE_MINION_COUNT);
+        setBaseMinionPowerChance(BASE_MINION_POWER_CHANCE);
+        setBaseMinionAttackTargetChance(BASE_MINION_ATTACK_CHANCE);
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
