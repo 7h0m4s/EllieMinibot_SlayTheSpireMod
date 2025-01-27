@@ -1,7 +1,6 @@
 package EllieMinibot.relics;
 
 import EllieMinibot.CharacterFile;
-import EllieMinibot.actions.SpawnAllyAction;
 import EllieMinibot.friendlymonster.NeuroDogFriendlyMonster;
 import EllieMinibot.monsters.EvilDroneMonster;
 import EllieMinibot.orbs.*;

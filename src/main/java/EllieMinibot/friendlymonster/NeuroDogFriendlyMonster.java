@@ -1,12 +1,14 @@
 package EllieMinibot.friendlymonster;
 
+import EllieMinibot.actions.ChannelRandomEllieOrbAction;
+import EllieMinibot.cards.specialcards.BugFactCard;
+import EllieMinibot.util.Wiz;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.red.Flex;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,6 +25,7 @@ import java.util.Random;
 
 import static EllieMinibot.CharacterFile.BASE_MINION_ATTACK_CHANCE;
 import static EllieMinibot.ModFile.makeID;
+import static EllieMinibot.util.Wiz.*;
 
 public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
     public static final String NAME = "Neuro Dog";
@@ -57,7 +60,8 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     DamageInfo info = new DamageInfo(this, 5, DamageInfo.DamageType.NORMAL);
                     info.applyPowers(this, target); // <--- This lets powers effect minions attacks
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
+                    atb(new DamageAction(target, info));
+                    atb(new SFXAction("SLIME_ATTACK"));
                     playAnimation(animationType.ATTACK);
                 }
         ));
@@ -68,7 +72,8 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     DamageInfo info = new DamageInfo(this, 10, DamageInfo.DamageType.NORMAL);
                     info.applyPowers(this, target); // <--- This lets powers effect minions attacks
-                    AbstractDungeon.actionManager.addToBottom(new DamageAction(target, info));
+                    atb(new DamageAction(target, info));
+                    atb(new SFXAction("BLUNT_HEAVY"));
                     playAnimation(animationType.ATTACK);
                 }
         ));
@@ -76,7 +81,8 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/defendL.png"),
                 "Gain 10 block",
                 () -> {
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 10));
+                    atb(new GainBlockAction(this, this, 15));
+                    atb(new SFXAction("BLOCK_GAIN_1"));
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
@@ -85,8 +91,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                 "Apply 2 Weak to an enemy",
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this, new WeakPower(target, 2, false), 2));
-                    playAnimation(animationType.FRONTFLIP);
+                    atb(new ApplyPowerAction(target, this, new WeakPower(target, 2, false), 2));
+                    atb(new SFXAction("DEBUFF_1"));
+                    playAnimation(animationType.GROWL);
 
                 }
         ));
@@ -95,8 +102,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                 "Apply 2 Vulnerable to an enemy",
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, this, new VulnerablePower(target, 2, false), 2));
-                    playAnimation(animationType.FRONTFLIP);
+                    atb(new ApplyPowerAction(target, this, new VulnerablePower(target, 2, false), 2));
+                    atb(new SFXAction("DEBUFF_2"));
+                    playAnimation(animationType.SPIN);
 
                 }
         ));
@@ -108,6 +116,7 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
                     this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
                     this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 2), 2));
+                    atb(new SFXAction("BUFF_1"));
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
@@ -119,49 +128,51 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
                     this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 2), 2));
                     this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, 2), 2));
+                    atb(new SFXAction("BUFF_2"));
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
-        moveMasterList.add(new MinionMove("Taunt", this,
-                new Texture("ellieminibotResources/images/friendlymonsters/intent/defendBuffL.png"),
-                "Enemies will target Neuro Dog on their next turn",
+        moveMasterList.add(new MinionMove("CodeBug", this,
+                new Texture("ellieminibotResources/images/friendlymonsters/intent/codebug.png"),
+                "Give player 2 Bug Fact cards",
                 () -> {
-                    AbstractPlayerWithMinions p = (AbstractPlayerWithMinions) AbstractDungeon.player;
-                    p.setBaseMinionAttackTargetChance(1);
-                    playAnimation(animationType.FRONTFLIP);
+                    atb(new SFXAction("RELIC_DROP_MAGICAL"));
+                    playAnimation(animationType.BUGTHROW);
+                    atb(new MakeTempCardInHandAction(new BugFactCard(), 2));
                 }
         ));
-
-        // TODO MAKE A "CREATE BUG FACT" MOVE
-
-
-//        moveMasterList.add(new MinionMove("Hide", this,
-//                new Texture("ellieminibotResources/images/friendlymonsters/intent/escapeL.png"),
-//                "Enemies will ignore Neuro Dog on their next turn",
-//                () -> {
-//                    AbstractPlayerWithMinions p = (AbstractPlayerWithMinions) AbstractDungeon.player;
-//                    p.setBaseMinionAttackTargetChance(0);
-//
-//                }
-//        ));
-//        moveMasterList.add(new MinionMove("Sleep", this,
-//                new Texture("ellieminibotResources/images/friendlymonsters/intent/sleepL.png"),
-//                "Do nothing",
-//                () -> {
-//
-//                }
-//        ));
+        moveMasterList.add(new MinionMove("Play", this,
+                new Texture("ellieminibotResources/images/friendlymonsters/intent/drawpile.png"),
+                "Play the next card in draw pile",
+                () -> {
+                    atb(new SFXAction("ATTACK_MAGIC_FAST_3"));
+                    playAnimation(animationType.SPIN);
+                    atb(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
+                }
+        ));
+        moveMasterList.add(new MinionMove("Ponder Orb", this,
+                new Texture("ellieminibotResources/images/friendlymonsters/intent/empty1.png"),
+                "Channel a random orb",
+                () -> {
+                    atb(new SFXAction("ATTACK_MAGIC_FAST_2"));
+                    playAnimation(animationType.FRONTFLIP);
+                    atb(new ChannelRandomEllieOrbAction());
+                }
+        ));
 
         refreshMoveOptions();
 
     }
 
      enum  animationType {
-        ATTACK,
-        FRONTFLIP,
-        IDLE,
-        DEATH
-    }
+         ATTACK,
+         FRONTFLIP,
+         SPIN,
+         GROWL,
+         BUGTHROW,
+         IDLE,
+         DEATH
+     }
 
     private void playAnimation(animationType type) {playAnimation(type, 1f);}
     private void playAnimation(animationType type, float timeScale){
@@ -173,6 +184,15 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                 break;
             case FRONTFLIP:
                 animationName = "frontflip";
+                break;
+            case SPIN:
+                animationName = "spin";
+                break;
+            case GROWL:
+                animationName = "growl";
+                break;
+            case BUGTHROW:
+                animationName = "bugthrow";
                 break;
         }
 
@@ -203,7 +223,7 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
             }
 
 
-            this.deathTimer = 5.0f;
+            this.deathTimer = 6.0f;
 
         }
     }
