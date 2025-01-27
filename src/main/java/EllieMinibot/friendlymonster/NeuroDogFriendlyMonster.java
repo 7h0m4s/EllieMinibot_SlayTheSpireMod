@@ -35,7 +35,6 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
     public static final String IMG = "ellieminibotResources/images/friendlymonsters/cutoutneurodog_withface_scaled.png";
     private Random rand = new Random();
 
-    public static ArrayList<MinionMove> moveMasterList = new ArrayList<>();
 
 
     public NeuroDogFriendlyMonster(float drawX, float drawY) {
@@ -47,12 +46,101 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
-
-
-
         byte nextMove = 1;
         this.setMove(nextMove, Intent.ATTACK, -1);
+        refreshMoveOptions();
+    }
 
+
+    enum  animationType {
+         ATTACK,
+         FRONTFLIP,
+         SPIN,
+         GROWL,
+         BUGTHROW,
+         IDLE,
+         DEATH
+     }
+
+    private void playAnimation(animationType type) {playAnimation(type, 1f);}
+    private void playAnimation(animationType type, float timeScale){
+        String animationName = "";
+
+        switch(type){
+            case ATTACK:
+                animationName = "attack";
+                break;
+            case FRONTFLIP:
+                animationName = "frontflip";
+                break;
+            case SPIN:
+                animationName = "spin";
+                break;
+            case GROWL:
+                animationName = "growl";
+                break;
+            case BUGTHROW:
+                animationName = "bugthrow";
+                break;
+        }
+
+        AnimationState.TrackEntry trackEntry = this.state.setAnimation(0, animationName, false);
+        this.state.addAnimation(0, "idle", true, 0.0F);
+        trackEntry.setTimeScale(timeScale);
+    }
+
+    @Override
+    public void deathReact() {
+        super.deathReact();
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "death", false);
+    }
+
+    @Override
+    public void die(boolean triggerPowers) {
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "death", false);
+        if (!this.isDying) {
+            this.isDying = true;
+            if (this.currentHealth <= 0 && triggerPowers) {
+                for (AbstractPower p : this.powers) {
+                    p.onDeath();
+                }
+            }
+
+            if (this.currentHealth < 0) {
+                this.currentHealth = 0;
+            }
+
+
+            this.deathTimer = 4.0f;
+
+        }
+    }
+
+
+    @Override
+    public void applyEndOfTurnTriggers() {
+        // Override so that turn taken is reset at start of turn by NeuroDogRelic
+        // to prevent buttons from re-showing up before next turn
+        super.applyEndOfTurnTriggers();
+        this.clearMoves();
+    }
+
+    public void refreshMoveOptions() {
+        this.clearMoves();
+        while (this.moves.getMoves().size() < 2) {
+            ArrayList<MinionMove> moveList = createMoves();
+            MinionMove moveOption = moveList.get(rand.nextInt(moveList.size()));
+            if (this.moves.hasMove(moveOption.getID())){
+                continue;
+            }
+            else{
+                this.addMove(moveOption);
+            }
+        }
+    }
+
+    private ArrayList<MinionMove> createMoves(){
+        ArrayList<MinionMove> moveMasterList = new ArrayList<>();
 
         moveMasterList.add(new MinionMove("Tackle", this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/attack/attack_intent_1.png"),
@@ -160,87 +248,8 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     atb(new ChannelRandomEllieOrbAction());
                 }
         ));
+        return moveMasterList;
 
-        refreshMoveOptions();
-
-    }
-
-     enum  animationType {
-         ATTACK,
-         FRONTFLIP,
-         SPIN,
-         GROWL,
-         BUGTHROW,
-         IDLE,
-         DEATH
-     }
-
-    private void playAnimation(animationType type) {playAnimation(type, 1f);}
-    private void playAnimation(animationType type, float timeScale){
-        String animationName = "";
-
-        switch(type){
-            case ATTACK:
-                animationName = "attack";
-                break;
-            case FRONTFLIP:
-                animationName = "frontflip";
-                break;
-            case SPIN:
-                animationName = "spin";
-                break;
-            case GROWL:
-                animationName = "growl";
-                break;
-            case BUGTHROW:
-                animationName = "bugthrow";
-                break;
-        }
-
-        AnimationState.TrackEntry trackEntry = this.state.setAnimation(0, animationName, false);
-        this.state.addAnimation(0, "idle", true, 0.0F);
-        trackEntry.setTimeScale(timeScale);
-    }
-
-    @Override
-    public void deathReact() {
-        super.deathReact();
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "death", false);
-    }
-
-    @Override
-    public void die(boolean triggerPowers) {
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "death", false);
-        if (!this.isDying) {
-            this.isDying = true;
-            if (this.currentHealth <= 0 && triggerPowers) {
-                for (AbstractPower p : this.powers) {
-                    p.onDeath();
-                }
-            }
-
-            if (this.currentHealth < 0) {
-                this.currentHealth = 0;
-            }
-
-
-            this.deathTimer = 6.0f;
-
-        }
-    }
-
-    public void refreshMoveOptions() {
-        this.clearMoves();
-        while (this.moves.getMoves().size() < 2) {
-
-            MinionMove moveOption = moveMasterList.get(rand.nextInt(moveMasterList.size()));
-            if (this.moves.hasMove(moveOption.getID())){
-                continue;
-            }
-            else{
-                this.addMove(moveOption);
-            }
-        }
     }
 
 }
