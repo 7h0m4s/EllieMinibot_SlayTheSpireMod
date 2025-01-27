@@ -58,6 +58,14 @@ public class NeuroDogRelic extends AbstractEasyRelic {
         p.setBaseMinionAttackTargetChance(BASE_MINION_ATTACK_CHANCE);
 
         minion.refreshMoveOptions();
+        minion.setTakenTurn(false);
 
+    }
+
+    @Override
+    public void atTurnStartPostDraw() {
+        super.atTurnStartPostDraw();
+
+        minion.setTakenTurn(false);
     }
 }

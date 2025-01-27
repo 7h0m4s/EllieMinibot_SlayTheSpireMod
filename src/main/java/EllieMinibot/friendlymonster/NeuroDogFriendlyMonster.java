@@ -1,5 +1,6 @@
 package EllieMinibot.friendlymonster;
 
+import EllieMinibot.ModFile;
 import EllieMinibot.actions.ChannelRandomEllieOrbAction;
 import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.util.Wiz;

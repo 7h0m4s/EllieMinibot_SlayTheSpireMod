@@ -36,6 +36,9 @@ import EllieMinibot.cards.cardvars.AbstractEasyDynamicVariable;
 import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
 import EllieMinibot.util.ProAudio;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -88,6 +91,8 @@ public class ModFile implements
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
     };
+
+    public static final Logger logger = LogManager.getLogger("EllieMinibot");
 
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
