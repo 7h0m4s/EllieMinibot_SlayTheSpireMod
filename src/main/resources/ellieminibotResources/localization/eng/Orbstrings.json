@@ -51,6 +51,14 @@
       " #yBug #yFact card."
     ]
   },
+  "MapleOrb": {
+    "NAME": "Maple_QB",
+    "DESCRIPTION": [
+      "#yPassive: At the start of turn, gain #b%d temporary #yDexterity.",
+      " NL #yEvoke: gain #b%d temporary #yDexterity.",
+      ""
+    ]
+  },
   "BookieOrb": {
     "NAME": "Bookie",
     "DESCRIPTION": [

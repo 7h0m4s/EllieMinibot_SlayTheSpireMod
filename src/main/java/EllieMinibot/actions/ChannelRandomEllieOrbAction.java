@@ -32,6 +32,7 @@ public class ChannelRandomEllieOrbAction extends AbstractGameAction {
             orbClasses.add(YourAverageBoOrb.class);
             orbClasses.add(EllieOrb.class);
             orbClasses.add(GomiOrb.class);
+            orbClasses.add(MapleOrb.class);
 
             // Step 2: Select a random class
             Random random = new Random();

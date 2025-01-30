@@ -49,6 +49,8 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
         byte nextMove = 1;
         this.setMove(nextMove, Intent.ATTACK, -1);
         refreshMoveOptions();
+
+
     }
 
 

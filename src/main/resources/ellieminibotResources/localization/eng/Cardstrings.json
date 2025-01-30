@@ -151,6 +151,10 @@
     "NAME": "Ellie Solo Stream",
     "DESCRIPTION": "*Channel 1 *Ellie."
   },
+  "${ModID}:MapleCollab": {
+    "NAME": "Maple Moderation",
+    "DESCRIPTION": "*Channel 1 *Maple."
+  },
   "${ModID}:BookieCollab": {
     "NAME": "Bookie Collab",
     "DESCRIPTION": "*Channel 1 *Bookie."

@@ -18,9 +18,9 @@
     "FLAVOR": "Solo built robot quadruped to provide an AI streamer a physical body.",
     "DESCRIPTIONS": [
       "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bDesign",
-      "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bReduce #bLatency",
       "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bAssemble",
-      "Fully functional Neuro Dog is summoned as an ally at the start of each combat."
+      "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bReduce #bLatency",
+      "Neuro Dog is summoned as an ally at the start of each combat. There is a #b%d% chance enemies will target Neuro instead of the player."
     ]
   }
 }

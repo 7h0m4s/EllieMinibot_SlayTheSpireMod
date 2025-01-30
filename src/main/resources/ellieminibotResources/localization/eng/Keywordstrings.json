@@ -93,6 +93,13 @@
     "DESCRIPTION": "An orb that creates Bug Fact cards at the start of turn."
   },
   {
+    "PROPER_NAME": "Maple_QB",
+    "NAMES": [
+      "Maple_QB"
+    ],
+    "DESCRIPTION": "An orb that provides 1 temporary Dexterity at the start of turn."
+  },
+  {
     "PROPER_NAME": "Bookie",
     "NAMES": [
       "Bookie"

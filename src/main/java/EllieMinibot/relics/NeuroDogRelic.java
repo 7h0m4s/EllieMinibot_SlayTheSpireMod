@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import hlysine.friendlymonsters.monsters.AbstractFriendlyMonster;
+import hlysine.friendlymonsters.patches.PlayerAddSavableFieldsPatch;
 import hlysine.friendlymonsters.utils.MinionUtils;
 
 import java.util.ArrayList;
@@ -24,13 +25,25 @@ import static hlysine.friendlymonsters.utils.MinionUtils.setBaseMinionAttackTarg
 
 public class NeuroDogRelic extends AbstractEasyRelic {
     public static final String ID = makeID("NeuroDogRelic");
-    public int maxNeuroDogCounter = 0;
+    public int maxNeuroDogCounter = 3;
     public String minionID;
     private NeuroDogFriendlyMonster minion;
 
     public NeuroDogRelic() {
+
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ELLIE_MINIBOT_COLOR);
         this.counter = 0;
+
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        if(this.counter == -1) counter = 0;
+        if (counter >= maxNeuroDogCounter) {
+            return String.format(DESCRIPTIONS[counter], (int) BASE_MINION_ATTACK_CHANCE * 100);
+        }
+        return String.format(DESCRIPTIONS[counter], maxNeuroDogCounter - counter);
+
     }
 
     @Override
@@ -52,20 +65,23 @@ public class NeuroDogRelic extends AbstractEasyRelic {
     @Override
     public void atTurnStart() {
         super.atTurnStart();
-
-        // Set attack chance to back to base chance at start of turn
         AbstractPlayerWithMinions p = (AbstractPlayerWithMinions) AbstractDungeon.player;
+        if(((MonsterGroup) PlayerAddSavableFieldsPatch.PlayerAddFieldsPatch.fm_minions.get(AbstractDungeon.player)).monsters.size() > 0){
+
+
         p.setBaseMinionAttackTargetChance(BASE_MINION_ATTACK_CHANCE);
 
         minion.refreshMoveOptions();
         minion.setTakenTurn(false);
+        }
 
     }
 
     @Override
     public void atTurnStartPostDraw() {
         super.atTurnStartPostDraw();
-
-        minion.setTakenTurn(false);
+        if(((MonsterGroup) PlayerAddSavableFieldsPatch.PlayerAddFieldsPatch.fm_minions.get(AbstractDungeon.player)).monsters.size() > 0) {
+            minion.setTakenTurn(false);
+        }
     }
 }
