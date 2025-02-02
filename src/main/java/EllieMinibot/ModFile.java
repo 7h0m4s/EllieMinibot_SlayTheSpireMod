@@ -16,6 +16,7 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -27,6 +28,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
@@ -171,6 +173,13 @@ public class ModFile implements
                         UnlockTracker.markRelicAsSeen(relic.relicId);
                     }
                 });
+
+        BaseMod.addRelicToCustomPool(new RunicCapacitor(),CharacterFile.Enums.ELLIE_MINIBOT_COLOR );
+        BaseMod.addRelicToCustomPool(new EmotionChip(),CharacterFile.Enums.ELLIE_MINIBOT_COLOR );
+        BaseMod.addRelicToCustomPool(new Inserter(),CharacterFile.Enums.ELLIE_MINIBOT_COLOR );
+        BaseMod.addRelicToCustomPool(new GoldPlatedCables(),CharacterFile.Enums.ELLIE_MINIBOT_COLOR );
+        BaseMod.addRelicToCustomPool(new DataDisk(),CharacterFile.Enums.ELLIE_MINIBOT_COLOR );
+
     }
 
     @Override
