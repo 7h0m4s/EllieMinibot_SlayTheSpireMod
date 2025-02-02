@@ -6,9 +6,17 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Bite;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +33,7 @@ public class HireathonCard extends AbstractEasyCard {
     public HireathonCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 3;
-        this.misc = 1;
+        this.misc = 100;
         baseMagicNumber = magicNumber = 1;
         rawDescription = String.format(cardStrings.DESCRIPTION,this.misc);
         this.initializeDescription();
@@ -45,9 +53,25 @@ public class HireathonCard extends AbstractEasyCard {
         if (chance < misc) {
             AbstractCard thatCompany = new ThatCompanyCard();
             if(this.upgraded) thatCompany.upgrade();
-            makeInHand(new ThatCompanyCard());
+
             this.exhaust = true;
             this.triggerOnExhaust();
+
+            ArrayList<AbstractCard> masterDeck = AbstractDungeon.player.masterDeck.group;
+
+            for(int i = masterDeck.size() - 1; i >= 0; --i) {
+                AbstractCard masterCard = (AbstractCard)masterDeck.get(i);
+                if (masterCard.uuid == this.uuid) {
+                    AbstractDungeon.player.masterDeck.removeCard(masterCard);
+                    break;
+                }
+            }
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(thatCompany, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            UnlockTracker.markCardAsSeen(thatCompany.cardID);
+
+            AbstractCard tempThatCompany = new ThatCompanyCard();
+            if(this.upgraded) tempThatCompany.upgrade();
+            makeInHand(tempThatCompany);
         }
 
         if(this.misc >= 100 || (this.misc + this.magicNumber >= 100)) {

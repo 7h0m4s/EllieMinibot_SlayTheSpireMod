@@ -18,7 +18,7 @@ public class ThatCompanyCard extends AbstractEasyCard {
         super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = damage = 32;
         tags.add(CardTags.STRIKE);
-        exhaust = true;
+        exhaust = false;
 
         //this.costForTurn = 0; // Free to play when first created
     }
