@@ -50,6 +50,7 @@ public class NeuroDogRelic extends AbstractEasyRelic {
     public void atBattleStart() {
         if(counter >= maxNeuroDogCounter) {
             if (AbstractDungeon.player instanceof AbstractPlayerWithMinions) {
+                this.flash();
                 AbstractPlayerWithMinions p = (AbstractPlayerWithMinions) AbstractDungeon.player;
                 minion = new NeuroDogFriendlyMonster(-700, 50);
                 minionID = minion.id;
