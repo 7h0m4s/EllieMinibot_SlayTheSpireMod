@@ -104,7 +104,7 @@ public class EvilNeuroMonster extends AbstractMonster {
     public void usePreBattleAction() {
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
-        AbstractDungeon.getCurrRoom().playBgmInstantly("EVIL");
+        AbstractDungeon.getCurrRoom().playBgmInstantly(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 3)));
         UnlockTracker.markBossAsSeen("AUTOMATON");
     }

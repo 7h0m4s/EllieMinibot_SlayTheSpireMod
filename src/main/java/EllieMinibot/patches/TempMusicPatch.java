@@ -6,7 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.audio.MainMusic;
 import com.megacrit.cardcrawl.audio.TempMusic;
 
-import static EllieMinibot.ModFile.makePath;
+import static EllieMinibot.ModFile.*;
 
 public class TempMusicPatch {
 
@@ -17,14 +17,10 @@ public class TempMusicPatch {
     public static class TempMusicGetSongPatch {
         @SpirePrefixPatch
         public static SpireReturn<Music> Prefix(TempMusic __instance, String key) {
-            if(key == "EVIL"){
-                return SpireReturn.Return(MainMusic.newMusic(makePath("audio/bg_music/EvilNeuro_CrazyRobotBody.ogg")));
+            if (key.equals(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY)) {
+                return SpireReturn.Return(MainMusic.newMusic(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG));
             }
             return SpireReturn.Continue();
         }
-
-
     }
-
-
 }
