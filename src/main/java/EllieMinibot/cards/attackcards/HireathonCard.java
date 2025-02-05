@@ -33,7 +33,7 @@ public class HireathonCard extends AbstractEasyCard {
     public HireathonCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 3;
-        this.misc = 100;
+        this.misc = 1;
         baseMagicNumber = magicNumber = 1;
         rawDescription = String.format(cardStrings.DESCRIPTION,this.misc);
         this.initializeDescription();

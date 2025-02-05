@@ -45,8 +45,8 @@ public class CharacterFile extends AbstractPlayerWithMinions {
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
     public static final int BASE_MINION_COUNT = 1;
-    public static final float BASE_MINION_POWER_CHANCE = 0.75f;
-    public static final float BASE_MINION_ATTACK_CHANCE = 0.75f;
+    public static final float BASE_MINION_POWER_CHANCE = 0.25f;
+    public static final float BASE_MINION_ATTACK_CHANCE = 0.25f;
 
 
     public CharacterFile(String name, PlayerClass setClass) {
@@ -121,8 +121,8 @@ public class CharacterFile extends AbstractPlayerWithMinions {
 //        retVal.add(SelfMaintenanceCard.ID);
 //        retVal.add(VedalCollabCard.ID);
 //        retVal.add(CerberCollabCard.ID);
-        retVal.add(HireathonCard.ID);
-        retVal.add(LoudAsCicadaCard.ID);
+//        retVal.add(HireathonCard.ID);
+//        retVal.add(LoudAsCicadaCard.ID);
 //        retVal.add(StrongAnklesCard.ID);
 //        retVal.add(NerdyGirlRizzCard.ID);
 //        retVal.add(BookieCollabCard.ID);
