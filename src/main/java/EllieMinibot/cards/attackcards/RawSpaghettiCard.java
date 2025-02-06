@@ -1,11 +1,16 @@
 package EllieMinibot.cards.attackcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import basemod.BaseMod;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 
@@ -34,5 +39,12 @@ public class RawSpaghettiCard  extends AbstractEasyCard {
     public void upp() {
 
         upgradeDamage(3);
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@UkichanUki")));
+        return tooltips;
     }
 }
