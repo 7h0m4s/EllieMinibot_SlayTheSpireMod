@@ -13,6 +13,13 @@
       "Channel a random friend of Ellie as an orb at start of combat."
     ]
   },
+  "${ModID}:GamerSuppsRelic": {
+    "NAME": "Gamer Supps",
+    "FLAVOR": "Ellie doesn't have an official flavor (yet).",
+    "DESCRIPTIONS": [
+      "Get #b10% off at the merchant with code #yMINIBOT."
+    ]
+  },
   "${ModID}:NeuroDogRelic": {
     "NAME": "Neuro Dog",
     "FLAVOR": "Solo built robot quadruped to provide an AI streamer a physical body.",
