@@ -2,15 +2,17 @@
   "modid": "${ModID}",
   "name": "${project.name}",
   "author_list": [
-    "Anonymous, as of yet!"
+    "7h0m4s"
   ],
   "description": "${project.description}",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",
+  "credits": "Basemod, ModTheSpire, FriendlyMonsters, DarkVexon_ProTemplate",
   "dependencies": [
     "basemod",
-    "stslib"
+    "stslib",
+    "FriendlyMonsters"
   ]
 }
 
