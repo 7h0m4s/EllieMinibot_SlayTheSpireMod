@@ -1,6 +1,7 @@
 package EllieMinibot.cards.specialcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.powers.UmActuallyPower;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
@@ -10,8 +11,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.apache.commons.lang3.ArrayUtils;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -19,8 +23,11 @@ import static EllieMinibot.ModFile.makeID;
 
 public class BugFactCard  extends AbstractEasyCard {
     public final static String ID = makeID("BugFact");
+    public static String[] bugFactStrings;
     public static int totalBugFacts;
     public int bugFactIndex = 0;
+
+    private static int[] spiderFactIndexes = {38,39,40,41,42,43,44,45,46,47};
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public BugFactCard() {
@@ -40,7 +47,12 @@ public class BugFactCard  extends AbstractEasyCard {
 
     private void applyBugFact() {
         Random random = new Random();
-        bugFactIndex = random.nextInt(totalBugFacts);
+
+        // If Enable_Spider_Bug_Facts is disabled. Keep re-rolling bug facts till a non spider item is found
+        do {
+            bugFactIndex = random.nextInt(totalBugFacts);
+        } while (!ConfigPanel.Enable_Spider_Bug_Facts && ArrayUtils.contains(spiderFactIndexes, bugFactIndex));
+
         this.rawDescription = String.format("%s NL %s", this.rawDescription, cardStrings.EXTENDED_DESCRIPTION[bugFactIndex]);
 
         loadCardImage(String.format("ellieminibotResources/images/cards/bugfacts/BugFact_%03d.png",bugFactIndex));

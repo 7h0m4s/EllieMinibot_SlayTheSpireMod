@@ -1,27 +1,26 @@
 package EllieMinibot;
 
-import EllieMinibot.cards.EasyModalChoiceCard;
-import EllieMinibot.cards.powercards.SongCrazyRobotBodyCard;
+import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.events.ClintsReptilesEvent;
 import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
-import EllieMinibot.ui.campfire.NeuroDogCampfireOption;
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.ReflectionHacks;
 import basemod.abstracts.DynamicVariable;
 import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.utils.compression.lzma.Base;
+import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.ModInfo;
+import com.evacipated.cardcrawl.modthespire.Patcher;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.localization.*;
@@ -29,20 +28,20 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.relics.*;
-import com.megacrit.cardcrawl.rooms.CampfireUI;
-import com.megacrit.cardcrawl.rooms.RestRoom;
-import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.cardvars.AbstractEasyDynamicVariable;
 import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
-import EllieMinibot.util.ProAudio;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.scannotation.AnnotationDB;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.Set;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT;
 
@@ -58,12 +57,17 @@ public class ModFile implements
         AddAudioSubscriber {
 
     public static final String modID = "ellieminibot";
+    public static final String modName = "EllieMinibot";
+
+    public static ModInfo info;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
 
     public static Color characterColor = new Color(82, 94, 95, 1);
+
+    public SpireConfig ELLIEMINIBOT_CONFIG;
 
     public static final String SHOULDER1 = makeCharacterPath("mainChar/shoulder.png");
     public static final String SHOULDER2 = makeCharacterPath("mainChar/shoulder2.png");
@@ -96,13 +100,31 @@ public class ModFile implements
 
     public static final Logger logger = LogManager.getLogger("EllieMinibot");
 
-    private String getLangString() {
+    public String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
                 return Settings.language.name().toLowerCase();
             }
         }
         return "eng";
+    }
+
+    static {
+
+        // Find and load Mod Info
+        Optional<ModInfo> infos = Arrays.stream(Loader.MODINFOS).filter((modInfo) -> {
+            AnnotationDB annotationDB = Patcher.annotationDBMap.get(modInfo.jarURL);
+            if (annotationDB == null)
+                return false;
+            Set<String> initializers = annotationDB.getAnnotationIndex().getOrDefault(SpireInitializer.class.getName(), Collections.emptySet());
+            return initializers.contains(ModFile.class.getName());
+        }).findFirst();
+        if (infos.isPresent()) {
+            info = infos.get();
+        } else {
+            throw new RuntimeException("Failed to determine mod info/ID based on initializer.");
+        }
+
     }
 
     public ModFile() {
@@ -113,6 +135,8 @@ public class ModFile implements
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
+
+
     }
 
     public static String makePath(String resourcePath) {
@@ -234,6 +258,14 @@ public class ModFile implements
     @Override
     public void receivePostInitialize()
     {
+
+        //This loads the image used as an icon in the in-game mods menu.
+        Texture badgeTexture = new Texture(Gdx.files.internal("ellieminibotResources/images/ellieMinibotBadge.png"));
+
+        // Loads the config page for the mod
+        BaseMod.registerModBadge(badgeTexture, info.Name, info.Authors[0], info.Description, new ConfigPanel());
+
+
         // Add a single monster encounter
         BaseMod.addMonster(LanternBugMonster.ID, () -> new LanternBugMonster());
         // Add a multi-monster encounter
