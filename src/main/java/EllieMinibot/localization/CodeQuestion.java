@@ -3,10 +3,10 @@ package EllieMinibot.localization;
 import java.util.List;
 
 public class CodeQuestion {
-    private String question;
-    private List<String> options;
-    private String answer;
-    private String explanation;
+    public String question;
+    public List<String> options;
+    public String answer;
+    public String explanation;
 
     // getters and setters
 }

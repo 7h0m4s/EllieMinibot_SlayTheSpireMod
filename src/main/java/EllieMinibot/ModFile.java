@@ -100,6 +100,10 @@ public class ModFile implements
     public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG = makePath("audio/bg_music/EvilNeuro_CrazyRobotBody.ogg");
     public static final String CLINTS_REPTILE_ROOM_KEY = makeID("ClintsReptileRoomAudio");
     public static final String CLINTS_REPTILE_ROOM_OGG = makePath("audio/ClintsReptileRoom.ogg");
+    public static final String CORRECT_SFX_KEY = makeID("CorrectSfx");
+    public static final String CORRECT_SFX_OGG = makePath("audio/CorrectSfx.ogg");
+    public static final String WRONG_SFX_KEY = makeID("WrongSfx");
+    public static final String WRONG_SFX_OGG = makePath("audio/WrongSfx.ogg");
 
     public static ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
 
@@ -249,6 +253,8 @@ public class ModFile implements
         BaseMod.addAudio(SONG_CRAZYROBOTBODY_KEY, SONG_CRAZYROBOTBODY_OGG);
         BaseMod.addAudio(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY, BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG);
         BaseMod.addAudio(CLINTS_REPTILE_ROOM_KEY, CLINTS_REPTILE_ROOM_OGG);
+        BaseMod.addAudio(CORRECT_SFX_KEY, CORRECT_SFX_OGG);
+        BaseMod.addAudio(WRONG_SFX_KEY, WRONG_SFX_OGG);
     }
 
     @Override
