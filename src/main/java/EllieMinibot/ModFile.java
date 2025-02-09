@@ -2,6 +2,8 @@ package EllieMinibot;
 
 import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.events.ClintsReptilesEvent;
+import EllieMinibot.localization.CodeQuestion;
+import EllieMinibot.localization.CodeQuestionType;
 import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
@@ -35,13 +37,18 @@ import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.util.IOUtils;
 import org.scannotation.AnnotationDB;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.*;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Optional;
-import java.util.Set;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT;
 
@@ -93,6 +100,8 @@ public class ModFile implements
     public static final String BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG = makePath("audio/bg_music/EvilNeuro_CrazyRobotBody.ogg");
     public static final String CLINTS_REPTILE_ROOM_KEY = makeID("ClintsReptileRoomAudio");
     public static final String CLINTS_REPTILE_ROOM_OGG = makePath("audio/ClintsReptileRoom.ogg");
+
+    public static ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -290,9 +299,207 @@ public class ModFile implements
         BaseMod.addEvent(ClintsReptilesEvent.ID, ClintsReptilesEvent.class);
         BaseMod.addEvent(new AddEventParams.Builder(ClintsReptilesEvent.ID, ClintsReptilesEvent.class).playerClass(ELLIE_MINIBOT).create());
 
+
+        setupCodeQuestions();
     }
 
+private void setupCodeQuestions(){
+    String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/CodeQuestionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
 
+    Gson gson = new Gson();
+    Type type = new TypeToken<Map<String, List<CodeQuestion>>>() {}.getType();
+    Map<String, ArrayList<CodeQuestion>> data = gson.fromJson(json, type);
+
+
+    for (String questionType : data.keySet()) {
+        switch(questionType) {
+            case "C":
+                if(ConfigPanel.Enable_CodeQuestions_For_C) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "C++":
+                if(ConfigPanel.Enable_CodeQuestions_For_CPlusPlus) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Java":
+                if(ConfigPanel.Enable_CodeQuestions_For_Java) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Maven":
+                if(ConfigPanel.Enable_CodeQuestions_For_Maven) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Kotlin":
+                if(ConfigPanel.Enable_CodeQuestions_For_Kotlin) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Spring":
+                if(ConfigPanel.Enable_CodeQuestions_For_Spring) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Python":
+                if(ConfigPanel.Enable_CodeQuestions_For_Python) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Stack":
+                if(ConfigPanel.Enable_CodeQuestions_For_Stack) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Queue":
+                if(ConfigPanel.Enable_CodeQuestions_For_Queue) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Linked List":
+                if(ConfigPanel.Enable_CodeQuestions_For_Linked_List) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "DataStructures":
+                if(ConfigPanel.Enable_CodeQuestions_For_DataStructures) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "JavaScript":
+                if(ConfigPanel.Enable_CodeQuestions_For_JavaScript) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Go":
+                if(ConfigPanel.Enable_CodeQuestions_For_Go) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "C#":
+                if(ConfigPanel.Enable_CodeQuestions_For_CSharp) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "PHP":
+                if(ConfigPanel.Enable_CodeQuestions_For_PHP) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Swift":
+                if(ConfigPanel.Enable_CodeQuestions_For_Swift) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Ruby":
+                if(ConfigPanel.Enable_CodeQuestions_For_Ruby) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "R":
+                if(ConfigPanel.Enable_CodeQuestions_For_R) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Scala":
+                if(ConfigPanel.Enable_CodeQuestions_For_Scala) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "SQL":
+                if(ConfigPanel.Enable_CodeQuestions_For_SQL) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "DBMC":
+                if(ConfigPanel.Enable_CodeQuestions_For_DBMC) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "MySQL":
+                if(ConfigPanel.Enable_CodeQuestions_For_MySQL) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "PostgreSQL":
+                if(ConfigPanel.Enable_CodeQuestions_For_PostgreSQL) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "MongoDB":
+                if(ConfigPanel.Enable_CodeQuestions_For_MongoDB) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Oracle":
+                if(ConfigPanel.Enable_CodeQuestions_For_Oracle) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "SQL Server":
+                if(ConfigPanel.Enable_CodeQuestions_For_SQL_Server) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "HTML":
+                if(ConfigPanel.Enable_CodeQuestions_For_HTML) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "CSS":
+                if(ConfigPanel.Enable_CodeQuestions_For_CSS) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "React":
+                if(ConfigPanel.Enable_CodeQuestions_For_React) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Angular":
+                if(ConfigPanel.Enable_CodeQuestions_For_Angular) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Node JS":
+                if(ConfigPanel.Enable_CodeQuestions_For_Node_JS) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Express.js":
+                if(ConfigPanel.Enable_CodeQuestions_For_Expressjs) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "jQuery":
+                if(ConfigPanel.Enable_CodeQuestions_For_jQuery) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Vue.js":
+                if(ConfigPanel.Enable_CodeQuestions_For_Vuejs) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "TypeScript":
+                if(ConfigPanel.Enable_CodeQuestions_For_TypeScript) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "JSON":
+                if(ConfigPanel.Enable_CodeQuestions_For_JSON) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "XML":
+                if(ConfigPanel.Enable_CodeQuestions_For_XML) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Software Engineering":
+                if(ConfigPanel.Enable_CodeQuestions_For_Software_Engineering) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Operating System":
+                if(ConfigPanel.Enable_CodeQuestions_For_Operating_System) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Computer Hardware":
+                if(ConfigPanel.Enable_CodeQuestions_For_Computer_Hardware) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Linux":
+                if(ConfigPanel.Enable_CodeQuestions_For_Linux) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Software Testing":
+                if(ConfigPanel.Enable_CodeQuestions_For_Software_Testing) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Object-Oriented Programming (OOP)":
+                if(ConfigPanel.Enable_CodeQuestions_For_Object_Oriented_Programming_OOP) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Embedded Systems":
+                if(ConfigPanel.Enable_CodeQuestions_For_Embedded_Systems) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Artificial Intelligence":
+                if(ConfigPanel.Enable_CodeQuestions_For_Artificial_Intelligence) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Cyber Security":
+                if(ConfigPanel.Enable_CodeQuestions_For_Cyber_Security) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "IoT (Internet of Things)":
+                if(ConfigPanel.Enable_CodeQuestions_For_IoT_Internet_of_Things) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Hadoop":
+                if(ConfigPanel.Enable_CodeQuestions_For_Hadoop) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Data Science":
+                if(ConfigPanel.Enable_CodeQuestions_For_Data_Science) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Unix":
+                if(ConfigPanel.Enable_CodeQuestions_For_Unix) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Visual Basic":
+                if(ConfigPanel.Enable_CodeQuestions_For_Visual_Basic) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "MapReduce":
+                if(ConfigPanel.Enable_CodeQuestions_For_MapReduce) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Cassandra":
+                if(ConfigPanel.Enable_CodeQuestions_For_Cassandra) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Redis":
+                if(ConfigPanel.Enable_CodeQuestions_For_Redis) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Apache Spark":
+                if(ConfigPanel.Enable_CodeQuestions_For_Apache_Spark) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Apache Kafka":
+                if(ConfigPanel.Enable_CodeQuestions_For_Apache_Kafka) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "RabbitMQ":
+                if(ConfigPanel.Enable_CodeQuestions_For_RabbitMQ) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "DevOps":
+                if(ConfigPanel.Enable_CodeQuestions_For_DevOps) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Docker":
+                if(ConfigPanel.Enable_CodeQuestions_For_Docker) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Git":
+                if(ConfigPanel.Enable_CodeQuestions_For_Git) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+            case "Kubernetes":
+                if(ConfigPanel.Enable_CodeQuestions_For_Kubernetes) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));
+                break;
+        }
+
+    }
+}
 
 
 }

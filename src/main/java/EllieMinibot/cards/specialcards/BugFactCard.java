@@ -1,5 +1,6 @@
 package EllieMinibot.cards.specialcards;
 
+import EllieMinibot.ModFile;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.powers.UmActuallyPower;
