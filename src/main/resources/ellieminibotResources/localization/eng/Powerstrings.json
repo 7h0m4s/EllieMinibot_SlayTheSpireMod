@@ -19,5 +19,12 @@
       "#yBug #YFacts deal #b",
       " additional damage."
     ]
+  },
+  "${ModID}:CodeQuestionStreakPower": {
+    "NAME": "Quiz Streak",
+    "DESCRIPTIONS": [
+      "#yQuiz cards gain #b",
+      "% additional potency. NL The streak will reset when a question is answered incorrectly."
+    ]
   }
 }

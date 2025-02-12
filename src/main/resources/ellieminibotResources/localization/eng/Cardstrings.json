@@ -193,7 +193,7 @@
   },
   "${ModID}:JobInterview": {
     "NAME": "Job Interview",
-    "DESCRIPTION": "*[Leet Code]. NL Deal !D! damage if answer correctly. NL else take !D! damage."
+    "DESCRIPTION": "*[Quiz]. NL Deal !D! damage if answer correctly. NL else take !M! damage."
   },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",

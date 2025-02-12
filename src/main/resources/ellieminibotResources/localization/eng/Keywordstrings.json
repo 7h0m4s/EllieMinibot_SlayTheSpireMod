@@ -29,6 +29,13 @@
     "DESCRIPTION": "Reduce incoming damage at a flat rate."
   },
   {
+    "PROPER_NAME": "Quiz",
+    "NAMES": [
+      "Quiz"
+    ],
+    "DESCRIPTION": "On playing card, a multiple choice question will be displayed. NL  NL If answered #bcorrectly, the card will work normally and you will gain a Streak point. NL  NL If answered #bincorrectly, the target of the card will be inverted. For example failing a quiz attack card, will cause Ellie to take damage instead of the enemy. NL  NL The question topics can be changed in mod config menu."
+  },
+  {
     "PROPER_NAME": "Bug Fact",
     "NAMES": [
       "BugFact"
