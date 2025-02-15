@@ -199,6 +199,10 @@
     "NAME": "Job Interview",
     "DESCRIPTION": "*[Quiz]. NL Deal !D! damage if answer correctly. NL else take !M! damage."
   },
+  "${ModID}:LeetCodePractice": {
+    "NAME": "Leet Code Practice",
+    "DESCRIPTION": "*[Quiz]. NL Gain !B! *Block if answer correctly. NL else a random enemy gains !B! *Block."
+  },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & *Exhaust.",

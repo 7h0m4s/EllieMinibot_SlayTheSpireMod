@@ -130,8 +130,9 @@ public class CharacterFile extends AbstractPlayerWithMinions {
 //        retVal.add(UmActuallyCard.ID);
 //        retVal.add(EatTheCodeBugCard.ID);
 //        retVal.add(MapleCollabCard.ID);
-        retVal.add(JobInterviewCard.ID);
+//        retVal.add(JobInterviewCard.ID);
 //        retVal.add(FeatureNotABugCard.ID);
+        retVal.add(LeetCodePracticeCard.ID);
         return retVal;
     }
 
