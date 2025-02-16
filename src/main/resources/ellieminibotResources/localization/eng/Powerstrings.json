@@ -20,11 +20,11 @@
       " additional damage."
     ]
   },
-  "${ModID}:CodeQuestionStreakPower": {
-    "NAME": "Quiz Streak",
+  "${ModID}:WelcomeRaidersPower": {
+    "NAME": "Welcome Raiders",
     "DESCRIPTIONS": [
-      "#yQuiz cards gain #b",
-      "% additional potency. NL The streak will reset when a question is answered incorrectly."
+      "*Channel #b",
+      "random orbs at the start of turn."
     ]
   }
 }

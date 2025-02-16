@@ -115,6 +115,11 @@
     "NAME": "Crazy Effing Robot Body Song",
     "DESCRIPTION": "Gain !M! *Strength."
   },
+  "${ModID}:WelcomeRaiders": {
+    "NAME": "Welcome Raiders",
+    "DESCRIPTION": "*Channel !M! random orb at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "*Channel !M! random orbs at the start of each turn."
+  },
   "${ModID}:DrinkingStream": {
     "NAME": "Drinking Stream",
     "DESCRIPTION": "Gain !B! *Block for every *Channeled orb."
