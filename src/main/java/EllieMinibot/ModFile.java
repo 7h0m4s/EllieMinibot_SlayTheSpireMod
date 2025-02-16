@@ -51,6 +51,7 @@ import java.util.*;
 import java.nio.charset.StandardCharsets;
 
 import static EllieMinibot.CharacterFile.Enums.ELLIE_MINIBOT;
+import static EllieMinibot.config.ConfigPanel.Disable_QUIZ_Card_Questions;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -316,8 +317,11 @@ private void setupCodeQuestions(){
     Type type = new TypeToken<Map<String, List<CodeQuestion>>>() {}.getType();
     Map<String, ArrayList<CodeQuestion>> data = gson.fromJson(json, type);
 
+    if(Disable_QUIZ_Card_Questions) return;
 
     for (String questionType : data.keySet()) {
+
+        if(data.get(questionType).isEmpty()) continue; // Skip if the QuestionType contains no questions
         switch(questionType) {
             case "C":
                 if(ConfigPanel.Enable_CodeQuestions_For_C) CODE_QUESTION_TYPES.add(new CodeQuestionType(questionType, data.get(questionType)));

@@ -19,18 +19,29 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.function.Predicate;
 
+import static EllieMinibot.config.ConfigPanel.Disable_QUIZ_Card_Questions;
 import static EllieMinibot.util.Wiz.atb;
 
 public class CodeQuestionAction extends AbstractGameAction {
 
     public CodeQuestionAction(Runnable onSuccess, Runnable onFailure) {
-
-
         Random random = new Random();
+
+        if(Disable_QUIZ_Card_Questions || ModFile.CODE_QUESTION_TYPES.isEmpty()){
+            onSuccess.run();
+            return;
+        }
+
         int codeQuestionTypeIndex = random.nextInt(ModFile.CODE_QUESTION_TYPES.size());
         CodeQuestionType codeQuestionType = ModFile.CODE_QUESTION_TYPES.get(codeQuestionTypeIndex);
 
         int codeQuestionIndex = random.nextInt(codeQuestionType.CodeQuestions.size());
+
+        if(Disable_QUIZ_Card_Questions || codeQuestionType.CodeQuestions.isEmpty()){
+            onSuccess.run();
+            return;
+        }
+
         CodeQuestion codeQuestion = codeQuestionType.CodeQuestions.get(codeQuestionIndex);
         Collections.shuffle(codeQuestion.options);
 

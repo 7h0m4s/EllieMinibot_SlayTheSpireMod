@@ -36,9 +36,9 @@ public class JobInterviewCard extends AbstractQuizCard {
 
     public JobInterviewCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF);
-
+        baseDamage = damage = 6;
         if(AbstractDungeon.player != null && AbstractDungeon.player.hasPower(CodeQuestionStreakPower.POWER_ID)) UpdateStreak(AbstractDungeon.player.getPower(CodeQuestionStreakPower.POWER_ID).amount);
-        baseMagicNumber = magicNumber = 6;
+
 
         isMultiDamage = false;
         tags.add(CardTags.STRIKE);
@@ -60,7 +60,7 @@ public class JobInterviewCard extends AbstractQuizCard {
                 {
                     atb(new SFXAction(WRONG_SFX_KEY));
                     atb(new VFXAction(new BorderFlashEffect(Color.RED, true)));
-                    atb(new DamageAction(p, new DamageInfo(AbstractDungeon.player, secondDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+                    atb(new DamageAction(p, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
                     // Reset Streak if failed
                     AbstractPower streakPower = AbstractDungeon.player.getPower(CodeQuestionStreakPower.POWER_ID);

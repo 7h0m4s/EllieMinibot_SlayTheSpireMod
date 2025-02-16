@@ -197,7 +197,7 @@
   },
   "${ModID}:JobInterview": {
     "NAME": "Job Interview",
-    "DESCRIPTION": "*[Quiz]. NL Deal !D! damage if answer correctly. NL else take !M! damage."
+    "DESCRIPTION": "*[Quiz]. NL Deal !D! damage if answer correctly. NL else take !D! damage."
   },
   "${ModID}:LeetCodePractice": {
     "NAME": "Leet Code Practice",

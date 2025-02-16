@@ -9,6 +9,8 @@ public class ConfigPanel extends EasyConfigPanel {
     public static boolean Enable_Spider_Bug_Facts = true;
 
 
+    public static boolean Disable_QUIZ_Card_Questions = false;
+
     public static boolean Enable_CodeQuestions_For_C = true;
     public static boolean Enable_CodeQuestions_For_CPlusPlus = true;
     public static boolean Enable_CodeQuestions_For_Java = true;
