@@ -122,7 +122,7 @@
   },
   "${ModID}:FeedGale": {
     "NAME": "Simp For Gale",
-    "DESCRIPTION": "*Exhaust NL Gain !M! block. NL Permanently destroy a card in hand. Permanently upgrade all *Simp *For *Gale cards by the cost of the destroyed card."
+    "DESCRIPTION": "Gain !M! block. NL Permanently destroy a card in hand. Permanently upgrade all *Simp *For *Gale cards by the cost of the destroyed card. NL *Exhaust"
   },
   "${ModID}:DrinkingStream": {
     "NAME": "Drinking Stream",
