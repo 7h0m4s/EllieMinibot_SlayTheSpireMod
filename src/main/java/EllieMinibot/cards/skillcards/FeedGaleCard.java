@@ -31,14 +31,14 @@ public class FeedGaleCard extends AbstractEasyCard {
 
     public FeedGaleCard() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        baseBlock = block = 1;
 
-        // Match BaseMagicNumber with all other FeedGaleCards
+        // Match baseBlock with all other FeedGaleCards
         if(AbstractDungeon.player != null) {
             AbstractDungeon.player.masterDeck.group
                     .stream()
                     .filter(a -> a.cardID == this.cardID)
-                    .forEach(c-> {if(c.baseMagicNumber > this.baseMagicNumber) this.baseMagicNumber = c.baseMagicNumber;});
+                    .forEach(c-> {if(c.baseBlock > this.baseBlock) this.baseBlock = c.baseBlock;});
         }
         exhaust = false;
     }
@@ -71,12 +71,12 @@ public class FeedGaleCard extends AbstractEasyCard {
                 AbstractDungeon.player.masterDeck.group
                         .stream()
                         .filter(a -> a.cardID == this.cardID)
-                        .forEach(c-> c.baseMagicNumber += c2.costForTurn);
+                        .forEach(c-> c.baseBlock += c2.costForTurn);
 
                 Wiz.getAllCardsInCardGroups(true, true)
                         .stream()
                         .filter(a -> a.cardID == this.cardID)
-                        .forEach(c-> c.baseMagicNumber += c2.costForTurn);
+                        .forEach(c-> c.baseBlock += c2.costForTurn);
 
                 // Remove selected card from hand and master deck
                 Wiz.p().hand.group
