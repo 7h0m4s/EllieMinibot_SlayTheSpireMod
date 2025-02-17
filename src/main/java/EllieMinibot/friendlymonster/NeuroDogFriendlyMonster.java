@@ -3,6 +3,8 @@ package EllieMinibot.friendlymonster;
 import EllieMinibot.ModFile;
 import EllieMinibot.actions.ChannelRandomEllieOrbAction;
 import EllieMinibot.cards.specialcards.BugFactCard;
+import EllieMinibot.relics.NerfTurretRelic;
+import EllieMinibot.relics.NeuroDogRelic;
 import EllieMinibot.util.Wiz;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Texture;
@@ -146,10 +148,10 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
         moveMasterList.add(new MinionMove("Tackle", this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/attack/attack_intent_1.png"),
-                "Deal 5 damage to an enemy",
+                "Deal "+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 10 : 5) +" damage to an enemy",
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
-                    DamageInfo info = new DamageInfo(this, 5, DamageInfo.DamageType.NORMAL);
+                    DamageInfo info = new DamageInfo(this, Wiz.p().hasRelic(NerfTurretRelic.ID) ? 10 : 5 , DamageInfo.DamageType.NORMAL);
                     info.applyPowers(this, target); // <--- This lets powers effect minions attacks
                     atb(new DamageAction(target, info));
                     atb(new SFXAction("SLIME_ATTACK"));
@@ -158,10 +160,10 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
         ));
         moveMasterList.add(new MinionMove("Body Slam", this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/attack/attack_intent_2.png"),
-                "Deal 10 damage to an enemy",
+                "Deal "+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 20 : 10) +" damage to an enemy",
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
-                    DamageInfo info = new DamageInfo(this, 10, DamageInfo.DamageType.NORMAL);
+                    DamageInfo info = new DamageInfo(this, Wiz.p().hasRelic(NerfTurretRelic.ID) ? 20 : 10, DamageInfo.DamageType.NORMAL);
                     info.applyPowers(this, target); // <--- This lets powers effect minions attacks
                     atb(new DamageAction(target, info));
                     atb(new SFXAction("BLUNT_HEAVY"));

@@ -18,8 +18,8 @@ public class BeatSabreCard extends AbstractEasyCard {
 
     public BeatSabreCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1; // This turn draw count
-        baseSecondMagic = secondMagic = 2; // next turn draw count
+        baseMagicNumber = magicNumber = 2; // This turn draw count
+        baseSecondMagic = secondMagic = 3; // next turn draw count
         tags.add(CardTags.EMPTY);
     }
 

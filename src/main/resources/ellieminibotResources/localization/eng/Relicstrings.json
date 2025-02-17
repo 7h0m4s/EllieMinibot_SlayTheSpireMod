@@ -20,6 +20,13 @@
       "Get #b10% off at the merchant with code #yMINIBOT."
     ]
   },
+  "${ModID}:NerfTurretRelic": {
+    "NAME": "NeuroDog Nerf Turret",
+    "FLAVOR": "The only weapon Neuro-sama can be trusted with.",
+    "DESCRIPTIONS": [
+      "NeuroDog's direct attacks do double damage."
+    ]
+  },
   "${ModID}:NeuroDogRelic": {
     "NAME": "Neuro Dog",
     "FLAVOR": "Solo built robot quadruped to provide an AI streamer a physical body.",
@@ -27,7 +34,7 @@
       "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bDesign",
       "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bAssemble",
       "Work on Neuro Dog at #yRest #ySites #b%d times to finish building her. NL Current Stage: #bReduce #bLatency",
-      "Neuro Dog is summoned as an ally at the start of each combat. There is a #b%d% chance enemies will target Neuro instead of the player."
+      "Neuro Dog is summoned as an ally at the start of each combat. There is a #b%d percent chance enemies will target Neuro instead of the player."
     ]
   }
 }
