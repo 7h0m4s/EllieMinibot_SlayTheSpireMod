@@ -62,16 +62,20 @@ public class ClintsReptilesEvent extends AbstractImageEvent {
         switch (buttonPressed) {
             case 0:
                 provideRelic(new PreservedInsect(), PreservedInsect.ID);
+                AbstractEvent.logMetricObtainRelic("ClintsReptiles", "Insect",new PreservedInsect());
                 break;
             case 1:
                 provideRelic(new SnakeRing(), SnakeRing.ID);
+                AbstractEvent.logMetricObtainRelic("ClintsReptiles", "Reptile",new SnakeRing());
                 break;
             case 2:
                 provideRelic(new ToxicEgg2(), ToxicEgg2.ID);
+                AbstractEvent.logMetricObtainRelic("ClintsReptiles", "Avian",new ToxicEgg2());
                 break;
             case 3:
                 AbstractCard c = new Regret();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                AbstractEvent.logMetricObtainCard("ClintsReptiles", "Run Away",new Regret());
                 this.screenNum = 1;
                 this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
                 this.imageEventText.clearAllDialogs();
