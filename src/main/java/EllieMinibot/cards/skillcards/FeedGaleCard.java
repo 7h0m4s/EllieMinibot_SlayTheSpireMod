@@ -40,14 +40,14 @@ public class FeedGaleCard extends AbstractEasyCard {
                     .filter(a -> a.cardID == this.cardID)
                     .forEach(c-> {if(c.baseMagicNumber > this.baseMagicNumber) this.baseMagicNumber = c.baseMagicNumber;});
         }
-        exhaust = true;
+        exhaust = false;
     }
 
     @Override
     public boolean cardPlayable(AbstractMonster m) {
         boolean isPlayable = false;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.costForTurn > 0
+            if (c.costForTurn >= 0
                     && c.uuid != this.uuid
                     && c.type != CardType.STATUS
                     && c.type != CardType.CURSE) {
@@ -64,7 +64,7 @@ public class FeedGaleCard extends AbstractEasyCard {
                 Wiz.p().hand.group,
                 "Choose a card to permanently destroy.",
                 false,
-                (c)-> (c.costForTurn > 0 && c.uuid != this.uuid && c.type != CardType.STATUS && c.type != CardType.CURSE),
+                (c)-> (c.costForTurn >= 0 && c.uuid != this.uuid && c.type != CardType.STATUS && c.type != CardType.CURSE),
                 (cards) -> {
             for (AbstractCard c2 : cards) {
                 // Update FeedGale Cards
