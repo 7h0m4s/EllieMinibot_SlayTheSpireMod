@@ -204,6 +204,10 @@
     "NAME": "Distracted",
     "DESCRIPTION": "*Unplayable. NL *Ethereal. NL Whenever this card is drawn, lose 1 Energy."
   },
+  "${ModID}:UkuleleCurse": {
+    "NAME": "Ukulele",
+    "DESCRIPTION": "*Unplayable."
+  },
   "${ModID}:JobInterview": {
     "NAME": "Job Interview",
     "DESCRIPTION": "*[Quiz]. NL Deal !D! damage if answer correctly. NL else take !D! damage."
