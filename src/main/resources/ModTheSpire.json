@@ -8,7 +8,7 @@
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",
-  "credits": "Basemod, ModTheSpire, FriendlyMonsters, DarkVexon_ProTemplate",
+  "credits": "Basemod, ModTheSpire, FriendlyMonsters, DarkVexon_ProTemplate & Maddii of the Otter Clan",
   "dependencies": [
     "basemod",
     "stslib",
