@@ -130,7 +130,7 @@
   },
   "${ModID}:UmActually": {
     "NAME": "Ummm, Actually",
-    "DESCRIPTION": "*Bug *Fact cards deal an extra !M! damage."
+    "DESCRIPTION": "*Bug *Fact cards deal an additional !M! damage."
   },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
