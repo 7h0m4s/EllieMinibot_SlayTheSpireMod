@@ -194,7 +194,7 @@
   },
   "${ModID}:NerdyGirlRizz": {
     "NAME": "Nerdy Girl Rizz",
-    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters. NL *Exhaust"
+    "DESCRIPTION": "*Channel a chosen orb to fill all orb slots. NL *Exhaust"
   },
   "${ModID}:FeatureNotABug": {
     "NAME": "Feature Not A Bug",
@@ -215,6 +215,10 @@
   "${ModID}:LeetCodePractice": {
     "NAME": "Leet Code Practice",
     "DESCRIPTION": "*[Quiz]. NL Gain !B! *Block if answer correctly. NL else a random enemy gains !B! *Block."
+  },
+  "${ModID}:AboveAverageBo": {
+    "NAME": "Above Average Bo",
+    "DESCRIPTION": "*Your *Average *Bo orbs attack an additional time. NL *Channel !M! *Your *Average *Bo."
   },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",

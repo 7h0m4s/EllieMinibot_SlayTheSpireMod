@@ -26,5 +26,12 @@
       "*Channel #b",
       "random orbs at the start of turn."
     ]
+  },
+  "${ModID}:AboveAverageBoPower": {
+    "NAME": "Above Average Bo",
+    "DESCRIPTIONS": [
+      "*Your *Average *Bo orbs gain #b",
+      "additional attacks on evoke and end of turn."
+    ]
   }
 }

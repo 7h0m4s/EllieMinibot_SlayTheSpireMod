@@ -1,5 +1,6 @@
 package EllieMinibot.orbs;
 
+import EllieMinibot.powers.AboveAverageBoPower;
 import EllieMinibot.util.TexLoader;
 import EllieMinibot.util.Wiz;
 import com.badlogic.gdx.graphics.Texture;
@@ -46,7 +47,9 @@ public class YourAverageBoOrb  extends AbstractOrb {
     }
 
     public void onEvoke() {
-        for (int i = 0; i < 2; i++) {
+        int numAttacks = 2;
+        if(Wiz.p().hasPower(AboveAverageBoPower.POWER_ID)) numAttacks += Wiz.p().getPower(AboveAverageBoPower.POWER_ID).amount;
+        for (int i = 0; i < numAttacks; i++) {
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -65,19 +68,23 @@ public class YourAverageBoOrb  extends AbstractOrb {
     }
 
     public void onEndOfTurn() {
-        Wiz.atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                AbstractMonster target = Wiz.getFrontmostEnemy();
-                if (target != null) {
-                    att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                    att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
-                    att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
-                    att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+        int numAttacks = 1;
+        if(Wiz.p().hasPower(AboveAverageBoPower.POWER_ID)) numAttacks += Wiz.p().getPower(AboveAverageBoPower.POWER_ID).amount;
+        for (int i = 0; i < numAttacks; i++) {
+            Wiz.atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    AbstractMonster target = Wiz.getFrontmostEnemy();
+                    if (target != null) {
+                        att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                        att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
+                        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                        att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                    }
+                    isDone = true;
                 }
-                isDone = true;
-            }
-        });
+            });
+        }
     }
 
     public void triggerEvokeAnimation() {
