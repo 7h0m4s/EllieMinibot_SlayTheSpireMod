@@ -46,6 +46,7 @@ public class AboveAverageBoCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@WigsInk")));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("YourAverageBo")), BaseMod.getKeywordDescription(makeID("YourAverageBo"))));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         return tooltips;
     }
