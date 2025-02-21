@@ -20,7 +20,7 @@ public class BookieCollabCard extends AbstractEasyCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public BookieCollabCard() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(CardTags.EMPTY);
     }
 
