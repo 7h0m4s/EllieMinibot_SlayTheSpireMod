@@ -1,6 +1,7 @@
 package EllieMinibot;
 
 import EllieMinibot.config.ConfigPanel;
+import EllieMinibot.events.BoBathroomEvent;
 import EllieMinibot.events.ClintsReptilesEvent;
 import EllieMinibot.localization.CodeQuestion;
 import EllieMinibot.localization.CodeQuestionType;
@@ -308,6 +309,9 @@ public class ModFile implements
         // Events
         BaseMod.addEvent(ClintsReptilesEvent.ID, ClintsReptilesEvent.class);
         BaseMod.addEvent(new AddEventParams.Builder(ClintsReptilesEvent.ID, ClintsReptilesEvent.class).playerClass(ELLIE_MINIBOT).create());
+
+        BaseMod.addEvent(BoBathroomEvent.ID, BoBathroomEvent.class);
+        BaseMod.addEvent(new AddEventParams.Builder(BoBathroomEvent.ID, BoBathroomEvent.class).playerClass(ELLIE_MINIBOT).create());
 
 
         setupCodeQuestions();
