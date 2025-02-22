@@ -188,6 +188,10 @@
     "NAME": "Loud As Cicadas",
     "DESCRIPTION": "\"Swarming in hundreds\" NL Add !M! *Bug *Facts to your hand."
   },
+  "${ModID}:OvenDriedBugs": {
+    "NAME": "Oven Dried Bugs",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Bug *Facts to your hand."
+  },
   "${ModID}:StrongAnkles": {
     "NAME": "Strong Ankles",
     "DESCRIPTION": "Deal !D! damage NL Draw !M! *Bug *Fact cards."
