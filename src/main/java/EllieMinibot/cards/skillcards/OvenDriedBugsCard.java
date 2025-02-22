@@ -15,7 +15,7 @@ import static EllieMinibot.ModFile.makeID;
 
 public class OvenDriedBugsCard extends AbstractEasyCard {
     public final static String ID = makeID("OvenDriedBugs");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public OvenDriedBugsCard() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

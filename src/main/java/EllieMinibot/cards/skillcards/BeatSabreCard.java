@@ -14,7 +14,7 @@ import static EllieMinibot.util.Wiz.*;
 
 public class BeatSabreCard extends AbstractEasyCard {
     public final static String ID = makeID("BeatSabre");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public BeatSabreCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

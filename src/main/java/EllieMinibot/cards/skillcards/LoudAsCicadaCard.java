@@ -20,7 +20,7 @@ import static EllieMinibot.util.Wiz.atb;
 
 public class LoudAsCicadaCard extends AbstractEasyCard {
     public final static String ID = makeID("LoudAsCicada");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public LoudAsCicadaCard() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

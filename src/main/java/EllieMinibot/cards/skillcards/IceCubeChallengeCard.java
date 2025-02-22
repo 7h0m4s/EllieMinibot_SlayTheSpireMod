@@ -16,7 +16,7 @@ import static EllieMinibot.ModFile.makeID;
 
 public class IceCubeChallengeCard  extends AbstractEasyCard {
     public final static String ID = makeID("IceCubeChallenge");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public IceCubeChallengeCard() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

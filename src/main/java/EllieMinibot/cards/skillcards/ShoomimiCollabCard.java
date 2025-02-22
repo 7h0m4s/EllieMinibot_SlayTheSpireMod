@@ -16,7 +16,7 @@ import static EllieMinibot.util.Wiz.atb;
 
 public class ShoomimiCollabCard extends AbstractEasyCard {
     public final static String ID = makeID("ShoomimiCollab");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public ShoomimiCollabCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

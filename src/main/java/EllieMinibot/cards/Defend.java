@@ -7,7 +7,7 @@ import static EllieMinibot.ModFile.makeID;
 
 public class Defend extends AbstractEasyCard {
     public final static String ID = makeID("Defend");
-    // intellij stuff skill, self, basic, , ,  5, 3, , 
+ 
 
     public Defend() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);

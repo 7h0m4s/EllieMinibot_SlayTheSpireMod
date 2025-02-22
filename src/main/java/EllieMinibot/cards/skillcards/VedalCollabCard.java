@@ -17,7 +17,7 @@ import static EllieMinibot.util.Wiz.atb;
 
 public class VedalCollabCard extends AbstractEasyCard {
     public final static String ID = makeID("VedalCollab");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public VedalCollabCard() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

@@ -14,7 +14,7 @@ import static EllieMinibot.ModFile.makeID;
 
 public class SpinRingCard extends AbstractEasyCard {
     public final static String ID = makeID("SpinRing");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public SpinRingCard() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

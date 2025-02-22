@@ -17,7 +17,7 @@ import static EllieMinibot.util.Wiz.atb;
 
 public class DrinkingStreamCard extends AbstractEasyCard {
     public final static String ID = makeID("DrinkingStream");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public DrinkingStreamCard() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

@@ -25,7 +25,7 @@ import static EllieMinibot.util.Wiz.*;
 public class EatTheCodeBugCard extends AbstractEasyCard {
     public final static String ID = makeID("EatTheCodeBug");
     private Random randomizer = new Random();
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public EatTheCodeBugCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

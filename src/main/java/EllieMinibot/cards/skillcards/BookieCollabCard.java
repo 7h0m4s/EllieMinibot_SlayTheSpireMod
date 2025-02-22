@@ -17,7 +17,7 @@ import static EllieMinibot.util.Wiz.atb;
 
 public class BookieCollabCard extends AbstractEasyCard {
     public final static String ID = makeID("BookieCollab");
-    // intellij stuff skill, self, basic, , ,  5, 3, ,
+
 
     public BookieCollabCard() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
