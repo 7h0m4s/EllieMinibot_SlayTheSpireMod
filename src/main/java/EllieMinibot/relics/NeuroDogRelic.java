@@ -33,11 +33,11 @@ public class NeuroDogRelic extends AbstractEasyRelic {
 
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ELLIE_MINIBOT_COLOR);
         this.counter = 0;
-
     }
 
     @Override
     public String getUpdatedDescription() {
+        maxNeuroDogCounter = 3;
         if(this.counter == -1) counter = 0;
         if (counter >= maxNeuroDogCounter) {
             return String.format(DESCRIPTIONS[counter], (int) BASE_MINION_ATTACK_CHANCE * 100);
