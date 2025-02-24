@@ -29,8 +29,19 @@ public class WaterproofingPower extends AbstractEasyPower {
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
+        if(damageType == DamageInfo.DamageType.THORNS) return damage;
+        float total = damage - amount;
+        if (total < 0) return 0;
+        return total;
+    }
 
-        return damage - amount;
+    @Override
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if(info.type != DamageInfo.DamageType.THORNS) return damageAmount;
+        else{
+            int total = damageAmount - amount;
+            return Math.max(total, 0);
+        }
     }
 
     @Override

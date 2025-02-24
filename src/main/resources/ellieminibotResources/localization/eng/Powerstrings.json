@@ -16,7 +16,7 @@
   "${ModID}:UmActuallyPower": {
     "NAME": "Umm Actually",
     "DESCRIPTIONS": [
-      "#yBug #YFacts deal #b",
+      "#yBug #yFacts deal #b",
       " additional damage."
     ]
   },
@@ -32,6 +32,13 @@
     "DESCRIPTIONS": [
       "*Your *Average *Bo orbs gain #b",
       "additional attacks on evoke and end of turn."
+    ]
+  },
+  "${ModID}:CodeQuestionStreakPower": {
+    "NAME": "Streak",
+    "DESCRIPTIONS": [
+      "#y[Quiz] cards gain #b",
+      "% additional potency."
     ]
   }
 }

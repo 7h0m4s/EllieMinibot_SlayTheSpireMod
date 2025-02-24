@@ -19,7 +19,7 @@ public class ShopScreenPatch {
         @SpirePostfixPatch
         public static void Postfix(ShopScreen __instance, ArrayList<AbstractCard> coloredCards, ArrayList<AbstractCard> colorlessCards) {
             if (AbstractDungeon.player.hasRelic(GamerSuppsRelic.ID)) {
-                __instance.applyDiscount(0.1F, true);
+                __instance.applyDiscount(0.9F, true);
             }
         }
     }

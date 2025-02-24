@@ -20,7 +20,7 @@ public class RawSpaghettiCard  extends AbstractEasyCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public RawSpaghettiCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 10;
         baseSecondDamage = secondDamage = 1;
         isMultiDamage = true;

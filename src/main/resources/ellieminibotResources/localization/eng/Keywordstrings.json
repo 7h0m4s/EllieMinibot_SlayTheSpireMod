@@ -55,7 +55,7 @@
       "YourAverageBo",
       "Your Average Bo"
     ],
-    "DESCRIPTION": "An orb that damages the frontmost enemy at the end of turn."
+    "DESCRIPTION": "An orb that damages the front most enemy at the end of turn."
   },
   {
     "PROPER_NAME": "Gomi",
@@ -111,6 +111,6 @@
     "NAMES": [
       "Bookie"
     ],
-    "DESCRIPTION": "An orb that transfers buffs and debuffs between player and monsters."
+    "DESCRIPTION": "An orb that at the start of turn, transfers a single buff from a monster to the player or a debuff from the player to a random monster."
   }
 ]

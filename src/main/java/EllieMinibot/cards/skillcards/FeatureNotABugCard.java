@@ -20,19 +20,19 @@ public class FeatureNotABugCard extends AbstractEasyCard {
     // intellij stuff power, self, uncommon
 
     public FeatureNotABugCard() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
+        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ALL);
         this.exhaust = true;
         this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Remove player debuffs
-        List<AbstractPower> playerDebuffPowers = p.powers.stream().filter(a -> a.type == AbstractPower.PowerType.DEBUFF).collect(Collectors.toList());
+        List<AbstractPower> playerDebuffPowers = p.powers.stream().filter(Wiz::debuffFilter).collect(Collectors.toList());
         p.powers.removeAll(playerDebuffPowers);
 
         // For each monster, move buffs to player
         for( AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters.stream().filter(a -> !a.isDeadOrEscaped()).collect(Collectors.toList())){
-            List<AbstractPower> monsterBuffPowers = monster.powers.stream().filter(a -> a.type == AbstractPower.PowerType.BUFF).collect(Collectors.toList());
+            List<AbstractPower> monsterBuffPowers = monster.powers.stream().filter(Wiz::buffFilter).collect(Collectors.toList());
             monsterBuffPowers.forEach(a-> Wiz.transferPower(a, monster, p));
             monster.powers.removeAll(monsterBuffPowers);
             playerDebuffPowers.forEach(a-> Wiz.transferPower(a, p, monster));

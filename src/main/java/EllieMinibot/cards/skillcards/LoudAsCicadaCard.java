@@ -23,7 +23,7 @@ public class LoudAsCicadaCard extends AbstractEasyCard {
 
 
     public LoudAsCicadaCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 3;
 
         this.cardsToPreview = new BugFactCard();

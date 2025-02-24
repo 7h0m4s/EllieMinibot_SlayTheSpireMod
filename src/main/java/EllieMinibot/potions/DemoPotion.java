@@ -1,5 +1,6 @@
 package EllieMinibot.potions;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import EllieMinibot.CharacterFile;
 import EllieMinibot.ModFile;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class DemoPotion extends AbstractEasyPotion {
     public static String ID = makeID("DemoPotion");
 

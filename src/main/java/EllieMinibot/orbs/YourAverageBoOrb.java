@@ -3,6 +3,8 @@ package EllieMinibot.orbs;
 import EllieMinibot.powers.AboveAverageBoPower;
 import EllieMinibot.util.TexLoader;
 import EllieMinibot.util.Wiz;
+import EllieMinibot.vfx.combat.SmallColouredLaserEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -57,7 +59,7 @@ public class YourAverageBoOrb  extends AbstractOrb {
                     if (target != null) {
                         att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                         att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
-                        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                        att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.MAROON.cpy()), 0.1F));
                         att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                     }
                     isDone = true;
@@ -78,7 +80,7 @@ public class YourAverageBoOrb  extends AbstractOrb {
                     if (target != null) {
                         att(new DamageAction(target, new DamageInfo(AbstractDungeon.player, YourAverageBoOrb.applyLockOn(target, evokeAmount), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                         att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
-                        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+                        att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.MAROON.cpy()), 0.1F));
                         att(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                     }
                     isDone = true;

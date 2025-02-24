@@ -19,7 +19,7 @@ public class IceCubeChallengeCard  extends AbstractEasyCard {
 
 
     public IceCubeChallengeCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         tags.add(CardTags.EMPTY);
     }

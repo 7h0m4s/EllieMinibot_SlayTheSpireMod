@@ -23,7 +23,7 @@ public class StoreRelicPatch {
         )
         public static void Insert(StoreRelic __instance, ShopScreen shopScreen) {
             if (__instance.relic.relicId.equals(GamerSuppsRelic.ID)) {
-                shopScreen.applyDiscount(0.1F, true);
+                shopScreen.applyDiscount(0.9F, true);
             }
         }
 

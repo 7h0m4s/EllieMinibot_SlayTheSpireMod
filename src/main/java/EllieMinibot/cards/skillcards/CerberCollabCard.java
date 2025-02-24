@@ -19,7 +19,7 @@ public class CerberCollabCard extends AbstractEasyCard {
 
 
     public CerberCollabCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
 
         tags.add(CardTags.EMPTY);
     }

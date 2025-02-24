@@ -4,6 +4,7 @@ import EllieMinibot.cards.AbstractQuizCard;
 import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -32,6 +33,9 @@ public class CodeQuestionStreakPower extends AbstractEasyPower {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
         this.updateExistingQuizCards();
+        if (this.amount == 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        }
     }
 
     private void updateExistingQuizCards() {

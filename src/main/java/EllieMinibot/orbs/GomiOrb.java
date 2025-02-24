@@ -3,6 +3,8 @@ package EllieMinibot.orbs;
 import EllieMinibot.actions.EasyXCostAction;
 import EllieMinibot.util.TexLoader;
 import EllieMinibot.util.Wiz;
+import EllieMinibot.vfx.combat.SmallColouredLaserEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -52,7 +54,7 @@ public class GomiOrb extends AbstractOrb {
     public void onEvoke() {
         AbstractMonster target = Wiz.getRandomEnemy();
         applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),evokeAmount));
-        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+        att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.GREEN.cpy()), 0.1F));
         att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
 
     }
@@ -61,7 +63,7 @@ public class GomiOrb extends AbstractOrb {
         AbstractMonster target = Wiz.getRandomEnemy();
         applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),passiveAmount));
         att(new VFXAction(new DarkOrbActivateEffect(hb.cX, hb.cY), 0.1F));
-        att(new VFXAction(new SmallLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY), 0.1F));
+        att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.GREEN.cpy()), 0.1F));
         att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
     }
 

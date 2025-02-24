@@ -66,6 +66,7 @@ public class JobInterviewCard extends AbstractQuizCard {
                     AbstractPower streakPower = AbstractDungeon.player.getPower(CodeQuestionStreakPower.POWER_ID);
                     if(streakPower != null ) streakPower.stackPower(streakPower.amount * -1);
 
+
                 }));
     }
 

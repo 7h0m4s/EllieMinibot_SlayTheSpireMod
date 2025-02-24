@@ -18,7 +18,7 @@ public class OvenDriedBugsCard extends AbstractEasyCard {
 
 
     public OvenDriedBugsCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
         this.baseBlock = this.block = 6;
 

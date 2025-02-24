@@ -69,8 +69,8 @@ public class BookieOrb extends AbstractOrb {
 
     private void orbAction(){
         AbstractMonster monster = Wiz.getRandomEnemy();
-        List<AbstractPower> playerDebuffPowers = AbstractDungeon.player.powers.stream().filter(a -> a.type == AbstractPower.PowerType.DEBUFF).collect(Collectors.toList());
-        List<AbstractPower> monsterBuffPowers = monster.powers.stream().filter(a -> a.type == AbstractPower.PowerType.BUFF).collect(Collectors.toList());
+        List<AbstractPower> playerDebuffPowers = AbstractDungeon.player.powers.stream().filter(Wiz::debuffFilter).collect(Collectors.toList());
+        List<AbstractPower> monsterBuffPowers = monster.powers.stream().filter(Wiz::buffFilter).collect(Collectors.toList());
         if(playerDebuffPowers.isEmpty() && monsterBuffPowers.isEmpty()) return;
 
         Random random = new Random();

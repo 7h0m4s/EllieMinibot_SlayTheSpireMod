@@ -33,7 +33,7 @@ public class LeetCodePracticeCard extends AbstractQuizCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public LeetCodePracticeCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = block = 6;
         if(AbstractDungeon.player != null && AbstractDungeon.player.hasPower(CodeQuestionStreakPower.POWER_ID)) UpdateStreak(AbstractDungeon.player.getPower(CodeQuestionStreakPower.POWER_ID).amount);
         isMultiDamage = false;

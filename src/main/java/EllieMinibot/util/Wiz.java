@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FadingPower;
+import com.megacrit.cardcrawl.powers.ShiftingPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -308,5 +310,15 @@ public class Wiz {
             target.powers.add(power);
         }
         source.powers.remove(power);
+    }
+
+    public static boolean buffFilter(AbstractPower a) {
+
+        return a.type == AbstractPower.PowerType.BUFF && a.ID != ShiftingPower.POWER_ID && a.ID != FadingPower.POWER_ID;
+    }
+
+    public static boolean debuffFilter(AbstractPower a) {
+
+        return a.type == AbstractPower.PowerType.DEBUFF;
     }
 }
