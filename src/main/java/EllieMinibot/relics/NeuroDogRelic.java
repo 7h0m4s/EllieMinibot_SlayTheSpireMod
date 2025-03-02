@@ -7,6 +7,7 @@ import EllieMinibot.orbs.*;
 import EllieMinibot.ui.campfire.NeuroDogCampfireOption;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
@@ -32,7 +33,14 @@ public class NeuroDogRelic extends AbstractEasyRelic {
     public NeuroDogRelic() {
 
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ELLIE_MINIBOT_COLOR);
-        this.counter = 0;
+        this.counter = 3;
+    }
+
+    public void refreshDescription(){
+        this.description = getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
     }
 
     @Override

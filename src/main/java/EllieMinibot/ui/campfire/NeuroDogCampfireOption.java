@@ -28,12 +28,14 @@ public class NeuroDogCampfireOption extends AbstractCampfireOption {
     public void useOption() {
         // Define what happens when the button is clicked
         AbstractDungeon.effectList.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-        NeuroDogRelic neuroDogRelic = (NeuroDogRelic)AbstractDungeon.player.relics.stream().filter(a-> a.getClass() == NeuroDogRelic.class).findFirst().orElse(null);
+        NeuroDogRelic neuroDogRelic = (NeuroDogRelic)AbstractDungeon.player.getRelic(NeuroDogRelic.ID);
         if (neuroDogRelic == null) return;
 
         if(neuroDogRelic.counter < neuroDogRelic.maxNeuroDogCounter) {
             neuroDogRelic.setCounter(neuroDogRelic.counter + 1);
             neuroDogRelic.flash();
+            neuroDogRelic.getUpdatedDescription();
+            neuroDogRelic.refreshDescription();
         }
 
         ((RestRoom)AbstractDungeon.getCurrRoom()).cutFireSound();
