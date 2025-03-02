@@ -3,6 +3,7 @@ package EllieMinibot.cards.skillcards;
 import EllieMinibot.actions.EasyModalChoiceAction;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.util.Wiz;
+import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
@@ -99,6 +100,7 @@ public class FeedGaleCard extends AbstractEasyCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "Arcat109")));
         return tooltips;
     }
 }

@@ -91,7 +91,7 @@
   },
   "${ModID}:EatTheCodeBug": {
     "NAME": "Eat The Codebug",
-    "DESCRIPTION": "*Exhaust all *Bug *Fact cards in hand. NL Gain !B! *Block for each card *Exhausted."
+    "DESCRIPTION": "Gain !B! *Block. NL Gain 1 additional *Block for each exhausted *Bug *Fact card."
   },
   "${ModID}:SelfMaintenance": {
     "NAME": "Self Maintenance",

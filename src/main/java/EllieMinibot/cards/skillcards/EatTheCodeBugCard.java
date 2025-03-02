@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.AbstractStance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,21 +25,26 @@ import static EllieMinibot.util.Wiz.*;
 
 public class EatTheCodeBugCard extends AbstractEasyCard {
     public final static String ID = makeID("EatTheCodeBug");
-    private Random randomizer = new Random();
 
 
     public EatTheCodeBugCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = block = 5;
+
+        // Prepopulate base block in case card is created during combat.
+        if(AbstractDungeon.isPlayerInDungeon()){
+            int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+            baseBlock = block = totalExhaustedBugFacts;
+        } else{
+            baseBlock = block = 0;
+        }
+
         tags.add(CardTags.EMPTY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        List<AbstractCard> allBugFactCards = hand().group.stream().filter(a-> a.cardID.equals(BugFactCard.ID)).collect(Collectors.toList());
-        for(AbstractCard card: allBugFactCards){
-            atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 5));
-            atb(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-        }
+
+        blck();
+
     }
 
 

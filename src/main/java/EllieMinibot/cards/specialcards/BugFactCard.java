@@ -2,12 +2,15 @@ package EllieMinibot.cards.specialcards;
 
 import EllieMinibot.ModFile;
 import EllieMinibot.cards.AbstractEasyCard;
+import EllieMinibot.cards.skillcards.EatTheCodeBugCard;
 import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.powers.UmActuallyPower;
+import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,12 +18,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static EllieMinibot.ModFile.makeID;
+import static EllieMinibot.util.Wiz.p;
 
 public class BugFactCard  extends AbstractEasyCard {
     public final static String ID = makeID("BugFact");
@@ -60,8 +62,17 @@ public class BugFactCard  extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Update EatTheCodeBug Cards
+        int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count()) + 1;
+        AbstractList<AbstractCard> allEatBugFactsCards = (AbstractList<AbstractCard>) Wiz.getAllCardsInCardGroups(true, true).stream().filter(a-> a.cardID == EatTheCodeBugCard.ID).collect(Collectors.toList());
+        for(AbstractCard c :  allEatBugFactsCards){
+            c.baseBlock = totalExhaustedBugFacts;
+            c.initializeDescription();
+        }
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+
     }
 
     @Override
