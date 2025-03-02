@@ -91,7 +91,8 @@
   },
   "${ModID}:EatTheCodeBug": {
     "NAME": "Eat The Codebug",
-    "DESCRIPTION": "Gain !B! *Block. NL Gain 1 additional *Block for each exhausted *Bug *Fact card."
+    "DESCRIPTION": "Gain !B! *Block. NL Gain 1 additional *Block for each exhausted *Bug *Fact card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! *Block. NL Gain 1 additional *Block for each exhausted *Bug *Fact card. NL Minimum 5 block."
   },
   "${ModID}:SelfMaintenance": {
     "NAME": "Self Maintenance",

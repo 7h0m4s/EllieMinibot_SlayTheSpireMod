@@ -63,16 +63,23 @@ public class BugFactCard  extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Update EatTheCodeBug Cards
-        int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count()) + 1;
-        AbstractList<AbstractCard> allEatBugFactsCards = (AbstractList<AbstractCard>) Wiz.getAllCardsInCardGroups(true, true).stream().filter(a-> a.cardID == EatTheCodeBugCard.ID).collect(Collectors.toList());
+        int totalExhaustedBugFacts =Math.toIntExact(p()
+                                .exhaustPile
+                                .group
+                                .stream()
+                                .filter(a -> a.cardID == BugFactCard.ID)
+                                .count()) + 1;
+        AbstractList<AbstractCard> allEatBugFactsCards =
+                (AbstractList<AbstractCard>) Wiz
+                .getAllCardsInCardGroups(true, true)
+                .stream()
+                .filter(a-> a.cardID == EatTheCodeBugCard.ID)
+                .collect(Collectors.toList());
         for(AbstractCard c :  allEatBugFactsCards){
-            c.baseBlock = totalExhaustedBugFacts;
-            c.initializeDescription();
+            ((EatTheCodeBugCard) c).recalculateBlockValue(totalExhaustedBugFacts);
         }
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
-
     }
 
     @Override

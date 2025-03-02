@@ -25,15 +25,15 @@ import static EllieMinibot.util.Wiz.*;
 
 public class EatTheCodeBugCard extends AbstractEasyCard {
     public final static String ID = makeID("EatTheCodeBug");
+    private final static int upgradedMinimumBlock = 5;
 
 
     public EatTheCodeBugCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
         // Prepopulate base block in case card is created during combat.
         if(AbstractDungeon.isPlayerInDungeon()){
-            int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
-            baseBlock = block = totalExhaustedBugFacts;
+            recalculateBlockValue();
         } else{
             baseBlock = block = 0;
         }
@@ -42,15 +42,28 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         blck();
+    }
 
+    public void recalculateBlockValue(){
+        int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+        recalculateBlockValue(totalExhaustedBugFacts);
+    }
+
+    public void recalculateBlockValue(int exhaustedBugFactCount){
+        if(this.upgraded){
+            baseBlock = exhaustedBugFactCount + upgradedMinimumBlock;
+        }
+        else{
+            baseBlock = exhaustedBugFactCount;
+        }
+        this.initializeDescription();
     }
 
 
     @Override
     public void upp() {
-        this.upgradeBlock(2);
+        recalculateBlockValue();
     }
 
     @Override
