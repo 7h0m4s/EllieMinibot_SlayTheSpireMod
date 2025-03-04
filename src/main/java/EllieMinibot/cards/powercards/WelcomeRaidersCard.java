@@ -21,7 +21,7 @@ public class WelcomeRaidersCard extends AbstractEasyCard {
     // intellij stuff power, self, uncommon
 
     public WelcomeRaidersCard() {
-        super(ID, 3, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

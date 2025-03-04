@@ -113,8 +113,8 @@
     "DESCRIPTION": "Gain !M! *Focus."
   },
   "${ModID}:SongCrazyRobotBody": {
-    "NAME": "Crazy Effing Robot Body Song",
-    "DESCRIPTION": "Gain !M! *Strength."
+    "NAME": "Crazy Robot Body Song",
+    "DESCRIPTION": "*Block is not removed at the start of your turn."
   },
   "${ModID}:WelcomeRaiders": {
     "NAME": "Welcome Raiders",

@@ -3,9 +3,12 @@ package EllieMinibot.cards.powercards;
 import EllieMinibot.cards.AbstractEasyCard;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
@@ -20,18 +23,29 @@ public class SongCrazyRobotBodyCard extends AbstractEasyCard {
     // intellij stuff power, self, uncommon
 
     public SongCrazyRobotBodyCard() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         att(new SFXAction(SONG_CRAZYROBOTBODY_KEY));
-        applyToSelf(new StrengthPower(p, magicNumber));
+        boolean powerExists = false;
+
+        for(AbstractPower pow : p.powers) {
+            if (pow.ID.equals("Barricade")) {
+                powerExists = true;
+                break;
+            }
+        }
+
+        if (!powerExists) {
+            this.addToBot(new ApplyPowerAction(p, p, new BarricadePower(p)));
+        }
     }
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        this.upgradeBaseCost(2);;
     }
 
     @Override
