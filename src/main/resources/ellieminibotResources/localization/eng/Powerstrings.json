@@ -30,7 +30,7 @@
   "${ModID}:AboveAverageBoPower": {
     "NAME": "Above Average Bo",
     "DESCRIPTIONS": [
-      "*Your *Average *Bo orbs gain #b",
+      "#yYour #yAverage #yBo orbs gain #b",
       "additional attacks on evoke and end of turn."
     ]
   },
