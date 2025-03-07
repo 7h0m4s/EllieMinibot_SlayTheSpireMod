@@ -45,11 +45,11 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
 
     public void recalculateBlockValue(){
         int totalExhaustedBugFacts;
-        if(AbstractDungeon.player == null || Wiz.p().exhaustPile == null || !AbstractDungeon.isPlayerInDungeon()){
+        if(AbstractDungeon.player == null || AbstractDungeon.player.exhaustPile == null || AbstractDungeon.player.exhaustPile.group == null || !AbstractDungeon.isPlayerInDungeon()){
             totalExhaustedBugFacts = 0;
         }
         else {
-            totalExhaustedBugFacts = Math.toIntExact(Wiz.p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+            totalExhaustedBugFacts = Math.toIntExact(AbstractDungeon.player.exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
         }
         recalculateBlockValue(totalExhaustedBugFacts);
     }
