@@ -30,23 +30,27 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
 
     public EatTheCodeBugCard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-
+        baseBlock = block = 0;
         // Prepopulate base block in case card is created during combat.
         if(AbstractDungeon.isPlayerInDungeon()){
             recalculateBlockValue();
-        } else{
-            baseBlock = block = 0;
         }
-
         tags.add(CardTags.EMPTY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        recalculateBlockValue();
         blck();
     }
 
     public void recalculateBlockValue(){
-        int totalExhaustedBugFacts = Math.toIntExact(p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+        int totalExhaustedBugFacts;
+        if(AbstractDungeon.player == null || Wiz.p().exhaustPile == null || !AbstractDungeon.isPlayerInDungeon()){
+            totalExhaustedBugFacts = 0;
+        }
+        else {
+            totalExhaustedBugFacts = Math.toIntExact(Wiz.p().exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+        }
         recalculateBlockValue(totalExhaustedBugFacts);
     }
 
@@ -56,7 +60,9 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
         }
         else{
             baseBlock = exhaustedBugFactCount;
+
         }
+        this.isBlockModified = true;
         this.initializeDescription();
     }
 
@@ -72,5 +78,11 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("block"), BaseMod.getKeywordDescription("block")));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("exhaust"), BaseMod.getKeywordDescription("exhaust")));
         return tooltips;
+    }
+
+    @Override
+    public void atTurnStart() {
+        recalculateBlockValue();
+        super.atTurnStart();
     }
 }
