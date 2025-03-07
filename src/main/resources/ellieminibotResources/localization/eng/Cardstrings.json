@@ -122,8 +122,8 @@
     "UPGRADE_DESCRIPTION": "*Channel !M! random orbs at the start of each turn."
   },
   "${ModID}:FeedGale": {
-    "NAME": "Simp For Gale",
-    "DESCRIPTION": "Gain !B! block. NL Permanently destroy a card in hand. Permanently upgrade all *Simp *For *Gale cards by the cost of the destroyed card."
+    "NAME": "Feed Gale",
+    "DESCRIPTION": "Gain !B! block. NL Permanently destroy a card in hand. Permanently upgrade all *Feed *Gale cards by the cost of the destroyed card."
   },
   "${ModID}:DrinkingStream": {
     "NAME": "Drinking Stream",
