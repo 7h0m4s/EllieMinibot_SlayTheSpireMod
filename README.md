@@ -13,7 +13,7 @@ You can find more of Ellie_Minibot here:
 * [Twitch](https://www.twitch.tv/Ellie_Minibot)
 * [YouTube](https://www.youtube.com/@Ellie_Minibot)
 * [Twitter/X](https://x.com/dumb_lil_robot)
-* [TicTok](https://www.tiktok.com/@dumb_lil_robot)
+* [TikTok](https://www.tiktok.com/@dumb_lil_robot)
 * [Official Discord](https://discord.gg/codebugs)
 
 ## Mod Dependencies:
