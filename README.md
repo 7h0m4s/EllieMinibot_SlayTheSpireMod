@@ -7,7 +7,7 @@
 
 A mod for the hit deck building game [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/). 
 
-Adds a new character based of the Ellie_Minibot VTuber, along with new cards, events, relics, potions and combat encounters.
+Adds a new character based on the Ellie_Minibot VTuber, along with new cards, events, relics, potions and combat encounters.
 
 You can find more of Ellie_Minibot here:
 * [Twitch](https://www.twitch.tv/Ellie_Minibot)
