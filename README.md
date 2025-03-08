@@ -9,7 +9,7 @@ A mod for the hit deck building game [Slay the Spire](https://store.steampowered
 
 Adds a new character based of the Ellie_Minibot VTuber, along with new cards, events, relics, potions and combat encounters.
 
-You can find more Ellie_Minibot content here:
+You can find more of Ellie_Minibot here:
 * [Twitch](https://www.twitch.tv/Ellie_Minibot)
 * [YouTube](https://www.youtube.com/@Ellie_Minibot)
 * [Twitter/X](https://x.com/dumb_lil_robot)
@@ -36,7 +36,7 @@ You can install this mod either through the Steam Workshop or manually.
 
 ### Manual Install
 1. Ensure that you have [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/) downloaded and installed somewhere on your computer.
-2. Navigate to the [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/) folder and add a new folder called "mods" (e.g. 'C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods')
+2. Navigate to the [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/) folder and create a new folder called "mods" (e.g. 'C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\mods')
 2. Download the Ellie Minibot mod using the "Download Jar" link above into the new mod folder
 3. Use the Github links to download each of the Mod Dependencies into the mod folder.
 4. Launch [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/)
