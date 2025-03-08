@@ -1,7 +1,9 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.*;
+import EllieMinibot.cards.powercards.*;
 import EllieMinibot.cards.skillcards.*;
+import EllieMinibot.cards.specialcards.*;
 import EllieMinibot.relics.EllieAntennaRelic;
 import EllieMinibot.relics.NeuroDogRelic;
 import basemod.abstracts.CustomEnergyOrb;
@@ -99,40 +101,53 @@ public class CharacterFile extends AbstractPlayerWithMinions {
             retVal.add(Defend.ID);
         }
         retVal.add(YourAverageBoCollabCard.ID);
-//        retVal.add(RawSpaghettiCard.ID);
-//        retVal.add(IceCubeChallengeCard.ID);
-//        retVal.add(ReadyToRaidCard.ID);
-//        retVal.add(GomiCollabCard.ID);
-//        retVal.add(MinikoMewCollabCard.ID);
-//        retVal.add(ShoomimiCollabCard.ID);
-//        retVal.add(EllieCollabCard.ID);
-//        retVal.add(TeethModelCard.ID);
-//        retVal.add(WaterproofingCard.ID);
-//        retVal.add(OtamatoneCard.ID);
-//        retVal.add(LeadedSolderCard.ID);
-//        retVal.add(FakeBoyfriendCard.ID);
-//        retVal.add(SpinRingCard.ID);
-//        retVal.add(BeatSabreCard.ID);
-//        retVal.add(SongTogetherCard.ID);
-//        retVal.add(SongCrazyRobotBodyCard.ID);
-//        retVal.add(SelfMaintenanceCard.ID);
-//        retVal.add(VedalCollabCard.ID);
-//        retVal.add(CerberCollabCard.ID);
+//        // --- Attack Cards ---
 //        retVal.add(HireathonCard.ID);
-//        retVal.add(LoudAsCicadaCard.ID);
-//        retVal.add(StrongAnklesCard.ID);
-//        retVal.add(NerdyGirlRizzCard.ID);
-//        retVal.add(BookieCollabCard.ID);
-//        retVal.add(DrinkingStreamCard.ID);
-//        retVal.add(UmActuallyCard.ID);
-//        retVal.add(EatTheCodeBugCard.ID);
-//        retVal.add(MapleCollabCard.ID);
 //        retVal.add(JobInterviewCard.ID);
-//        retVal.add(FeatureNotABugCard.ID);
-//        retVal.add(LeetCodePracticeCard.ID);
-//        retVal.add(WelcomeRaidersCard.ID);
+//        retVal.add(LeadedSolderCard.ID);
+//        retVal.add(RawSpaghettiCard.ID);
+//        retVal.add(StrongAnklesCard.ID);
+//        retVal.add(TeethModelCard.ID);
+//        retVal.add(ThatCompanyCard.ID);
+//
+//        // --- Power Cards ---
 //        retVal.add(AboveAverageBoCard.ID);
+//        retVal.add(OtamatoneCard.ID);
+//        retVal.add(SelfMaintenanceCard.ID);
+//        retVal.add(SongCrazyRobotBodyCard.ID);
+//        retVal.add(SongTogetherCard.ID);
+//        retVal.add(UmActuallyCard.ID);
+//        retVal.add(WaterproofingCard.ID);
+//        retVal.add(WelcomeRaidersCard.ID);
+//
+//        // --- Skill Cards ---
+//        retVal.add(BeatSabreCard.ID);
+//        retVal.add(BookieCollabCard.ID);
+//        retVal.add(CerberCollabCard.ID);
+//        retVal.add(DrinkingStreamCard.ID);
+//        retVal.add(EatTheCodeBugCard.ID);
+//        retVal.add(EllieCollabCard.ID);
+//        retVal.add(FakeBoyfriendCard.ID);
+//        retVal.add(FeatureNotABugCard.ID);
 //        retVal.add(FeedGaleCard.ID);
+//        retVal.add(GomiCollabCard.ID);
+//        retVal.add(IceCubeChallengeCard.ID);
+//        retVal.add(LeetCodePracticeCard.ID);
+//        retVal.add(LoudAsCicadaCard.ID);
+//        retVal.add(MapleCollabCard.ID);
+//        retVal.add(MinikoMewCollabCard.ID);
+//        retVal.add(NerdyGirlRizzCard.ID);
+//        retVal.add(OvenDriedBugsCard.ID);
+//        retVal.add(ReadyToRaidCard.ID);
+//        retVal.add(ShoomimiCollabCard.ID);
+//        retVal.add(SpinRingCard.ID);
+//        retVal.add(VedalCollabCard.ID);
+//        retVal.add(YourAverageBoCollabCard.ID);
+//
+//        // --- Special Cards ---
+//        retVal.add(BugFactCard.ID);
+//        retVal.add(DistractedCard.ID);
+//        retVal.add(UkuleleCurseCard.ID);
         return retVal;
     }
 
