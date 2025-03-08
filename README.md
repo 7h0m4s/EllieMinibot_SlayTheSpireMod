@@ -1,6 +1,6 @@
 # Ellie_Minibot - Slay the Spire Mod
 
-| **[Steam Workshop]()** | **[Download JAR](https://github.com/7h0m4s/EllieMinibot_SlayTheSpireMod/releases)** |
+| **[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3440378506)** | **[Download JAR](https://github.com/7h0m4s/EllieMinibot_SlayTheSpireMod/releases)** |
 |-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 ---
 ## Description
