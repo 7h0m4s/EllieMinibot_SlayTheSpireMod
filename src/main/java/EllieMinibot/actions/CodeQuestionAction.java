@@ -1,23 +1,16 @@
 package EllieMinibot.actions;
 
 import EllieMinibot.ModFile;
-import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.specialcards.CodeQuestionModalChoiceCard;
 import EllieMinibot.localization.CodeQuestion;
 import EllieMinibot.localization.CodeQuestionType;
-import EllieMinibot.cards.EasyModalChoiceCard;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import org.apache.logging.log4j.core.appender.rolling.action.AbstractAction;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.util.function.Predicate;
 
 import static EllieMinibot.config.ConfigPanel.Disable_QUIZ_Card_Questions;
 import static EllieMinibot.util.Wiz.atb;
@@ -67,7 +60,6 @@ public class CodeQuestionAction extends AbstractGameAction {
                     cardName = "Something Broke";
                     break;
             }
-            String cardDescription = option;
             Runnable cardAction;
             if(option.equals(codeQuestion.answer)){
                 cardAction = onSuccess;
@@ -75,7 +67,7 @@ public class CodeQuestionAction extends AbstractGameAction {
             else{
                 cardAction = onFailure;
             }
-            easyCardList.add(new CodeQuestionModalChoiceCard(cardName, cardDescription, cardAction, codeQuestion));
+            easyCardList.add(new CodeQuestionModalChoiceCard(cardName, option, cardAction, codeQuestion));
 
             count++;
 
@@ -93,6 +85,5 @@ public class CodeQuestionAction extends AbstractGameAction {
     @Override
     public void update() {
         this.isDone = true;
-        return;
     }
 }

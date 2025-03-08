@@ -3,7 +3,6 @@ package EllieMinibot.cards.specialcards;
 import EllieMinibot.cards.AbstractEasyCard;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -21,10 +20,6 @@ public class UkuleleCurseCard extends AbstractEasyCard {
         this.isEthereal = false;
         this.exhaust = false;
     }
-
-//    public void triggerWhenDrawn() {
-//        this.addToBot(new LoseEnergyAction(1));
-//    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }

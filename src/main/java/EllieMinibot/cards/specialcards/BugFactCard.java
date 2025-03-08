@@ -1,6 +1,5 @@
 package EllieMinibot.cards.specialcards;
 
-import EllieMinibot.ModFile;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.skillcards.EatTheCodeBugCard;
 import EllieMinibot.config.ConfigPanel;
@@ -17,7 +16,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.commons.lang3.ArrayUtils;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -30,7 +28,7 @@ public class BugFactCard  extends AbstractEasyCard {
     public static int totalBugFacts;
     public int bugFactIndex = 0;
 
-    private static int[] spiderFactIndexes = {38,39,40,41,42,43,44,45,46,47};
+    private static final int[] spiderFactIndexes = {38,39,40,41,42,43,44,45,46,47};
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public BugFactCard() {
@@ -67,13 +65,13 @@ public class BugFactCard  extends AbstractEasyCard {
                                 .exhaustPile
                                 .group
                                 .stream()
-                                .filter(a -> a.cardID == BugFactCard.ID)
+                                .filter(a -> a.cardID.equals(BugFactCard.ID))
                                 .count()) + 1;
         AbstractList<AbstractCard> allEatBugFactsCards =
                 (AbstractList<AbstractCard>) Wiz
                 .getAllCardsInCardGroups(true, true)
                 .stream()
-                .filter(a-> a.cardID == EatTheCodeBugCard.ID)
+                .filter(a-> a.cardID.equals(EatTheCodeBugCard.ID))
                 .collect(Collectors.toList());
         for(AbstractCard c :  allEatBugFactsCards){
             ((EatTheCodeBugCard) c).recalculateBlockValue(totalExhaustedBugFacts);

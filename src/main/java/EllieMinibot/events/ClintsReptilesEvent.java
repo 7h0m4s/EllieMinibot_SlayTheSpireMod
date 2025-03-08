@@ -1,10 +1,6 @@
 package EllieMinibot.events;
 
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Bite;
-import com.megacrit.cardcrawl.cards.colorless.Discovery;
-import com.megacrit.cardcrawl.cards.curses.Parasite;
 import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -18,7 +14,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import java.text.MessageFormat;
 
 import static EllieMinibot.ModFile.*;
-import static EllieMinibot.util.Wiz.att;
 
 public class ClintsReptilesEvent extends AbstractImageEvent {
     public static final String ID = makeID("ClintsReptilesEvent");
@@ -97,10 +92,7 @@ public class ClintsReptilesEvent extends AbstractImageEvent {
             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, new Circlet());
         }
         this.imageEventText.clearAllDialogs();
-        //this.imageEventText.setDialogOption(slot,OPTIONS[4]);
-        //this.imageEventText.clearRemainingOptions();
         this.imageEventText.setDialogOption(OPTIONS[4]);
-        //this.imageEventText.clearRemainingOptions();
 
     }
 }

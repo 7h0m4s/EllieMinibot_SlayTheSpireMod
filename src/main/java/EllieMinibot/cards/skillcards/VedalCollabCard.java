@@ -1,7 +1,6 @@
 package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
-import EllieMinibot.orbs.MinikoMewOrb;
 import EllieMinibot.orbs.VedalOrb;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;

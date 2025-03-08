@@ -1,7 +1,6 @@
 package EllieMinibot.powers;
 
 import EllieMinibot.cards.AbstractQuizCard;
-import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;

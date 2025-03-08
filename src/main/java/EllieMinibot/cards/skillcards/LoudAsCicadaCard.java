@@ -1,14 +1,10 @@
 package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
-import EllieMinibot.cards.attackcards.ThatCompanyCard;
 import EllieMinibot.cards.specialcards.BugFactCard;
-import EllieMinibot.orbs.GomiOrb;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,11 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.Wiz.atb;
 
 public class LoudAsCicadaCard extends AbstractEasyCard {
     public final static String ID = makeID("LoudAsCicada");
-
 
     public LoudAsCicadaCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

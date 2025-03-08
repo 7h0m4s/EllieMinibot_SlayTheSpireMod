@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.*;
 
@@ -64,9 +64,7 @@ public class NerdyGirlRizzCard extends AbstractEasyCard {
         for(int i = 0; i < Wiz.p().maxOrbs; ++i) {
             try {
                 AbstractDungeon.player.channelOrb((AbstractOrb) orbClass.newInstance());
-            } catch (InstantiationException e) {
-                throw new RuntimeException(e);
-            } catch (IllegalAccessException e) {
+            } catch (InstantiationException | IllegalAccessException e) {
                 throw new RuntimeException(e);
             }
         }

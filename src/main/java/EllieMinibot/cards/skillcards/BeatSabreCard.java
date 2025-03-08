@@ -1,10 +1,7 @@
 package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
-import EllieMinibot.orbs.GomiOrb;
-import EllieMinibot.powers.WaterproofingPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;

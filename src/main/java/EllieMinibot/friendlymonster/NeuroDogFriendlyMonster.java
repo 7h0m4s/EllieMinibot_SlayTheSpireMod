@@ -1,10 +1,8 @@
 package EllieMinibot.friendlymonster;
 
-import EllieMinibot.ModFile;
 import EllieMinibot.actions.ChannelRandomEllieOrbAction;
 import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.relics.NerfTurretRelic;
-import EllieMinibot.relics.NeuroDogRelic;
 import EllieMinibot.util.Wiz;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,20 +11,16 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.Flex;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
-import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
 import hlysine.friendlymonsters.monsters.AbstractFriendlyMonster;
 import hlysine.friendlymonsters.monsters.MinionMove;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import static EllieMinibot.CharacterFile.BASE_MINION_ATTACK_CHANCE;
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.*;
 
@@ -35,7 +29,7 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
     public static final String ID = makeID("NeuroDogFriendlyMonster");
     public static final int MAX_HP = 25;
     public static final String IMG = "ellieminibotResources/images/friendlymonsters/cutoutneurodog_withface_scaled.png";
-    private Random rand = new Random();
+    private final Random rand = new Random();
 
 
 

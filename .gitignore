@@ -93,3 +93,4 @@ sendToDevs/
 backup.ps1
 /workshop_mod_create.ps1
 /workshop_mod_upload.ps1
+/workshop_transfer_content.ps1

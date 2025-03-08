@@ -1,14 +1,10 @@
 package EllieMinibot.cards.specialcards;
 
-import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.EasyModalChoiceCard;
 import EllieMinibot.localization.CodeQuestion;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 import java.util.List;

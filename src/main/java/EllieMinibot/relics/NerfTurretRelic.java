@@ -1,13 +1,9 @@
 package EllieMinibot.relics;
 
 import EllieMinibot.CharacterFile;
-import EllieMinibot.actions.ChannelRandomEllieOrbAction;
 import EllieMinibot.util.Wiz;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.Wiz.atb;
-import static EllieMinibot.util.Wiz.drawPile;
 
 public class NerfTurretRelic extends AbstractEasyRelic {
     public static final String ID = makeID("NerfTurretRelic");

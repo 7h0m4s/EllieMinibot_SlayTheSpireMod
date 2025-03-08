@@ -9,13 +9,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BarricadePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static EllieMinibot.ModFile.*;
-import static EllieMinibot.util.Wiz.applyToSelf;
 import static EllieMinibot.util.Wiz.att;
 
 public class SongCrazyRobotBodyCard extends AbstractEasyCard {
@@ -45,7 +43,7 @@ public class SongCrazyRobotBodyCard extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeBaseCost(2);;
+        this.upgradeBaseCost(2);
     }
 
     @Override

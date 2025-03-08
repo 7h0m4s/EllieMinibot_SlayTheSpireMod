@@ -12,11 +12,11 @@ import EllieMinibot.ModFile;
 import EllieMinibot.util.TexLoader;
 
 public abstract class AbstractEasyPower extends AbstractPower {
-    public int amount2 = -1;
-    public boolean isTwoAmount = false;
-    public static Color redColor2 = Color.RED.cpy();
-    public static Color greenColor2 = Color.GREEN.cpy();
-    public boolean canGoNegative2 = false;
+    public final int amount2 = -1;
+    public final boolean isTwoAmount = false;
+    public static final Color redColor2 = Color.RED.cpy();
+    public static final Color greenColor2 = Color.GREEN.cpy();
+    public final boolean canGoNegative2 = false;
 
     public AbstractEasyPower(String ID, String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
         this.ID = ID;

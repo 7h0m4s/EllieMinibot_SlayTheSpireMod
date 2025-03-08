@@ -9,10 +9,10 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import java.util.function.BiFunction;
 
 public class EasyXCostAction extends AbstractGameAction {
-    public BiFunction<Integer, int[], Boolean> xActionUpdate;
-    public int[] params;
-    protected int baseValue;
-    protected boolean freeToPlayOnce;
+    public final BiFunction<Integer, int[], Boolean> xActionUpdate;
+    public final int[] params;
+    protected final int baseValue;
+    protected final boolean freeToPlayOnce;
     protected int effect;
     private boolean firstUpdate = true;
 

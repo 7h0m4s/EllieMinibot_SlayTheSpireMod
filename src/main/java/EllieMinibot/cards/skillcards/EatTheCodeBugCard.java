@@ -2,26 +2,16 @@ package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.specialcards.BugFactCard;
-import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.AbstractStance;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.Wiz.*;
 
 public class EatTheCodeBugCard extends AbstractEasyCard {
     public final static String ID = makeID("EatTheCodeBug");
@@ -49,7 +39,7 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
             totalExhaustedBugFacts = 0;
         }
         else {
-            totalExhaustedBugFacts = Math.toIntExact(AbstractDungeon.player.exhaustPile.group.stream().filter(a -> a.cardID == BugFactCard.ID).count());
+            totalExhaustedBugFacts = Math.toIntExact(AbstractDungeon.player.exhaustPile.group.stream().filter(a -> a.cardID.equals(BugFactCard.ID)).count());
         }
         recalculateBlockValue(totalExhaustedBugFacts);
     }

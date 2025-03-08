@@ -7,7 +7,6 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,7 +9,7 @@ import static EllieMinibot.ModFile.makeRelicPath;
 import static EllieMinibot.ModFile.modID;
 
 public abstract class AbstractEasyRelic extends CustomRelic {
-    public AbstractCard.CardColor color;
+    public final AbstractCard.CardColor color;
 
     public AbstractEasyRelic(String setId, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx) {
         this(setId, tier, sfx, null);

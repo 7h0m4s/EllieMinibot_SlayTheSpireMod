@@ -1,13 +1,10 @@
 package EllieMinibot;
 
 import EllieMinibot.cards.attackcards.*;
-import EllieMinibot.cards.powercards.*;
 import EllieMinibot.cards.skillcards.*;
-import EllieMinibot.cards.skillcards.ReadyToRaidCard;
 import EllieMinibot.relics.EllieAntennaRelic;
 import EllieMinibot.relics.NeuroDogRelic;
 import basemod.abstracts.CustomEnergyOrb;
-import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -85,7 +82,7 @@ public class CharacterFile extends AbstractPlayerWithMinions {
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
-        List<CutscenePanel> panels = new ArrayList();
+        List<CutscenePanel> panels = new ArrayList<CutscenePanel>();
         panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie1.png", "BELL"));
         panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie2.png"));
         panels.add(new CutscenePanel("ellieminibotResources/images/scenes/ellie3.png"));

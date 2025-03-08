@@ -39,7 +39,7 @@ public class Wiz {
     }
 
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
-        cardsList.forEach(c -> consumer.accept(c));
+        cardsList.forEach(consumer::accept);
     }
 
     public static ArrayList<AbstractCard> getAllCardsInCardGroups(boolean includeHand, boolean includeExhaust) {
@@ -54,13 +54,13 @@ public class Wiz {
     }
 
     public static void forAllMonstersLiving(Consumer<AbstractMonster> consumer) {
-        getEnemies().forEach(mo -> consumer.accept(mo));
+        getEnemies().forEach(consumer::accept);
     }
 
     public static void forAllMonstersLivingTop(Consumer<AbstractMonster> consumer) {
         ArrayList<AbstractMonster> enemies = getEnemies();
         Collections.reverse(enemies);
-        enemies.forEach(mo -> consumer.accept(mo));
+        enemies.forEach(consumer::accept);
     }
 
     public static ArrayList<AbstractMonster> getEnemies() {

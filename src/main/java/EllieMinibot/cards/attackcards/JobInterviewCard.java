@@ -1,10 +1,8 @@
 package EllieMinibot.cards.attackcards;
 
 import EllieMinibot.actions.CodeQuestionAction;
-import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.AbstractQuizCard;
 import EllieMinibot.powers.CodeQuestionStreakPower;
-import EllieMinibot.powers.WaterproofingPower;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.badlogic.gdx.graphics.Color;
@@ -18,13 +16,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static EllieMinibot.ModFile.*;
 import static EllieMinibot.util.Wiz.*;

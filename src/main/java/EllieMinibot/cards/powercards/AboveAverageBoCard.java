@@ -3,20 +3,15 @@ package EllieMinibot.cards.powercards;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.orbs.YourAverageBoOrb;
 import EllieMinibot.powers.AboveAverageBoPower;
-import EllieMinibot.powers.WaterproofingPower;
-import EllieMinibot.powers.WelcomeRaidersPower;
-import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static EllieMinibot.ModFile.WELCOME_RAIDERS_KEY;
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.*;
 

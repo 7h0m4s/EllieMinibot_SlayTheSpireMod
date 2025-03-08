@@ -2,7 +2,6 @@ package EllieMinibot.events;
 
 import EllieMinibot.cards.powercards.AboveAverageBoCard;
 import EllieMinibot.cards.powercards.WaterproofingCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Regret;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -10,12 +9,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import java.text.MessageFormat;
 
-import static EllieMinibot.ModFile.CLINTS_REPTILE_ROOM_KEY;
 import static EllieMinibot.ModFile.makeID;
 
 public class BoBathroomEvent extends AbstractImageEvent {
@@ -44,9 +41,6 @@ public class BoBathroomEvent extends AbstractImageEvent {
     }
 
     public void onEnterRoom() {
-        if (Settings.AMBIANCE_ON) {
-
-        }
     }
 
     @Override

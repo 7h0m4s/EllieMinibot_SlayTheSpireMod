@@ -2,7 +2,6 @@ package EllieMinibot.powers;
 
 import EllieMinibot.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 

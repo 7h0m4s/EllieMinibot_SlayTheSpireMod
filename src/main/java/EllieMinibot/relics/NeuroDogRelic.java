@@ -2,27 +2,18 @@ package EllieMinibot.relics;
 
 import EllieMinibot.CharacterFile;
 import EllieMinibot.friendlymonster.NeuroDogFriendlyMonster;
-import EllieMinibot.monsters.EvilDroneMonster;
-import EllieMinibot.orbs.*;
 import EllieMinibot.ui.campfire.NeuroDogCampfireOption;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import hlysine.friendlymonsters.characters.AbstractPlayerWithMinions;
-import hlysine.friendlymonsters.monsters.AbstractFriendlyMonster;
 import hlysine.friendlymonsters.patches.PlayerAddSavableFieldsPatch;
-import hlysine.friendlymonsters.utils.MinionUtils;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 import static EllieMinibot.CharacterFile.BASE_MINION_ATTACK_CHANCE;
 import static EllieMinibot.ModFile.makeID;
-import static hlysine.friendlymonsters.utils.MinionUtils.setBaseMinionAttackTargetChance;
 
 public class NeuroDogRelic extends AbstractEasyRelic {
     public static final String ID = makeID("NeuroDogRelic");

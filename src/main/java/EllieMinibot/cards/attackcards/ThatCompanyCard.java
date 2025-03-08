@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Random;
-
 import static EllieMinibot.ModFile.makeID;
 
 public class ThatCompanyCard extends AbstractEasyCard {

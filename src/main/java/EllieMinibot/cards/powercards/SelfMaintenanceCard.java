@@ -3,7 +3,6 @@ package EllieMinibot.cards.powercards;
 import EllieMinibot.cards.AbstractEasyCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.powers.RepairPower;
 
 import static EllieMinibot.ModFile.makeID;

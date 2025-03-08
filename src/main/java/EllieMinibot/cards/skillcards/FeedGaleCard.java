@@ -1,27 +1,19 @@
 package EllieMinibot.cards.skillcards;
 
-import EllieMinibot.actions.EasyModalChoiceAction;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.UpgradeSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.atb;
@@ -38,7 +30,7 @@ public class FeedGaleCard extends AbstractEasyCard {
         if(AbstractDungeon.player != null) {
             AbstractDungeon.player.masterDeck.group
                     .stream()
-                    .filter(a -> a.cardID == this.cardID)
+                    .filter(a -> a.cardID.equals(this.cardID))
                     .forEach(c-> {if(c.baseBlock > this.baseBlock) this.baseBlock = c.baseBlock;});
         }
         exhaust = false;
@@ -71,12 +63,12 @@ public class FeedGaleCard extends AbstractEasyCard {
                 // Update FeedGale Cards
                 AbstractDungeon.player.masterDeck.group
                         .stream()
-                        .filter(a -> a.cardID == this.cardID)
+                        .filter(a -> a.cardID.equals(this.cardID))
                         .forEach(c-> c.baseBlock += c2.costForTurn);
 
                 Wiz.getAllCardsInCardGroups(true, true)
                         .stream()
-                        .filter(a -> a.cardID == this.cardID)
+                        .filter(a -> a.cardID.equals(this.cardID))
                         .forEach(c-> c.baseBlock += c2.costForTurn);
 
                 // Remove selected card from hand and master deck

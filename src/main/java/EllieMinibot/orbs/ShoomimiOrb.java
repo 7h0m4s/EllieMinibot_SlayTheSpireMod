@@ -1,25 +1,20 @@
 package EllieMinibot.orbs;
 
 import EllieMinibot.util.TexLoader;
-import EllieMinibot.util.Wiz;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 
-import java.util.ArrayList;
-
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.ModFile.makeImagePath;
-import static EllieMinibot.util.Wiz.atb;
 import static EllieMinibot.util.Wiz.att;
 
 public class ShoomimiOrb extends AbstractOrb {

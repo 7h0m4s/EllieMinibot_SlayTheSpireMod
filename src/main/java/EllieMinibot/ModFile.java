@@ -22,7 +22,6 @@ import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -38,14 +37,10 @@ import EllieMinibot.potions.AbstractEasyPotion;
 import EllieMinibot.relics.AbstractEasyRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.util.IOUtils;
 import org.scannotation.AnnotationDB;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.*;
 
@@ -68,13 +63,13 @@ public class ModFile implements
     public static final String modID = "ellieminibot";
     public static final String modName = "EllieMinibot";
 
-    public static ModInfo info;
+    public static final ModInfo info;
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
 
-    public static Color characterColor = new Color(82, 94, 95, 1);
+    public static final Color characterColor = new Color(82, 94, 95, 1);
 
     public SpireConfig ELLIEMINIBOT_CONFIG;
 
@@ -109,9 +104,9 @@ public class ModFile implements
     public static final String WRONG_SFX_KEY = makeID("WrongSfx");
     public static final String WRONG_SFX_OGG = makePath("audio/WrongSfx.ogg");
 
-    public static ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
+    public static final ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
 
-    public static Settings.GameLanguage[] SupportedLanguages = {
+    public static final Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
     };
 
@@ -299,7 +294,7 @@ public class ModFile implements
 
 
 
-        BaseMod.addMonster(EvilNeuroMonster.ID, () -> new EvilNeuroMonster());
+        BaseMod.addMonster(EvilNeuroMonster.ID, EvilNeuroMonster::new);
 
         BaseMod.addBoss(TheCity.ID, EvilNeuroMonster.ID,
                 "ellieminibotResources/images/ui/map/boss/EvilNeuro.png",

@@ -1,13 +1,11 @@
 package EllieMinibot.cards.attackcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
-import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
@@ -15,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.Wiz.applyToEnemy;
 import static EllieMinibot.util.Wiz.applyToEnemyTop;
 
 public class TeethModelCard extends AbstractEasyCard {

@@ -14,7 +14,7 @@ import static EllieMinibot.util.Wiz.*;
 
 @AutoAdd.Ignore
 public class DemoPotion extends AbstractEasyPotion {
-    public static String ID = makeID("DemoPotion");
+    public static final String ID = makeID("DemoPotion");
 
     public DemoPotion() {
         super(ID, PotionRarity.COMMON, PotionSize.ANVIL, new Color(0.2f, 0.4f, 0.9f, 1f), new Color(0.6f, 0.8f, 1.0f, 1f), null, CharacterFile.Enums.ELLIE_MINIBOT, ModFile.characterColor);

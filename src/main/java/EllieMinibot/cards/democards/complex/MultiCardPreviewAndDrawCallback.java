@@ -42,6 +42,6 @@ public class MultiCardPreviewAndDrawCallback extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeDamage(1);
-        MultiCardPreview.multiCardPreview.get(this).forEach(c -> c.upgrade()); // here, we show upgraded smite and safeties.
+        MultiCardPreview.multiCardPreview.get(this).forEach(AbstractCard::upgrade); // here, we show upgraded smite and safeties.
     }
 }

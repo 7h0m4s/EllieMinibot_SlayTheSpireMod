@@ -1,6 +1,5 @@
 package EllieMinibot.patches;
 
-import basemod.ReflectionHacks;
 import com.badlogic.gdx.audio.Music;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.audio.MainMusic;

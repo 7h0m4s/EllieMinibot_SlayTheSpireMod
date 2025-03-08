@@ -1,15 +1,12 @@
 package EllieMinibot.orbs;
 
-import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.util.TexLoader;
 import EllieMinibot.util.Wiz;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
@@ -18,7 +15,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -46,7 +42,7 @@ public class BookieOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1],this.passiveAmount,this.passiveAmount, this.evokeAmount, this.evokeAmount);;
+        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1],this.passiveAmount,this.passiveAmount, this.evokeAmount, this.evokeAmount);
     }
 
     public void onEvoke() {

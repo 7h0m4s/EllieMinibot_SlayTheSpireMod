@@ -2,7 +2,6 @@ package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.orbs.BookieOrb;
-import EllieMinibot.orbs.EllieOrb;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;

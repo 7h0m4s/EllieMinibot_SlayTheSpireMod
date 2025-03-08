@@ -1,23 +1,17 @@
 package EllieMinibot.cards.powercards;
 
 import EllieMinibot.cards.AbstractEasyCard;
-import EllieMinibot.powers.LambdaPower;
 import EllieMinibot.powers.WaterproofingPower;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.util.Wiz.applyToSelf;
-import static EllieMinibot.util.Wiz.atb;
 
 public class WaterproofingCard extends AbstractEasyCard {
     public final static String ID = makeID("Waterproofing");

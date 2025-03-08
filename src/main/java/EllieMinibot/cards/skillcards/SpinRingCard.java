@@ -2,13 +2,9 @@ package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.cards.specialcards.DistractedCard;
-import EllieMinibot.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.Collections;
 
 import static EllieMinibot.ModFile.makeID;
 

@@ -12,12 +12,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.ModFile.makeImagePath;
-import static EllieMinibot.util.Wiz.applyToSelf;
 import static EllieMinibot.util.Wiz.att;
 
 public class EllieOrb extends AbstractOrb {
@@ -39,7 +37,7 @@ public class EllieOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2],this.passiveAmount, this.evokeAmount);;
+        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2],this.passiveAmount, this.evokeAmount);
     }
 
     public void onEvoke() {

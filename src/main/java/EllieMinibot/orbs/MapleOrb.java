@@ -1,13 +1,11 @@
 package EllieMinibot.orbs;
 
-import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,7 +17,6 @@ import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 
 import static EllieMinibot.ModFile.makeID;
 import static EllieMinibot.ModFile.makeImagePath;
-import static EllieMinibot.util.Wiz.atb;
 import static EllieMinibot.util.Wiz.att;
 
 public class MapleOrb extends AbstractOrb {
@@ -41,7 +38,7 @@ public class MapleOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2],this.passiveAmount, this.evokeAmount);;
+        this.description = String.format(orbString.DESCRIPTION[0] + orbString.DESCRIPTION[1] + orbString.DESCRIPTION[2],this.passiveAmount, this.evokeAmount);
     }
 
     public void onEvoke() {
