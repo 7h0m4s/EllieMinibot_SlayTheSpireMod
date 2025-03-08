@@ -26,11 +26,8 @@ public class RawSpaghettiCard  extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         DmgSelf(p, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        allDmg(AbstractGameAction.AttackEffect.NONE);
-
-
+        allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 
     @Override
