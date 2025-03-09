@@ -45,10 +45,12 @@ public class GomiOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
-        AbstractMonster target = Wiz.getRandomEnemy();
-        applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),evokeAmount));
-        att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.GREEN.cpy()), 0.1F));
-        att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
+        for (int i = 0; i < evokeAmount; i++) {
+            AbstractMonster target = Wiz.getRandomEnemy();
+            applyToEnemyTop(target, new PoisonPower(target, Wiz.adp(),basePassiveAmount));
+            att(new VFXAction(new SmallColouredLaserEffect(target.hb.cX, target.hb.cY, hb.cX, hb.cY, Color.GREEN.cpy()), 0.1F));
+            att(new SFXAction("MONSTER_SLIME_ATTACK", 0.5F));
+        }
 
     }
 
