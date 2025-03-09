@@ -105,7 +105,7 @@
   },
   "${ModID}:BeatSabre": {
     "NAME": "BeatSabre",
-    "DESCRIPTION": "Draw !M! cards. NL Draw !${ModID}:m2! cards next turn.",
+    "DESCRIPTION": "Draw !M! cards. NL Draw !${ModID}:m2! card next turn.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Draw !${ModID}:m2! cards next turn."
   },
   "${ModID}:SongTogether": {
