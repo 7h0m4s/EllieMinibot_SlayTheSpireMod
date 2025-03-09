@@ -22,7 +22,7 @@ public class SpinRingCard extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         p.gainEnergy(magicNumber);
-        addToBot(new MakeTempCardInDrawPileAction(new DistractedCard(), magicNumber, true, false));
+        addToBot(new MakeTempCardInDrawPileAction(new DistractedCard(), 1, true, false));
     }
 
 
