@@ -63,7 +63,7 @@ public class LeetCodePracticeCard extends AbstractQuizCard {
 
     @Override
     public void upp() {
-        //upgradeDamage(3);
+        this.updateCost(-1);
     }
 
     @Override
