@@ -20,7 +20,7 @@ You can find more of Ellie_Minibot here:
 * ModTheSpire ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1605060445) - [Github](https://github.com/kiooeht/ModTheSpire))
 * BaseMod ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1605833019) - [Github](https://github.com/daviscook477/BaseMod/releases))
 * StSLib ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1609158507) - [Github](https://github.com/kiooeht/StSLib/releases))
-* StSLib ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2816293692) - [Github](https://github.com/hlysine/FriendlyMonsters/releases))
+* Friendly Monsters ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2816293692) - [Github](https://github.com/hlysine/FriendlyMonsters/releases))
 
 ## Installation
 You can install this mod either through the Steam Workshop or manually.
