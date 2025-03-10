@@ -83,8 +83,9 @@ public class JobInterviewCard extends AbstractQuizCard {
         if (streakValue <= 0) {
             baseDamage = 6;
         } else {
-            baseDamage = (int) (baseDamage + 6 * (streakValue * 0.1f));
+            baseDamage = (int) (baseDamage + 6 * (streakValue * 0.15f));
         }
+        this.applyPowers();
         this.initializeDescription();
     }
 

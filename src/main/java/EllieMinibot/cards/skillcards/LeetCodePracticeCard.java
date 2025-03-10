@@ -79,8 +79,9 @@ public class LeetCodePracticeCard extends AbstractQuizCard {
         if (streakValue <= 0) {
             baseBlock = 10;
         } else {
-            baseBlock = (int) (baseBlock + 10 * (streakValue * 0.1f));
+            baseBlock = (int) (baseBlock + 10 * (streakValue * 0.15f));
         }
+        this.applyPowers();
         this.initializeDescription();
     }
 

@@ -37,6 +37,11 @@ public class CodeQuestionStreakPower extends AbstractEasyPower {
         }
     }
 
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + (this.amount * 15) + DESCRIPTIONS[1];
+    }
+
     private void updateExistingQuizCards() {
         for(AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof AbstractQuizCard) {
@@ -61,14 +66,5 @@ public class CodeQuestionStreakPower extends AbstractEasyPower {
                 ((AbstractQuizCard) c).UpdateStreak(this.amount);
             }
         }
-
     }
-
-
-
-    @Override
-    public void updateDescription() {
-        description = DESCRIPTIONS[0] + (this.amount * 10) + DESCRIPTIONS[1];
-    }
-
 }
