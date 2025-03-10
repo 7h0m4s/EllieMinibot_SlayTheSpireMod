@@ -31,9 +31,10 @@ public class FeedGaleCard extends AbstractEasyCard {
             AbstractDungeon.player.masterDeck.group
                     .stream()
                     .filter(a -> a.cardID.equals(this.cardID))
-                    .forEach(c-> {if(c.baseBlock > this.baseBlock) this.baseBlock = c.baseBlock;});
+                    .forEach(c-> {if(c.baseBlock > this.baseBlock) this.UpgradeGale(c.baseBlock);});
         }
         exhaust = false;
+        this.initializeDescription();
     }
 
     @Override
@@ -51,6 +52,14 @@ public class FeedGaleCard extends AbstractEasyCard {
         return isPlayable;
     }
 
+    public void UpgradeGale(int amount){
+        baseBlock += amount;
+        this.applyPowers();
+        this.applyPowersToBlock();
+        this.initializeDescription();
+    }
+
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new SelectCardsCenteredAction(
@@ -59,26 +68,31 @@ public class FeedGaleCard extends AbstractEasyCard {
                 false,
                 (c)-> (c.costForTurn >= 0 && c.uuid != this.uuid && c.type != CardType.STATUS && c.type != CardType.CURSE),
                 (cards) -> {
+
             for (AbstractCard c2 : cards) {
+
+                // Upgrade the FeedGale card that was used manually
+                this.UpgradeGale(c2.costForTurn);
+
                 // Update FeedGale Cards
                 AbstractDungeon.player.masterDeck.group
                         .stream()
                         .filter(a -> a.cardID.equals(this.cardID))
-                        .forEach(c-> c.baseBlock += c2.costForTurn);
+                        .forEach(c-> ((FeedGaleCard)c).UpgradeGale(c2.costForTurn));
 
                 Wiz.getAllCardsInCardGroups(true, true)
                         .stream()
                         .filter(a -> a.cardID.equals(this.cardID))
-                        .forEach(c-> c.baseBlock += c2.costForTurn);
+                        .forEach(c-> ((FeedGaleCard)c).UpgradeGale(c2.costForTurn));
 
                 // Remove selected card from hand and master deck
-                Wiz.p().hand.group
-                        .removeIf(a-> a.uuid == c2.uuid);
                 Wiz.p().hand.group
                         .stream()
                         .filter(a-> a.uuid == c2.uuid)
                         .forEach(c-> AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, Settings.WIDTH / 2, Settings.HEIGHT / 2)));
                 Wiz.p().hand.group
+                        .removeIf(a-> a.uuid == c2.uuid);
+                AbstractDungeon.player.masterDeck.group
                         .removeIf(a-> a.uuid == c2.uuid);
             }
         }));
@@ -92,7 +106,6 @@ public class FeedGaleCard extends AbstractEasyCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "Arcat109")));
         return tooltips;
     }
 }
