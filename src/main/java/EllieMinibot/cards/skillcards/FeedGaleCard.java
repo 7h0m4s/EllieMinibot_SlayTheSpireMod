@@ -1,10 +1,12 @@
 package EllieMinibot.cards.skillcards;
 
 import EllieMinibot.cards.AbstractEasyCard;
+import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.util.Wiz;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,8 +17,9 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import java.util.ArrayList;
 import java.util.List;
 
-import static EllieMinibot.ModFile.makeID;
+import static EllieMinibot.ModFile.*;
 import static EllieMinibot.util.Wiz.atb;
+import static EllieMinibot.util.Wiz.att;
 
 public class FeedGaleCard extends AbstractEasyCard {
 
@@ -61,6 +64,9 @@ public class FeedGaleCard extends AbstractEasyCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if(!ConfigPanel.Disable_FeedGale_SoundEffect) {
+            att(new SFXAction(GALE_ELLIE_KEY));
+        }
         blck();
         atb(new SelectCardsCenteredAction(
                 Wiz.p().hand.group,

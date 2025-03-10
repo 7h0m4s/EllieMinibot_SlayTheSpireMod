@@ -99,6 +99,8 @@ public class ModFile implements
     public static final String CLINTS_REPTILE_ROOM_OGG = makePath("audio/ClintsReptileRoom.ogg");
     public static final String WELCOME_RAIDERS_KEY = makeID("WelcomeRaidersAudio");
     public static final String WELCOME_RAIDERS_OGG = makePath("audio/WelcomeRaiders.ogg");
+    public static final String GALE_ELLIE_KEY = makeID("GaleEllieAudio");
+    public static final String GALE_ELLIE_OGG = makePath("audio/GaleEllie.ogg");
     public static final String CORRECT_SFX_KEY = makeID("CorrectSfx");
     public static final String CORRECT_SFX_OGG = makePath("audio/CorrectSfx.ogg");
     public static final String WRONG_SFX_KEY = makeID("WrongSfx");
@@ -253,6 +255,7 @@ public class ModFile implements
         BaseMod.addAudio(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY, BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG);
         BaseMod.addAudio(CLINTS_REPTILE_ROOM_KEY, CLINTS_REPTILE_ROOM_OGG);
         BaseMod.addAudio(WELCOME_RAIDERS_KEY, WELCOME_RAIDERS_OGG);
+        BaseMod.addAudio(GALE_ELLIE_KEY, GALE_ELLIE_OGG);
         BaseMod.addAudio(CORRECT_SFX_KEY, CORRECT_SFX_OGG);
         BaseMod.addAudio(WRONG_SFX_KEY, WRONG_SFX_OGG);
     }
