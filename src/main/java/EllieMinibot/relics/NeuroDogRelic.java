@@ -25,7 +25,7 @@ public class NeuroDogRelic extends AbstractEasyRelic {
     public NeuroDogRelic() {
 
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ELLIE_MINIBOT_COLOR);
-        this.counter = 3;
+        this.counter = 0;
     }
 
     public void refreshDescription(){
