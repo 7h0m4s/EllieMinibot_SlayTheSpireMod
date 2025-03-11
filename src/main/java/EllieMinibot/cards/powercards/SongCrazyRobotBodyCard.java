@@ -50,7 +50,6 @@ public class SongCrazyRobotBodyCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "Xenogaeia")));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("strength"), BaseMod.getKeywordDescription("strength")));
         return tooltips;
     }
 }
