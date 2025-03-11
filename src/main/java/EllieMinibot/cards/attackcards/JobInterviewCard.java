@@ -30,7 +30,7 @@ public class JobInterviewCard extends AbstractQuizCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public JobInterviewCard() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = damage = 6;
         if(AbstractDungeon.player != null && AbstractDungeon.player.hasPower(CodeQuestionStreakPower.POWER_ID)) UpdateStreak(AbstractDungeon.player.getPower(CodeQuestionStreakPower.POWER_ID).amount);
 
