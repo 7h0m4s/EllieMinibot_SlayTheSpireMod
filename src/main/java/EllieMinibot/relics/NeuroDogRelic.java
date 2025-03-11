@@ -1,6 +1,7 @@
 package EllieMinibot.relics;
 
 import EllieMinibot.CharacterFile;
+import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.friendlymonster.NeuroDogFriendlyMonster;
 import EllieMinibot.ui.campfire.NeuroDogCampfireOption;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,7 +25,7 @@ public class NeuroDogRelic extends AbstractEasyRelic {
     public NeuroDogRelic() {
 
         super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ELLIE_MINIBOT_COLOR);
-        this.counter = 0;
+        this.counter = 3;
     }
 
     public void refreshDescription(){
@@ -51,7 +52,12 @@ public class NeuroDogRelic extends AbstractEasyRelic {
             if (AbstractDungeon.player instanceof AbstractPlayerWithMinions) {
                 this.flash();
                 AbstractPlayerWithMinions p = (AbstractPlayerWithMinions) AbstractDungeon.player;
-                minion = new NeuroDogFriendlyMonster(-700, 50);
+                if(!ConfigPanel.Make_NeuroDog_Appear_Higher_In_The_Air) {
+                    minion = new NeuroDogFriendlyMonster(-700, 50);
+                }
+                    else{
+                    minion = new NeuroDogFriendlyMonster(-700, 450);
+                    }
                 minionID = minion.id;
                 p.addMinion(minion);
             }

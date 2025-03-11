@@ -8,6 +8,7 @@ public class ConfigPanel extends EasyConfigPanel {
 
     public static boolean Enable_Spider_Bug_Facts = true;
 
+    public static boolean Make_NeuroDog_Appear_Higher_In_The_Air = false;
 
     public static boolean Disable_FeedGale_SoundEffect = false;
 
