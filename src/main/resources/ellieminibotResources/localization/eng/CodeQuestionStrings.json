@@ -1618,17 +1618,6 @@
             "explanation": "In C, functions are declared with their return type followed by the function name and parentheses."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "Error",
-                "0",
-                "Hello",
-                "greet"
-            ],
-            "answer": "Hello",
-            "explanation": "The function greet() is called within main() and prints “Hello” to the console."
-        },
-        {
             "question": "How many values can a function return in C?",
             "options": [
                 "Multiple values",
@@ -2034,17 +2023,6 @@
             ],
             "answer": "pointer to an int",
             "explanation": "This declaration means that ptr is a pointer variable that can store the address of an int data type."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "10",
-                "Address of a",
-                "p",
-                "Address of p"
-            ],
-            "answer": "10",
-            "explanation": "The pointer p is assigned the address of a and *p dereferences the pointer, giving the value of a which is 10."
         },
         {
             "question": "Which keyword is used to allocate dynamic memory in C?",
@@ -6341,17 +6319,6 @@
             "explanation": "The % operator returns the remainder of a division operation."
         },
         {
-            "question": "What is the output of the following program?",
-            "options": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "answer": "1",
-            "explanation": "The % operator is used for finding the remainder of the division operation. In this case, 5 divided by 2 leaves a remainder of 1."
-        },
-        {
             "question": "Which keyword is used to manually throw an exception in Java?",
             "options": [
                 "throw",
@@ -8299,17 +8266,6 @@
             "explanation": "Starting from Java 8, switch statements can be used with String variables, allowing case labels to be String literals."
         },
         {
-            "question": "What is the output of the following Java code?",
-            "options": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "No output"
-            ],
-            "answer": "Tuesday",
-            "explanation": "The switch statement evaluates the 'day' variable, and since its value is 2, it matches the case labeled 2, printing \"Tuesday\"."
-        },
-        {
             "question": "What is the primary function of the while loop in Java?",
             "options": [
                 "To execute a block of code a fixed number of times",
@@ -9188,17 +9144,6 @@
             ],
             "answer": "An object is a specific instance of a class",
             "explanation": "An object is a specific instance of a class, embodying the structure and behavior defined by the class."
-        },
-        {
-            "question": "What is the output of the following Java code?",
-            "options": [
-                "0",
-                "5",
-                "Error",
-                "null"
-            ],
-            "answer": "5",
-            "explanation": "The code creates an object of the class 'Main', and then it prints the value of the variable 'x' of that object, which is 5&#8203;“【oaicite:2】“&#8203;."
         },
         {
             "question": "What is the standard naming convention for classes in Java?",
@@ -14118,17 +14063,6 @@
             "explanation": "Intermediate operations in the Stream API return a new Stream that can be further processed, while terminal operations produce a final result or perform a side effect."
         },
         {
-            "question": "What is the output of the following Stream operation?",
-            "options": [
-                "[1, 2, 3, 4]",
-                "[2, 4, 6, 8]",
-                "[2, 3, 4, 5]",
-                "[1, 3, 5, 7]"
-            ],
-            "answer": "[2, 4, 6, 8]",
-            "explanation": "The map() operation multiplies each element of the Stream by 2, resulting in the output [2, 4, 6, 8]."
-        },
-        {
             "question": "What is the purpose of the collect() method in the Stream API?",
             "options": [
                 "To transform the elements of a Stream.",
@@ -17789,17 +17723,6 @@
             "explanation": "The global keyword is used inside a function to refer to a variable that is defined in the global scope."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "12",
-                "7",
-                "None",
-                "Error"
-            ],
-            "answer": "7",
-            "explanation": "The operate function takes another function as an argument and calls it with x and y. In this case, it calls the add function, which returns 3 + 4, i.e., 7."
-        },
-        {
             "question": "Which of the following can be used as default values for function arguments?",
             "options": [
                 "Numbers",
@@ -17866,17 +17789,6 @@
             "explanation": "The extend() method is used to add multiple items to a list."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "[‘apple’, ‘banana’, ‘orange’, ‘cherry’]",
-                "[‘apple’, ‘orange’, ‘banana’, ‘cherry’]",
-                "[‘orange’, ‘apple’, ‘banana’, ‘cherry’]",
-                "[‘apple’, ‘banana’, ‘cherry’, ‘orange’]"
-            ],
-            "answer": "[‘apple’, ‘orange’, ‘banana’, ‘cherry’]",
-            "explanation": "The insert() method inserts an item at a specified index."
-        },
-        {
             "question": "How can you remove the last item from a list?",
             "options": [
                 "remove()",
@@ -17919,17 +17831,6 @@
             ],
             "answer": "index()",
             "explanation": "The index() method returns the index of the first occurrence of the specified item in the list."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "[1, 2, 3]",
-                "[4, 2, 3]",
-                "[4, 4, 4]",
-                "Error"
-            ],
-            "answer": "[4, 2, 3]",
-            "explanation": "Lists are mutable, and when you assign a list to another variable (like another_list in the example), both variables point to the same list in memory. Any changes made using one variable are reflected in the other."
         },
         {
             "question": "How can you create a copy of a list?",
@@ -18018,17 +17919,6 @@
             ],
             "answer": "continue",
             "explanation": "The continue keyword is used to skip the current iteration of a loop and proceed to the next one."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "0 1 2 3",
-                "1 2 3",
-                "0 1 2",
-                "Error"
-            ],
-            "answer": "0 1 2",
-            "explanation": "By default, range(n) starts from 0 and goes up to, but does not include, n."
         },
         {
             "question": "How would you loop over a string one character at a time?",
@@ -18152,17 +18042,6 @@
             "explanation": "In Python, a number with a decimal point is considered a float, so x will be of type float."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "10, 20",
-                "20",
-                "10",
-                "Error"
-            ],
-            "answer": "10",
-            "explanation": "The code uses multiple assignment where x is assigned 10 and y is assigned 20. The print statement only prints the value of x."
-        },
-        {
             "question": "Which of the following is not a reserved keyword in Python?",
             "options": [
                 "for",
@@ -18260,17 +18139,6 @@
             ],
             "answer": "NoneType",
             "explanation": "None is a special type in Python represented by NoneType."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "2",
-                "2.0",
-                "4",
-                "1"
-            ],
-            "answer": "2",
-            "explanation": "The // operator in Python performs integer (floor) division."
         },
         {
             "question": "Which of the following is a complex number in Python?",
@@ -18647,17 +18515,6 @@
             "explanation": "None is considered false in a Boolean context in Python."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "True",
-                "False",
-                "0",
-                "None"
-            ],
-            "answer": "False",
-            "explanation": "The number 0 is considered False in Python, so bool(0) returns False."
-        },
-        {
             "question": "What is the output of 10 / 3 in Python?",
             "options": [
                 "3",
@@ -19030,17 +18887,6 @@
             ],
             "answer": "('Hello', 'Hello')",
             "explanation": "Multiplying a tuple by an integer n repeats the tuple n times."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "(1, 2, ['x', 4])",
-                "Error",
-                "(1, 'x', [3, 4])",
-                "(1, 2, [3, 'x'])"
-            ],
-            "answer": "(1, 2, ['x', 4])",
-            "explanation": "While tuples are immutable, their mutable elements (like lists) can be modified."
         },
         {
             "question": "What is a set in Python?",
@@ -19483,17 +19329,6 @@
             "explanation": "Python uses 'elif', short for 'else if', for multiple, mutually exclusive conditions in an if statement."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "Greater",
-                "Equal",
-                "Lesser",
-                "No output"
-            ],
-            "answer": "Equal",
-            "explanation": "The code checks if x is greater than, equal to, or less than 10. Since x is 10, it prints \"Equal\"."
-        },
-        {
             "question": "How do you write a one-line if statement in Python?",
             "options": [
                 "if x > 10: print(x)",
@@ -19615,17 +19450,6 @@
             "explanation": "In Python, the else block after a while loop is executed when the loop condition becomes False."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "5 4 3",
-                "5 4",
-                "5 4 3 2",
-                "Infinite loop"
-            ],
-            "answer": "5 4",
-            "explanation": "The loop decrements x and prints its value as long as x is greater than 3."
-        },
-        {
             "question": "How do you create an infinite loop?",
             "options": [
                 "while True:",
@@ -19679,17 +19503,6 @@
             ],
             "answer": "Using the 'break' statement",
             "explanation": "The 'break' statement is used to exit a while loop before the condition becomes False."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "1 2 4 5",
-                "1 2 3 4 5",
-                "1 2",
-                "1 2 3 4"
-            ],
-            "answer": "1 2 4 5",
-            "explanation": "The 'continue' statement skips the print statement when count is 3, so 3 is not printed."
         },
         {
             "question": "What is the basic structure of a for loop in Python?",
@@ -19778,17 +19591,6 @@
             ],
             "answer": "for char in 'hello':",
             "explanation": "You can loop through a string directly by iterating over its characters."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "0 1 2 Done",
-                "0 1 2",
-                "Done",
-                "0 1"
-            ],
-            "answer": "0 1 2 Done",
-            "explanation": "The for loop iterates over 0, 1, 2, and then the else block is executed, printing \"Done\"."
         },
         {
             "question": "How can you loop through a tuple (1, 2, 3) and print each number?",
@@ -19910,17 +19712,6 @@
             ],
             "answer": "\"\"\"This is a docstring\"\"\"",
             "explanation": "Docstrings are specified using triple quotes at the beginning of a function."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "None",
-                "0",
-                "\"\"",
-                "Error"
-            ],
-            "answer": "None",
-            "explanation": "The pass statement in a function does nothing, and a function without a return statement returns None by default."
         },
         {
             "question": "How do you define a function that takes an unlimited number of keyword arguments?",
@@ -22430,17 +22221,6 @@
             "explanation": ""
         },
         {
-            "question": "What is the output of the following while loop?",
-            "options": [
-                "Hello",
-                "Hello Hello Hello",
-                "0 1 2",
-                "undefined"
-            ],
-            "answer": "Hello Hello Hello",
-            "explanation": ""
-        },
-        {
             "question": "What is the difference between for and while loops?",
             "options": [
                 "There is no difference; they are interchangeable.",
@@ -22463,17 +22243,6 @@
             "explanation": ""
         },
         {
-            "question": "What is the output of the following do-while loop?",
-            "options": [
-                "Hello Hello Hello Hello Hello",
-                "Hello",
-                "undefined",
-                "Hello Hello Hello Hello"
-            ],
-            "answer": "Hello",
-            "explanation": ""
-        },
-        {
             "question": "What is the correct way to skip the current iteration of a loop in JavaScript?",
             "options": [
                 "break;",
@@ -22482,17 +22251,6 @@
                 "continue;"
             ],
             "answer": "continue;",
-            "explanation": ""
-        },
-        {
-            "question": "What is the output of the following loop?",
-            "options": [
-                "0 1 3 4",
-                "0 1 2 3 4",
-                "2 4",
-                "0 1 2 4"
-            ],
-            "answer": "0 1 3 4",
             "explanation": ""
         },
         {
@@ -22658,17 +22416,6 @@
                 "deleteIf()"
             ],
             "answer": "filter()",
-            "explanation": ""
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "15",
-                "10",
-                "0",
-                "30"
-            ],
-            "answer": "15",
             "explanation": ""
         },
         {
@@ -28539,17 +28286,6 @@
             "explanation": "LINQ (Language Integrated Query) is a feature in C# that provides a query syntax for querying data sources like arrays, collections, databases, etc."
         },
         {
-            "question": "What is the output of the following code?",
-            "options": [
-                "x=5, y=5",
-                "x=6, y=5",
-                "x=5, y=6",
-                "x=6, y=6"
-            ],
-            "answer": "x=6, y=5",
-            "explanation": "The post-increment operator (x++) increases x after its current value has been assigned to y. So, y gets 5, and then x becomes 6."
-        },
-        {
             "question": "What is an interface in C#?",
             "options": [
                 "A method to connect to databases",
@@ -28902,17 +28638,6 @@
             "explanation": "In C#, the 'decimal' type is used for high-precision floating point numbers. The 'm' suffix is used for decimal literals."
         },
         {
-            "question": "What is the output of the following C# code?",
-            "options": [
-                "x=10, y=10",
-                "x=11, y=10",
-                "x=10, y=11",
-                "x=11, y=11"
-            ],
-            "answer": "x=11, y=10",
-            "explanation": "The post-increment operator (x++) increments x after its current value is assigned to y. So, y gets 10 and x becomes 11."
-        },
-        {
             "question": "Which of the following is true about the 'var' keyword in C#?",
             "options": [
                 "It declares a constant variable.",
@@ -29210,17 +28935,6 @@
             "explanation": "The 'dynamic' data type in C# is used to store data of any type, with its type being determined and checked at runtime."
         },
         {
-            "question": "What is the output of the following C# code?",
-            "options": [
-                "0",
-                "255",
-                "256",
-                "An error"
-            ],
-            "answer": "0",
-            "explanation": "In C#, the 'byte' data type wraps around on overflow. So, incrementing 255 will result in 0."
-        },
-        {
             "question": "Which C# data type should be used for a variable that needs to hold a large number of true/false values?",
             "options": [
                 "bool",
@@ -29252,17 +28966,6 @@
             ],
             "answer": "string",
             "explanation": "In C#, reference types like 'string' are implicitly nullable, meaning they can be assigned a null value."
-        },
-        {
-            "question": "What is the output of the following expression in C#?",
-            "options": [
-                "16",
-                "11",
-                "8",
-                "13"
-            ],
-            "answer": "11",
-            "explanation": "According to the order of operations in C#, multiplication is performed before addition. So, 3 * 2 is calculated first, making the expression 5 + 6, which equals 11."
         },
         {
             "question": "In C#, which operator is used for concatenating two strings?",
@@ -29408,17 +29111,6 @@
             "explanation": "The bitwise AND of 5 (0101 in binary) and 3 (0011 in binary) is 0001 in binary, which is 1 in decimal."
         },
         {
-            "question": "What is the output of the following C# code?",
-            "options": [
-                "3.3333",
-                "3",
-                "3.3",
-                "4"
-            ],
-            "answer": "3",
-            "explanation": "In C#, the division of two integers results in an integer. The fractional part is discarded, so 10 / 3 gives 3."
-        },
-        {
             "question": "How do you concatenate strings in C#?",
             "options": [
                 "Using the '+' operator",
@@ -29461,17 +29153,6 @@
             ],
             "answer": "ToUpper()",
             "explanation": "The ToUpper() method is used to convert a string to uppercase in C#."
-        },
-        {
-            "question": "What is the output of the following code in C#?",
-            "options": [
-                "Hello,",
-                "World!",
-                "ello, World!",
-                ", World!"
-            ],
-            "answer": "World!",
-            "explanation": "The Substring(7) method returns a new string starting from the 7th index of the original string."
         },
         {
             "question": "What is the character used to denote a verbatim string in C#?",
@@ -29549,17 +29230,6 @@
             ],
             "answer": "Replace()",
             "explanation": "The Replace() method is used to replace all occurrences of a specified substring with another substring in a string."
-        },
-        {
-            "question": "What is the output of the following code in C#?",
-            "options": [
-                "S",
-                "h",
-                "a",
-                "C"
-            ],
-            "answer": "h",
-            "explanation": "String indexing in C# is zero-based, so text[2] refers to the third character, which is 'h'."
         },
         {
             "question": "How do you convert a string to a number in C#?",
@@ -29670,17 +29340,6 @@
             ],
             "answer": "data[2];",
             "explanation": "Array indices in C# start at 0, so the third element is accessed with data[2]."
-        },
-        {
-            "question": "What is the output of the following C# code?",
-            "options": [
-                "1",
-                "2",
-                "3",
-                "Error"
-            ],
-            "answer": "2",
-            "explanation": "The index 1 corresponds to the second element in the array, which is 2."
         },
         {
             "question": "How do you create a two-dimensional array in C#?",
@@ -30066,17 +29725,6 @@
             ],
             "answer": "Yes, by using commas to separate values",
             "explanation": "In C#, a case statement can match multiple values by specifying them as a comma-separated list."
-        },
-        {
-            "question": "What is the output of the following code?",
-            "options": [
-                "One or Two",
-                "Other",
-                "No output",
-                "Error"
-            ],
-            "answer": "One or Two",
-            "explanation": "Since x is 2, the case for 2 is executed, printing \"One or Two\"."
         },
         {
             "question": "How do you handle multiple conditions with the same code in a switch statement?",
