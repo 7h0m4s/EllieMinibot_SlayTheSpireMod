@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>EllieMinibot</groupId>
     <artifactId>EllieMinibot</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <name>Ellie Minibot</name>
     <description>Adds the Ellie Minibot playable character.</description>
     <!-- Change the above for mod information. -->

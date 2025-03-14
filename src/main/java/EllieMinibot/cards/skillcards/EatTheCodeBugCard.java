@@ -59,14 +59,12 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        recalculateBlockValue();
+        recalculateBlockValue(0);
     }
 
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("block"), BaseMod.getKeywordDescription("block")));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("exhaust"), BaseMod.getKeywordDescription("exhaust")));
         return tooltips;
     }
 

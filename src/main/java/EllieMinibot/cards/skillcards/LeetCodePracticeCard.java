@@ -69,8 +69,8 @@ public class LeetCodePracticeCard extends AbstractQuizCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        //tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "Arcat109")));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Quiz")), BaseMod.getKeywordDescription(makeID("Quiz"))));
+        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("block"), BaseMod.getKeywordDescription("block")));
         return tooltips;
     }
 
