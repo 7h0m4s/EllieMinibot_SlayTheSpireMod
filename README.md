@@ -45,6 +45,9 @@ You can install this mod either through the Steam Workshop or manually.
 7. Ensure that the Ellie Minibot mod and the 4 dependencies are visible in the list on the left and are ticked
 8. Click Play
 
+## Translator Credits
+* Simplified Chinese: NotEvil
+
 ## Art Credits:
 All art used in this mod credits the artists either in the card's tooltips or on the image itself. 
 Make sure to check out all these wonderful artists in this community.
