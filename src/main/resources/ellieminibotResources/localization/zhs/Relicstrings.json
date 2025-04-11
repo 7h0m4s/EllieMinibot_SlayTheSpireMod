@@ -1,0 +1,40 @@
+{
+  "ellieminibot:TodoItem": {
+    "NAME": "Todo Item",
+    "FLAVOR": "TODO: make this a sweet relic.",
+    "DESCRIPTIONS": [
+      "Has no effect."
+    ]
+  },
+  "ellieminibot:EllieAntennaRelic": {
+    "NAME": "小机器人天线",
+    "FLAVOR": "在一个笨蛋小机器人头上找到的天线。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时生成一个随机的Ellie朋友作为充能球。"
+    ]
+  },
+  "ellieminibot:GamerSuppsRelic": {
+    "NAME": "Gamer Supps能量饮料",
+    "FLAVOR": "Ellie还没有正式的口味。",
+    "DESCRIPTIONS": [
+      "使用代码MINIBOT在商人处获得 #b10% 的优惠。"
+    ]
+  },
+  "ellieminibot:NerfTurretRelic": {
+    "NAME": "NeuroDog的Nerf炮台",
+    "FLAVOR": "Neuro-sama唯一可以相信的武器。",
+    "DESCRIPTIONS": [
+      "NeuroDog的直接攻击造成双倍伤害。"
+    ]
+  },
+  "ellieminibot:NeuroDogRelic": {
+    "NAME": "Neuro Dog",
+    "FLAVOR": "独自打造的四足机器人为一个AI主播提供了一个物理身体。",
+    "DESCRIPTIONS": [
+      "在火堆开发 #b%d 次来完成建造她。 NL 当前阶段： #b设计",
+      "在火堆开发 #b%d 次来完成建造她。 NL 当前阶段： #b装配",
+      "在火堆开发 #b%d 次来完成建造她。 NL 当前阶段。: #b降低 #b延迟",
+      "每场战斗开始时，NeuroDog被召唤为盟友。有 #b%d 的概率敌人会选择Neuro而不是玩家为攻击对象。"
+    ]
+  }
+}

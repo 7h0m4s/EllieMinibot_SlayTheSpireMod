@@ -6,6 +6,7 @@ import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
@@ -38,9 +39,8 @@ public class VedalCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Artist")), String.format(BaseMod.getKeywordDescription(makeID("Artist")), "@Monikaphobia")));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Vedal987")), BaseMod.getKeywordDescription(makeID("Vedal987"))));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("upgrade"), BaseMod.getKeywordDescription("upgrade")));
+        tooltips.add(new TooltipInfo(GameDictionary.UPGRADE.NAMES[0], GameDictionary.UPGRADE.DESCRIPTION));
         return tooltips;
     }
 }

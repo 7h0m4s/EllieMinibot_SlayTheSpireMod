@@ -36,7 +36,6 @@ public class EllieCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Ellie_Minibot")), BaseMod.getKeywordDescription(makeID("Ellie_Minibot"))));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         return tooltips;
     }
 }

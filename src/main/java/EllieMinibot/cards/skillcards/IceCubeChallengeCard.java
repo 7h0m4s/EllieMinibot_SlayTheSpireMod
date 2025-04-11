@@ -6,6 +6,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Frost;
 
@@ -39,8 +40,7 @@ public class IceCubeChallengeCard  extends AbstractEasyCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("frost"), BaseMod.getKeywordDescription("frost")));
+        tooltips.add(new TooltipInfo(GameDictionary.FROST.NAMES[0], GameDictionary.FROST.DESCRIPTION));
         return tooltips;
     }
 }

@@ -28,12 +28,4 @@ public class UkuleleCurseCard extends AbstractEasyCard {
     public void upp() {
 
     }
-
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("unplayable"), BaseMod.getKeywordDescription("unplayable")));
-        return tooltips;
-    }
 }

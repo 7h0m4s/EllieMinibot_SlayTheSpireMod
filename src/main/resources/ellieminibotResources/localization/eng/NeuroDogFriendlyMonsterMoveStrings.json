@@ -1,0 +1,64 @@
+{
+  "TACKLE": {
+    "NAME": "Tackle",
+    "DESCRIPTION": [
+      "Deal ",
+      " damage to an enemy"
+    ]
+  },
+  "BODYSLAM": {
+    "NAME": "Body Slam",
+    "DESCRIPTION": [
+      "Deal ",
+      " damage to an enemy"
+    ]
+  },
+  "DEFEND": {
+    "NAME": "Defend",
+    "DESCRIPTION": [
+      "Gain 10 block"
+    ]
+  },
+  "GROWL": {
+    "NAME": "Growl",
+    "DESCRIPTION": [
+      "Apply 2 Weak to an enemy"
+    ]
+  },
+  "TAILWHIP": {
+    "NAME": "Tail Whip",
+    "DESCRIPTION": [
+      "Apply 2 Vulnerable to an enemy"
+    ]
+  },
+  "HYPE": {
+    "NAME": "Hype",
+    "DESCRIPTION": [
+      "Give player 2 temporary strength"
+    ]
+  },
+  "COMFORT": {
+    "NAME": "Comfort",
+    "DESCRIPTION": [
+      "Give player 2 temporary dexterity"
+    ]
+  },
+  "CODEBUG": {
+    "NAME": "CodeBug",
+    "DESCRIPTION": [
+      "Give player 2 Bug Fact cards"
+    ]
+  },
+  "PLAY": {
+    "NAME": "Play",
+    "DESCRIPTION": [
+      "Play the next card in draw pile"
+    ]
+  },
+  "PONDERORB": {
+    "NAME": "Ponder Orb",
+    "DESCRIPTION": [
+      "Channel a random orb"
+    ]
+  }
+}

@@ -29,11 +29,4 @@ public class FakeBoyfriendCard extends AbstractEasyCard {
     public void upp() {
         this.upgradeBlock(3);
     }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("block"), BaseMod.getKeywordDescription("block")));
-        return tooltips;
-    }
 }

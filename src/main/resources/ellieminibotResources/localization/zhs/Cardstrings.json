@@ -1,0 +1,293 @@
+{
+  "ellieminibot:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "ellieminibot:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "ellieminibot:ExampleTwoAmountPowerCard": {
+    "NAME": "Two Amount Power",
+    "DESCRIPTION": "在你的回合开始时, 获得 !M! 点力量和 !ellieminibot:m2! 点敏捷."
+  },
+  "ellieminibot:InlinePowerDemo": {
+    "NAME": "Inline Power",
+    "DESCRIPTION": "打击多造成 !M! 点伤害. NL 在你的回合结束时, 获得 !M! 点格挡.",
+    "EXTENDED_DESCRIPTION": [
+      "打击+, 防御+",
+      " #y打击造成 #b",
+      " 点额外伤害. 在你的回合结束时, 获得 #b",
+      " #y点格挡."
+    ]
+  },
+  "ellieminibot:SelectCardsPlusCardMods": {
+    "NAME": "Cool Card Stuff",
+    "DESCRIPTION": "从任意种类的三张牌中选择一张变成 0 费. NL 将它加入你的手牌. NL 它将变成虚无和消耗.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to add into your hand with Ethereal and Exhaust."
+    ]
+  },
+  "ellieminibot:EasyXCostDemo": {
+    "NAME": "Easy X Cost",
+    "DESCRIPTION": "{@@}Deal !D! damage X{!M!|>0=+!M!} times. NL Gain X{!M!|>0=+!M!} Strength. NL Exhaust."
+  },
+  "ellieminibot:EasyModalChoiceDemo": {
+    "NAME": "Easy Modal Choice",
+    "DESCRIPTION": "Choose one: Draw !M! cards or gain !ellieminibot:m2! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Draw",
+      "Draw ",
+      " cards.",
+      "Strength",
+      "Gain ",
+      " Strength."
+    ]
+  },
+  "ellieminibot:DrawAndShiv": {
+    "NAME": "Draw and Shiv",
+    "DESCRIPTION": "Draw 1 card. NL Add 1 *Shiv into your hand."
+  },
+  "ellieminibot:TwoTypesOfDamage": {
+    "NAME": "Two Damage Values",
+    "DESCRIPTION": "Deal !D! damage. NL If you're Vulnerable, deal !ellieminibot:sd! damage instead."
+  },
+  "ellieminibot:StartupBlockCard": {
+    "NAME": "Startup And AOE",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Startup: Gain !M! Block."
+  },
+  "ellieminibot:MultiCardPreviewAndDrawCallback": {
+    "NAME": "Previews and Callbacks",
+    "DESCRIPTION": "{@@}Shuffle *Smite{!Upgrades!|>0=+} and *Safety{!Upgrades!|>0=+} into your draw pile. NL Draw 1 card. NL If it's Colorless, deal !D! damage to ALL enemies."
+  },
+  "ellieminibot:RawSpaghetti": {
+    "NAME": "生吃意大利面",
+    "DESCRIPTION": "受到 1 点伤害, 对所有敌人造成 !D! 点伤害。"
+  },
+  "ellieminibot:ReadyToRaid": {
+    "NAME": "准备Raid!",
+    "DESCRIPTION": "减少敌人的力量 *X 点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "减少敌人的力量 *X + !M! 点。 NL 消耗 。"
+  },
+  "ellieminibot:TeethModel": {
+    "NAME": "牙齿模型",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。"
+  },
+  "ellieminibot:Waterproofing": {
+    "NAME": "防水躯体",
+    "DESCRIPTION": "给予 !M! 层 ellieminibot:防水 。"
+  },
+  "ellieminibot:Otamatone": {
+    "NAME": "电音蝌蚪模型",
+    "DESCRIPTION": "获得 !M! 个 充能球 栏位。"
+  },
+  "ellieminibot:LeadedSolder": {
+    "NAME": "含铅焊料毒雾",
+    "DESCRIPTION": "给予 !M! 层 中毒 。 NL 给予 !ellieminibot:m2! 层 虚弱 。"
+  },
+  "ellieminibot:FakeBoyfriend": {
+    "NAME": "伪装男友",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "ellieminibot:EatTheCodeBug": {
+    "NAME": "吃掉代码虫",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 ellieminibot:虫物信息 提供1点额外格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 ellieminibot:虫物信息 提供1点额外格挡。 NL 至少获得5点格挡。"
+  },
+  "ellieminibot:SelfMaintenance": {
+    "NAME": "自维护",
+    "DESCRIPTION": "在战斗结束时，回复 !M! 点 生命 。"
+  },
+  "ellieminibot:SpinRing": {
+    "NAME": "旋转虫指环",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 增加一张 分心 到你的弃牌堆。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 增加一张 分心 到你的弃牌堆。"
+  },
+  "ellieminibot:BeatSabre": {
+    "NAME": "节奏光剑",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 下一回合多抽 !ellieminibot:m2! 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 下一回合多抽 !ellieminibot:m2! 张牌。"
+  },
+  "ellieminibot:SongTogether": {
+    "NAME": "歌唱Together",
+    "DESCRIPTION": "获得 !M! 点 集中 。"
+  },
+  "ellieminibot:SongCrazyRobotBody": {
+    "NAME": "Crazy Robot Body",
+    "DESCRIPTION": " 格挡 不再在你的回合开始时消失。"
+  },
+  "ellieminibot:WelcomeRaiders": {
+    "NAME": "欢迎，Raiders！",
+    "DESCRIPTION": "每回合开始时 生成 !M! 个随机充能球。",
+    "UPGRADE_DESCRIPTION": "每回合开始时 生成 !M! 个随机充能球。"
+  },
+  "ellieminibot:FeedGale": {
+    "NAME": "喂食盖尔",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 永久消耗一张牌。 根据被消耗牌的费用永久增加所有从 ellieminibot:喂食盖尔 获得的格挡。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张牌永久消耗。"
+    ]
+  },
+  "ellieminibot:DrinkingStream": {
+    "NAME": "醉酒直播",
+    "DESCRIPTION": "每有1个 生成 的充能球获得 !B! 点 格挡 。"
+  },
+  "ellieminibot:UmActually": {
+    "NAME": "Ummm，事实上",
+    "DESCRIPTION": " ellieminibot:虫物信息 额外造成 !M! 点伤害。"
+  },
+  "ellieminibot:YourAverageBoCollab": {
+    "NAME": "YourAverageBo联动",
+    "DESCRIPTION": " 生成 1个 *bo 充能球。"
+  },
+  "ellieminibot:GomiCollab": {
+    "NAME": "Gomi联动",
+    "DESCRIPTION": " 生成 1个 *gomi 充能球。"
+  },
+  "ellieminibot:MinikoMewCollab": {
+    "NAME": "MinikoMew联动",
+    "DESCRIPTION": " 生成 1个 *miniko 充能球。"
+  },
+  "ellieminibot:ShoomimiCollab": {
+    "NAME": "Shoomimi联动",
+    "DESCRIPTION": " 生成 1个 *shoomimi 充能球。"
+  },
+  "ellieminibot:VedalCollab": {
+    "NAME": "Vedal联动",
+    "DESCRIPTION": " 生成 1个 *vedal 充能球。"
+  },
+  "ellieminibot:CerberCollab": {
+    "NAME": "Cerber联动",
+    "DESCRIPTION": " 生成 1个 *cerber 充能球。"
+  },
+  "ellieminibot:EllieCollab": {
+    "NAME": "Ellie单人直播",
+    "DESCRIPTION": " 生成 1个 *ellie 充能球"
+  },
+  "ellieminibot:MapleCollab": {
+    "NAME": "Maple审查",
+    "DESCRIPTION": " 生成 1个 *maple 充能球。"
+  },
+  "ellieminibot:BookieCollab": {
+    "NAME": "Bookie联动",
+    "DESCRIPTION": " 生成 1个 *bookie 充能球。"
+  },
+  "ellieminibot:IceCubeChallenge": {
+    "NAME": "冰块挑战",
+    "DESCRIPTION": " 生成 !M! 个 冰霜充能球。",
+    "EXTENDED_DESCRIPTION": [
+      "投20面骰子来决定冰块数量真心不是个好主意。",
+      "用班卓琴驱散寒冷也不坏。"
+    ]
+  },
+  "ellieminibot:Hireathon": {
+    "NAME": "招聘马拉松",
+    "DESCRIPTION": "造成 !D! 点伤害 并 永久增加 !M!%% 的概率。 NL NL %d%% 的概率永久转变为牌“那家”公司。"
+  },
+  "ellieminibot:ThatCompany": {
+    "NAME": "“那家”公司",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "ellieminibot:LoudAsCicada": {
+    "NAME": "像蝉一样热闹呢",
+    "DESCRIPTION": "“蜂拥集结” NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+  },
+  "ellieminibot:OvenDriedBugs": {
+    "NAME": "烤箱干虫子",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+  },
+  "ellieminibot:StrongAnkles": {
+    "NAME": "强壮脚踝",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+  },
+  "ellieminibot:NerdyGirlRizz": {
+    "NAME": "迷人理工科女孩",
+    "DESCRIPTION": "选择 生成 一种充能球来填充所有的充能球栏位 NL 消耗 "
+  },
+  "ellieminibot:FeatureNotABug": {
+    "NAME": "是特性不是Bug",
+    "DESCRIPTION": "从全部怪物偷取增益效果。 NL 将玩家的负面效果转移到全部怪物。 NL  消耗 "
+  },
+  "ellieminibot:Distracted": {
+    "NAME": "分心",
+    "DESCRIPTION": " 不能被打出 。 NL  虚无 。 NL 无论何时抽到此牌，失去1能量。"
+  },
+  "ellieminibot:UkuleleCurse": {
+    "NAME": "尤克里里",
+    "DESCRIPTION": " 不能被打出 。"
+  },
+  "ellieminibot:JobInterview": {
+    "NAME": "工作采访",
+    "DESCRIPTION": " ellieminibot:编程小测试 。 NL 如果回答正确，造成 !D! 点伤害。 NL 否则收到 !D! 点伤害。"
+  },
+  "ellieminibot:LeetCodePractice": {
+    "NAME": "力扣编程练习",
+    "DESCRIPTION": " ellieminibot:编程小测试 。 NL 如果回答正确，获得 !B! 点 格挡。 NL 否则一个随机敌人获得 !B! 点 格挡。"
+  },
+  "ellieminibot:AboveAverageBo": {
+    "NAME": "超越AverageBo",
+    "DESCRIPTION": " *bo 充能球额外攻击一次。 NL  生成 !M! 个 *bo 充能球。"
+  },
+  "ellieminibot:BugFact": {
+    "NAME": "虫物信息",
+    "DESCRIPTION": "造成 !D! 点伤害 并 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "科学家不确定为什么巴西角蝉的胸部会长出这些球状的附属物。一些科学家推测它们是防御捕食者的一种形式。",
+      "为了吸引配偶，花生蝽（fulgora_laternaria）会将它的头撞在一棵空心树上以产生声音振动。",
+      "家蚕吃了足够的叶子，在56天内体重增加了4000倍以上。",
+      "蜜蜂有两个胃。一个用于消化食物，另一个用于储存蜂蜜。",
+      "鼠妇，或者“西瓜虫”，可能看起来像虫，但他们是一种甲壳类动物。它们是少数完全生活在陆地上的甲壳类动物之一。",
+      "螳螂是唯一能转动头的昆虫。他们还可以看到3d视角，这使他们成为理想的猎人。",
+      "澳大利亚虎甲虫是世界上有记录以来跑得最快的昆虫，平均速度为每小时5.5英里（km/h），即每秒171个它的体长。",
+      "大力士甲虫可以搬运850倍于自身重量的物体。",
+      "燕尾蝶的翅膀拍动速度是昆虫中最慢的，每分钟拍动300下。蠓虫是最快的，每分钟62760次。",
+      "毛毛虫有六条腿，就像所有的昆虫一样。其他“腿”的外观实际上是毛毛虫腹部的突出物，叫做“称腹足”。",
+      "昆虫没有肺。它们通过被称为呼吸孔的微小气孔呼吸。",
+      "一种名为石油蝇的蛆完全淹没在原油的水坑中，是唯一在原油中发育的昆虫。它以落入水中的不幸昆虫为食。",
+      "世界上最长的昆虫是竹节虫chan's_megastick，腿伸展开长22.3英寸（567毫米）",
+      "蚱蜢的耳朵在腹部，藏在翅膀下面。",
+      "臭虫会被宿主呼出的二氧化碳和体温所吸引。成年臭虫也会等上一年不进食。",
+      "大多数蚜虫都是出生就怀孕的。",
+      "萤火虫是甲虫，不是苍蝇。",
+      "地球上超过三分之一的昆虫是甲虫，大约有39000种。",
+      "有些鹰蛾的嘴里有一种叫做唇毛的结构，这种结构可以让它们听到超声波，比如蝙蝠回声定位发出的声音。",
+      "乌桕大蚕蛾是世界上最大的蛾子，翼展可达10英寸（25厘米）。它是以希腊神话中的巨人阿特拉斯命名的。",
+      "螳螂是地球上唯一只有一只耳朵的动物。",
+      "地震时飞蛾不能飞。",
+      "蜻蜓不能行走。适应飞行生活的蜻蜓主要利用腿来抓、栖息和捕获猎物。",
+      "kikiki_huna，一种仙蝇，是世界上已知最小的飞行昆虫。它长0.15毫米。它是在夏威夷群岛发现的。",
+      "金线螳螂是一种稀有的螳螂，发现于东南亚，呈彩虹色。",
+      "phengaris_arion是一种蝴蝶，是一种孵卵寄生虫，它依靠另一种昆虫白蚁来抚养幼崽。",
+      "萤火虫身上发光的化学物质叫做荧光素(luciferin)。在拉丁语中，lucifer的意思是“光的使者”。",
+      "猫跳蚤和狗跳蚤进化出不同形状的刺，称为梳子，以躲避宿主的舌头。普通的人类跳蚤没有梳子。",
+      "蜻蜓是动物界最成功的猎手，成功率约为95%。",
+      "白天飞蛾比蝴蝶多。",
+      "蜣螂白天靠太阳导航，晚上靠星星导航。",
+      "螳蛉（螳蛉科）不是螳螂或苍蝇。",
+      "雌性红天鹅绒蚂蚁（dasymutilla_occidentalis）实际上是一种无翅黄蜂。",
+      "对蝎子的恐惧被称为蜘蛛恐惧症，这个术语用来定义对所有蛛形纲动物的恐惧，包括蜘蛛。",
+      "超有机体是同一物种的一组协同作用的有机体。例如蚂蚁、白蚁、蜜蜂和珊瑚。",
+      "对黄蜂的恐惧被称为黄蜂恐惧症。",
+      "如果给蜜蜂每小时10美元的报酬来酿制蜂蜜，蜂蜜的价格就会飙升到每磅360万美元左右。",
+      "belgica_antarctica，即南极摇蚊，是一种不能飞的摇蚊，只存在于南极洲，是唯一原产于南极洲的昆虫。",
+      "吉卜林巴希拉蜘蛛是世界上唯一（一般而言）素食蜘蛛。",
+      "蜘蛛有蓝色的血液。氧与血蓝蛋白结合，血蓝蛋白是一种含有铜的分子，而不像人类血红蛋白中的铁。",
+      "patu_marplesi是世界上最小的蜘蛛。它太小了，一支铅笔的末端能站得下10只。",
+      "拟态蛛通常以其他蜘蛛为食。它们通过抓取猎物网上的蛛丝来模拟被困昆虫的移动。",
+      "spider”一词来源于古英语单词“spithra”，与德语“spinne”有关，两者都表示“纺纱工”。",
+      "飞航是蜘蛛通过释放丝线捕捉风力，从而飞离地面的一种移动方式。",
+      "水蜘蛛（agyroneta_aquatica）是唯一一种终生生活在水中的蜘蛛。这些蜘蛛构造了一个“潜水钟”，使它们能够在水下生活和织网。",
+      "鸟粪蛛（celaenia_excavata）因长得像鸟粪而得名。这种伪装可以防止鸟吃掉它。",
+      "当车轮蜘蛛（carparachne aureoflava）受到惊吓时，它们会蜷缩双腿滚下沙丘。",
+      "一条足以环绕地球的蜘蛛丝的重量只有一磅多一点。",
+      "在动物王国里，最快的动作是德古拉蚂蚁（adetomyrma_ventrix）的咬嘴动作。它能以每小时200英里的速度开关下颚。",
+      "有记录以来最大的蚁群覆盖3700英里，从意大利北部到西班牙的大西洋海岸。由阿根廷蚂蚁组成（linepithema_humile）。",
+      "世界上最小的蚂蚁是法老蚁，它的长度在1.5毫米到2毫米之间。",
+      "受精的蚂蚁卵生出雌性蚂蚁。如果一个卵没有受精，它就会变成雄性。",
+      "瓢虫的翅膀被称为鞘翅。",
+      "帝王蝶（danaus_plexippus）是唯一像鸟类一样进行双向迁徙的蝴蝶。",
+      "rubber_ducky是一种等足类动物。看看它们，它们真可爱。",
+      "代码虫是一种罕见的等足类动物，只在叫做ellie的小机器人附近发现。"
+    ]
+  }
+}

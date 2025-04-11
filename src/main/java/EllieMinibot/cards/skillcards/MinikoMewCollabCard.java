@@ -38,7 +38,6 @@ public class MinikoMewCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("MinikoMew")), BaseMod.getKeywordDescription(makeID("MinikoMew"))));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("channel"), BaseMod.getKeywordDescription("channel")));
         return tooltips;
     }
 }

@@ -5,6 +5,7 @@ import EllieMinibot.events.BoBathroomEvent;
 import EllieMinibot.events.ClintsReptilesEvent;
 import EllieMinibot.localization.CodeQuestion;
 import EllieMinibot.localization.CodeQuestionType;
+import EllieMinibot.localization.NeuroDogFriendlyMonsterMoveStrings;
 import EllieMinibot.monsters.EvilNeuroMonster;
 import EllieMinibot.monsters.LanternBugMonster;
 import basemod.AutoAdd;
@@ -108,8 +109,11 @@ public class ModFile implements
 
     public static final ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
 
+    public static Map<String, NeuroDogFriendlyMonsterMoveStrings> NeuroDogMoveSet = new HashMap<String, NeuroDogFriendlyMonsterMoveStrings>();
+
     public static final Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS
     };
 
     public static final Logger logger = LogManager.getLogger("EllieMinibot");
@@ -245,6 +249,11 @@ public class ModFile implements
         BaseMod.loadCustomStringsFile(MonsterStrings.class, modID + "Resources/localization/" + getLangString() + "/MonsterStrings.json");
         BaseMod.loadCustomStringsFile(EventStrings.class, modID + "Resources/localization/" + getLangString() + "/Eventstrings.json");
 
+
+        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/NeuroDogFriendlyMonsterMoveStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        Gson gson = new Gson();
+        Type type = new TypeToken<Map<String, NeuroDogFriendlyMonsterMoveStrings>>() {}.getType();
+        NeuroDogMoveSet = gson.fromJson(json, type);
     }
 
     @Override
@@ -262,6 +271,8 @@ public class ModFile implements
 
     @Override
     public void receiveEditKeywords() {
+
+        // Mod specific keywords
         Gson gson = new Gson();
         String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);

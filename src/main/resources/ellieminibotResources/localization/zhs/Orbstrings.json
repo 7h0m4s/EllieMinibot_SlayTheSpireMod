@@ -1,0 +1,69 @@
+{
+  "YourAverageBoOrb": {
+    "NAME": "YourAverageBo",
+    "DESCRIPTION": [
+      " #y被动 ：在你的回合结束时，对最前方的敌人造成 #b",
+      " 点伤害。 NL #y激发 ： 对最前方的敌人造成 #b",
+      " 点伤害两次。"
+    ]
+  },
+  "GomiOrb": {
+    "NAME": "Gomi",
+    "DESCRIPTION": [
+      " #y被动 ：在回合开始时，给予随机一个敌人 #b",
+      "层 #y中毒 。 NL #y激发 ： 给予随机一个敌人 #b",
+      "层 #y中毒 。"
+    ]
+  },
+  "MinikoMewOrb": {
+    "NAME": "MinikoMew",
+    "DESCRIPTION": [
+      " #y被动 ： 在你的回合开始时，减少你的抽牌堆中下一张牌的费用",
+      "  #b%d 。 NL #y激发 ：减少你手牌中随机一张牌的费用",
+      "  #b%d 。"
+    ]
+  },
+  "VedalOrb": {
+    "NAME": "Vedal987",
+    "DESCRIPTION": [
+      "#y被动 ：在你的回合开始时，升级你抽牌堆中的 #b%d 张牌。 NL #y激发 ：升级手牌中的 #b%d 张随机牌。"
+    ]
+  },
+  "CerberOrb": {
+    "NAME": "Cerber",
+    "DESCRIPTION": [
+      "#y被动 ：在你的回合结束时，获得 #b%d 点 #y活力 。 NL #y激发 ：获得 #b%d 点 #y活力 。"
+    ]
+  },
+  "ShoomimiOrb": {
+    "NAME": "Shoomimi",
+    "DESCRIPTION": [
+      " #y被动 ：在回合开始时多抽 #b%d 张牌。",
+      " NL #y激发 ： 抽 #b%d",
+      " 张牌。"
+    ]
+  },
+  "EllieOrb": {
+    "NAME": "Ellie Minibot",
+    "DESCRIPTION": [
+      " #y被动 ：在你的回合开始时，获得 #b%d 张 虫物信息 。",
+      " NL #y激发 ：获得 #b%d",
+      " 张 虫物信息 。"
+    ]
+  },
+  "MapleOrb": {
+    "NAME": "Maple_QB",
+    "DESCRIPTION": [
+      " #y被动 ：在你的回合开始时，获得 #b%d 点临时 #y敏捷 。",
+      " NL #y激发：获得 #b%d 点临时 #y敏捷 。",
+      ""
+    ]
+  },
+  "BookieOrb": {
+    "NAME": "Bookie",
+    "DESCRIPTION": [
+      " #y被动 ：在你的回合开始时，随机将玩家身上的 #b%d 个负面效果转移到一个怪物身上 或 将一个怪物身上的 #b%d 个负面效果转移到玩家身上。",
+      " NL #y激发 ：随机将玩家身上的 #b%d 个负面效果转移到一个怪物身上 或 将一个怪物身上的 #b%d 个负面效果转移到玩家身上。"
+    ]
+  }
+}

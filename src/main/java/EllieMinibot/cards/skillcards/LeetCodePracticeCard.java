@@ -70,7 +70,6 @@ public class LeetCodePracticeCard extends AbstractQuizCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Quiz")), BaseMod.getKeywordDescription(makeID("Quiz"))));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("block"), BaseMod.getKeywordDescription("block")));
         return tooltips;
     }
 

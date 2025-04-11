@@ -1,5 +1,6 @@
 package EllieMinibot.friendlymonster;
 
+import EllieMinibot.ModFile;
 import EllieMinibot.actions.ChannelRandomEllieOrbAction;
 import EllieMinibot.cards.specialcards.BugFactCard;
 import EllieMinibot.relics.NerfTurretRelic;
@@ -140,9 +141,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
     private ArrayList<MinionMove> createMoves(){
         ArrayList<MinionMove> moveMasterList = new ArrayList<>();
 
-        moveMasterList.add(new MinionMove("Tackle", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("TACKLE").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/attack/attack_intent_1.png"),
-                "Deal "+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 10 : 5) +" damage to an enemy",
+                ModFile.NeuroDogMoveSet.get("TACKLE").DESCRIPTION[0]+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 10 : 5) +ModFile.NeuroDogMoveSet.get("TACKLE").DESCRIPTION[1],
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     DamageInfo info = new DamageInfo(this, Wiz.p().hasRelic(NerfTurretRelic.ID) ? 10 : 5 , DamageInfo.DamageType.NORMAL);
@@ -152,9 +153,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     playAnimation(animationType.ATTACK);
                 }
         ));
-        moveMasterList.add(new MinionMove("Body Slam", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("BODYSLAM").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/attack/attack_intent_2.png"),
-                "Deal "+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 20 : 10) +" damage to an enemy",
+                ModFile.NeuroDogMoveSet.get("BODYSLAM").DESCRIPTION[0]+ (Wiz.p().hasRelic(NerfTurretRelic.ID) ? 20 : 10) +ModFile.NeuroDogMoveSet.get("BODYSLAM").DESCRIPTION[1],
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     DamageInfo info = new DamageInfo(this, Wiz.p().hasRelic(NerfTurretRelic.ID) ? 20 : 10, DamageInfo.DamageType.NORMAL);
@@ -164,18 +165,18 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     playAnimation(animationType.ATTACK);
                 }
         ));
-        moveMasterList.add(new MinionMove("Defend", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("DEFEND").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/defendL.png"),
-                "Gain 10 block",
+                ModFile.NeuroDogMoveSet.get("DEFEND").DESCRIPTION[0],
                 () -> {
                     atb(new GainBlockAction(this, this, 15));
                     atb(new SFXAction("BLOCK_GAIN_1"));
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
-        moveMasterList.add(new MinionMove("Growl", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("GROWL").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/debuff2L.png"),
-                "Apply 2 Weak to an enemy",
+                ModFile.NeuroDogMoveSet.get("DEFEND").DESCRIPTION[0],
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     atb(new ApplyPowerAction(target, this, new WeakPower(target, 2, false), 2));
@@ -184,9 +185,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
                 }
         ));
-        moveMasterList.add(new MinionMove("Tail Whip", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("TAILWHIP").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/debuff1L.png"),
-                "Apply 2 Vulnerable to an enemy",
+                ModFile.NeuroDogMoveSet.get("TAILWHIP").DESCRIPTION[0],
                 () -> {
                     AbstractMonster target = AbstractDungeon.getRandomMonster();
                     atb(new ApplyPowerAction(target, this, new VulnerablePower(target, 2, false), 2));
@@ -195,9 +196,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
 
                 }
         ));
-        moveMasterList.add(new MinionMove("Hype", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("HYPE").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/buff1L.png"),
-                "Give player 2 temporary strength",
+                ModFile.NeuroDogMoveSet.get("HYPE").DESCRIPTION[0],
                 () -> {
                     AbstractPlayer p = AbstractDungeon.player;
 
@@ -207,9 +208,9 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
-        moveMasterList.add(new MinionMove("Comfort", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("COMFORT").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/magicL.png"),
-                "Give player 2 temporary dexterity",
+                ModFile.NeuroDogMoveSet.get("COMFORT").DESCRIPTION[0],
                 () -> {
                     AbstractPlayer p = AbstractDungeon.player;
 
@@ -219,27 +220,27 @@ public class NeuroDogFriendlyMonster  extends AbstractFriendlyMonster {
                     playAnimation(animationType.FRONTFLIP);
                 }
         ));
-        moveMasterList.add(new MinionMove("CodeBug", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("CODEBUG").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/codebug.png"),
-                "Give player 2 Bug Fact cards",
+                ModFile.NeuroDogMoveSet.get("CODEBUG").DESCRIPTION[0],
                 () -> {
                     atb(new SFXAction("RELIC_DROP_MAGICAL"));
                     playAnimation(animationType.BUGTHROW);
                     atb(new MakeTempCardInHandAction(new BugFactCard(), 2));
                 }
         ));
-        moveMasterList.add(new MinionMove("Play", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("PLAY").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/drawpile.png"),
-                "Play the next card in draw pile",
+                ModFile.NeuroDogMoveSet.get("PLAY").DESCRIPTION[0],
                 () -> {
                     atb(new SFXAction("ATTACK_MAGIC_FAST_3"));
                     playAnimation(animationType.SPIN);
                     atb(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
                 }
         ));
-        moveMasterList.add(new MinionMove("Ponder Orb", this,
+        moveMasterList.add(new MinionMove(ModFile.NeuroDogMoveSet.get("PONDERORB").NAME, this,
                 new Texture("ellieminibotResources/images/friendlymonsters/intent/empty1.png"),
-                "Channel a random orb",
+                ModFile.NeuroDogMoveSet.get("PONDERORB").DESCRIPTION[0],
                 () -> {
                     atb(new SFXAction("ATTACK_MAGIC_FAST_2"));
                     playAnimation(animationType.FRONTFLIP);

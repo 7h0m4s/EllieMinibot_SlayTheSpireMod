@@ -1,0 +1,64 @@
+{
+  "TACKLE": {
+    "NAME": "处理",
+    "DESCRIPTION": [
+      "对一名敌人造成",
+      "点伤害",
+    ]
+  },
+  "BODYSLAM": {
+    "NAME": "身体猛击",
+    "DESCRIPTION": [
+      "对一名敌人造成",
+      "点伤害"
+    ]
+  },
+  "DEFEND": {
+    "NAME": "保卫",
+    "DESCRIPTION": [
+      "获得10点格挡"
+    ]
+  },
+  "GROWL": {
+    "NAME": "咆哮",
+    "DESCRIPTION": [
+      "给予一名敌人2层虚弱"
+    ]
+  },
+  "TAILWHIP": {
+    "NAME": "尾鞭",
+    "DESCRIPTION": [
+      "给予一名敌人两层易伤"
+    ]
+  },
+  "HYPE": {
+    "NAME": "炒作",
+    "DESCRIPTION": [
+      "给予玩家2点临时力量"
+    ]
+  },
+  "COMFORT": {
+    "NAME": "舒适",
+    "DESCRIPTION": [
+      "给予玩家2层临时敏捷"
+    ]
+  },
+  "CODEBUG": {
+    "NAME": "代码错误",
+    "DESCRIPTION": [
+      "给予玩家2张虫物信息"
+    ]
+  },
+  "PLAY": {
+    "NAME": "玩",
+    "DESCRIPTION": [
+      "打出抽牌堆中的下一张牌"
+    ]
+  },
+  "PONDERORB": {
+    "NAME": "沉思球",
+    "DESCRIPTION": [
+      "生成一个随机充能球"
+    ]
+  }
+}

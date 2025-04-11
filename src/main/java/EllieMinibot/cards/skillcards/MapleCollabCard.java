@@ -6,6 +6,7 @@ import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class MapleCollabCard extends AbstractEasyCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tooltips = new ArrayList<>();
         tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle(makeID("Maple_QB")), BaseMod.getKeywordDescription(makeID("Maple_QB"))));
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("dexterity"), BaseMod.getKeywordDescription("dexterity")));
+        tooltips.add(new TooltipInfo(GameDictionary.DEXTERITY.NAMES[0], GameDictionary.DEXTERITY.DESCRIPTION));
         return tooltips;
     }
 }

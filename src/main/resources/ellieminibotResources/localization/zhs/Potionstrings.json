@@ -1,0 +1,16 @@
+{
+    "ellieminibot:DemoPotion": {
+        "NAME": "炫酷Demo药水",
+        "DESCRIPTIONS": [
+            "获得 #b",
+            " 点力量 。"
+        ]
+    },
+    "ellieminibot:BeansPotion": {
+        "NAME": "厕所的豆子",
+        "DESCRIPTIONS": [
+            " 回复 #b ",
+            " 点生命，并且避免尴尬的社交。"
+        ]
+    }
+}

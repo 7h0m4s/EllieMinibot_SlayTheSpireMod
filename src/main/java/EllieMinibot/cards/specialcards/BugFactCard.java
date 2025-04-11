@@ -84,11 +84,4 @@ public class BugFactCard  extends AbstractEasyCard {
     public void upp() {
         upgradeDamage(3);
     }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("exhaust"), BaseMod.getKeywordDescription("exhaust")));
-        return tooltips;
-    }
 }

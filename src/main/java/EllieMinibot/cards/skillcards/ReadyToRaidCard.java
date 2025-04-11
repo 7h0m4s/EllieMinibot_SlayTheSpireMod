@@ -35,11 +35,4 @@ public class ReadyToRaidCard  extends AbstractEasyCard {
     public void upp() {
         upgradeMagicNumber(1);
     }
-
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tooltips = new ArrayList<>();
-        tooltips.add(new TooltipInfo(BaseMod.getKeywordTitle("exhaust"), BaseMod.getKeywordDescription("exhaust")));
-        return tooltips;
-    }
 }

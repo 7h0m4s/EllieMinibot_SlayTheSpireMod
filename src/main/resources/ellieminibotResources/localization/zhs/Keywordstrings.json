@@ -1,0 +1,115 @@
+[
+  {
+    "PROPER_NAME": "TODO",
+    "NAMES": [
+      "todo",
+      "todos"
+    ],
+    "DESCRIPTION": "TODO: Make your own epic keywords"
+  },
+  {
+    "PROPER_NAME": "画师",
+    "NAMES": [
+      "Artist"
+    ],
+    "DESCRIPTION": "#b%s."
+  },
+  {
+    "PROPER_NAME": "卡片赞助",
+    "NAMES": [
+      "CardSuggestedBy"
+    ],
+    "DESCRIPTION": "#b%s."
+  },
+  {
+    "PROPER_NAME": "防水",
+    "NAMES": [
+      "Waterproofing"
+    ],
+    "DESCRIPTION": "以固定的比例减少到来的伤害。"
+  },
+  {
+    "PROPER_NAME": "编程小测试",
+    "NAMES": [
+      "Quiz"
+    ],
+    "DESCRIPTION": "当使用这张牌时，将显示一个多选项的问题。 NL  NL 如果回答 #b正确 ，此牌将正常使用且你会得到一个连胜点数。 NL  NL 如果回答 #b不正确 ，此牌的作用目标将会反转。比如回答错误一张测试攻击牌，将会对Ellie造成伤害，而不是敌人。 NL  NL 问题的种类可以在模组配置菜单中改变。"
+  },
+  {
+    "PROPER_NAME": "虫物信息",
+    "NAMES": [
+      "BugFact"
+    ],
+    "DESCRIPTION": " 虫物信息 是一系列 #b0 费的 消耗 攻击牌。"
+  },
+  {
+    "PROPER_NAME": "Umm,事实上",
+    "NAMES": [
+      "UmActuallyPower"
+    ],
+    "DESCRIPTION": " 虫物信息 造成更多伤害。"
+  },
+  {
+    "PROPER_NAME": "YourAverageBo",
+    "NAMES": [
+      "YourAverageBo"
+    ],
+    "DESCRIPTION": "充能球：在回合结束时对最前方敌人造成伤害。"
+  },
+  {
+    "PROPER_NAME": "Gomi",
+    "NAMES": [
+      "Gomi"
+    ],
+    "DESCRIPTION": "充能球：在回合结束时给予一个随机敌人中毒。"
+  },
+  {
+    "PROPER_NAME": "MinikoMew",
+    "NAMES": [
+      "MinikoMew"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时减少下一张抽到牌的费用。"
+  },
+  {
+    "PROPER_NAME": "Vedal987",
+    "NAMES": [
+      "Vedal987"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时升级下一张抽到的牌。"
+  },
+  {
+    "PROPER_NAME": "Cerber",
+    "NAMES": [
+      "Cerber"
+    ],
+    "DESCRIPTION": "充能球：在你的回合结束时给予 活力 。"
+  },
+  {
+    "PROPER_NAME": "Shoomimi",
+    "NAMES": [
+      "Shoomimi"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时抽一张牌。"
+  },
+  {
+    "PROPER_NAME": "Ellie_Minibot",
+    "NAMES": [
+      "Ellie_Minibot"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时增加一张虫误信息到你的手牌。"
+  },
+  {
+    "PROPER_NAME": "Maple_QB",
+    "NAMES": [
+      "Maple_QB"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时给予一层临时的敏捷。"
+  },
+  {
+    "PROPER_NAME": "Bookie",
+    "NAMES": [
+      "Bookie"
+    ],
+    "DESCRIPTION": "充能球：在回合开始时将一个怪物身上的一个增益效果转移到玩家身上，或者将玩家身上的一个负面效果转移到一个随机怪物身上。"
+  }
+]

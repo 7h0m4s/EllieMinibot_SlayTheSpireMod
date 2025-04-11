@@ -3,6 +3,7 @@ package EllieMinibot.cards.skillcards;
 import EllieMinibot.cards.AbstractEasyCard;
 import EllieMinibot.config.ConfigPanel;
 import EllieMinibot.util.Wiz;
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
@@ -21,6 +22,7 @@ import static EllieMinibot.ModFile.*;
 import static EllieMinibot.util.Wiz.atb;
 import static EllieMinibot.util.Wiz.att;
 
+@AutoAdd.Ignore
 public class FeedGaleCard extends AbstractEasyCard {
 
     public final static String ID = makeID("FeedGale");
@@ -28,6 +30,7 @@ public class FeedGaleCard extends AbstractEasyCard {
     public FeedGaleCard() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = block = 1;
+        this.misc = 0;
 
         // Match baseBlock with all other FeedGaleCards
         if(AbstractDungeon.player != null) {
@@ -56,7 +59,8 @@ public class FeedGaleCard extends AbstractEasyCard {
     }
 
     public void UpgradeGale(int amount){
-        baseBlock += amount;
+        this.misc += amount;
+        this.baseBlock = 1 + this.misc;
         this.applyPowers();
         this.applyPowersToBlock();
         this.initializeDescription();
@@ -67,10 +71,11 @@ public class FeedGaleCard extends AbstractEasyCard {
         if(!ConfigPanel.Disable_FeedGale_SoundEffect) {
             att(new SFXAction(GALE_ELLIE_KEY));
         }
+
         blck();
         atb(new SelectCardsCenteredAction(
                 Wiz.p().hand.group,
-                "Choose a card to permanently destroy.",
+                cardStrings.EXTENDED_DESCRIPTION[0],
                 false,
                 (c)-> (c.costForTurn >= 0 && c.uuid != this.uuid && c.type != CardType.STATUS && c.type != CardType.CURSE),
                 (cards) -> {

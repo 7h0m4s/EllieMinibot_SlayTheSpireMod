@@ -52,7 +52,11 @@ public class EatTheCodeBugCard extends AbstractEasyCard {
             baseBlock = exhaustedBugFactCount;
 
         }
-        this.applyPowersToBlock();
+
+        if (AbstractDungeon.player != null && AbstractDungeon.isPlayerInDungeon()) {
+            this.applyPowersToBlock();
+        }
+
         this.initializeDescription();
     }
 

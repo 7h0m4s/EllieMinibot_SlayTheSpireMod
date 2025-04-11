@@ -66,12 +66,12 @@
   },
   "${ModID}:ReadyToRaid": {
     "NAME": "Ready To Raid!",
-    "DESCRIPTION": "Reduce enemy Strength by *X. NL *Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce enemy Strength by *X + !M! NL *Exhaust."
+    "DESCRIPTION": "Reduce enemy Strength by *X. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce enemy Strength by *X + !M! NL Exhaust."
   },
   "${ModID}:TeethModel": {
     "NAME": "Teeth Model",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Vulnerable. NL Apply !M! *Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak."
   },
   "${ModID}:Waterproofing": {
     "NAME": "Waterproof Body",
@@ -83,11 +83,11 @@
   },
   "${ModID}:LeadedSolder": {
     "NAME": "Leaded Solder Fumes",
-    "DESCRIPTION": "Apply !M! *Poison. NL Apply !${ModID}:m2! *Weak."
+    "DESCRIPTION": "Apply !M! Poison. NL Apply !${ModID}:m2! Weak."
   },
   "${ModID}:FakeBoyfriend": {
     "NAME": "Fake Boyfriend",
-    "DESCRIPTION": "Gain !B! *Block."
+    "DESCRIPTION": "Gain !B! Block."
   },
   "${ModID}:EatTheCodeBug": {
     "NAME": "Eat The Codebug",
@@ -110,24 +110,27 @@
   },
   "${ModID}:SongTogether": {
     "NAME": "Together Song",
-    "DESCRIPTION": "Gain !M! *Focus."
+    "DESCRIPTION": "Gain !M! Focus."
   },
   "${ModID}:SongCrazyRobotBody": {
     "NAME": "Crazy Robot Body",
-    "DESCRIPTION": "*Block is not removed at the start of your turn."
+    "DESCRIPTION": "Block is not removed at the start of your turn."
   },
   "${ModID}:WelcomeRaiders": {
     "NAME": "Welcome Raiders",
-    "DESCRIPTION": "*Channel !M! random orb at the start of each turn.",
-    "UPGRADE_DESCRIPTION": "*Channel !M! random orbs at the start of each turn."
+    "DESCRIPTION": "Channel !M! random orb at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Channel !M! random orbs at the start of each turn."
   },
   "${ModID}:FeedGale": {
     "NAME": "Feed Gale",
-    "DESCRIPTION": "Gain !B! block. NL Permanently destroy a card. Permanently increase the Block of all *Feed *Gale cards by the cost of the destroyed card."
+    "DESCRIPTION": "Gain !B! block. NL Permanently destroy a card. Permanently increase the Block of all *Feed *Gale cards by the cost of the destroyed card.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to permanently destroy."
+    ]
   },
   "${ModID}:DrinkingStream": {
     "NAME": "Drinking Stream",
-    "DESCRIPTION": "Gain !B! *Block for every *Channeled orb."
+    "DESCRIPTION": "Gain !B! Block for every Channeled orb."
   },
   "${ModID}:UmActually": {
     "NAME": "Ummm, Actually",
@@ -135,43 +138,43 @@
   },
   "${ModID}:YourAverageBoCollab": {
     "NAME": "YourAverageBo Collab",
-    "DESCRIPTION": "*Channel 1 *YourAverageBo."
+    "DESCRIPTION": "Channel 1 *YourAverageBo."
   },
   "${ModID}:GomiCollab": {
     "NAME": "Gomi Collab",
-    "DESCRIPTION": "*Channel 1 *Gomi."
+    "DESCRIPTION": "Channel 1 *Gomi."
   },
   "${ModID}:MinikoMewCollab": {
     "NAME": "MinikoMew Collab",
-    "DESCRIPTION": "*Channel 1 *MinikoMew."
+    "DESCRIPTION": "Channel 1 *MinikoMew."
   },
   "${ModID}:ShoomimiCollab": {
     "NAME": "Shoomimi Collab",
-    "DESCRIPTION": "*Channel 1 *Shoomimi."
+    "DESCRIPTION": "Channel 1 *Shoomimi."
   },
   "${ModID}:VedalCollab": {
     "NAME": "Vedal Collab",
-    "DESCRIPTION": "*Channel 1 *Vedal."
+    "DESCRIPTION": "Channel 1 *Vedal."
   },
   "${ModID}:CerberCollab": {
     "NAME": "Cerber Collab",
-    "DESCRIPTION": "*Channel 1 *Cerber."
+    "DESCRIPTION": "Channel 1 *Cerber."
   },
   "${ModID}:EllieCollab": {
     "NAME": "Ellie Solo Stream",
-    "DESCRIPTION": "*Channel 1 *Ellie."
+    "DESCRIPTION": "Channel 1 *Ellie."
   },
   "${ModID}:MapleCollab": {
     "NAME": "Maple Moderation",
-    "DESCRIPTION": "*Channel 1 *Maple."
+    "DESCRIPTION": "Channel 1 *Maple."
   },
   "${ModID}:BookieCollab": {
     "NAME": "Bookie Collab",
-    "DESCRIPTION": "*Channel 1 *Bookie."
+    "DESCRIPTION": "Channel 1 *Bookie."
   },
   "${ModID}:IceCubeChallenge": {
     "NAME": "Ice Cube Challenge",
-    "DESCRIPTION": "*Channel !M! *Frost.",
+    "DESCRIPTION": "Channel !M! *Frost.",
     "EXTENDED_DESCRIPTION": [
       "Rolling a d20 for number of ice cubes was a bad idea.",
       "Banjo playing the cold away was not."
@@ -199,19 +202,19 @@
   },
   "${ModID}:NerdyGirlRizz": {
     "NAME": "Nerdy Girl Rizz",
-    "DESCRIPTION": "*Channel a chosen orb to fill all orb slots. NL *Exhaust"
+    "DESCRIPTION": "Channel a chosen orb to fill all orb slots. NL Exhaust"
   },
   "${ModID}:FeatureNotABug": {
     "NAME": "Feature Not A Bug",
-    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters. NL *Exhaust"
+    "DESCRIPTION": "Steal the buffs from all monsters. NL Transfer player debuffs to all monsters. NL Exhaust"
   },
   "${ModID}:Distracted": {
     "NAME": "Distracted",
-    "DESCRIPTION": "*Unplayable. NL *Ethereal. NL Whenever this card is drawn, lose 1 Energy."
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL Whenever this card is drawn, lose 1 Energy."
   },
   "${ModID}:UkuleleCurse": {
     "NAME": "Ukulele",
-    "DESCRIPTION": "*Unplayable."
+    "DESCRIPTION": "Unplayable."
   },
   "${ModID}:JobInterview": {
     "NAME": "Job Interview",
@@ -219,15 +222,15 @@
   },
   "${ModID}:LeetCodePractice": {
     "NAME": "Leet Code Practice",
-    "DESCRIPTION": "*[Quiz]. NL Gain !B! *Block if answer correctly. NL else a random enemy gains !B! *Block."
+    "DESCRIPTION": "*[Quiz]. NL Gain !B! Block if answer correctly. NL else a random enemy gains !B! Block."
   },
   "${ModID}:AboveAverageBo": {
     "NAME": "Above Average Bo",
-    "DESCRIPTION": "*Your *Average *Bo orbs attack an additional time. NL *Channel !M! *Your *Average *Bo."
+    "DESCRIPTION": "*Your *Average *Bo orbs attack an additional time. NL Channel !M! *Your *Average *Bo."
   },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
-    "DESCRIPTION": "Deal !D! damage & *Exhaust.",
+    "DESCRIPTION": "Deal !D! damage & Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Scientists are unsure why the Brazilian treehopper has these globular appendages coming out of its thorax. Some scientists speculate they are a form of defense against predators.",
       "To attract a mate, the peanut bug (Fulgora laternaria) will knock its head on a hollow tree to create sound vibrations",

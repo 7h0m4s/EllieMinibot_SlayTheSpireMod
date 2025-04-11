@@ -1,0 +1,44 @@
+{
+  "ellieminibot:ExampleTwoAmountPower": {
+    "NAME": "Example 2",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      " 点 力量 #b",
+      " 和 敏捷。"
+    ]
+  },
+  "ellieminibot:WaterproofingPower": {
+    "NAME": "防水",
+    "DESCRIPTIONS": [
+      "减少 #b%d 点到来的伤害"
+    ]
+  },
+  "ellieminibot:UmActuallyPower": {
+    "NAME": "Umm 事实上",
+    "DESCRIPTIONS": [
+      " 虫物信息 造成 #b",
+      " 点额外伤害"
+    ]
+  },
+  "ellieminibot:WelcomeRaidersPower": {
+    "NAME": "欢迎，Raiders！",
+    "DESCRIPTIONS": [
+      "回合开始时 生成 #b",
+      " 个随机充能球。"
+    ]
+  },
+  "ellieminibot:AboveAverageBoPower": {
+    "NAME": "超越AverageBo",
+    "DESCRIPTIONS": [
+      " 你的 #ybo 充能球造成 #b",
+      " 次额外攻击。"
+    ]
+  },
+  "ellieminibot:CodeQuestionStreakPower": {
+    "NAME": "连胜",
+    "DESCRIPTIONS": [
+      " 编程小测试 牌给予 #b",
+      " % 额外的效能。"
+    ]
+  }
+}
