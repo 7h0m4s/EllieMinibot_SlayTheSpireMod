@@ -75,7 +75,7 @@
   },
   "ellieminibot:Waterproofing": {
     "NAME": "防水躯体",
-    "DESCRIPTION": "给予 !M! 层 ellieminibot:防水 。"
+    "DESCRIPTION": "给予 !M! 层 *防水 。"
   },
   "ellieminibot:Otamatone": {
     "NAME": "电音蝌蚪模型",
@@ -91,8 +91,8 @@
   },
   "ellieminibot:EatTheCodeBug": {
     "NAME": "吃掉代码虫",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 ellieminibot:虫物信息 提供1点额外格挡。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 ellieminibot:虫物信息 提供1点额外格挡。 NL 至少获得5点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 *虫物信息 提供1点额外格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 每张消耗的 *虫物信息 提供1点额外格挡。 NL 至少获得5点格挡。"
   },
   "ellieminibot:SelfMaintenance": {
     "NAME": "自维护",
@@ -123,7 +123,7 @@
   },
   "ellieminibot:FeedGale": {
     "NAME": "喂食盖尔",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 永久消耗一张牌。 根据被消耗牌的费用永久增加所有从 ellieminibot:喂食盖尔 获得的格挡。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 永久消耗一张牌。 根据被消耗牌的费用永久增加所有从 *喂食盖尔 获得的格挡。",
     "EXTENDED_DESCRIPTION": [
       "选择一张牌永久消耗。"
     ]
@@ -134,7 +134,7 @@
   },
   "ellieminibot:UmActually": {
     "NAME": "Ummm，事实上",
-    "DESCRIPTION": " ellieminibot:虫物信息 额外造成 !M! 点伤害。"
+    "DESCRIPTION": " *虫物信息 额外造成 !M! 点伤害。"
   },
   "ellieminibot:YourAverageBoCollab": {
     "NAME": "YourAverageBo联动",
@@ -190,15 +190,15 @@
   },
   "ellieminibot:LoudAsCicada": {
     "NAME": "像蝉一样热闹呢",
-    "DESCRIPTION": "“蜂拥集结” NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+    "DESCRIPTION": "“蜂拥集结” NL 增加 !M! 张 *虫物信息 到你的手牌。"
   },
   "ellieminibot:OvenDriedBugs": {
     "NAME": "烤箱干虫子",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 增加 !M! 张 *虫物信息 到你的手牌。"
   },
   "ellieminibot:StrongAnkles": {
     "NAME": "强壮脚踝",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 ellieminibot:虫物信息 到你的手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 增加 !M! 张 *虫物信息 到你的手牌。"
   },
   "ellieminibot:NerdyGirlRizz": {
     "NAME": "迷人理工科女孩",
@@ -218,11 +218,11 @@
   },
   "ellieminibot:JobInterview": {
     "NAME": "工作采访",
-    "DESCRIPTION": " ellieminibot:编程小测试 。 NL 如果回答正确，造成 !D! 点伤害。 NL 否则收到 !D! 点伤害。"
+    "DESCRIPTION": " *编程小测试 。 NL 如果回答正确，造成 !D! 点伤害。 NL 否则收到 !D! 点伤害。"
   },
   "ellieminibot:LeetCodePractice": {
     "NAME": "力扣编程练习",
-    "DESCRIPTION": " ellieminibot:编程小测试 。 NL 如果回答正确，获得 !B! 点 格挡。 NL 否则一个随机敌人获得 !B! 点 格挡。"
+    "DESCRIPTION": " *编程小测试 。 NL 如果回答正确，获得 !B! 点 格挡。 NL 否则一个随机敌人获得 !B! 点 格挡。"
   },
   "ellieminibot:AboveAverageBo": {
     "NAME": "超越AverageBo",
