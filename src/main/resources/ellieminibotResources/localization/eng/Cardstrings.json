@@ -228,6 +228,10 @@
     "NAME": "Above Average Bo",
     "DESCRIPTION": "*Your *Average *Bo orbs attack an additional time. NL Channel !M! *Your *Average *Bo."
   },
+  "${ModID}:SecretIdentity": {
+    "NAME": "Secret Identity",
+    "DESCRIPTION": "Gain !M! Intangible. NL Retain. NL Exhaust."
+  },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & Exhaust.",

@@ -143,6 +143,7 @@ public class CharacterFile extends AbstractPlayerWithMinions {
 //        retVal.add(SpinRingCard.ID);
 //        retVal.add(VedalCollabCard.ID);
 //        retVal.add(YourAverageBoCollabCard.ID);
+//        retVal.add(SecretIdentityCard.ID);
 //
 //        // --- Special Cards ---
 //        retVal.add(BugFactCard.ID);

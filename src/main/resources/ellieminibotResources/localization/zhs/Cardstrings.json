@@ -228,6 +228,10 @@
     "NAME": "超越AverageBo",
     "DESCRIPTION": " *bo 充能球额外攻击一次。 NL  生成 !M! 个 *bo 充能球。"
   },
+  "${ModID}:SecretIdentity": {
+    "NAME": "秘密身份",
+    "DESCRIPTION": "获得 !M! 无实体. NL 保留 NL 消耗"
+  },
   "ellieminibot:BugFact": {
     "NAME": "虫物信息",
     "DESCRIPTION": "造成 !D! 点伤害 并 消耗 。",
