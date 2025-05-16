@@ -1,7 +1,7 @@
 package EllieMinibot.events;
 
+import EllieMinibot.cards.specialcards.GeoGuesserTileCard;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -14,9 +14,7 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.math.Vector3;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,7 +27,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import java.util.ArrayList;
@@ -38,7 +35,6 @@ import java.util.List;
 import java.util.Random;
 
 import static EllieMinibot.ModFile.makeID;
-import static EllieMinibot.util.ImageHelper.drawTextureScaled;
 
 public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String ID = makeID("GeoGuesserEvent");
@@ -64,10 +60,12 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private static float drawScaleMedium;
     private static float drawScaleLarge;
 
-    private int gridHeight = 6;
-    private int gridWidth = 8;
+    private int GRID_ROWS = 6;
+    private int GRID_COLS = 8;
 
-    private Texture worldImg;
+    private Texture portraitImg;
+    private Texture worldTexture;
+    private TextureRegion worldTextureRegion;
 
 
     // Non Shader 360 Viewer
@@ -100,13 +98,16 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         this.waitTimer = 0.0F;
         this.cardsMatched = 0;
         this.screen = GeoGuesserEvent.CUR_SCREEN.INTRO;
-        this.cards.group = this.initializeCards();
         Collections.shuffle(this.cards.group, new Random(AbstractDungeon.miscRng.randomLong()));
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.matchedCards = new ArrayList();
 
-        this.worldImg = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent.png");
-        this.panoTexture = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent.png");
+        this.portraitImg = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent.png");
+        this.worldTexture = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent_WorldMap.png");
+
+
+        this.cards.group = this.initializeCards();
+
 
         init3D();
     }
@@ -142,51 +143,27 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
     private ArrayList<AbstractCard> initializeCards() {
         ArrayList<AbstractCard> retVal = new ArrayList();
-        ArrayList<AbstractCard> retVal2 = new ArrayList();
 
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnRandomCurse());
-        retVal.add(AbstractDungeon.player.getStartCardForEvent());
+        int cellWidth = this.worldTexture.getWidth() / GRID_COLS;
+        int cellHeight = this.worldTexture.getHeight() / GRID_ROWS;
+        int textureHeight = this.worldTexture.getHeight();
 
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnRandomCurse());
-        retVal.add(AbstractDungeon.player.getStartCardForEvent());
 
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnRandomCurse());
-        retVal.add(AbstractDungeon.player.getStartCardForEvent());
+        int i = 0;
+        for (int row = 0; row < GRID_ROWS; row++) {
+            for (int col = 0; col < GRID_COLS; col++) {
+                int x = col * cellWidth;
+                //int y = textureHeight - (row + 1) * cellHeight; // y is flipped in LibGDX
+                int y = (row + 1) * cellHeight; // y is flipped in LibGDX
+                GeoGuesserTileCard c = new GeoGuesserTileCard(new TextureRegion(worldTexture,x,y,cellWidth,cellHeight),row, col);
+                c.current_x = (float) Settings.WIDTH / 2.0F;
+                c.target_x = c.current_x;
+                c.current_y = -300.0F * Settings.scale;
+                c.target_y = c.current_y;
+                retVal.add(c);
+                i++;
 
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnRandomCurse());
-        retVal.add(AbstractDungeon.player.getStartCardForEvent());
-
-        for (AbstractCard c : retVal) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                r.onPreviewObtainCard(c);
             }
-
-            retVal2.add(c.makeStatEquivalentCopy());
-        }
-
-        retVal.addAll(retVal2);
-
-        for (AbstractCard c : retVal) {
-            c.current_x = (float) Settings.WIDTH / 2.0F;
-            c.target_x = c.current_x;
-            c.current_y = -300.0F * Settings.scale;
-            c.target_y = c.current_y;
         }
 
         return retVal;
@@ -471,12 +448,12 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }*/
 
         int i = 0;
-        for (int row = 0; row < gridHeight; row++) {
-            for (int col = 0; col < gridWidth; col++) {
+        for (int row = 0; row < GRID_ROWS; row++) {
+            for (int col = 0; col < GRID_COLS; col++) {
                 if (i < this.cards.size()) {
                     //grid.add(new Cell(row, col, objects.get(index++)));
-                    ((AbstractCard) this.cards.group.get(i)).target_x = (float) (col) * 50.0F * Settings.xScale + 1220.0F * Settings.xScale;
-                    ((AbstractCard) this.cards.group.get(i)).target_y = (float) (row) * -60.0F * Settings.yScale + 650.0F * Settings.yScale;
+                    ((AbstractCard) this.cards.group.get(i)).target_x = (float) (col) * 70.0F * Settings.xScale + 1220.0F * Settings.xScale;
+                    ((AbstractCard) this.cards.group.get(i)).target_y = (float) (row) * -80.0F * Settings.yScale + 650.0F * Settings.yScale;
                     ((AbstractCard) this.cards.group.get(i)).targetDrawScale = drawScaleSmall;
                     ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
                     i++;
