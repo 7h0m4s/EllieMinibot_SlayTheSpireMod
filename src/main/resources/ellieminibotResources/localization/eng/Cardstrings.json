@@ -232,6 +232,10 @@
     "NAME": "Secret Identity",
     "DESCRIPTION": "Gain !M! Intangible. NL Retain. NL Exhaust."
   },
+  "${ModID}:GeoGuesserTile": {
+  "NAME": "GeoGuesserTile",
+  "DESCRIPTION": "if you are seeing this, then something has gone wrong. Please report this to the developer."
+},
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",
     "DESCRIPTION": "Deal !D! damage & Exhaust.",

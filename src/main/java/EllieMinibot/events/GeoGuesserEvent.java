@@ -28,11 +28,9 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import jdk.internal.net.http.common.Pair;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static EllieMinibot.ModFile.makeID;
 
@@ -49,6 +47,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private boolean cleanUpCalled = false;
     private int attemptCount = 5;
     private CardGroup cards;
+    private Dictionary<Pair<Integer,Integer>, AbstractCard> cardDict;
     private float waitTimer;
     private int cardsMatched;
     private GeoGuesserEvent.CUR_SCREEN screen;
@@ -60,8 +59,8 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private static float drawScaleMedium;
     private static float drawScaleLarge;
 
-    private int GRID_ROWS = 6;
-    private int GRID_COLS = 8;
+    private int GRID_ROWS = 8;
+    private int GRID_COLS = 17;
 
     private Texture portraitImg;
     private Texture worldTexture;
@@ -86,9 +85,10 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private final float SENSITIVITY = 0.3f;
     private float targetZoom = 0f;    // In range [minZoom, maxZoom]
     private float currentZoom = 0f;
-    private final float MIN_ZOOM = -10f;
+    private final float MIN_ZOOM = -24f;
     private final float MAX_ZOOM = 10f;
     private final float ZOOM_SENSITIVITY = 1.5f;
+    private final float BASE_SENSITIVITY = 0.3f;
 
     public GeoGuesserEvent() {
         super(NAME, DESCRIPTIONS[2], "ellieminibotResources/images/events/GeoGuesserEvent.png");
@@ -107,7 +107,6 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
 
         this.cards.group = this.initializeCards();
-
 
         init3D();
     }
@@ -161,8 +160,8 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 c.current_y = -300.0F * Settings.scale;
                 c.target_y = c.current_y;
                 retVal.add(c);
+                cardDict.put(new Pair<Integer, Integer>(row, col), c);
                 i++;
-
             }
         }
 
@@ -202,6 +201,10 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
         // Non Shader 360 Viewer
 
+        // Zoom Multiplier
+        float t = (currentZoom - MIN_ZOOM) / (MAX_ZOOM - MIN_ZOOM);   // 0 … 1
+        float zoomMult = MathUtils.lerp(0.05f, 1f, t);
+
         // Handle mouse wheel zoom
         if (InputHelper.scrolledDown) {
             targetZoom += ZOOM_SENSITIVITY;
@@ -220,12 +223,12 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }
 
         if (dragging && InputHelper.isMouseDown) {
-            float deltaX = InputHelper.mX - lastX;
-            float deltaY = InputHelper.mY - lastY;
+            float deltaX = (InputHelper.mX - lastX) * BASE_SENSITIVITY * zoomMult;
+            float deltaY = (InputHelper.mY - lastY) * BASE_SENSITIVITY * zoomMult;
 
             // Update velocity based on mouse drag
-            yawVelocity = deltaX * SENSITIVITY;
-            pitchVelocity = -deltaY * SENSITIVITY;
+            yawVelocity = deltaX;
+            pitchVelocity = deltaY;
 
             lastX = InputHelper.mX;
             lastY = InputHelper.mY;
@@ -234,8 +237,11 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }
 
         // Apply inertia
-        targetYaw += yawVelocity;
-        targetPitch += pitchVelocity;
+        targetYaw += Math.max(-15f, Math.min(yawVelocity, 15f));
+        targetPitch += Math.max(-15f, Math.min(pitchVelocity, 15f));
+
+        // limit yaw speed
+        targetYaw = MathUtils.clamp(targetYaw,-360f,  360f);
 
         // Apply friction to velocity
         yawVelocity *= FRICTION;
@@ -440,27 +446,28 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     }
 
     private void placeCards() {
-       /* for (int i = 0; i < this.cards.size(); ++i) {
-            ((AbstractCard) this.cards.group.get(i)).target_x = (float) (i % gridWidth) * 210.0F * Settings.xScale + 640.0F * Settings.xScale;
-            ((AbstractCard) this.cards.group.get(i)).target_y = (float) (i % gridHeight) * -230.0F * Settings.yScale + 750.0F * Settings.yScale;
-            ((AbstractCard) this.cards.group.get(i)).targetDrawScale = 0.25F;
-            ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
-        }*/
+        float xGap = 50.0F * Settings.xScale;
+        float yGap = -60.0F * Settings.yScale;
+        float gridWidth = (float) (GRID_COLS * xGap);
+        float gridHeight = (float) GRID_ROWS * yGap;
+        float gridX = (float) (Settings.WIDTH * 0.5f - gridWidth * 0.5F);
+        float gridY = (float) (Settings.HEIGHT * 0.45f - gridHeight * 0.5F);
 
         int i = 0;
         for (int row = 0; row < GRID_ROWS; row++) {
             for (int col = 0; col < GRID_COLS; col++) {
                 if (i < this.cards.size()) {
-                    //grid.add(new Cell(row, col, objects.get(index++)));
-                    ((AbstractCard) this.cards.group.get(i)).target_x = (float) (col) * 70.0F * Settings.xScale + 1220.0F * Settings.xScale;
-                    ((AbstractCard) this.cards.group.get(i)).target_y = (float) (row) * -80.0F * Settings.yScale + 650.0F * Settings.yScale;
+//                    //grid.add(new Cell(row, col, objects.get(index++)));
+//                    ((AbstractCard) this.cards.group.get(i)).target_x = (float) (col) * 50.0F * Settings.xScale + 1320.0F * Settings.xScale;
+//                    ((AbstractCard) this.cards.group.get(i)).target_y = (float) (row) * -60.0F * Settings.yScale + 750.0F * Settings.yScale;
+                    ((AbstractCard) this.cards.group.get(i)).target_x = (float)col * xGap + (Settings.WIDTH * 0.55F);
+                    ((AbstractCard) this.cards.group.get(i)).target_y = (float)row * yGap + gridY; //(Settings.HEIGHT + gridHeight);
                     ((AbstractCard) this.cards.group.get(i)).targetDrawScale = drawScaleSmall;
                     ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
                     i++;
                 }
             }
         }
-
     }
 
     public void render(SpriteBatch sb) {
@@ -483,13 +490,18 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             // Non Shader 360 Viewer
             sb.end();
             // Calculate viewport size (¼ of screen width)
-            int width = 1200;
-            int height = 800;
-            int x = 175;
-            int y = 400;
+//            float width = 1200 * Settings.scale;
+//            float height = 800 * Settings.scale;
+//            float x = 175 * Settings.scale;
+//            float y = 400 * Settings.scale;
+
+            float width = Settings.WIDTH * 0.45f;
+            float height = Settings.HEIGHT * 0.45f;
+            float x = Settings.WIDTH * 0.05f;
+            float y = Settings.HEIGHT * 0.25f;
 
             // Set the small viewport for 3D rendering
-            Gdx.gl.glViewport(x, y, width, height);
+            Gdx.gl.glViewport((int)x, (int)y, (int)width, (int)height);
 
             // Adjust camera aspect for new viewport
             camera.viewportWidth = width;
@@ -513,6 +525,19 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             // Draw the rest of your event
         }
 
+    }
+
+    private Pair<Integer,Integer> worldMapCoord2CardGridCoord(Integer x, Integer y) {
+        int height = this.worldTexture.getHeight();
+        int width = this.worldTexture.getWidth();
+
+        int x_size = width / GRID_COLS;
+        int y_size = height / GRID_ROWS;
+
+        int col_coord = x / x_size;
+        int row_coord = y / y_size;
+
+        return new Pair<Integer,Integer>(col_coord, row_coord);
     }
 
     @Override

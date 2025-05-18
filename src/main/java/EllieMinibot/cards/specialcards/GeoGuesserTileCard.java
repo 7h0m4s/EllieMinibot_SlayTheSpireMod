@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,7 +26,7 @@ public class GeoGuesserTileCard extends AbstractEasyCard {
     private TextureRegion mapTextureRegion;
     public int row,col;
 
-    private int cardWidth = 600/2, cardHeight = 830/2;
+    private int cardWidth = 700/2, cardHeight = 950/2;
 
     public GeoGuesserTileCard(TextureRegion mapRegion, int row, int col) {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
@@ -56,7 +57,12 @@ public class GeoGuesserTileCard extends AbstractEasyCard {
 
         //height 830
         //width 600
-        sb.draw(mapTextureRegion, (this.current_x - (cardWidth * this.drawScale)/2f), (this.current_y - (cardHeight * this.drawScale)/2f), cardWidth * this.drawScale, cardHeight * this.drawScale);
+        float manualScale = 0.8f;
+        sb.draw(mapTextureRegion,
+                (this.current_x - ((cardWidth/2f) * manualScale * this.drawScale * Settings.scale)) ,
+                (this.current_y - ((cardHeight/2f) * manualScale * this.drawScale * Settings.scale)),
+                cardWidth * manualScale * this.drawScale * Settings.scale,
+                cardHeight * manualScale * this.drawScale * Settings.scale);
     }
 
 
