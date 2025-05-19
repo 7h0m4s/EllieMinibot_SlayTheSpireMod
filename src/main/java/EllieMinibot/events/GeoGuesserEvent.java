@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.PerspectiveCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.VertexAttributes;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
@@ -14,7 +15,10 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,12 +31,14 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import jdk.internal.net.http.common.Pair;
 
 import java.util.*;
 
-import static EllieMinibot.ModFile.makeID;
+import static EllieMinibot.ModFile.*;
+import static EllieMinibot.util.Wiz.atb;
 
 public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String ID = makeID("GeoGuesserEvent");
@@ -40,16 +46,16 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
-    private AbstractCard chosenCard;
-    private AbstractCard hoveredCard;
+    private GeoGuesserTileCard chosenCard;
+    private GeoGuesserTileCard hoveredCard;
     private boolean cardFlipped = false;
     private boolean gameDone = false;
     private boolean cleanUpCalled = false;
+    private boolean displayResultsCalled = false;
     private int attemptCount = 5;
     private CardGroup cards;
-    private Dictionary<Pair<Integer,Integer>, AbstractCard> cardDict;
+    private Map<String, GeoGuesserTileCard> cardDict = new Hashtable<>();
     private float waitTimer;
-    private int cardsMatched;
     private GeoGuesserEvent.CUR_SCREEN screen;
     private static final String MSG_2;
     private static final String MSG_3;
@@ -59,8 +65,16 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private static float drawScaleMedium;
     private static float drawScaleLarge;
 
-    private int GRID_ROWS = 8;
-    private int GRID_COLS = 17;
+    private static int GRID_ROWS = 8;
+    private static int GRID_COLS = 17;
+    private static float GRID_X_GAP = 50.0F * Settings.xScale;
+    private static float GRID_Y_GAP = -60.0F * Settings.yScale;
+
+    private static float GRID_WIDTH = GRID_COLS * GRID_X_GAP;
+    private static float GRID_HEIGHT =  GRID_ROWS * GRID_Y_GAP;
+    private static float GRID_X = Settings.WIDTH * 0.5f - GRID_WIDTH * 0.5F;
+    private static float GRID_Y = Settings.HEIGHT * 0.45f - GRID_HEIGHT * 0.5F;
+
 
     private Texture portraitImg;
     private Texture worldTexture;
@@ -89,6 +103,25 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private final float MAX_ZOOM = 10f;
     private final float ZOOM_SENSITIVITY = 1.5f;
     private final float BASE_SENSITIVITY = 0.3f;
+    private final float VIEWPORT_WIDTH = Settings.WIDTH * 0.45f;
+    private final float VIEWPORT_HEIGHT = Settings.HEIGHT * 0.45f;
+    private final float VIEWPORT_X = Settings.WIDTH * 0.05f;
+    private final float VIEWPORT_Y = Settings.HEIGHT * 0.25f;
+
+
+    //Border Flash Effect
+    private TextureAtlas.AtlasRegion borderFlashImg = ImageMaster.BORDER_GLOW_2;;
+    private float borderFlashDuration = 1.0F;
+    private boolean borderFlashActive = false;
+    private boolean borderFlashAdditive;
+    private Color borderFlashColor = Color.RED;
+
+
+    //TODO REMOVE THIS
+    private int correctXCoord = 6248;
+    private int correctYCoord = 2460;
+
+
 
     public GeoGuesserEvent() {
         super(NAME, DESCRIPTIONS[2], "ellieminibotResources/images/events/GeoGuesserEvent.png");
@@ -96,7 +129,6 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
         this.cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         this.waitTimer = 0.0F;
-        this.cardsMatched = 0;
         this.screen = GeoGuesserEvent.CUR_SCREEN.INTRO;
         Collections.shuffle(this.cards.group, new Random(AbstractDungeon.miscRng.randomLong()));
         this.imageEventText.setDialogOption(OPTIONS[0]);
@@ -160,7 +192,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 c.current_y = -300.0F * Settings.scale;
                 c.target_y = c.current_y;
                 retVal.add(c);
-                cardDict.put(new Pair<Integer, Integer>(row, col), c);
+                cardDict.put(row+ "," + col, c);
                 i++;
             }
         }
@@ -174,6 +206,20 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY) {
             this.updateControllerInput();
             this.updateMatchGameLogic();
+        } else if (this.screen == CUR_SCREEN.DISPLAY_RESULTS) {
+            if (!this.displayResultsCalled) {
+                this.displayResultsCalled = true;
+                activateOutlines();
+            }
+
+            if (this.waitTimer > 0.0F) {
+                this.waitTimer -= Gdx.graphics.getDeltaTime();
+                if (this.waitTimer < 0.0F) {
+                    this.waitTimer = 0.0F;
+                    this.screen = GeoGuesserEvent.CUR_SCREEN.CLEAN_UP;
+                    this.waitTimer = 1.0F;
+                }
+            }
         } else if (this.screen == GeoGuesserEvent.CUR_SCREEN.CLEAN_UP) {
             if (!this.cleanUpCalled) {
                 this.cleanUpCalled = true;
@@ -272,6 +318,34 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         camera.position.set(0, 0, 0).sub(camera.direction.cpy().scl(currentZoom));
         camera.update();
 
+
+        borderFlashUpdate();
+
+    }
+
+    private void borderFlashTrigger(Color color, boolean additive) {
+        this.borderFlashImg = ImageMaster.BORDER_GLOW_2;
+        this.borderFlashDuration = 1.0F;
+        this.borderFlashColor = color.cpy();
+        this.borderFlashColor.a = 0.0F;
+        this.borderFlashAdditive = additive;
+        this.borderFlashActive = true;
+    }
+
+    private void borderFlashUpdate(){
+        // Border Flash Update
+        if (this.borderFlashActive) {
+            if (1.0F - this.borderFlashDuration < 0.1F) {
+                this.borderFlashColor.a = Interpolation.fade.apply(0.0F, 1.0F, (1.0F - this.borderFlashDuration) * 10.0F);
+            } else {
+                this.borderFlashColor.a = Interpolation.pow2Out.apply(0.0F, 1.0F, this.borderFlashDuration);
+            }
+
+            this.borderFlashDuration -= Gdx.graphics.getDeltaTime();
+            if (this.borderFlashDuration < 0.0F) {
+                this.borderFlashActive = false;
+            }
+        }
     }
 
     private void updateControllerInput() {
@@ -354,62 +428,69 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 if (this.hoveredCard == null && c.hb.hovered) {
                     c.drawScale = drawScaleMedium;
                     c.targetDrawScale = drawScaleMedium;
-                    this.hoveredCard = c;
+                    this.hoveredCard = (GeoGuesserTileCard)c;
                     if (InputHelper.justClickedLeft && this.hoveredCard.isFlipped) {
                         InputHelper.justClickedLeft = false;
-                        this.hoveredCard.isFlipped = false;
-                        if (!this.cardFlipped) {
-                            this.cardFlipped = true;
-                            this.chosenCard = this.hoveredCard;
-                        } else {
-                            this.cardFlipped = false;
-                            if (this.chosenCard.cardID.equals(this.hoveredCard.cardID)) {
-                                this.waitTimer = 1.0F;
-                                this.chosenCard.targetDrawScale = drawScaleMedium;
-                                this.chosenCard.target_x = (float) Settings.WIDTH / 2.0F;
-                                this.chosenCard.target_y = (float) Settings.HEIGHT / 2.0F;
-                                this.hoveredCard.targetDrawScale = drawScaleMedium;
-                                this.hoveredCard.target_x = (float) Settings.WIDTH / 2.0F;
-                                this.hoveredCard.target_y = (float) Settings.HEIGHT / 2.0F;
-                            } else {
-                                this.waitTimer = 1.25F;
-                                this.chosenCard.targetDrawScale = drawScaleLarge;
-                                this.hoveredCard.targetDrawScale = drawScaleLarge;
+                        if (this.chosenCard != null && this.chosenCard.uuid.equals(this.hoveredCard.uuid)) {
+                            // Start scoring and ending event
+                            GeoGuesserTileCard correctCard = worldMapCoord2GridCard(correctXCoord, correctYCoord);
+
+                            int distanceFromCorrectCard = toroidalDistance(
+                                    correctCard.row, correctCard.col,
+                                    this.chosenCard.row, this.chosenCard.col);
+
+
+                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(correctCard.makeCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+
+                            if(distanceFromCorrectCard == 0) {
+                                CardCrawlGame.sound.play(CORRECT_SFX_KEY);
+                                borderFlashTrigger(Color.GREEN, true);
                             }
+                            else if(distanceFromCorrectCard == 1) {
+                                CardCrawlGame.sound.play(QUESTION_SFX_KEY);
+                                borderFlashTrigger(Color.YELLOW, true);
+                            } else {
+                                CardCrawlGame.sound.play(WRONG_SFX_KEY);
+                                borderFlashTrigger(Color.RED, true);
+                            }
+
+                            this.gameDone = true;
+                            this.waitTimer = 0.5F;
+                        } else {
+                            if(this.chosenCard != null) {
+                                this.chosenCard.targetDrawScale = drawScaleSmall;
+                            }
+                            this.chosenCard = this.hoveredCard; // update chosen card
+                            this.waitTimer = 0.5F;
+                            this.chosenCard.targetDrawScale = drawScaleMedium;
                         }
                     }
-                } else if (c != this.chosenCard) {
-                    c.targetDrawScale = drawScaleSmall;
+                }
+                else {
+                    if(this.chosenCard != null && this.hoveredCard != null && this.chosenCard.uuid.equals(c.uuid)){
+                        c.drawScale = drawScaleMedium;
+                        c.targetDrawScale = drawScaleMedium;
+                    }
+                    else {
+                        c.drawScale = drawScaleSmall;
+                        c.targetDrawScale = drawScaleSmall;
+                    }
+                }
+
+                // Ensure chosen card is always medium scale
+                if(this.chosenCard != null && c.uuid.equals(this.chosenCard.uuid)) {
+                    c.drawScale = drawScaleMedium;
+                    c.targetDrawScale = drawScaleMedium;
                 }
             }
         } else {
             this.waitTimer -= Gdx.graphics.getDeltaTime();
             if (this.waitTimer < 0.0F && !this.gameDone) {
                 this.waitTimer = 0.0F;
-                if (this.chosenCard.cardID.equals(this.hoveredCard.cardID)) {
-                    ++this.cardsMatched;
-                    this.cards.group.remove(this.chosenCard);
-                    this.cards.group.remove(this.hoveredCard);
-                    this.matchedCards.add(this.chosenCard.cardID);
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.chosenCard.makeCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                    this.chosenCard = null;
-                    this.hoveredCard = null;
-                } else {
-                    this.chosenCard.isFlipped = true;
-                    this.hoveredCard.isFlipped = true;
-                    this.chosenCard.targetDrawScale = drawScaleSmall;
-                    this.hoveredCard.targetDrawScale = drawScaleSmall;
-                    this.chosenCard = null;
-                    this.hoveredCard = null;
-                }
-
-                --this.attemptCount;
-                if (this.attemptCount == 0) {
-                    this.gameDone = true;
-                    this.waitTimer = 1.0F;
-                }
             } else if (this.gameDone) {
-                this.screen = GeoGuesserEvent.CUR_SCREEN.CLEAN_UP;
+                this.screen = CUR_SCREEN.DISPLAY_RESULTS;
+                this.waitTimer = 3.0F;
+
             }
         }
 
@@ -439,29 +520,19 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                         return;
                 }
             case COMPLETE:
-                logMetricObtainCards("Match and Keep!", this.cardsMatched + " cards matched", this.matchedCards);
+                //logMetricObtainCards("Match and Keep!", this.cardsMatched + " cards matched", this.matchedCards);
                 this.openMap();
         }
 
     }
 
     private void placeCards() {
-        float xGap = 50.0F * Settings.xScale;
-        float yGap = -60.0F * Settings.yScale;
-        float gridWidth = (float) (GRID_COLS * xGap);
-        float gridHeight = (float) GRID_ROWS * yGap;
-        float gridX = (float) (Settings.WIDTH * 0.5f - gridWidth * 0.5F);
-        float gridY = (float) (Settings.HEIGHT * 0.45f - gridHeight * 0.5F);
-
         int i = 0;
         for (int row = 0; row < GRID_ROWS; row++) {
             for (int col = 0; col < GRID_COLS; col++) {
                 if (i < this.cards.size()) {
-//                    //grid.add(new Cell(row, col, objects.get(index++)));
-//                    ((AbstractCard) this.cards.group.get(i)).target_x = (float) (col) * 50.0F * Settings.xScale + 1320.0F * Settings.xScale;
-//                    ((AbstractCard) this.cards.group.get(i)).target_y = (float) (row) * -60.0F * Settings.yScale + 750.0F * Settings.yScale;
-                    ((AbstractCard) this.cards.group.get(i)).target_x = (float)col * xGap + (Settings.WIDTH * 0.55F);
-                    ((AbstractCard) this.cards.group.get(i)).target_y = (float)row * yGap + gridY; //(Settings.HEIGHT + gridHeight);
+                    ((AbstractCard) this.cards.group.get(i)).target_x = (float)col * GRID_X_GAP + (Settings.WIDTH * 0.55F);
+                    ((AbstractCard) this.cards.group.get(i)).target_y = (float)row * GRID_Y_GAP + GRID_Y;
                     ((AbstractCard) this.cards.group.get(i)).targetDrawScale = drawScaleSmall;
                     ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
                     i++;
@@ -480,32 +551,33 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             this.hoveredCard.render(sb);
         }
 
-        if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY) {
-            FontHelper.renderSmartText(sb, FontHelper.panelNameFont, OPTIONS[3] + this.attemptCount, 780.0F * Settings.scale, 80.0F * Settings.scale, 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+        if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY || this.screen == CUR_SCREEN.DISPLAY_RESULTS ) {
+            //FontHelper.renderSmartText(sb, FontHelper.panelNameFont, OPTIONS[3] + this.attemptCount, 780.0F * Settings.scale, 80.0F * Settings.scale, 2000.0F * Settings.scale, 0.0F, Color.WHITE);
 
+            FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Left click to drag the view around. Scroll to zoom in and out.", Settings.WIDTH * 0.06f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+
+            if(chosenCard != null) {
+                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Click card again to confirm your selection.", Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+            }
+            else{
+                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Click the card you think matches the location on the left.", Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+            }
 
             //drawTextureScaled(sb,this.worldImg,200.0F, 300.0F);
 
 
             // Non Shader 360 Viewer
             sb.end();
-            // Calculate viewport size (¼ of screen width)
-//            float width = 1200 * Settings.scale;
-//            float height = 800 * Settings.scale;
-//            float x = 175 * Settings.scale;
-//            float y = 400 * Settings.scale;
 
-            float width = Settings.WIDTH * 0.45f;
-            float height = Settings.HEIGHT * 0.45f;
-            float x = Settings.WIDTH * 0.05f;
-            float y = Settings.HEIGHT * 0.25f;
+
+
 
             // Set the small viewport for 3D rendering
-            Gdx.gl.glViewport((int)x, (int)y, (int)width, (int)height);
+            Gdx.gl.glViewport((int)VIEWPORT_X, (int)VIEWPORT_Y, (int)VIEWPORT_WIDTH, (int)VIEWPORT_HEIGHT);
 
             // Adjust camera aspect for new viewport
-            camera.viewportWidth = width;
-            camera.viewportHeight = height;
+            camera.viewportWidth = VIEWPORT_WIDTH;
+            camera.viewportHeight = VIEWPORT_HEIGHT;
             camera.update();
 
             // Render 3D sphere into this small viewport
@@ -522,12 +594,24 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             sb.begin(); // Resume 2D rendering
             super.render(sb);
 
-            // Draw the rest of your event
+            // Draw Border Flash
+            if(this.borderFlashActive) {
+                if (this.borderFlashAdditive) {
+                    sb.setBlendFunction(770, 1);
+                    sb.setColor(this.borderFlashColor);
+                    sb.draw(this.borderFlashImg, 0.0F, 0.0F, (float) Settings.WIDTH, (float) Settings.HEIGHT);
+                    sb.setBlendFunction(770, 771);
+                } else {
+                    sb.setColor(this.borderFlashColor);
+                    sb.draw(this.img, 0.0F, 0.0F, (float) Settings.WIDTH, (float) Settings.HEIGHT);
+                }
+            }
         }
 
     }
 
-    private Pair<Integer,Integer> worldMapCoord2CardGridCoord(Integer x, Integer y) {
+
+    private GeoGuesserTileCard worldMapCoord2GridCard(Integer x, Integer y) {
         int height = this.worldTexture.getHeight();
         int width = this.worldTexture.getWidth();
 
@@ -537,7 +621,59 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         int col_coord = x / x_size;
         int row_coord = y / y_size;
 
-        return new Pair<Integer,Integer>(col_coord, row_coord);
+        return cardDict.get(row_coord + "," + col_coord);
+    }
+
+    private void activateOutlines() {
+        this.chosenCard.targetDrawScale = drawScaleSmall;
+        for (int i = 0; i < this.cards.group.size(); i++) {
+            GeoGuesserTileCard currentCard = (GeoGuesserTileCard) this.cards.group.get(i);
+            GeoGuesserTileCard correctCard = worldMapCoord2GridCard(correctXCoord, correctYCoord);
+            int distance = toroidalDistance(currentCard.row, currentCard.col, correctCard.row, correctCard.col);
+            boolean isChosenCard = this.chosenCard.uuid.equals(currentCard.uuid);
+
+            switch (distance) {
+                case 0:
+                    currentCard.setOutline(Color.GREEN,isChosenCard);
+                    break;
+                case 1:
+                    currentCard.setOutline(Color.YELLOW,isChosenCard);
+                    break;
+                default:
+                    currentCard.setOutline(Color.RED,isChosenCard);
+                    break;
+            }
+        }
+    }
+
+    private void deactivateOutlines() {
+        for (int i = 0; i < this.cards.group.size(); i++) {
+            GeoGuesserTileCard card = (GeoGuesserTileCard) this.cards.group.get(i);
+            card.setOutline(null,false);
+        }
+    }
+
+    /**
+     * Computes the wrap-around (toroidal) Manhattan distance between two cells
+     * on the event grid whose origin (0,0) is the top-left corner.
+     *
+     * @param rA  row index of cell A
+     * @param cA  column index of cell A
+     * @param rB  row index of cell B
+     * @param cB  column index of cell B
+     * @return the minimal Chebyshev distance from A to B with wrap-around
+     */
+    public static int toroidalDistance(int rA, int cA, int rB, int cB) {
+        // wrapped horizontal separation
+        int dx = Math.abs(cA - cB);
+        dx = Math.min(dx, GRID_COLS - dx);
+
+        // wrapped vertical separation
+        int dy = Math.abs(rA - rB);
+        dy = Math.min(dy, GRID_ROWS - dy);
+
+        // Chebyshev (square-ring) distance
+        return Math.max(dx, dy);
     }
 
     @Override
@@ -566,6 +702,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         RULE_EXPLANATION,
         PLAY,
         COMPLETE,
+        DISPLAY_RESULTS,
         CLEAN_UP;
 
         private CUR_SCREEN() {

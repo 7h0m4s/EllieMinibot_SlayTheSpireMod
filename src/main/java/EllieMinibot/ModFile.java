@@ -107,6 +107,8 @@ public class ModFile implements
     public static final String CORRECT_SFX_OGG = makePath("audio/CorrectSfx.ogg");
     public static final String WRONG_SFX_KEY = makeID("WrongSfx");
     public static final String WRONG_SFX_OGG = makePath("audio/WrongSfx.ogg");
+    public static final String QUESTION_SFX_KEY = makeID("QuestionSfx");
+    public static final String QUESTION_SFX_OGG = makePath("audio/QuestionSfx.ogg");
 
     public static final ArrayList<CodeQuestionType> CODE_QUESTION_TYPES = new ArrayList<CodeQuestionType>();
 
@@ -259,7 +261,6 @@ public class ModFile implements
 
     @Override
     public void receiveAddAudio() {
-
         BaseMod.addAudio(SONG_TOGETHER_KEY, SONG_TOGETHER_OGG);
         BaseMod.addAudio(SONG_CRAZYROBOTBODY_KEY, SONG_CRAZYROBOTBODY_OGG);
         BaseMod.addAudio(BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_KEY, BG_MUSIC_EVILNEURO_CRAZYROBOTBODY_OGG);
@@ -268,6 +269,7 @@ public class ModFile implements
         BaseMod.addAudio(GALE_ELLIE_KEY, GALE_ELLIE_OGG);
         BaseMod.addAudio(CORRECT_SFX_KEY, CORRECT_SFX_OGG);
         BaseMod.addAudio(WRONG_SFX_KEY, WRONG_SFX_OGG);
+        BaseMod.addAudio(QUESTION_SFX_KEY, QUESTION_SFX_OGG);
     }
 
     @Override
