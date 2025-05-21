@@ -27,6 +27,13 @@
       "NeuroDog的直接攻击造成双倍伤害。"
     ]
   },
+  "${ModID}:GeoGuesserRelic": {
+    "NAME": "Geoguessr 专业徽章",
+    "FLAVOR": "证明您可以与 Rainbolt 一较高低。",
+    "DESCRIPTIONS": [
+      "在每次战斗开始时随机抽取一张稀有卡。"
+    ]
+  },
   "ellieminibot:NeuroDogRelic": {
     "NAME": "Neuro Dog",
     "FLAVOR": "独自打造的四足机器人为一个AI主播提供了一个物理身体。",

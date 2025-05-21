@@ -27,6 +27,13 @@
       "NeuroDog's direct attacks do double damage."
     ]
   },
+  "${ModID}:GeoGuesserRelic": {
+    "NAME": "GeoGuesser Pro Badge",
+    "FLAVOR": "Proof you could go toe to toe with Rainbolt.",
+    "DESCRIPTIONS": [
+      "Draw a random #yrare card at the start of each combat."
+    ]
+  },
   "${ModID}:NeuroDogRelic": {
     "NAME": "Neuro Dog",
     "FLAVOR": "Solo built robot quadruped to provide an AI streamer a physical body.",
