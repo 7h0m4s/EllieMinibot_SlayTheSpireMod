@@ -234,7 +234,11 @@
   },
   "${ModID}:GeoGuesserTile": {
   "NAME": "GeoGuesserTile",
-  "DESCRIPTION": "if you are seeing this, then something has gone wrong. Please report this to the developer."
+  "DESCRIPTION": "If you are seeing this, then something has gone wrong. Please report this to the developer."
+},
+  "${ModID}:GeoGuesserFailCurse": {
+  "NAME": "GeoGoofus",
+  "DESCRIPTION": "Discard a random card on drawing this card."
 },
   "${ModID}:BugFact": {
     "NAME": "Bug Fact",

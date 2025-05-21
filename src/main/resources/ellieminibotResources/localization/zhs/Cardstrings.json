@@ -232,6 +232,14 @@
     "NAME": "秘密身份",
     "DESCRIPTION": "获得 !M! 无实体. NL 保留 NL 消耗"
   },
+  "${ModID}:GeoGuesserTile": {
+    "NAME": "地理猜测瓷砖",
+    "DESCRIPTION": "如果您看到此信息，则表示出现了问题。请向开发者报告。"
+  },
+  "${ModID}:GeoGuesserFailCurse": {
+    "NAME": "乔·古弗斯",
+    "DESCRIPTION": "抽取此卡时丢弃一张随机卡。"
+  },
   "ellieminibot:BugFact": {
     "NAME": "虫物信息",
     "DESCRIPTION": "造成 !D! 点伤害 并 消耗 。",
