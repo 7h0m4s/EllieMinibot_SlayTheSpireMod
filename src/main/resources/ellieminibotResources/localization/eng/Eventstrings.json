@@ -41,15 +41,18 @@
   "${ModID}:GeoGuesserEvent": {
     "NAME": "Geo Guesser",
     "DESCRIPTIONS": [
-      "\" #bTwelve cards! Match them to keep them! #bFive tries, no do-overs. NL Are you ready? Let's start!\"",
-      "You complete the gremlin's game and look up. NL He disappeared?",
-      "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. You approach him out of curiosity."
+      "You come across a fun looking game that tests your knowledge of the world. NL NL You approach out of curiosity.",
+      "To win a prize, you must correctly guess the pictured location on the world map. NL NL But be careful...there is a curse upon those who choose poorly!",
+      "Success! NL Take this badge as proof of your cartographic prediction skills.",
+      "Hmmmm... NL Close enough. NL Have this card as a consolation prize.",
+      "Oh No! You were ",
+      " cards off! NL You're clearly cursed for perpetual directional bewilderment.",
+      "Hmmmm...close enough. You may choose a card as a consolation prize."
     ],
     "OPTIONS": [
       "[Continue]",
       "[Leave]",
       "[Play]",
-      "Remaining Attempts: #y"
     ]
   }
 }

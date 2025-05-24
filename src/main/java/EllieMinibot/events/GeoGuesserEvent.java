@@ -1,6 +1,8 @@
 package EllieMinibot.events;
 
+import EllieMinibot.cards.specialcards.GeoGuesserFailCurseCard;
 import EllieMinibot.cards.specialcards.GeoGuesserTileCard;
+import EllieMinibot.relics.GeoGuesserRelic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
@@ -17,8 +19,6 @@ import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,14 +31,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import jdk.internal.net.http.common.Pair;
 
 import java.util.*;
 
 import static EllieMinibot.ModFile.*;
-import static EllieMinibot.util.Wiz.atb;
 
 public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String ID = makeID("GeoGuesserEvent");
@@ -48,18 +47,16 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String[] OPTIONS;
     private GeoGuesserTileCard chosenCard;
     private GeoGuesserTileCard hoveredCard;
-    private boolean cardFlipped = false;
     private boolean gameDone = false;
     private boolean cleanUpCalled = false;
     private boolean displayResultsCalled = false;
-    private int attemptCount = 5;
     private CardGroup cards;
     private Map<String, GeoGuesserTileCard> cardDict = new Hashtable<>();
     private float waitTimer;
     private GeoGuesserEvent.CUR_SCREEN screen;
-    private static final String MSG_2;
-    private static final String MSG_3;
-    private List<String> matchedCards;
+    private int distanceFromCorrectCard = 0;
+    private boolean pickCardReward;
+
     
     private static float drawScaleSmall;
     private static float drawScaleMedium;
@@ -122,9 +119,8 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private int correctYCoord = 2460;
 
 
-
     public GeoGuesserEvent() {
-        super(NAME, DESCRIPTIONS[2], "ellieminibotResources/images/events/GeoGuesserEvent.png");
+        super(NAME, DESCRIPTIONS[0], "ellieminibotResources/images/events/GeoGuesserEvent.png");
 
 
         this.cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -132,7 +128,6 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         this.screen = GeoGuesserEvent.CUR_SCREEN.INTRO;
         Collections.shuffle(this.cards.group, new Random(AbstractDungeon.miscRng.randomLong()));
         this.imageEventText.setDialogOption(OPTIONS[0]);
-        this.matchedCards = new ArrayList();
 
         this.portraitImg = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent.png");
         this.worldTexture = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent_WorldMap.png");
@@ -186,7 +181,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 int x = col * cellWidth;
                 //int y = textureHeight - (row + 1) * cellHeight; // y is flipped in LibGDX
                 int y = (row + 1) * cellHeight; // y is flipped in LibGDX
-                GeoGuesserTileCard c = new GeoGuesserTileCard(new TextureRegion(worldTexture,x,y,cellWidth,cellHeight),row, col);
+                GeoGuesserTileCard c = new GeoGuesserTileCard(new TextureRegion(worldTexture,x,y,cellWidth,cellHeight),row, col, this);
                 c.current_x = (float) Settings.WIDTH / 2.0F;
                 c.target_x = c.current_x;
                 c.current_y = -300.0F * Settings.scale;
@@ -200,6 +195,14 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         return retVal;
     }
 
+    public float getWaitTimer() {
+        return this.waitTimer;
+    }
+
+    public boolean isCompleted() {
+        return screen == CUR_SCREEN.COMPLETE;
+    }
+
     public void update() {
         super.update();
         this.cards.update();
@@ -209,7 +212,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         } else if (this.screen == CUR_SCREEN.DISPLAY_RESULTS) {
             if (!this.displayResultsCalled) {
                 this.displayResultsCalled = true;
-                activateOutlines();
+                outlineActivate();
             }
 
             if (this.waitTimer > 0.0F) {
@@ -232,9 +235,21 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                     this.waitTimer = 0.0F;
                     this.screen = GeoGuesserEvent.CUR_SCREEN.COMPLETE;
                     GenericEventDialog.show();
-                    this.imageEventText.updateBodyText(MSG_3);
-                    this.imageEventText.clearRemainingOptions();
-                    this.imageEventText.setDialogOption(OPTIONS[1]);
+
+                    if(this.distanceFromCorrectCard == 0){
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                        this.imageEventText.clearRemainingOptions();
+                        this.imageEventText.setDialogOption(OPTIONS[1], new GeoGuesserRelic());
+                    } else if(this.distanceFromCorrectCard == 1){
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
+                        this.imageEventText.clearRemainingOptions();
+                        this.imageEventText.setDialogOption(OPTIONS[1]);
+                        displayCardReward();
+                    } else {
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[4] + this.distanceFromCorrectCard + DESCRIPTIONS[5]);
+                        this.imageEventText.clearRemainingOptions();
+                        this.imageEventText.setDialogOption(OPTIONS[1], new GeoGuesserFailCurseCard());
+                    }
                 }
             }
         }
@@ -244,8 +259,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }
 
 
-
-        // Non Shader 360 Viewer
+        //----- Non Shader 360 Viewer -----
 
         // Zoom Multiplier
         float t = (currentZoom - MIN_ZOOM) / (MAX_ZOOM - MIN_ZOOM);   // 0 … 1
@@ -287,7 +301,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         targetPitch += Math.max(-15f, Math.min(pitchVelocity, 15f));
 
         // limit yaw speed
-        targetYaw = MathUtils.clamp(targetYaw,-360f,  360f);
+        //targetYaw = MathUtils.clamp(targetYaw,-370f,  370f);
 
         // Apply friction to velocity
         yawVelocity *= FRICTION;
@@ -435,7 +449,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                             // Start scoring and ending event
                             GeoGuesserTileCard correctCard = worldMapCoord2GridCard(correctXCoord, correctYCoord);
 
-                            int distanceFromCorrectCard = toroidalDistance(
+                            distanceFromCorrectCard = toroidalDistance(
                                     correctCard.row, correctCard.col,
                                     this.chosenCard.row, this.chosenCard.col);
 
@@ -501,8 +515,9 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        this.imageEventText.updateBodyText(MSG_2);
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                        this.imageEventText.updateDialogOption(1, OPTIONS[1]);
                         this.screen = GeoGuesserEvent.CUR_SCREEN.RULE_EXPLANATION;
                         return;
                     default:
@@ -512,18 +527,83 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.removeDialogOption(0);
+                        this.imageEventText.removeDialogOption(1);
                         GenericEventDialog.hide();
                         this.screen = GeoGuesserEvent.CUR_SCREEN.PLAY;
                         this.placeCards();
+                        return;
+                    case 1:
+                        this.imageEventText.removeDialogOption(0);
+                        this.imageEventText.removeDialogOption(1);
+                        GenericEventDialog.hide();
+                        this.screen = GeoGuesserEvent.CUR_SCREEN.COMPLETE;
+                        this.openMap();
+
                         return;
                     default:
                         return;
                 }
             case COMPLETE:
                 //logMetricObtainCards("Match and Keep!", this.cardsMatched + " cards matched", this.matchedCards);
+
+                if(this.distanceFromCorrectCard == 0){
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, new GeoGuesserRelic());
+                } else if(this.distanceFromCorrectCard == 1){
+                    //if(!this.pickCardReward) displayCardReward();
+                    //if (this.pickCardReward && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                    if (this.pickCardReward && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                        AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
+                        //logMetricObtainCard("The Library", "Read", c);
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                    }
+                } else {
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new GeoGuesserFailCurseCard(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                }
+
+
                 this.openMap();
         }
 
+    }
+
+    private void displayCardReward(){
+        this.pickCardReward = true;
+        CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+        for(int i = 0; i < 5; ++i) {
+            AbstractCard card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
+            boolean containsDupe = true;
+
+            while(containsDupe) {
+                containsDupe = false;
+
+                for(AbstractCard c : group.group) {
+                    if (c.cardID.equals(card.cardID)) {
+                        containsDupe = true;
+                        card = AbstractDungeon.getCard(AbstractDungeon.rollRarity()).makeCopy();
+                        break;
+                    }
+                }
+            }
+
+            if (group.contains(card)) {
+                --i;
+            } else {
+                for(AbstractRelic r : AbstractDungeon.player.relics) {
+                    r.onPreviewObtainCard(card);
+                }
+
+                group.addToBottom(card);
+            }
+        }
+
+        for(AbstractCard c : group.group) {
+            UnlockTracker.markCardAsSeen(c.cardID);
+        }
+
+        AbstractDungeon.gridSelectScreen.open(group, 1, DESCRIPTIONS[6], false);
+        return;
     }
 
     private void placeCards() {
@@ -552,7 +632,6 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }
 
         if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY || this.screen == CUR_SCREEN.DISPLAY_RESULTS ) {
-            //FontHelper.renderSmartText(sb, FontHelper.panelNameFont, OPTIONS[3] + this.attemptCount, 780.0F * Settings.scale, 80.0F * Settings.scale, 2000.0F * Settings.scale, 0.0F, Color.WHITE);
 
             FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Left click to drag the view around. Scroll to zoom in and out.", Settings.WIDTH * 0.06f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
 
@@ -624,7 +703,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         return cardDict.get(row_coord + "," + col_coord);
     }
 
-    private void activateOutlines() {
+    private void outlineActivate() {
         this.chosenCard.targetDrawScale = drawScaleSmall;
         for (int i = 0; i < this.cards.group.size(); i++) {
             GeoGuesserTileCard currentCard = (GeoGuesserTileCard) this.cards.group.get(i);
@@ -634,22 +713,15 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
             switch (distance) {
                 case 0:
-                    currentCard.setOutline(Color.GREEN,isChosenCard);
+                    currentCard.setOutline(Color.GREEN,isChosenCard, distance);
                     break;
                 case 1:
-                    currentCard.setOutline(Color.YELLOW,isChosenCard);
+                    currentCard.setOutline(Color.YELLOW,isChosenCard, distance);
                     break;
                 default:
-                    currentCard.setOutline(Color.RED,isChosenCard);
+                    currentCard.setOutline(Color.RED,isChosenCard,distance);
                     break;
             }
-        }
-    }
-
-    private void deactivateOutlines() {
-        for (int i = 0; i < this.cards.group.size(); i++) {
-            GeoGuesserTileCard card = (GeoGuesserTileCard) this.cards.group.get(i);
-            card.setOutline(null,false);
         }
     }
 
@@ -685,12 +757,10 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     }
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Match and Keep!");
+        eventStrings = CardCrawlGame.languagePack.getEventString(makeID("GeoGuesserEvent"));
         NAME = eventStrings.NAME;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
-        MSG_2 = DESCRIPTIONS[0];
-        MSG_3 = DESCRIPTIONS[1];
 
         drawScaleSmall = 0.125F;
         drawScaleMedium = 0.25F;
