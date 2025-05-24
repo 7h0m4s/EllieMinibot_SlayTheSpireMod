@@ -47,12 +47,15 @@
       "Hmmmm... NL Close enough. NL Have this card as a consolation prize.",
       "Oh No! You were ",
       " cards off! NL You're clearly cursed for perpetual directional bewilderment.",
-      "Hmmmm...close enough. You may choose a card as a consolation prize."
+      "Hmmmm...close enough. You may choose a card as a consolation prize.",
+      "Left click to drag the view around. Scroll to zoom in and out.",
+      "Click card again to confirm your selection.",
+      "Click the card you think matches the location on the left."
     ],
     "OPTIONS": [
       "[Continue]",
       "[Leave]",
-      "[Play]",
+      "[Play]"
     ]
   }
 }

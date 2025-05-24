@@ -633,13 +633,13 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
         if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY || this.screen == CUR_SCREEN.DISPLAY_RESULTS ) {
 
-            FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Left click to drag the view around. Scroll to zoom in and out.", Settings.WIDTH * 0.06f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+            FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[7], Settings.WIDTH * 0.06f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
 
             if(chosenCard != null) {
-                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Click card again to confirm your selection.", Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[8], Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
             }
             else{
-                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, "Click the card you think matches the location on the left.", Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[9], Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
             }
 
             //drawTextureScaled(sb,this.worldImg,200.0F, 300.0F);
