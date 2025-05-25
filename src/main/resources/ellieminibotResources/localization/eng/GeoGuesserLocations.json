@@ -1,0 +1,42 @@
+[
+  {
+    "imagePath": "000.jpg",
+    "columnIndex": 15,
+    "rowIndex": 5,
+    "locationName": "Mooloolaba, Australia",
+    "latitude": -26.6799835,
+    "longitude": 153.1203552
+  },
+  {
+    "imagePath": "001.jpg",
+    "columnIndex": 14,
+    "rowIndex": 1,
+    "locationName": "Kyoto, Japan",
+    "latitude": 35.0091683,
+    "longitude": 135.6748735
+  },
+  {
+    "imagePath": "002.jpg",
+    "columnIndex": 7,
+    "rowIndex": 0,
+    "locationName": "London, England",
+    "latitude": 51.5164575,
+    "longitude": -0.1192707
+  },
+  {
+    "imagePath": "003.jpg",
+    "columnIndex": 3,
+    "rowIndex": 1,
+    "locationName": "New York, USA",
+    "latitude": 40.7851533,
+    "longitude": -73.9694604
+  },
+  {
+    "imagePath": "004.jpg",
+    "columnIndex": 9,
+    "rowIndex": 1,
+    "locationName": "Suez Canal, Egypt",
+    "latitude": 30.04254,
+    "longitude": 32.5746352
+  }
+]

@@ -1,7 +1,9 @@
 package EllieMinibot.events;
 
+import EllieMinibot.ModFile;
 import EllieMinibot.cards.specialcards.GeoGuesserFailCurseCard;
 import EllieMinibot.cards.specialcards.GeoGuesserTileCard;
+import EllieMinibot.localization.GeoGuesserLocation;
 import EllieMinibot.relics.GeoGuesserRelic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -38,6 +40,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import java.util.*;
 
 import static EllieMinibot.ModFile.*;
+import static com.badlogic.gdx.math.MathUtils.random;
 
 public class GeoGuesserEvent extends AbstractImageEvent {
     public static final String ID = makeID("GeoGuesserEvent");
@@ -113,15 +116,11 @@ public class GeoGuesserEvent extends AbstractImageEvent {
     private boolean borderFlashAdditive;
     private Color borderFlashColor = Color.RED;
 
-
-    //TODO REMOVE THIS
-    private int correctXCoord = 6248;
-    private int correctYCoord = 2460;
+    private GeoGuesserLocation geoGuesserLocation;
 
 
     public GeoGuesserEvent() {
         super(NAME, DESCRIPTIONS[0], "ellieminibotResources/images/events/GeoGuesserEvent.png");
-
 
         this.cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         this.waitTimer = 0.0F;
@@ -132,14 +131,23 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         this.portraitImg = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent.png");
         this.worldTexture = ImageMaster.loadImage("ellieminibotResources/images/events/GeoGuesserEvent_WorldMap.png");
 
-
         this.cards.group = this.initializeCards();
 
+        randomlySelectGeoLocation();
         init3D();
     }
 
+    private void randomlySelectGeoLocation(){
+        int locationIndex = random.nextInt(GEO_GUESSER_LOCATIONS.size());
+
+        //TODO REMOVE
+        locationIndex = 4;
+
+        geoGuesserLocation = GEO_GUESSER_LOCATIONS.get(locationIndex);
+    }
+
     private void init3D() {
-        panoTexture = new Texture(Gdx.files.internal("ellieminibotResources/images/events/GeoGuesser/panorama_00.jpg"));
+        panoTexture = new Texture(Gdx.files.internal("ellieminibotResources/images/events/GeoGuesser/" + geoGuesserLocation.imagePath));
         panoTexture.setWrap(Texture.TextureWrap.Repeat, Texture.TextureWrap.ClampToEdge);
 
         ModelBuilder modelBuilder = new ModelBuilder();
@@ -452,14 +460,10 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                         InputHelper.justClickedLeft = false;
                         if (this.chosenCard != null && this.chosenCard.uuid.equals(this.hoveredCard.uuid)) {
                             // Start scoring and ending event
-                            GeoGuesserTileCard correctCard = worldMapCoord2GridCard(correctXCoord, correctYCoord);
-
+                            GeoGuesserTileCard correctCard = getCorrectCard();
                             distanceFromCorrectCard = toroidalDistance(
                                     correctCard.row, correctCard.col,
                                     this.chosenCard.row, this.chosenCard.col);
-
-
-                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(correctCard.makeCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
 
                             if(distanceFromCorrectCard == 0) {
                                 CardCrawlGame.sound.play(CORRECT_SFX_KEY);
@@ -683,6 +687,17 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 FontHelper.renderSmartText(
                         sb,
                         FontHelper.panelNameFont,
+                        this.geoGuesserLocation.locationName +"    ("+ this.geoGuesserLocation.latitude + ", " + this.geoGuesserLocation.longitude + ")",
+                        Settings.WIDTH * 0.54f,
+                        10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                        2000.0F * Settings.scale,
+                        0.0F,
+                        Color.WHITE
+                );
+
+                FontHelper.renderSmartText(
+                        sb,
+                        FontHelper.panelNameFont,
                         DESCRIPTIONS[10],
                         (Settings.WIDTH * 0.5f) - 0.5f * (FontHelper.getSmartWidth(FontHelper.panelNameFont,DESCRIPTIONS[10], 500.0F * Settings.scale, 0.0f)),
                         -80.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
@@ -735,25 +750,15 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
     }
 
-
-    private GeoGuesserTileCard worldMapCoord2GridCard(Integer x, Integer y) {
-        int height = this.worldTexture.getHeight();
-        int width = this.worldTexture.getWidth();
-
-        int x_size = width / GRID_COLS;
-        int y_size = height / GRID_ROWS;
-
-        int col_coord = x / x_size;
-        int row_coord = y / y_size;
-
-        return cardDict.get(row_coord + "," + col_coord);
+    private GeoGuesserTileCard getCorrectCard(){
+        return cardDict.get(this.geoGuesserLocation.rowIndex + "," + this.geoGuesserLocation.columnIndex);
     }
 
     private void outlineActivate() {
         this.chosenCard.targetDrawScale = drawScaleSmall;
         for (int i = 0; i < this.cards.group.size(); i++) {
             GeoGuesserTileCard currentCard = (GeoGuesserTileCard) this.cards.group.get(i);
-            GeoGuesserTileCard correctCard = worldMapCoord2GridCard(correctXCoord, correctYCoord);
+            GeoGuesserTileCard correctCard = getCorrectCard();
             int distance = toroidalDistance(currentCard.row, currentCard.col, correctCard.row, correctCard.col);
             boolean isChosenCard = this.chosenCard.uuid.equals(currentCard.uuid);
 

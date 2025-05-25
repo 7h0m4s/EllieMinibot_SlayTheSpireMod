@@ -39,7 +39,7 @@ public class GeoGuesserTileCard extends AbstractEasyCard {
     private final static float manualMapScale = 0.8f;
     private float waitTimeStart = 0f;
 
-    private int cardWidth = 680/2, cardHeight = 960/2;
+    public final static int cardWidth = 680/2, cardHeight = 960/2;
     private GeoGuesserEvent parentEvent;
 
     public GeoGuesserTileCard(TextureRegion mapRegion, int row, int col, GeoGuesserEvent parentEvent) {
