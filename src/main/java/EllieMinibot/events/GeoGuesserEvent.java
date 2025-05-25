@@ -219,10 +219,15 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 this.waitTimer -= Gdx.graphics.getDeltaTime();
                 if (this.waitTimer < 0.0F) {
                     this.waitTimer = 0.0F;
-                    this.screen = GeoGuesserEvent.CUR_SCREEN.CLEAN_UP;
-                    this.waitTimer = 1.0F;
                 }
             }
+
+            if (InputHelper.justClickedLeft && this.waitTimer == 0.0F) {
+                InputHelper.justClickedLeft = false;
+                this.screen = GeoGuesserEvent.CUR_SCREEN.CLEAN_UP;
+                this.waitTimer = 1.0F;
+            }
+
         } else if (this.screen == GeoGuesserEvent.CUR_SCREEN.CLEAN_UP) {
             if (!this.cleanUpCalled) {
                 this.cleanUpCalled = true;
@@ -243,8 +248,8 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                     } else if(this.distanceFromCorrectCard == 1){
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
-                        this.imageEventText.setDialogOption(OPTIONS[1]);
-                        displayCardReward();
+                        this.imageEventText.setDialogOption(OPTIONS[0]);
+                        //displayCardReward();
                     } else {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4] + this.distanceFromCorrectCard + DESCRIPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
@@ -503,7 +508,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 this.waitTimer = 0.0F;
             } else if (this.gameDone) {
                 this.screen = CUR_SCREEN.DISPLAY_RESULTS;
-                this.waitTimer = 3.0F;
+                this.waitTimer = 1.0F;
 
             }
         }
@@ -549,20 +554,27 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 if(this.distanceFromCorrectCard == 0){
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, new GeoGuesserRelic());
                 } else if(this.distanceFromCorrectCard == 1){
-                    //if(!this.pickCardReward) displayCardReward();
-                    //if (this.pickCardReward && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                    if (this.pickCardReward && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                        AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
-                        //logMetricObtainCard("The Library", "Read", c);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                    }
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[11]);
+                    this.imageEventText.clearRemainingOptions();
+                    this.imageEventText.setDialogOption(OPTIONS[1]);
+                    this.screen = GeoGuesserEvent.CUR_SCREEN.CARD_REWARD_COMPLETE;
+                    displayCardReward();
+                    return;
                 } else {
                     AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new GeoGuesserFailCurseCard(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 }
 
 
                 this.openMap();
+                return;
+            case CARD_REWARD_COMPLETE:
+                if (this.pickCardReward && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                    AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                }
+                this.openMap();
+                return;
         }
 
     }
@@ -632,24 +644,58 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         }
 
         if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY || this.screen == CUR_SCREEN.DISPLAY_RESULTS ) {
+            if(!this.displayResultsCalled) {
 
-            FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[7], Settings.WIDTH * 0.06f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
-
-            if(chosenCard != null) {
-                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[8], Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+                FontHelper.renderSmartText(
+                        sb,
+                        FontHelper.panelNameFont,
+                        DESCRIPTIONS[7],
+                        Settings.WIDTH * 0.06f,
+                        10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                        2000.0F * Settings.scale,
+                        0.0F,
+                        Color.WHITE
+                );
+                if (chosenCard != null) {
+                    FontHelper.renderSmartText(
+                            sb,
+                            FontHelper.panelNameFont,
+                            DESCRIPTIONS[8],
+                            Settings.WIDTH * 0.54f,
+                            10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                            2000.0F * Settings.scale,
+                            0.0F,
+                            Color.WHITE
+                    );
+                } else {
+                    FontHelper.renderSmartText(
+                            sb,
+                            FontHelper.panelNameFont,
+                            DESCRIPTIONS[9],
+                            Settings.WIDTH * 0.54f,
+                            10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                            2000.0F * Settings.scale,
+                            0.0F,
+                            Color.WHITE);
+                }
             }
-            else{
-                FontHelper.renderSmartText(sb, FontHelper.panelNameFont, DESCRIPTIONS[9], Settings.WIDTH * 0.54f, 10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y), 2000.0F * Settings.scale, 0.0F, Color.WHITE);
+            else {
+                FontHelper.renderSmartText(
+                        sb,
+                        FontHelper.panelNameFont,
+                        DESCRIPTIONS[10],
+                        (Settings.WIDTH * 0.5f) - 0.5f * (FontHelper.getSmartWidth(FontHelper.panelNameFont,DESCRIPTIONS[10], 500.0F * Settings.scale, 0.0f)),
+                        -80.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                        500.0F * Settings.scale,
+                        0.0F,
+                        Color.WHITE
+                );
             }
 
-            //drawTextureScaled(sb,this.worldImg,200.0F, 300.0F);
 
 
             // Non Shader 360 Viewer
             sb.end();
-
-
-
 
             // Set the small viewport for 3D rendering
             Gdx.gl.glViewport((int)VIEWPORT_X, (int)VIEWPORT_Y, (int)VIEWPORT_WIDTH, (int)VIEWPORT_HEIGHT);
@@ -772,6 +818,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         RULE_EXPLANATION,
         PLAY,
         COMPLETE,
+        CARD_REWARD_COMPLETE,
         DISPLAY_RESULTS,
         CLEAN_UP;
 
