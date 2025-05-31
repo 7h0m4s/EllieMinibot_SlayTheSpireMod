@@ -72,7 +72,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
     private static float GRID_WIDTH = GRID_COLS * GRID_X_GAP;
     private static float GRID_HEIGHT =  GRID_ROWS * GRID_Y_GAP;
-    private static float GRID_X = Settings.WIDTH * 0.5f - GRID_WIDTH * 0.5F;
+    private static float GRID_X = Settings.WIDTH * 0.55F;
     private static float GRID_Y = Settings.HEIGHT * 0.45f - GRID_HEIGHT * 0.5F;
 
 
@@ -230,7 +230,22 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 }
             }
 
-            if (InputHelper.justClickedLeft && this.waitTimer == 0.0F) {
+            if ((InputHelper.justClickedLeft
+                    ||
+                    (Settings.isControllerMode
+                            && (CInputActionSet.up.isJustPressed()
+                            || CInputActionSet.down.isJustPressed()
+                            || CInputActionSet.left.isJustPressed()
+                            || CInputActionSet.right.isJustPressed()
+                            || CInputActionSet.altUp.isJustPressed()
+                            || CInputActionSet.altDown.isJustPressed()
+                            || CInputActionSet.altLeft.isJustPressed()
+                            || CInputActionSet.altRight.isJustPressed()
+                            || CInputActionSet.drawPile.isJustPressed()
+                            || CInputActionSet.discardPile.isJustPressed()
+                            ||  CInputActionSet.select.isJustPressed()
+                            ||  CInputActionSet.cancel.isJustPressed())))
+                    && this.waitTimer == 0.0F) {
                 InputHelper.justClickedLeft = false;
                 this.screen = GeoGuesserEvent.CUR_SCREEN.CLEAN_UP;
                 this.waitTimer = 1.0F;
@@ -284,6 +299,15 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         } else if (InputHelper.scrolledUp) {
             targetZoom -= ZOOM_SENSITIVITY;
         }
+        if(Settings.isControllerMode) {
+            if(CInputActionSet.drawPile.isJustPressed()){
+                targetZoom -= (int)(ZOOM_SENSITIVITY * 2.5);
+            }
+            if(CInputActionSet.discardPile.isJustPressed()){
+                targetZoom += (int)(ZOOM_SENSITIVITY * 2.5);
+            }
+        }
+
         targetZoom = MathUtils.clamp(targetZoom, MIN_ZOOM, MAX_ZOOM);
 
         // Smoothly interpolate current zoom
@@ -291,6 +315,34 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
         if (InputHelper.justClickedLeft) {
             dragging = true;
+            lastX = InputHelper.mX;
+            lastY = InputHelper.mY;
+        }
+
+        if(Settings.isControllerMode) {
+            float deltaX = 0F;
+            float deltaY = 0F;
+
+            if(CInputActionSet.up.isPressed()){
+                deltaY = -5F;
+            }
+            if(CInputActionSet.down.isPressed()){
+                deltaY = 5F;
+            }
+            if(CInputActionSet.left.isPressed()){
+                deltaX = -5F;
+            }
+            if(CInputActionSet.right.isPressed()){
+                deltaX = 5F;
+            }
+
+            deltaX = deltaX * BASE_SENSITIVITY * zoomMult;
+            deltaY = deltaY * BASE_SENSITIVITY * zoomMult;
+
+            // Update velocity based on mouse drag
+            yawVelocity = deltaX;
+            pitchVelocity = deltaY;
+
             lastX = InputHelper.mX;
             lastY = InputHelper.mY;
         }
@@ -324,7 +376,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         targetPitch = MathUtils.clamp(targetPitch, -85f, 85f);
 
         // Smoothly interpolate
-        currentYaw = MathUtils.lerpAngleDeg(currentYaw, targetYaw, 0.1f);
+        currentYaw = MathUtils.lerp(currentYaw, targetYaw, 0.1f);
         currentPitch = MathUtils.lerp(currentPitch, targetPitch, 0.1f);
 
         // Convert yaw/pitch to direction vector
@@ -392,48 +444,65 @@ public class GeoGuesserEvent extends AbstractImageEvent {
             if (!anyHovered) {
                 Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(0)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(0)).hb.cY);
             } else {
+                GeoGuesserTileCard currentCard = (GeoGuesserTileCard) this.cards.group.get(index);
+                int newRow = currentCard.row;
+                int newCol = currentCard.col;
                 if (!CInputActionSet.up.isJustPressed() && !CInputActionSet.altUp.isJustPressed()) {
                     if (!CInputActionSet.down.isJustPressed() && !CInputActionSet.altDown.isJustPressed()) {
                         if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
                             if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
-                                float x = ((AbstractCard) this.cards.group.get(index)).hb.cX + 210.0F * Settings.scale;
-                                if (x > 1375.0F * Settings.scale) {
-                                    x = 640.0F * Settings.scale;
+                                // RIGHT
+                                float x = (currentCard).hb.cX + GRID_X_GAP * Settings.scale;
+                                if (x > (GRID_X + GRID_WIDTH) * Settings.scale) {
+                                    x = GRID_X + GRID_X_GAP * Settings.scale;
                                 }
-
-                                Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
+                                logger.info("Set Cursor to:"+(int) x + ", " + (Settings.HEIGHT - (int) (currentCard).hb.cY));
+                                Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) (currentCard).hb.cY);
+                                newCol += 1;
                             }
                         } else {
-                            float x = ((AbstractCard) this.cards.group.get(index)).hb.cX - 210.0F * Settings.scale;
-                            if (x < 530.0F * Settings.scale) {
-                                x = 1270.0F * Settings.scale;
+                            // LEFT
+                            float x = (currentCard).hb.cX - GRID_X_GAP * Settings.scale;
+                            if (x < (GRID_X - GRID_X_GAP) * Settings.scale) {
+                                x = (GRID_X + GRID_WIDTH) * Settings.scale;
                             }
-
-                            Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
+                            logger.info("Set Cursor to:"+(int) x + ", " + (Settings.HEIGHT - (int) (currentCard).hb.cY));
+                            Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) (currentCard).hb.cY);
+                            newCol -= 1;
                         }
                     } else {
-                        float y = ((AbstractCard) this.cards.group.get(index)).hb.cY - 230.0F * Settings.scale;
-                        if (y < 175.0F * Settings.scale) {
-                            y = 750.0F * Settings.scale;
+                        // DOWN
+                        float y = (currentCard).hb.cY - Math.abs(GRID_Y_GAP) * Settings.scale;
+                        if (y < (GRID_Y + GRID_HEIGHT + GRID_Y_GAP) * Settings.scale) {
+                            y = GRID_Y * Settings.scale;
                         }
-
-                        Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - y));
+                        logger.info("Set Cursor to:"+(int) (int) (currentCard).hb.cX + ", " + (int) ((float) Settings.HEIGHT - y));
+                        Gdx.input.setCursorPosition((int) (currentCard).hb.cX, (int) ((float) Settings.HEIGHT - y));
+                        newRow += 1;
                     }
                 } else {
-                    float y = ((AbstractCard) this.cards.group.get(index)).hb.cY + 230.0F * Settings.scale;
-                    if (y > 865.0F * Settings.scale) {
-                        y = 290.0F * Settings.scale;
+                    // UP
+                    float y = (currentCard).hb.cY + Math.abs(GRID_Y_GAP) * Settings.scale;
+                    if (y > GRID_Y * Settings.scale) {
+                        y = (GRID_Y + GRID_HEIGHT) * Settings.scale;
                     }
-
-                    Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - y));
+                    logger.info("Set Cursor to:"+(int) (int) (currentCard).hb.cX + ", " + (int) ((float) Settings.HEIGHT - y));
+                    Gdx.input.setCursorPosition((int) (currentCard).hb.cX, (int) ((float) Settings.HEIGHT - y));
+                    newRow -= 1;
                 }
+
+                // Move hovered card to match new cursor position
+                GeoGuesserTileCard newCard = (GeoGuesserTileCard) this.cards.group.get(getCardIndexByRowAndCol(newRow, newCol));
+                currentCard.hb.hovered = false;
+                newCard.hb.hovered = true;
+                //this.hoveredCard = newCard;
+                //Gdx.input.setCursorPosition((int)((newCard).hb.cX + (GRID_X_GAP * 0.25f)), Settings.HEIGHT - (int) (newCard).hb.cY);
 
                 if (CInputActionSet.select.isJustPressed()) {
                     CInputActionSet.select.unpress();
                     InputHelper.justClickedLeft = true;
                 }
             }
-
         }
     }
 
@@ -627,7 +696,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         for (int row = 0; row < GRID_ROWS; row++) {
             for (int col = 0; col < GRID_COLS; col++) {
                 if (i < this.cards.size()) {
-                    ((AbstractCard) this.cards.group.get(i)).target_x = (float)col * GRID_X_GAP + (Settings.WIDTH * 0.55F);
+                    ((AbstractCard) this.cards.group.get(i)).target_x = (float)col * GRID_X_GAP + GRID_X;
                     ((AbstractCard) this.cards.group.get(i)).target_y = (float)row * GRID_Y_GAP + GRID_Y;
                     ((AbstractCard) this.cards.group.get(i)).targetDrawScale = drawScaleSmall;
                     ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
@@ -635,6 +704,21 @@ public class GeoGuesserEvent extends AbstractImageEvent {
                 }
             }
         }
+    }
+
+    private int getCardIndexByRowAndCol(int row, int col){
+        if(row < 0) row = GRID_ROWS;
+        if(row > GRID_ROWS) row = 0;
+        if(col < 0) col = GRID_COLS;
+        if(col > GRID_COLS) col = 0;
+        // yes I know this is inefficient, sue me
+        for(int i = 0; i < this.cards.group.size(); i++){
+            GeoGuesserTileCard c = (GeoGuesserTileCard) this.cards.group.get(i);
+            if(c.row == row && c.col == col){
+                return i;
+            }
+        }
+        return 0;
     }
 
     public void render(SpriteBatch sb) {
@@ -649,17 +733,40 @@ public class GeoGuesserEvent extends AbstractImageEvent {
 
         if (this.screen == GeoGuesserEvent.CUR_SCREEN.PLAY || this.screen == CUR_SCREEN.DISPLAY_RESULTS ) {
             if(!this.displayResultsCalled) {
-
-                FontHelper.renderSmartText(
-                        sb,
-                        FontHelper.panelNameFont,
-                        DESCRIPTIONS[7],
-                        Settings.WIDTH * 0.06f,
-                        10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
-                        2000.0F * Settings.scale,
-                        0.0F,
-                        Color.WHITE
-                );
+                if(!Settings.isControllerMode) {
+                    FontHelper.renderSmartText(
+                            sb,
+                            FontHelper.panelNameFont,
+                            DESCRIPTIONS[7],
+                            Settings.WIDTH * 0.06f,
+                            10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                            2000.0F * Settings.scale,
+                            0.0F,
+                            Color.WHITE
+                    );
+                }
+                else {
+                        FontHelper.renderSmartText(
+                                sb,
+                                FontHelper.panelNameFont,
+                                DESCRIPTIONS[12],
+                                Settings.WIDTH * 0.06f,
+                                -40.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                                2000.0F * Settings.scale,
+                                0.0F,
+                                Color.WHITE
+                        );
+                        FontHelper.renderSmartText(
+                                sb,
+                                FontHelper.panelNameFont,
+                                DESCRIPTIONS[13],
+                                Settings.WIDTH * 0.06f,
+                                10.0F * Settings.scale + (VIEWPORT_HEIGHT - VIEWPORT_Y),
+                                2000.0F * Settings.scale,
+                                0.0F,
+                                Color.WHITE
+                        );
+                    }
                 if (chosenCard != null) {
                     FontHelper.renderSmartText(
                             sb,
