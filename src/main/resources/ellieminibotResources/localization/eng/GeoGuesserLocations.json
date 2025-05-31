@@ -38,5 +38,77 @@
     "locationName": "Suez Canal, Egypt",
     "latitude": 30.04254,
     "longitude": 32.5746352
+  },
+  {
+    "imagePath": "005.jpg",
+    "columnIndex": 8,
+    "rowIndex": 5,
+    "locationName": "Cape Town, South Africa",
+    "latitude": -33.9278217,
+    "longitude": 18.4575247
+  },
+  {
+    "imagePath": "006.jpg",
+    "columnIndex": 16,
+    "rowIndex": 6,
+    "locationName": "Mount Creighton, New Zealand",
+    "latitude": -45.0799434,
+    "longitude": 168.470532
+  },
+  {
+    "imagePath": "007.jpg",
+    "columnIndex": 8,
+    "rowIndex": 0,
+    "locationName": "Zdziłowice, Poland",
+    "latitude": 50.8296701,
+    "longitude": 22.5145362
+  },
+  {
+    "imagePath": "008.jpg",
+    "columnIndex": 15,
+    "rowIndex": 4,
+    "locationName": "Cairns, Australia",
+    "latitude": -16.9206245,
+    "longitude": 145.7778971
+  },
+  {
+    "imagePath": "009.jpg",
+    "columnIndex": 7,
+    "rowIndex": 0,
+    "locationName": "Zaandam, Netherlands",
+    "latitude": 52.4763388,
+    "longitude": 4.8168524
+  },
+  {
+    "imagePath": "010.jpg",
+    "columnIndex": 8,
+    "rowIndex": 1,
+    "locationName": "Rome, Italy",
+    "latitude": 41.8900799,
+    "longitude": 12.4925423
+  },
+  {
+    "imagePath": "011.jpg",
+    "columnIndex": 1,
+    "rowIndex": 0,
+    "locationName": "Vancouver, Canada",
+    "latitude": 49.261251,
+    "longitude": -123.1087201
+  },
+  {
+    "imagePath": "012.jpg",
+    "columnIndex": 4,
+    "rowIndex": 5,
+    "locationName": "Buenos Aires, Argentina",
+    "latitude": -34.6059584,
+    "longitude": -58.3875808
+  },
+  {
+    "imagePath": "013.jpg",
+    "columnIndex": 7,
+    "rowIndex": 1,
+    "locationName": "Madrid, Spain",
+    "latitude": 40.4407661,
+    "longitude": -3.698644
   }
 ]

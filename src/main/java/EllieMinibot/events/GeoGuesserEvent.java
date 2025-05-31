@@ -141,7 +141,7 @@ public class GeoGuesserEvent extends AbstractImageEvent {
         int locationIndex = random.nextInt(GEO_GUESSER_LOCATIONS.size());
 
         //TODO REMOVE
-        locationIndex = 4;
+        //locationIndex = 4;
 
         geoGuesserLocation = GEO_GUESSER_LOCATIONS.get(locationIndex);
     }
