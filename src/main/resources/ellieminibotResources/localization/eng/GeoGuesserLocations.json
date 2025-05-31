@@ -110,5 +110,29 @@
     "locationName": "Madrid, Spain",
     "latitude": 40.4407661,
     "longitude": -3.698644
+  },
+  {
+    "imagePath": "014.jpg",
+    "columnIndex": 2,
+    "rowIndex": 2,
+    "locationName": "Santa María Asunción, Hidalgo, Mexico",
+    "latitude": 20.1676065,
+    "longitude": -98.2865264
+  },
+  {
+    "imagePath": "015.jpg",
+    "columnIndex": 9,
+    "rowIndex": 0,
+    "locationName": "Kyiv, Ukraine",
+    "latitude": 50.4461184,
+    "longitude": 30.5131632
+  },
+  {
+    "imagePath": "016.jpg",
+    "columnIndex": 1,
+    "rowIndex": 1,
+    "locationName": "Nevada, USA",
+    "latitude": 41.1689877,
+    "longitude": -119.4091872
   }
 ]
