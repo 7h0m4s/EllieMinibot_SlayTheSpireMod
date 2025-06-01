@@ -134,5 +134,13 @@
     "locationName": "Nevada, USA",
     "latitude": 41.1689877,
     "longitude": -119.4091872
+  },
+  {
+    "imagePath": "017.jpg",
+    "columnIndex": 2,
+    "rowIndex": 1,
+    "locationName": "San Antonio, United States",
+    "latitude": 29.4260492,
+    "longitude": -98.486878
   }
 ]
