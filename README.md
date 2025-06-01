@@ -55,14 +55,21 @@ Make sure to check out all these wonderful artists in this community.
 **If an artist's credit is missing or if you wish for your art to be removed for any reason. Please contact me and I'll happily resolve the issue.**
 
 #### Twitter / X:
+* [@233Eris](https://x.com/233Eris)
+* [@Ashen_rookery](https://x.com/ashen_rookery)
 * [@Boedromion_09](https://x.com/Boedromion_09)
+* [@CandyQueenSunny](https://x.com/CandyQueenSunny)
 * [@Fefifox](https://x.com/Fefifox)
 * [@HoneyX9Y](https://x.com/HoneyX9Y)
+* [@icveinss](https://x.com/icveinss)
+* [@Karumisuji](https://x.com/karumisuji)
+* [@Karumiji](https://x.com/Karumiji)
 * [@Kuinmelen](https://x.com/Kuinmelen)
 * [@Monikaphobia](https://x.com/Monikaphobia)
 * [@NoctisWhole](https://x.com/NoctisWhole)
 * [@PaleoDavidRU](https://x.com/PaleoDavidRU)
 * [@Pumpurumpum2](https://x.com/Pumpurumpum2)
+* [@Sappotling](https://x.com/Sappotling)
 * [@SprayCactus](https://x.com/SprayCactus)
 * [@UkichanUki](https://x.com/UkichanUki)
 * [@WigsInk](https://x.com/WigsInk)
@@ -70,10 +77,12 @@ Make sure to check out all these wonderful artists in this community.
 * [@qwuank](https://x.com/qwuank)
 * [@rurulalan](https://x.com/rurulalan)
 * [@woofwoof2222](https://x.com/woofwoof2222)
+* [@zer0chroma](https://x.com/zer0chroma)
 * [@zieb_s](https://x.com/zieb_s)
 
 #### Ellie_Minibot [Official Discord](https://discord.gg/codebugs):
 * Arcat109
+* Alva_Ross
 * Bookieson_
 * Inami2900
 * Steno
