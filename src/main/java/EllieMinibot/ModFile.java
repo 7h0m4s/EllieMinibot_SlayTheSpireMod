@@ -592,7 +592,16 @@ public class ModFile implements
     }
 
     private void setupGeoGuesserLocations() {
-        String json = Gdx.files.internal(modID + "Resources/localization/" + getLangString() + "/GeoGuesserLocations.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String localizedFilepath = modID + "Resources/localization/" + getLangString() + "/GeoGuesserLocations.json";
+        String englishFilepath = modID + "Resources/localization/" + "eng" + "/GeoGuesserLocations.json";
+        String json;
+        if (Gdx.files.internal(localizedFilepath).exists()) {
+            json = Gdx.files.internal(localizedFilepath).readString(String.valueOf(StandardCharsets.UTF_8));
+        }
+        else {
+            json = Gdx.files.internal(englishFilepath).readString(String.valueOf(StandardCharsets.UTF_8));
+        }
+
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<GeoGuesserLocation>>() {}.getType();
         GEO_GUESSER_LOCATIONS = gson.fromJson(json, type);
