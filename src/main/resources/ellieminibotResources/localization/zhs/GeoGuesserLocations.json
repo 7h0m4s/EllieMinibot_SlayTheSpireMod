@@ -1,0 +1,146 @@
+[
+  {
+    "imagePath": "000.jpg",
+    "columnIndex": 15,
+    "rowIndex": 5,
+    "locationName": "澳大利亚穆卢拉巴",
+    "latitude": -26.6799835,
+    "longitude": 153.1203552
+  },
+  {
+    "imagePath": "001.jpg",
+    "columnIndex": 14,
+    "rowIndex": 1,
+    "locationName": "日本京都",
+    "latitude": 35.0091683,
+    "longitude": 135.6748735
+  },
+  {
+    "imagePath": "002.jpg",
+    "columnIndex": 7,
+    "rowIndex": 0,
+    "locationName": "英国伦敦",
+    "latitude": 51.5164575,
+    "longitude": -0.1192707
+  },
+  {
+    "imagePath": "003.jpg",
+    "columnIndex": 3,
+    "rowIndex": 1,
+    "locationName": "美国纽约",
+    "latitude": 40.7851533,
+    "longitude": -73.9694604
+  },
+  {
+    "imagePath": "004.jpg",
+    "columnIndex": 9,
+    "rowIndex": 1,
+    "locationName": "埃及苏伊士运河",
+    "latitude": 30.04254,
+    "longitude": 32.5746352
+  },
+  {
+    "imagePath": "005.jpg",
+    "columnIndex": 8,
+    "rowIndex": 5,
+    "locationName": "南非开普敦",
+    "latitude": -33.9278217,
+    "longitude": 18.4575247
+  },
+  {
+    "imagePath": "006.jpg",
+    "columnIndex": 16,
+    "rowIndex": 6,
+    "locationName": "新西兰克赖顿山",
+    "latitude": -45.0799434,
+    "longitude": 168.470532
+  },
+  {
+    "imagePath": "007.jpg",
+    "columnIndex": 8,
+    "rowIndex": 0,
+    "locationName": "波兰兹德济沃维采",
+    "latitude": 50.8296701,
+    "longitude": 22.5145362
+  },
+  {
+    "imagePath": "008.jpg",
+    "columnIndex": 15,
+    "rowIndex": 4,
+    "locationName": "澳大利亚凯恩斯",
+    "latitude": -16.9206245,
+    "longitude": 145.7778971
+  },
+  {
+    "imagePath": "009.jpg",
+    "columnIndex": 7,
+    "rowIndex": 0,
+    "locationName": "荷兰赞丹",
+    "latitude": 52.4763388,
+    "longitude": 4.8168524
+  },
+  {
+    "imagePath": "010.jpg",
+    "columnIndex": 8,
+    "rowIndex": 1,
+    "locationName": "意大利罗马",
+    "latitude": 41.8900799,
+    "longitude": 12.4925423
+  },
+  {
+    "imagePath": "011.jpg",
+    "columnIndex": 1,
+    "rowIndex": 0,
+    "locationName": "加拿大温哥华",
+    "latitude": 49.261251,
+    "longitude": -123.1087201
+  },
+  {
+    "imagePath": "012.jpg",
+    "columnIndex": 4,
+    "rowIndex": 5,
+    "locationName": "阿根廷布宜诺斯艾利斯",
+    "latitude": -34.6059584,
+    "longitude": -58.3875808
+  },
+  {
+    "imagePath": "013.jpg",
+    "columnIndex": 7,
+    "rowIndex": 1,
+    "locationName": "西班牙马德里",
+    "latitude": 40.4407661,
+    "longitude": -3.698644
+  },
+  {
+    "imagePath": "014.jpg",
+    "columnIndex": 2,
+    "rowIndex": 2,
+    "locationName": "圣玛丽亚松森, 伊达尔戈, 墨西哥",
+    "latitude": 20.1676065,
+    "longitude": -98.2865264
+  },
+  {
+    "imagePath": "015.jpg",
+    "columnIndex": 9,
+    "rowIndex": 0,
+    "locationName": "乌克兰基辅",
+    "latitude": 50.4461184,
+    "longitude": 30.5131632
+  },
+  {
+    "imagePath": "016.jpg",
+    "columnIndex": 1,
+    "rowIndex": 1,
+    "locationName": "美国内华达州",
+    "latitude": 41.1689877,
+    "longitude": -119.4091872
+  },
+  {
+    "imagePath": "017.jpg",
+    "columnIndex": 2,
+    "rowIndex": 1,
+    "locationName": "美国圣安东尼奥",
+    "latitude": 29.4260492,
+    "longitude": -98.486878
+  }
+]
